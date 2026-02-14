@@ -406,6 +406,30 @@ a {
 .phone-frame {
   position: relative;
   width: min(340px, 100%);
+  isolation: isolate;
+}
+
+.phone-frame::before {
+  content: "";
+  position: absolute;
+  width: 142%;
+  aspect-ratio: 1.22 / 1;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 62% 38% 58% 42% / 44% 56% 40% 60%;
+  background: radial-gradient(
+    circle at 50% 48%,
+    #4353A5 0%,
+    rgba(67, 83, 165, 0.6) 22%,
+    rgba(88, 123, 246, 0.24) 49%,
+    rgba(88, 123, 246, 0.11) 63%,
+    rgba(88, 123, 246, 0.04) 73%,
+    rgba(88, 123, 246, 0) 82%
+  );
+  filter: blur(25px);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .phone-device {
@@ -414,6 +438,7 @@ a {
   background-color: fff;
   z-index: 10;
   position: relative;
+  
 }
 
 .phone-screen {
