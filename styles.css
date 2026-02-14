@@ -411,19 +411,19 @@ a {
 .phone-frame::before {
   content: "";
   position: absolute;
-  width: 132%;
-  aspect-ratio: 1 / 1;
+  width: 138%;
+  aspect-ratio: 1.22 / 1;
   left: 50%;
   top: 49%;
-  transform: translate(-50%, -50%);
-  border-radius: 56% 44% 52% 48% / 44% 56% 46% 54%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 62% 38% 58% 42% / 44% 56% 40% 60%;
   background: radial-gradient(
     circle at 50% 48%,
-    rgba(67, 83, 165, 0.34) 0%,
-    rgba(88, 123, 246, 0.2) 36%,
-    rgba(88, 123, 246, 0.1) 56%,
-    rgba(88, 123, 246, 0.04) 71%,
-    rgba(88, 123, 246, 0) 82%
+    #4353A5 0%,
+    rgba(67, 83, 165, 0.58) 22%,
+    rgba(88, 123, 246, 0.22) 46%,
+    rgba(88, 123, 246, 0.1) 63%,
+    rgba(88, 123, 246, 0) 84%
   );
   filter: blur(6px);
   z-index: 0;
