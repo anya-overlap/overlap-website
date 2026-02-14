@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oli — Dating, refined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo"><img src="./assets/logo.png" alt="Oli" /><span class="logo-word">Overlap</span></div>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="site-nav-links"
+          >
+            <span class="menu-toggle-line" aria-hidden="true"></span>
+            <span class="menu-toggle-line" aria-hidden="true"></span>
+            <span class="menu-toggle-line" aria-hidden="true"></span>
+          </button>
+          <div class="nav-links" id="site-nav-links">
+            <a href="#how">How it works</a>
+            <a href="#difference">Our differentiator</a>
+            <a href="#problems">Dating problems explained</a>
+          </div>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <span class="pill">NYC exclusive</span>
+            <h1>
+              <span class="hero-tagline" id="hero-tagline">The dating app you’ve been waiting for.</span>
+            </h1>
+ 
+            <div class="store-buttons">
+              <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+                <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" />
+              </a>
+              <a class="store-badge-link" href="#" aria-label="Get it on Google Play">
+                <img
+                  class="store-badge"
+                  src="./assets/GetItOnGooglePlay_Badge_Web_color_English.png"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="hero-cards">
+            <article class="profile-card">
+             
+                <img src="./assets/emilyScreenshot.png" alt="" />
+             
+            </article>
+            <article class="profile-card muted">
+              
+                <img src="./assets/victoriaScreenshot.png" alt="" />
+             
+            </article>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="how" class="matchmaker">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Matchmaker in your pocket</h2>
+            <p class="matchmaker-mobile-subtext">not a browsing app</p>
+          </div>
+          <div class="matchmaker-grid">
+            <div class="matchmaker-left">
+              <div class="info-block">
+                <h3>Personalized dating experience</h3>
+                <p class="link">not a browsing app</p>
+              </div>
+              <div class="steps">
+                <article class="step">
+                  <div class="step-header">
+                    <span class="step-number">1</span>
+                    <h4>Tell us what you want</h4>
+                  </div>
+                  <p>Customize search criteria based on what's important to you</p>
+                </article>
+                <article class="step">
+                  <div class="step-header">
+                    <span class="step-number">2</span>
+                    <h4>We get to work</h4>
+                  </div>
+                  <p>7 days to find people looking for similar things</p>
+                </article>
+                <article class="step">
+                  <div class="step-header">
+                    <span class="step-number">3</span>
+                    <h4>Batch day</h4>
+                  </div>
+                  <p>Only see high quality profiles who meet your requirements</p>
+                </article>
+              </div>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="matchmaker-right" id="difference">
+              <div class="info-block">
+                <h3>Compatibility assessed with questions that matter</h3>
+                <p class="link">without AI</p>
+              </div>
+              <div class="phone-card phone-carousel">
+                <div class="phone-frame">
+                 
+                  <div class="phone-screen">
+                    <div class="carousel-track">
+                      <div class="carousel-slide is-active">
+                        <img src="./assets/exclusiveSlider.png" alt="Exclusive slider screen" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="./assets/jealousySlider.png" alt="Jealousy slider screen" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="./assets/textingSlider.png" alt="Texting slider screen" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="./assets/agegapSlider.png" alt="Age gap slider screen" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="./assets/sexSlider.png" alt="Sex slider screen" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="./assets/officdating.png" alt="Office dating slider screen" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="./assets/timeawaySlider.png" alt="Time away slider screen" />
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                  class="phone-device"
+                  src="./assets/iPhone 14 Pro – Space Black.png"
+                  alt="iPhone 14 Pro in space black"
+                />
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow prev" type="button" aria-label="Previous slide">
+                    ←
+                  </button>
+                  <div class="carousel-pagination" role="tablist" aria-label="Slider pagination"></div>
+                  <button class="carousel-arrow next" type="button" aria-label="Next slide">
+                    →
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problems" class="problems">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Current problems with dating</h2>
+            <p class="link">and how we solve them</p>
+          </div>
+          <div class="problem-grid">
+            <article class="problem-card">
+              <div class="problem-header">
+                <div class="problem-header-left">
+                  <h4>Superficial profiles</h4>
+                </div>
+                <div class="problem-header-right">
+                  <div class="problem-icon">
+                    <img class="problem-icon-image problem-icon-image--compact" src="./assets/trash.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p>Strict profile requirements for picture quality and prompt length</p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-header">
+                <div class="problem-header-left">
+                  <h4>High volume + low fit</h4>
+                </div>
+                <div class="problem-header-right">
+                  <div class="problem-icon">
+                    <img class="problem-icon-image problem-icon-image--gauge" src="./assets/gauge.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p>Intentionally fewer profiles. Filters that actually filter</p>
+            </article>
+           
+            <article class="problem-card">
+              <div class="problem-header">
+                <div class="problem-header-left">
+                  <h4>Hours spent browsing</h4>
+                </div>
+                <div class="problem-header-right">
+                  <div class="problem-icon">
+                    <img class="problem-icon-image" src="./assets/timer.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p>No endless swiping, Overlap will be your matchmaker</p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-header">
+                <div class="problem-header-left">
+                  <h4>Chats die quick</h4>
+                </div>
+                <div class="problem-header-right">
+                  <div class="problem-icon">
+                    <img class="problem-icon-image" src="./assets/skull.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p>24 hour timer moves chats forward. No ghosts!</p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-header">
+                <div class="problem-header-left">
+                  <h4>Low effort messages</h4>
+                </div>
+                <div class="problem-header-right">
+                  <div class="problem-icon">
+                    <img class="problem-icon-image problem-icon-image--compact" src="./assets/messagebubble.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p>Send direct messages. Limited quantity. Word count minimums</p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-header">
+                <div class="problem-header-left">
+                  <h4>Low chemistry on dates</h4>
+                </div>
+                <div class="problem-header-right">
+                  <div class="problem-icon">
+                    <img class="problem-icon-image" src="./assets/lightning.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p>Mutual hobbies highlighted so you have more to talk about</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-brand" aria-label="Overlap brand">
+            <img src="./assets/logo.png" alt="Oli" />
+            <span class="logo-word cta-logo-word">Overlap</span>
+          </div>
+          <h2 class="cta-tagline">Declutter your dating experience</h2>
+          <div class="store-buttons">
+            <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+              <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" />
+            </a>
+            <a class="store-badge-link" href="#" aria-label="Get it on Google Play">
+              <img
+                class="store-badge"
+                src="./assets/GetItOnGooglePlay_Badge_Web_color_English.png"
+                alt="Get it on Google Play"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const phoneCarousel = document.querySelector(".phone-carousel");
+      if (phoneCarousel) {
+        const track = phoneCarousel.querySelector(".carousel-track");
+        const slides = Array.from(phoneCarousel.querySelectorAll(".carousel-slide"));
+        const pagination = phoneCarousel.querySelector(".carousel-pagination");
+        const prevButton = phoneCarousel.querySelector(".carousel-arrow.prev");
+        const nextButton = phoneCarousel.querySelector(".carousel-arrow.next");
+
+        let currentIndex = 0;
+
+        if (pagination) {
+          slides.forEach((slide, slideIndex) => {
+            const image = slide.querySelector("img");
+            const dot = document.createElement("button");
+            dot.className = "pagination-dot";
+            dot.type = "button";
+            dot.setAttribute("aria-label", `Show ${image?.alt || "slider"}`);
+            dot.setAttribute("aria-pressed", slideIndex === 0 ? "true" : "false");
+            if (slideIndex === 0) {
+              dot.classList.add("is-active");
+            }
+            dot.addEventListener("click", () => updateCarousel(slideIndex));
+            pagination.appendChild(dot);
+          });
+        }
+
+        const dots = Array.from(phoneCarousel.querySelectorAll(".pagination-dot"));
+
+        const updateCarousel = (index) => {
+          currentIndex = (index + slides.length) % slides.length;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle("is-active", slideIndex === currentIndex);
+          });
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === currentIndex;
+            dot.classList.toggle("is-active", isActive);
+            dot.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+        };
+
+        prevButton?.addEventListener("click", () => updateCarousel(currentIndex - 1));
+        nextButton?.addEventListener("click", () => updateCarousel(currentIndex + 1));
+      }
+
+      const menuToggleButton = document.querySelector(".menu-toggle");
+      const siteNavLinks = document.querySelector(".nav-links");
+      const heroTagline = document.querySelector("#hero-tagline");
+
+      if (menuToggleButton && siteNavLinks) {
+        menuToggleButton.addEventListener("click", () => {
+          const isOpen = siteNavLinks.classList.toggle("is-open");
+          menuToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        siteNavLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            siteNavLinks.classList.remove("is-open");
+            menuToggleButton.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      if (heroTagline) {
+        const taglineOptions = [
+          "The dating app you’ve been waiting for.",
+          "True love isn’t a numbers game.",
+          "Modern dating without the noise.",
+          "No more rage deleting.",
+        ];
+        const transitionMs = 400;
+        const visibleMs = 2500;
+        let taglineIndex = 0;
+
+        window.setInterval(() => {
+          heroTagline.classList.add("is-changing");
+
+          window.setTimeout(() => {
+            taglineIndex = (taglineIndex + 1) % taglineOptions.length;
+            heroTagline.textContent = taglineOptions[taglineIndex];
+            heroTagline.classList.remove("is-changing");
+          }, transitionMs);
+        }, visibleMs + transitionMs);
+      }
+    </script>
+  </body>
+</html>
