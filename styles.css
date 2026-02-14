@@ -306,7 +306,7 @@ a {
 
 .matchmaker-grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 2fr auto 3fr;
   gap: 40px;
   align-items: flex-start;
 }
