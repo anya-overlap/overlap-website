@@ -411,19 +411,21 @@ a {
 .phone-frame::before {
   content: "";
   position: absolute;
-  width: 92%;
+  width: 132%;
   aspect-ratio: 1 / 1;
   left: 50%;
-  top: 48%;
+  top: 49%;
   transform: translate(-50%, -50%);
-  border-radius: 52% 48% 50% 50% / 46% 54% 50% 50%;
+  border-radius: 56% 44% 52% 48% / 44% 56% 46% 54%;
   background: radial-gradient(
     circle at 50% 48%,
-    rgba(88, 123, 246, 0.14) 0%,
-    rgba(88, 123, 246, 0.07) 38%,
-    rgba(88, 123, 246, 0.02) 62%,
-    rgba(88, 123, 246, 0) 74%
+    rgba(67, 83, 165, 0.34) 0%,
+    rgba(88, 123, 246, 0.2) 36%,
+    rgba(88, 123, 246, 0.1) 56%,
+    rgba(88, 123, 246, 0.04) 71%,
+    rgba(88, 123, 246, 0) 82%
   );
+  filter: blur(6px);
   z-index: 0;
   pointer-events: none;
 }
