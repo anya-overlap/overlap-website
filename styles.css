@@ -405,6 +405,27 @@ a {
 .phone-frame {
   position: relative;
   width: min(340px, 100%);
+  isolation: isolate;
+}
+
+.phone-frame::before {
+  content: "";
+  position: absolute;
+  width: 92%;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  border-radius: 52% 48% 50% 50% / 46% 54% 50% 50%;
+  background: radial-gradient(
+    circle at 50% 48%,
+    rgba(88, 123, 246, 0.14) 0%,
+    rgba(88, 123, 246, 0.07) 38%,
+    rgba(88, 123, 246, 0.02) 62%,
+    rgba(88, 123, 246, 0) 74%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 
 .phone-device {
