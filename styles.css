@@ -351,7 +351,7 @@ a {
 }
 
 .matchmaker-left {
-  --matchmaker-step-offset: 50px;
+  --matchmaker-step-offset: clamp(12px, 4vw, 50px);
 }
 
 .divider {
@@ -361,8 +361,8 @@ a {
 }
 
 .info-block h3 {
-  font-size: 1.7rem;
-  line-height: 2rem;
+  font-size: 1.58rem;
+  line-height: 1.9rem;
   font-family: sans-serif;
   font-weight: 400;
   margin-bottom: 2px;
@@ -960,8 +960,8 @@ font-size: 18px;
   }
 
   .info-block h3 {
-    font-size: 1.52rem;
-    line-height: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.68rem;
   }
 
   .link,
