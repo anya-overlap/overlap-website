@@ -253,6 +253,80 @@
           </div>
         </div>
       </section>
+
+      <section class="learn-more reveal-on-scroll" aria-labelledby="learn-more-heading">
+        <div class="container learn-more-container">
+          <h2 id="learn-more-heading">Learn more</h2>
+
+          <div class="learn-more-group">
+            <h3>Overlap FAQs</h3>
+            <div class="learn-more-list" role="list">
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">Why did you create Overlap?</span>
+                  <span class="learn-more-item-subtitle">There are so many dating apps</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">How does the algorithm work?</span>
+                  <span class="learn-more-item-subtitle">Do I need to train it?</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">How will your user base grow?</span>
+                  <span class="learn-more-item-subtitle">Quality vs quantity</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">Will you use AI?</span>
+                  <span class="learn-more-item-subtitle">Since everyone asks...</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="learn-more-group learn-more-group--secondary">
+            <h3>Understanding today&rsquo;s dating landscape</h3>
+            <div class="learn-more-list" role="list">
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">Historical context of dating</span>
+                  <span class="learn-more-item-subtitle">How did we get here?</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">Conflict of interest</span>
+                  <span class="learn-more-item-subtitle">The business problem</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">Inorganic meeting</span>
+                  <span class="learn-more-item-subtitle">The fundamental weakness of dating apps</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+              <button class="learn-more-item" type="button" aria-expanded="false">
+                <span class="learn-more-item-copy">
+                  <span class="learn-more-item-title">Our position in the market</span>
+                  <span class="learn-more-item-subtitle">A unique value proposition</span>
+                </span>
+                <span class="learn-more-item-icon" aria-hidden="true">⌄</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="cta">
@@ -389,6 +463,14 @@
           }, transitionMs);
         }, visibleMs + transitionMs);
       }
+
+      const learnMoreItems = Array.from(document.querySelectorAll(".learn-more-item"));
+      learnMoreItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const isExpanded = item.getAttribute("aria-expanded") === "true";
+          item.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+        });
+      });
     </script>
   </body>
 </html>

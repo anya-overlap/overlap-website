@@ -573,6 +573,83 @@ a {
   background: #fff;
 }
 
+.learn-more {
+  padding: 0 0 120px;
+  background: #fff;
+}
+
+.learn-more-container {
+  max-width: 1120px;
+}
+
+.learn-more h2 {
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.learn-more-group {
+  max-width: 640px;
+}
+
+.learn-more-group h3 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.learn-more-group--secondary {
+  margin-top: 74px;
+}
+
+.learn-more-list {
+  border-bottom: 1px solid rgba(67, 83, 165, 0.45);
+}
+
+.learn-more-item {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(67, 83, 165, 0.45);
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 2px;
+  cursor: pointer;
+}
+
+.learn-more-item-copy {
+  display: grid;
+}
+
+.learn-more-item-title {
+  font-size: clamp(1.16rem, 1.6vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.learn-more-item-subtitle {
+  color: #1f3fa8;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.learn-more-item-icon {
+  color: var(--blue);
+  font-size: 1.65rem;
+  line-height: 1;
+  transform: translateY(-2px) rotate(0deg);
+  transition: transform 180ms ease;
+}
+
+.learn-more-item[aria-expanded="true"] .learn-more-item-icon {
+  transform: translateY(-2px) rotate(180deg);
+}
+
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -751,6 +828,10 @@ font-size: 18px;
   .problems {
     padding: 72px 0 106px;
    
+  }
+
+  .learn-more {
+    padding-bottom: 96px;
   }
 
   .cta {
@@ -973,6 +1054,40 @@ font-size: 18px;
 
   .problems {
     padding: 24px 0 54px;
+  }
+
+  .learn-more {
+    padding-bottom: 72px;
+  }
+
+  .learn-more h2 {
+    margin-bottom: 14px;
+  }
+
+  .learn-more-group h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .learn-more-group--secondary {
+    margin-top: 60px;
+  }
+
+  .learn-more-item {
+    padding: 9px 2px;
+  }
+
+  .learn-more-item-title {
+    font-size: 1.05rem;
+  }
+
+  .learn-more-item-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .learn-more-item-icon {
+    font-size: 1.3rem;
   }
 
   .hero-cards {
