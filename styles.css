@@ -808,18 +808,6 @@ a {
   isolation: isolate;
 }
 
-.problem-grid::before {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 240px;
-  right: -80px;
-  top: -32px;
-  background: radial-gradient(circle, rgba(88, 123, 246, 0.12) 0%, rgba(88, 123, 246, 0) 72%);
-  z-index: -1;
-  pointer-events: none;
-}
-
 .problem-card {
   --problem-card-padding: 16px;
   --problem-card-padding-top: 16px;
