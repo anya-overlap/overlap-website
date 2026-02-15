@@ -28,10 +28,12 @@ body {
     radial-gradient(circle at 78% 78%, rgba(88, 123, 246, 0.035) 0%, rgba(88, 123, 246, 0) 28%),
     linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .reveal-on-scroll {
