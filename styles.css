@@ -593,7 +593,7 @@ a {
 }
 
 .learn-more-group {
-  width: min(100%, 680px);
+  width: min(100%, 620px);
 }
 
 .learn-more-group h3 {
@@ -665,7 +665,7 @@ a {
 
 .learn-more-item-subtitle {
   color: #1f3fa8;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   line-height: 1.35;
 }
 
@@ -1114,7 +1114,7 @@ font-size: 18px;
   }
 
   .learn-more-item-subtitle {
-    font-size: 0.82rem;
+    font-size: 0.74rem;
   }
 
   .learn-more-answer {
