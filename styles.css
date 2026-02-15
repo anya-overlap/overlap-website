@@ -599,7 +599,7 @@ a {
 
 .learn-more-group h3 {
   font-family: "Inter", sans-serif;
-  font-size: calc(clamp(1.6rem, 2.2vw, 2.1rem) * var(--learn-more-font-scale));
+  font-size: calc(clamp(1.5rem, 2.05vw, 1.95rem) * var(--learn-more-font-scale));
   font-weight: 400;
   margin-bottom: 6px;
 }
@@ -1097,7 +1097,7 @@ font-size: 18px;
   }
 
   .learn-more-group h3 {
-    font-size: calc(2rem * var(--learn-more-font-scale));
+    font-size: calc(1.9rem * var(--learn-more-font-scale));
     line-height: 1.2;
     margin-bottom: 10px;
   }
