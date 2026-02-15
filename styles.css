@@ -599,7 +599,7 @@ a {
 
 .learn-more-group h3 {
   font-family: "Inter", sans-serif;
-  font-size: calc(clamp(1.5rem, 2.05vw, 1.95rem) * var(--learn-more-font-scale));
+  font-size: calc(clamp(1.42rem, 1.95vw, 1.82rem) * var(--learn-more-font-scale));
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -646,7 +646,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 14px 4px;
+  padding: 12px 4px;
   cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease;
 }
@@ -678,19 +678,20 @@ a {
 
 .learn-more-item-copy {
   display: grid;
+  gap: 1px;
 }
 
 .learn-more-item-title {
   color: #2f3138;
   font-size: calc(clamp(1.16rem, 1.6vw, 1.5rem) * var(--learn-more-font-scale));
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .learn-more-item-subtitle {
   color: #1f3fa8;
   font-size: calc(0.82rem * var(--learn-more-font-scale));
-  line-height: 1.35;
+  line-height: 1.22;
 }
 
 .learn-more-item-icon {
@@ -1142,7 +1143,7 @@ font-size: 18px;
   }
 
   .learn-more-group h3 {
-    font-size: calc(1.9rem * var(--learn-more-font-scale));
+    font-size: calc(1.8rem * var(--learn-more-font-scale));
     line-height: 1.2;
     margin-bottom: 10px;
   }
@@ -1153,7 +1154,7 @@ font-size: 18px;
 
 
   .learn-more-item {
-    padding: 12px 2px;
+    padding: 10px 2px;
   }
 
   .learn-more-item-title {
