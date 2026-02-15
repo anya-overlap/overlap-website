@@ -611,6 +611,17 @@ a {
   border-bottom: 1px solid #8A8B8F;
 }
 
+.learn-more-entry {
+  width: 100%;
+}
+
+.learn-more-answer {
+  padding: 0 4px 12px;
+  color: #4f5b82;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .learn-more-item {
   width: 100%;
   border: none;
@@ -1104,6 +1115,11 @@ font-size: 18px;
 
   .learn-more-item-subtitle {
     font-size: 0.82rem;
+  }
+
+  .learn-more-answer {
+    font-size: 0.78rem;
+    padding: 0 2px 10px;
   }
 
   .learn-more-item-icon {
