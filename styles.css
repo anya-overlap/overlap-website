@@ -574,22 +574,26 @@ a {
 }
 
 .learn-more {
-  padding: 0 0 120px;
-  background: #fff;
+  padding: 28px 0 120px;
+  background: #f3f3f3;
 }
 
 .learn-more-container {
-  max-width: 1120px;
+  max-width: 980px;
+  display: grid;
+  justify-items: center;
 }
 
 .learn-more h2 {
+  width: 100%;
+  text-align: center;
   font-size: clamp(2.5rem, 4vw, 3.6rem);
   font-weight: 400;
   margin-bottom: 24px;
 }
 
 .learn-more-group {
-  max-width: 640px;
+  width: min(100%, 760px);
 }
 
 .learn-more-group h3 {
@@ -618,7 +622,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 10px 2px;
+  padding: 10px 4px;
   cursor: pointer;
 }
 
@@ -1057,7 +1061,7 @@ font-size: 18px;
   }
 
   .learn-more {
-    padding-bottom: 72px;
+    padding: 16px 0 72px;
   }
 
   .learn-more h2 {
