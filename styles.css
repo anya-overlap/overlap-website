@@ -831,9 +831,9 @@ a {
 }
 
 .problem-card:hover {
-  transform: translateY(-2px);
-  border-color: #cfd9f7;
-  background: linear-gradient(180deg, #f1f4fd 0%, #ebeffa 100%);
+  transform: translateY(0);
+  border-color: #e6bac2;
+  background: #ececf2;
 }
 
 .problem-header {
