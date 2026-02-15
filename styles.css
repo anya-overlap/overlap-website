@@ -335,8 +335,8 @@ a {
 }
 
 .matchmaker {
-  padding: 118px 0 74px;
-  background: rgba(255, 255, 255, 0.68);
+  padding: 68px 0 34px;
+
   backdrop-filter: blur(1px);
 }
 
@@ -569,8 +569,8 @@ a {
 }
 
 .problems {
-  padding: 86px 0 130px;
-  background: #fff;
+  padding: 46px 0 70px;
+
 }
 
 .learn-more {
@@ -1132,6 +1132,7 @@ font-size: 18px;
 
   .problems {
     padding: 24px 0 54px;
+   
   }
 
   .learn-more {
