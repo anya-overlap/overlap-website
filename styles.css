@@ -718,19 +718,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 10px 4px;
+  gap: 12px;
+  padding: 10px 10px;
   cursor: pointer;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition: background-color 160ms ease, color 160ms ease, border-radius 160ms ease;
 }
 
 .learn-more-item:hover,
 .learn-more-item:focus-visible {
   background: rgba(88, 123, 246, 0.08);
+  border-radius: 14px;
 }
 
 .learn-more-item[aria-expanded="true"] {
   background: rgba(88, 123, 246, 0.12);
+  border-radius: 14px;
 }
 
 .learn-more-item:hover .learn-more-item-subtitle,
@@ -1265,7 +1267,7 @@ font-size: 18px;
   }
 
   .learn-more-item {
-    padding: 10px 2px;
+    padding: 10px 8px;
   }
 
   .learn-more-item-title {
