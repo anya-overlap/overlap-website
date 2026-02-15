@@ -340,10 +340,10 @@ a {
 .matchmaker {
   padding: 68px 0 34px;
   background:
-    linear-gradient(180deg, #eef2ff 0%, #f6f8ff 58%, #fbfcff 100%);
-  border-top: 1px solid #dbe3ff;
-  border-bottom: 1px solid #e7ebfb;
-  box-shadow: inset 0 18px 36px rgba(88, 123, 246, 0.08), inset 0 -14px 28px rgba(255, 255, 255, 0.7);
+    linear-gradient(180deg, #ffffff 0%, #ffffff 62%, #fcfdff 100%);
+  border-top: 1px solid #eef1f8;
+  border-bottom: 1px solid #e8ebf3;
+  box-shadow: inset 0 16px 30px rgba(255, 255, 255, 0.9), 0 12px 28px rgba(15, 23, 42, 0.04);
   backdrop-filter: blur(1px);
 }
 
