@@ -911,17 +911,33 @@ a {
 }
 
 .cta {
-  background: linear-gradient(140deg, #4d68df 0%, #587bf6 56%, #6b8cff 100%);
-  color: #fff;
-  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f6f9ff 0%, #edf3ff 100%);
+  color: #20325f;
+  padding: 54px 0 60px;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgba(88, 123, 246, 0.2), transparent 58%);
+  pointer-events: none;
 }
 
 .cta-inner {
+  position: relative;
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
   display: grid;
-  
+  gap: 10px;
+  border: 1px solid #d7e2fb;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 34px rgba(41, 77, 170, 0.1);
+  padding: clamp(24px, 3.1vw, 34px) clamp(18px, 4.4vw, 42px);
   justify-items: center;
 }
 
@@ -938,18 +954,27 @@ a {
 
 .cta-logo-word {
   margin-left: 0;
-  color: #eef6ff;
-font-size: 18px;
+  color: #2547ab;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .cta-tagline {
   display: inline-block;
-  margin-top: 1px;
-  margin-bottom: 20px;
+  margin: 2px 0 0;
+  color: #1f325f;
+}
+
+.cta-supporting-copy {
+  margin: 0;
+  color: #48609b;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  max-width: 520px;
 }
 
 .cta .store-buttons {
-  margin-top: 0;
+  margin-top: 8px;
   gap: clamp(8px, 2vw, 18px);
   flex-wrap: nowrap;
 }
