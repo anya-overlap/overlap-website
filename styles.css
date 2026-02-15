@@ -24,6 +24,8 @@ body {
   color: var(--text);
   background:
     radial-gradient(circle at 10% 0%, rgba(88, 123, 246, 0.08) 0%, rgba(88, 123, 246, 0) 38%),
+    radial-gradient(circle at 88% 22%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0) 30%),
+    radial-gradient(circle at 78% 78%, rgba(88, 123, 246, 0.035) 0%, rgba(88, 123, 246, 0) 28%),
     linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
   line-height: 1.6;
 }
@@ -339,7 +341,11 @@ a {
 
 .matchmaker {
   padding: 68px 0 34px;
-
+  background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 62%, #fcfdff 100%);
+  border-top: 1px solid #eef1f8;
+  border-bottom: 1px solid #e8ebf3;
+  box-shadow: inset 0 16px 30px rgba(255, 255, 255, 0.9), 0 12px 28px rgba(15, 23, 42, 0.04);
   backdrop-filter: blur(1px);
 }
 
@@ -385,7 +391,9 @@ a {
 
 
 .step {
-  background: #fff;
+  background:
+    radial-gradient(circle at 20% 12%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 42%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
   padding: 16px;
   border-radius: 10px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
@@ -581,7 +589,11 @@ a {
 .learn-more {
   --learn-more-font-scale: 0.92;
   padding: 28px 0 120px;
-  background: #f3f3f3;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
+    linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
+  border-top: 1px solid #e2e7f5;
+  box-shadow: inset 0 14px 24px rgba(88, 123, 246, 0.05);
 }
 
 .learn-more-container {
@@ -768,7 +780,9 @@ a {
   --problem-icon-compact-size: 22px;
   --problem-icon-gauge-margin: 5px;
   --problem-header-spacing: 16px;
-  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0) 38%),
+    linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
   padding: var(--problem-card-padding);
   padding-top: var(--problem-card-padding-top);
   border-radius: 10px;
