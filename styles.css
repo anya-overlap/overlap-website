@@ -342,6 +342,7 @@ a {
 .matchmaker {
   padding: 68px 0 34px;
   background:
+    radial-gradient(120% 160px at 50% 0%, rgba(88, 123, 246, 0.1) 0%, rgba(88, 123, 246, 0) 72%),
     linear-gradient(180deg, #ffffff 0%, #ffffff 62%, #fcfdff 100%);
   border-top: 1px solid #eef1f8;
   border-bottom: 1px solid #e8ebf3;
@@ -583,14 +584,16 @@ a {
 
 .problems {
   padding: 46px 0 70px;
-
+  background:
+    radial-gradient(120% 160px at 50% 0%, rgba(88, 123, 246, 0.1) 0%, rgba(88, 123, 246, 0) 72%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
 }
 
 .learn-more {
   --learn-more-font-scale: 0.92;
   padding: 28px 0 88px;
   background:
-    radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
+    radial-gradient(120% 160px at 50% 0%, rgba(88, 123, 246, 0.1) 0%, rgba(88, 123, 246, 0) 72%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
   border-top: 1px solid #e2e7f5;
   box-shadow: inset 0 14px 24px rgba(88, 123, 246, 0.05);
