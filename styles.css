@@ -833,7 +833,10 @@ a {
 .problem-card:hover {
   transform: translateY(0);
   border-color: #e6bac2;
-  background: #ececf2;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(236, 123, 141, 0.12) 0%, rgba(236, 123, 141, 0) 46%),
+    radial-gradient(circle at 82% 86%, rgba(88, 123, 246, 0.12) 0%, rgba(88, 123, 246, 0) 52%),
+    #ececf2;
 }
 
 .problem-header {
