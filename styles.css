@@ -625,7 +625,7 @@ a {
 
 .learn-more-group {
   width: min(100%, 620px);
-  padding-inline: 8px;
+  padding-inline: 12px;
 }
 
 .learn-more-group h3 {
@@ -642,7 +642,7 @@ a {
 
 .learn-more-secondary-wrap {
   width: min(100%, 620px);
-  padding-inline: 8px;
+  padding-inline: 12px;
   margin-top: 28px;
 }
 
