@@ -1164,10 +1164,17 @@ font-size: 18px;
     padding: 44px 0 15px;
   }
 
+  .matchmaker-grid {
+    gap: 16px;
+  }
+
   .steps {
     margin-top: 5px;
     gap: 20px;
     padding-bottom: 22px;
+    width: min(92%, 540px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .problem-grid::before {
@@ -1177,6 +1184,19 @@ font-size: 18px;
   .step {
     padding: 14px;
     border-radius: 8px;
+  }
+
+  .matchmaker-right {
+    padding-inline: 12px;
+  }
+
+  .phone-carousel {
+    width: 100%;
+    transform: none;
+  }
+
+  .phone-frame {
+    width: min(320px, 100%);
   }
 
   .step-header {
