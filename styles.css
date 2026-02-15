@@ -605,19 +605,19 @@ a {
   width: var(--problem-icon-circle-size);
   height: var(--problem-icon-circle-size);
   border-radius: 50%;
-  background: #eef1f7;
+  background: #e3e6ef;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.problem-card:nth-child(1) .problem-icon { background: #eef1ff; }
-.problem-card:nth-child(2) .problem-icon { background: #eaf4ff; }
-.problem-card:nth-child(3) .problem-icon { background: #edf7f4; }
-.problem-card:nth-child(4) .problem-icon { background: #f3f1ff; }
-.problem-card:nth-child(5) .problem-icon { background: #fff3ec; }
-.problem-card:nth-child(6) .problem-icon { background: #f2f4f9; }
+.problem-card:nth-child(1) .problem-icon { background: #e2e6f2; }
+.problem-card:nth-child(2) .problem-icon { background: #dde4f4; }
+.problem-card:nth-child(3) .problem-icon { background: #e1e6f0; }
+.problem-card:nth-child(4) .problem-icon { background: #e4e3f3; }
+.problem-card:nth-child(5) .problem-icon { background: #dfe5ef; }
+.problem-card:nth-child(6) .problem-icon { background: #e1e4ee; }
 
 .problem-icon-image {
   width: var(--problem-icon-size);
