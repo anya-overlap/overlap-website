@@ -832,11 +832,11 @@ a {
 
 .problem-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(216, 72, 72, 0.32);
+  border-color: rgba(216, 72, 72, 0.24);
   background:
-    radial-gradient(circle at 14% 16%, rgba(85, 120, 246, 0.08) 0%, rgba(85, 120, 246, 0) 42%),
-    radial-gradient(circle at 86% 82%, rgba(216, 72, 72, 0.075) 0%, rgba(216, 72, 72, 0) 44%),
-    linear-gradient(130deg, rgba(85, 120, 246, 0.045) 0%, rgba(137, 106, 236, 0.035) 52%, rgba(216, 72, 72, 0.045) 100%),
+    radial-gradient(circle at 14% 16%, rgba(85, 120, 246, 0.055) 0%, rgba(85, 120, 246, 0) 42%),
+    radial-gradient(circle at 86% 82%, rgba(216, 72, 72, 0.05) 0%, rgba(216, 72, 72, 0) 44%),
+    linear-gradient(130deg, rgba(85, 120, 246, 0.03) 0%, rgba(137, 106, 236, 0.022) 52%, rgba(216, 72, 72, 0.03) 100%),
     linear-gradient(180deg, #f4f6fc 0%, #f1f4fb 100%);
 }
 
