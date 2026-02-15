@@ -1064,6 +1064,7 @@ font-size: 18px;
   }
 
   .hero-copy h1 {
+    font-size: clamp(1.95rem, 7vw, 2.45rem);
     margin: 5px 0 4px;
     min-height: calc(2 * 1.2em);
   }
@@ -1212,7 +1213,7 @@ font-size: 18px;
   }
 
   .learn-more-group h3 {
-    font-size: calc(1.8rem * var(--learn-more-font-scale));
+    font-size: calc(clamp(1.2rem, 5.8vw, 1.45rem) * var(--learn-more-font-scale));
     line-height: 1.2;
     margin-bottom: 10px;
   }
