@@ -683,6 +683,7 @@ a {
 }
 
 .learn-more-list {
+  border-top: 1px solid #ced1d8;
   border-bottom: 1px solid #ced1d8;
 }
 
@@ -690,6 +691,10 @@ a {
   width: 100%;
   opacity: 0;
   transform: translateY(10px);
+}
+
+.learn-more-entry + .learn-more-entry {
+  border-top: 1px solid #ced1d8;
 }
 
 .learn-more.reveal-on-scroll.is-visible .learn-more-entry {
@@ -711,7 +716,6 @@ a {
 .learn-more-item {
   width: 100%;
   border: none;
-  border-top: 1px solid #ced1d8;
   background: transparent;
   color: var(--text);
   text-align: left;
