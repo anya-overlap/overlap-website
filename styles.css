@@ -609,7 +609,7 @@ a {
 }
 
 .learn-more-list {
-  border-bottom: 1px solid #b9bcc4;
+  border-bottom: 1px solid #ced1d8;
 }
 
 .learn-more-entry {
@@ -626,7 +626,7 @@ a {
 .learn-more-item {
   width: 100%;
   border: none;
-  border-top: 1px solid #b9bcc4;
+  border-top: 1px solid #ced1d8;
   background: transparent;
   color: var(--text);
   text-align: left;
@@ -659,6 +659,7 @@ a {
 }
 
 .learn-more-item-title {
+  color: #2f3138;
   font-size: calc(clamp(1.16rem, 1.6vw, 1.5rem) * var(--learn-more-font-scale));
   font-weight: 500;
   line-height: 1.25;
