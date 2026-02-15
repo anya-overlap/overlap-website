@@ -612,12 +612,12 @@ a {
   flex-shrink: 0;
 }
 
-.problem-card:nth-child(1) .problem-icon { background: #dee4f3; }
-.problem-card:nth-child(2) .problem-icon { background: #dde4f4; }
-.problem-card:nth-child(3) .problem-icon { background: #dfe5f2; }
-.problem-card:nth-child(4) .problem-icon { background: #dce3f2; }
-.problem-card:nth-child(5) .problem-icon { background: #e0e6f3; }
-.problem-card:nth-child(6) .problem-icon { background: #dbe2f1; }
+.problem-card:nth-child(1) .problem-icon { background: #d9e1f4; }
+.problem-card:nth-child(2) .problem-icon { background: #e3e9f7; }
+.problem-card:nth-child(3) .problem-icon { background: #d7deef; }
+.problem-card:nth-child(4) .problem-icon { background: #e1e5f5; }
+.problem-card:nth-child(5) .problem-icon { background: #dce4f6; }
+.problem-card:nth-child(6) .problem-icon { background: #e6ebf8; }
 
 .problem-icon-image {
   width: var(--problem-icon-size);
