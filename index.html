@@ -253,6 +253,57 @@
           </div>
         </div>
       </section>
+
+      <section class="faq" aria-labelledby="faq-heading">
+        <div class="container">
+          <div class="faq-heading-group">
+            <p class="faq-kicker">Learn more</p>
+            <h2 id="faq-heading">Overlap FAQs</h2>
+          </div>
+          <div class="faq-list" role="list">
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>
+                  <span class="faq-question-title">Why did you create Overlap?</span>
+                  <span class="faq-question-subtitle">There are so many dating apps</span>
+                </span>
+                <span class="faq-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <p class="faq-answer">We built Overlap to prioritize quality matches over endless swiping and help people date with more intention.</p>
+            </article>
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>
+                  <span class="faq-question-title">How does the algorithm work?</span>
+                  <span class="faq-question-subtitle">Do I need to train it?</span>
+                </span>
+                <span class="faq-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <p class="faq-answer">Our matching logic starts with your stated preferences and compatibility signals, so you do not need to train it over weeks of swiping.</p>
+            </article>
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>
+                  <span class="faq-question-title">How will your user base grow?</span>
+                  <span class="faq-question-subtitle">Quality vs quantity</span>
+                </span>
+                <span class="faq-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <p class="faq-answer">We are focused on thoughtful local rollout and product quality so each new member improves, rather than dilutes, matching outcomes.</p>
+            </article>
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>
+                  <span class="faq-question-title">Will you use AI?</span>
+                  <span class="faq-question-subtitle">Since everyone asks...</span>
+                </span>
+                <span class="faq-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <p class="faq-answer">We use technology to support better introductions, but we avoid black-box matching and keep user intent at the center.</p>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="cta">
@@ -363,6 +414,19 @@
           }, transitionMs);
         }, visibleMs + transitionMs);
       }
+
+      const faqQuestions = document.querySelectorAll(".faq-question");
+      faqQuestions.forEach((button) => {
+        button.addEventListener("click", () => {
+          const faqItem = button.closest(".faq-item");
+          if (!faqItem) {
+            return;
+          }
+
+          const isOpen = faqItem.classList.toggle("is-open");
+          button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
     </script>
   </body>
 </html>
