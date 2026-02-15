@@ -593,7 +593,7 @@ a {
 }
 
 .learn-more-group {
-  width: min(100%, 760px);
+  width: min(100%, 680px);
 }
 
 .learn-more-group h3 {
@@ -616,7 +616,7 @@ a {
 }
 
 .learn-more-answer {
-  padding: 0 4px 12px;
+  padding: 0 4px 18px;
   color: #4f5b82;
   font-size: 0.92rem;
   line-height: 1.45;
@@ -633,7 +633,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 10px 4px;
+  padding: 14px 4px;
   cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease;
 }
@@ -1106,7 +1106,7 @@ font-size: 18px;
   }
 
   .learn-more-item {
-    padding: 9px 2px;
+    padding: 12px 2px;
   }
 
   .learn-more-item-title {
@@ -1119,7 +1119,7 @@ font-size: 18px;
 
   .learn-more-answer {
     font-size: 0.78rem;
-    padding: 0 2px 10px;
+    padding: 0 2px 14px;
   }
 
   .learn-more-item-icon {
