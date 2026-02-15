@@ -587,7 +587,7 @@ a {
 .learn-more h2 {
   width: 100%;
   text-align: center;
-  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  font-size: clamp(2.1rem, 3.2vw, 2.9rem);
   font-weight: 400;
   margin-bottom: 24px;
 }
@@ -608,13 +608,13 @@ a {
 }
 
 .learn-more-list {
-  border-bottom: 1px solid rgba(67, 83, 165, 0.45);
+  border-bottom: 1px solid #8A8B8F;
 }
 
 .learn-more-item {
   width: 100%;
   border: none;
-  border-top: 1px solid rgba(67, 83, 165, 0.45);
+  border-top: 1px solid #8A8B8F;
   background: transparent;
   color: var(--text);
   text-align: left;
@@ -638,7 +638,7 @@ a {
 
 .learn-more-item-subtitle {
   color: #1f3fa8;
-  font-size: 1.35rem;
+  font-size: 1.12rem;
   line-height: 1.35;
 }
 
