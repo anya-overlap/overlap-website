@@ -600,6 +600,7 @@ a {
 
 .learn-more {
   --learn-more-font-scale: 0.92;
+  --learn-more-divider-inset: 10px;
   padding: 28px 0 88px;
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
@@ -683,8 +684,25 @@ a {
 }
 
 .learn-more-list {
-  border-top: 1px solid #ced1d8;
-  border-bottom: 1px solid #ced1d8;
+  position: relative;
+}
+
+.learn-more-list::before,
+.learn-more-list::after {
+  content: "";
+  position: absolute;
+  left: var(--learn-more-divider-inset);
+  right: var(--learn-more-divider-inset);
+  height: 1px;
+  background: #ced1d8;
+}
+
+.learn-more-list::before {
+  top: 0;
+}
+
+.learn-more-list::after {
+  bottom: 0;
 }
 
 .learn-more-entry {
@@ -694,7 +712,17 @@ a {
 }
 
 .learn-more-entry + .learn-more-entry {
-  border-top: 1px solid #ced1d8;
+  position: relative;
+}
+
+.learn-more-entry + .learn-more-entry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--learn-more-divider-inset);
+  right: var(--learn-more-divider-inset);
+  height: 1px;
+  background: #ced1d8;
 }
 
 .learn-more.reveal-on-scroll.is-visible .learn-more-entry {
@@ -1244,6 +1272,7 @@ font-size: 18px;
   }
 
   .learn-more {
+    --learn-more-divider-inset: 8px;
     padding: 16px 0 72px;
   }
 
