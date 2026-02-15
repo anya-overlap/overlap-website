@@ -588,7 +588,7 @@ a {
 .learn-more h2 {
   width: 100%;
   text-align: center;
-  font-size: calc(clamp(2.1rem, 3.2vw, 2.9rem) * var(--learn-more-font-scale));
+  font-size: calc(clamp(2rem, 3.05vw, 2.75rem) * var(--learn-more-font-scale));
   font-weight: 400;
   margin-bottom: 24px;
 }
