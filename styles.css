@@ -1168,6 +1168,11 @@ font-size: 18px;
     gap: 16px;
   }
 
+  .matchmaker-left,
+  .matchmaker-right {
+    min-width: 0;
+  }
+
   .steps {
     margin-top: 5px;
     gap: 20px;
@@ -1187,16 +1192,24 @@ font-size: 18px;
   }
 
   .matchmaker-right {
-    padding-inline: 12px;
+    padding-inline: 0;
   }
 
   .phone-carousel {
     width: 100%;
     transform: none;
+    gap: 10px;
   }
 
   .phone-frame {
-    width: min(320px, 100%);
+    width: min(280px, calc(100vw - 72px));
+    margin-inline: auto;
+  }
+
+  .carousel-controls {
+    width: 100%;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   .step-header {
