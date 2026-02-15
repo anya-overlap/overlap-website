@@ -687,6 +687,96 @@ a {
   filter: saturate(1.06);
 }
 
+.faq {
+  padding: 0 0 105px;
+  background: #fff;
+}
+
+.faq .container {
+  max-width: 980px;
+}
+
+.faq-heading-group {
+  margin-bottom: 30px;
+}
+
+.faq-kicker {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 4.2vw, 3.7rem);
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.faq-heading-group h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+  color: #131313;
+}
+
+.faq-list {
+  border-top: 1px solid rgba(88, 123, 246, 0.7);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(88, 123, 246, 0.7);
+}
+
+.faq-question {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  padding: 12px 4px 9px;
+  cursor: pointer;
+}
+
+.faq-question-title {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.45rem, 2.1vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.22;
+  color: #131313;
+}
+
+.faq-question-subtitle {
+  display: block;
+  color: var(--blue-dark);
+  font-size: clamp(1rem, 1.35vw, 1.42rem);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.faq-chevron {
+  color: var(--blue);
+  font-size: 1.35rem;
+  line-height: 1;
+  transition: transform 220ms ease;
+}
+
+.faq-answer {
+  display: none;
+  color: #4f4f4f;
+  margin: 0;
+  padding: 0 4px 14px;
+  max-width: 85ch;
+}
+
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-item.is-open .faq-answer {
+  display: block;
+}
+
 .cta {
   background: linear-gradient(140deg, #4d68df 0%, #587bf6 56%, #6b8cff 100%);
   color: #fff;
@@ -751,6 +841,10 @@ font-size: 18px;
   .problems {
     padding: 72px 0 106px;
    
+  }
+
+  .faq {
+    padding: 0 0 82px;
   }
 
   .cta {
@@ -973,6 +1067,27 @@ font-size: 18px;
 
   .problems {
     padding: 24px 0 54px;
+  }
+
+  .faq {
+    padding: 0 0 42px;
+  }
+
+  .faq-kicker {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+    margin-bottom: 4px;
+  }
+
+  .faq-heading-group {
+    margin-bottom: 12px;
+  }
+
+  .faq-question {
+    padding: 10px 2px 8px;
+  }
+
+  .faq-answer {
+    padding: 0 2px 11px;
   }
 
   .hero-cards {
