@@ -351,7 +351,7 @@ a {
 }
 
 .matchmaker-left {
-  --matchmaker-step-offset: clamp(12px, 4vw, 50px);
+  --matchmaker-step-offset: clamp(8px, 3vw, 36px);
 }
 
 .divider {
