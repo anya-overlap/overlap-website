@@ -672,7 +672,7 @@ a {
 
 .learn-more-item-copy {
   display: grid;
-  gap: 1px;
+  gap: 3px;
 }
 
 .learn-more-item-title {
@@ -694,7 +694,7 @@ a {
   justify-content: center;
   line-height: 1;
   transform: translateY(-2px) rotate(0deg);
-  transition: transform 280ms ease;
+  transition: transform 320ms ease;
 }
 
 .learn-more-item-icon-image {
