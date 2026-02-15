@@ -694,7 +694,7 @@ a {
   justify-content: center;
   line-height: 1;
   transform: translateY(-2px) rotate(0deg);
-  transition: transform 180ms ease;
+  transition: transform 280ms ease;
 }
 
 .learn-more-item-icon-image {
@@ -704,7 +704,7 @@ a {
 }
 
 .learn-more-item[aria-expanded="true"] .learn-more-item-icon {
-  transform: translateY(-2px) rotate(180deg);
+  transform: translateY(-2px) rotate(-180deg);
 }
 
 @keyframes learn-more-entry-in {
