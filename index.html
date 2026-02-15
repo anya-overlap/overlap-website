@@ -504,6 +504,11 @@
         }, visibleMs + transitionMs);
       }
 
+      const learnMoreEntries = Array.from(document.querySelectorAll(".learn-more-entry"));
+      learnMoreEntries.forEach((entry, index) => {
+        entry.style.setProperty("--learn-more-entry-delay", `${index * 45}ms`);
+      });
+
       const learnMoreItems = Array.from(document.querySelectorAll(".learn-more-item"));
       learnMoreItems.forEach((item) => {
         item.addEventListener("click", () => {
@@ -512,6 +517,12 @@
           item.setAttribute("aria-expanded", isExpanded ? "false" : "true");
           if (answer && answer.classList.contains("learn-more-answer")) {
             answer.hidden = isExpanded;
+            if (!isExpanded) {
+              answer.classList.remove("is-opening");
+              window.requestAnimationFrame(() => {
+                answer.classList.add("is-opening");
+              });
+            }
           }
         });
       });
