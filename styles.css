@@ -324,7 +324,7 @@ a {
 }
 
 .matchmaker {
-  padding: 118px 0;
+  padding: 118px 0 74px;
   background: rgba(255, 255, 255, 0.68);
   backdrop-filter: blur(1px);
 }
@@ -542,7 +542,7 @@ a {
 }
 
 .problems {
-  padding: 118px 0 130px;
+  padding: 86px 0 130px;
   background: #fff;
 }
 
@@ -605,12 +605,19 @@ a {
   width: var(--problem-icon-circle-size);
   height: var(--problem-icon-circle-size);
   border-radius: 50%;
-  background: #e0e0e0;
+  background: #eef1f7;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
+
+.problem-card:nth-child(1) .problem-icon { background: #eef1ff; }
+.problem-card:nth-child(2) .problem-icon { background: #eaf4ff; }
+.problem-card:nth-child(3) .problem-icon { background: #edf7f4; }
+.problem-card:nth-child(4) .problem-icon { background: #f3f1ff; }
+.problem-card:nth-child(5) .problem-icon { background: #fff3ec; }
+.problem-card:nth-child(6) .problem-icon { background: #f2f4f9; }
 
 .problem-icon-image {
   width: var(--problem-icon-size);
@@ -690,11 +697,11 @@ font-size: 18px;
 
 @media (max-width: 900px) {
   .matchmaker {
-    padding: 94px 0;
+    padding: 94px 0 60px;
   }
 
   .problems {
-    padding: 94px 0 106px;
+    padding: 72px 0 106px;
    
   }
 
@@ -913,7 +920,7 @@ font-size: 18px;
   }
 
   .problems {
-    padding: 32px 0 54px;
+    padding: 24px 0 54px;
   }
 
   .hero-cards {
