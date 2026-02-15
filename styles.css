@@ -376,29 +376,28 @@ a {
 .steps {
   margin-top: 65px;
   display: grid;
-  gap: 22px;
+  gap: 48px;
   width: calc(100% - var(--matchmaker-step-offset));
 }
 
 .step {
-  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  background: #fff;
   padding: 18px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
-  border: 1px solid #e7eaf3;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--border);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .step:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.07);
-  border-color: #dce2f4;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.09);
 }
 
 .step-number {
   font-size: 3.4rem;
   line-height: 3.1rem;
-  color: #d0d7ec;
+  color: #D1D5E5;
   font-weight: 600;
  
 }
