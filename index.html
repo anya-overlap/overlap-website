@@ -72,7 +72,7 @@
     </header>
 
     <main>
-      <section id="how" class="matchmaker">
+      <section id="how" class="matchmaker reveal-on-scroll">
         <div class="container">
           <div class="section-heading">
             <h2>Matchmaker in your pocket</h2>
@@ -164,7 +164,7 @@
         </div>
       </section>
 
-      <section id="problems" class="problems">
+      <section id="problems" class="problems reveal-on-scroll">
         <div class="container">
           <div class="section-heading">
             <h2>Current problems with dating</h2>
@@ -279,6 +279,32 @@
       </div>
     </footer>
     <script>
+      const revealItems = Array.from(document.querySelectorAll(".reveal-on-scroll"));
+      const canAnimate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!canAnimate) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      } else if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.15,
+            rootMargin: "0px 0px -8% 0px",
+          }
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+
       const phoneCarousel = document.querySelector(".phone-carousel");
       if (phoneCarousel) {
         const track = phoneCarousel.querySelector(".carousel-track");
