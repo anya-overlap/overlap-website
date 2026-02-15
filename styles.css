@@ -585,7 +585,7 @@ a {
 .learn-more {
   --learn-more-font-scale: 0.92;
   padding: 28px 0 120px;
-  background: #f3f3f3;
+  background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
 }
 
 .learn-more-container {
