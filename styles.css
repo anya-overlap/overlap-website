@@ -615,9 +615,9 @@ a {
 }
 
 .problem-card:hover {
-  transform: translateY(-1px);
-  border-color: #d5defb;
-  background: linear-gradient(180deg, #f5f7fd 0%, #f2f4fb 100%);
+  transform: translateY(-2px);
+  border-color: #cfd9f7;
+  background: linear-gradient(180deg, #f1f4fd 0%, #ebeffa 100%);
 }
 
 .problem-header {
@@ -684,8 +684,8 @@ a {
 }
 
 .problem-card:hover .problem-icon {
-  transform: scale(1.04);
-  filter: saturate(1.05);
+  transform: none;
+  filter: saturate(1.06);
 }
 
 .cta {
