@@ -595,24 +595,6 @@ a {
 
 .learn-more-group {
   width: min(100%, 600px);
-  padding: 18px 18px 10px;
-  border: 1px solid #dde2f0;
-  border-radius: 14px;
-  background: linear-gradient(180deg, #fbfcff 0%, #f7f9ff 100%);
-  box-shadow: 0 10px 24px rgba(48, 64, 135, 0.06);
-  position: relative;
-}
-
-.learn-more-group::before {
-  content: "";
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  top: 0;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #587bf6 0%, #8aa2ff 100%);
-  opacity: 0.55;
 }
 
 .learn-more-group h3 {
@@ -626,9 +608,6 @@ a {
   margin-top: 74px;
 }
 
-.learn-more-group--secondary::before {
-  background: linear-gradient(90deg, #4353a5 0%, #7286dd 100%);
-}
 
 .learn-more-list {
   border-bottom: 1px solid #ced1d8;
@@ -1172,15 +1151,6 @@ font-size: 18px;
     margin-top: 60px;
   }
 
-  .learn-more-group {
-    padding: 14px 12px 8px;
-    border-radius: 12px;
-  }
-
-  .learn-more-group::before {
-    left: 12px;
-    right: 12px;
-  }
 
   .learn-more-item {
     padding: 12px 2px;
