@@ -76,7 +76,7 @@ a {
 }
 
 .hero {
-  padding: 48px 0 80px;
+  padding: 40px 0 80px;
   background: transparent;
 }
 
@@ -90,6 +90,7 @@ a {
 .logo {
   display: inline-flex;
   align-items: center;
+  transform: translateY(3px);
 }
 
 .logo img {
@@ -111,6 +112,7 @@ a {
   display: flex;
   gap: 34px;
   font-size: 0.95rem;
+  transform: translateY(3px);
 }
 
 .nav-links a {
