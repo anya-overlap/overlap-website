@@ -594,7 +594,7 @@ a {
 }
 
 .learn-more-group {
-  width: min(100%, 620px);
+  width: min(100%, 600px);
 }
 
 .learn-more-group h3 {
@@ -609,7 +609,7 @@ a {
 }
 
 .learn-more-list {
-  border-bottom: 1px solid #8A8B8F;
+  border-bottom: 1px solid #b9bcc4;
 }
 
 .learn-more-entry {
@@ -617,7 +617,7 @@ a {
 }
 
 .learn-more-answer {
-  padding: 0 4px 18px;
+  padding: 8px 4px 18px;
   color: #4f5b82;
   font-size: calc(0.92rem * var(--learn-more-font-scale));
   line-height: 1.45;
@@ -626,7 +626,7 @@ a {
 .learn-more-item {
   width: 100%;
   border: none;
-  border-top: 1px solid #8A8B8F;
+  border-top: 1px solid #b9bcc4;
   background: transparent;
   color: var(--text);
   text-align: left;
@@ -1120,7 +1120,7 @@ font-size: 18px;
 
   .learn-more-answer {
     font-size: calc(0.78rem * var(--learn-more-font-scale));
-    padding: 0 2px 14px;
+    padding: 6px 2px 14px;
   }
 
   .learn-more-item-icon {
