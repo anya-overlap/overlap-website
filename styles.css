@@ -624,6 +624,22 @@ a {
   gap: 20px;
   padding: 10px 4px;
   cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.learn-more-item:hover,
+.learn-more-item:focus-visible {
+  background: rgba(88, 123, 246, 0.08);
+}
+
+.learn-more-item:hover .learn-more-item-subtitle,
+.learn-more-item:focus-visible .learn-more-item-subtitle {
+  color: #1a3288;
+}
+
+.learn-more-item:hover .learn-more-item-icon,
+.learn-more-item:focus-visible .learn-more-item-icon {
+  color: #4353A5;
 }
 
 .learn-more-item-copy {
@@ -638,7 +654,7 @@ a {
 
 .learn-more-item-subtitle {
   color: #1f3fa8;
-  font-size: 1.12rem;
+  font-size: 0.92rem;
   line-height: 1.35;
 }
 
@@ -647,7 +663,7 @@ a {
   font-size: 1.65rem;
   line-height: 1;
   transform: translateY(-2px) rotate(0deg);
-  transition: transform 180ms ease;
+  transition: transform 180ms ease, color 160ms ease;
 }
 
 .learn-more-item[aria-expanded="true"] .learn-more-item-icon {
@@ -1087,7 +1103,7 @@ font-size: 18px;
   }
 
   .learn-more-item-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.82rem;
   }
 
   .learn-more-item-icon {
