@@ -588,7 +588,7 @@ a {
 
 .learn-more {
   --learn-more-font-scale: 0.92;
-  padding: 28px 0 120px;
+  padding: 28px 0 88px;
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
@@ -607,12 +607,12 @@ a {
   text-align: center;
   font-size: calc(clamp(2rem, 3.05vw, 2.75rem) * var(--learn-more-font-scale));
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 
 }
 
 .learn-more-group {
-  width: min(100%, 600px);
+  width: min(100%, 620px);
 }
 
 .learn-more-group h3 {
@@ -624,9 +624,51 @@ a {
 }
 
 .learn-more-group--secondary {
-  margin-top: 74px;
+  margin-top: 18px;
 }
 
+.learn-more-secondary-wrap {
+  width: min(100%, 620px);
+  margin-top: 28px;
+}
+
+.learn-more-secondary-toggle {
+  width: 100%;
+  border: 1px solid #ced8f5;
+  border-radius: 10px;
+  background: rgba(88, 123, 246, 0.08);
+  color: #1f3fa8;
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.learn-more-secondary-toggle:hover,
+.learn-more-secondary-toggle:focus-visible {
+  background: rgba(88, 123, 246, 0.14);
+}
+
+.learn-more-secondary-toggle::after {
+  content: "Show";
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: #3156c7;
+}
+
+.learn-more-secondary-toggle[aria-expanded="true"]::after {
+  content: "Hide";
+}
 
 .learn-more-list {
   border-bottom: 1px solid #ced1d8;
@@ -664,8 +706,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 12px 4px;
+  gap: 16px;
+  padding: 10px 4px;
   cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease;
 }
@@ -1171,10 +1213,18 @@ font-size: 18px;
     margin-bottom: 10px;
   }
 
-  .learn-more-group--secondary {
-    margin-top: 60px;
+  .learn-more-secondary-wrap {
+    margin-top: 20px;
   }
 
+  .learn-more-secondary-toggle {
+    font-size: 0.84rem;
+    padding: 9px 12px;
+  }
+
+  .learn-more-group--secondary {
+    margin-top: 14px;
+  }
 
   .learn-more-item {
     padding: 10px 2px;
