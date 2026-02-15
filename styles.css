@@ -3,8 +3,8 @@
   --blue: #587BF6;
   --blue-dark: #4353A5;
   --blue-soft: #eef2ff;
-  --surface: #fbfcff;
-  --surface-strong: #edf1ff;
+  --surface: #f7f8fc;
+  --surface-strong: #f4f6fb;
   --text: #131313;
   --muted: #6b6b6b;
   --border: #e6e6e6;
@@ -573,7 +573,7 @@ a {
 }
 
 .problem-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   border-color: #d5defb;
 }
 
