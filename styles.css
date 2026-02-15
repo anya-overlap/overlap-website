@@ -3,8 +3,8 @@
   --blue: #587BF6;
   --blue-dark: #4353A5;
   --blue-soft: #eef2ff;
-  --surface: #f8f9ff;
-  --surface-strong: #f3f5ff;
+  --surface: #fbfcff;
+  --surface-strong: #edf1ff;
   --text: #131313;
   --muted: #6b6b6b;
   --border: #e6e6e6;
@@ -155,7 +155,6 @@ a {
   margin: 10px 0 16px;
   line-height: 1.2;
   min-height: calc(2 * 1.2em);
-  max-width: 13ch;
 }
 
 .hero-tagline {
