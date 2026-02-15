@@ -2,6 +2,9 @@
   color-scheme: light;
   --blue: #587BF6;
   --blue-dark: #4353A5;
+  --blue-soft: #eef2ff;
+  --surface: #f7f8fc;
+  --surface-strong: #f4f6fb;
   --text: #131313;
   --muted: #6b6b6b;
   --border: #e6e6e6;
@@ -19,12 +22,25 @@
 body {
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background: #fff;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(88, 123, 246, 0.08) 0%, rgba(88, 123, 246, 0) 38%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
   line-height: 1.6;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container {
@@ -61,7 +77,7 @@ a {
 
 .hero {
   padding: 48px 0 80px;
-  background: #fff;
+  background: transparent;
 }
 
 .nav {
@@ -95,6 +111,16 @@ a {
   display: flex;
   gap: 34px;
   font-size: 0.95rem;
+}
+
+.nav-links a {
+  opacity: 0.78;
+  letter-spacing: 0.01em;
+  transition: opacity 180ms ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
 }
 
 .menu-toggle {
@@ -156,6 +182,10 @@ a {
   max-width: 420px;
 }
 
+.hero-copy {
+  max-width: 560px;
+}
+
 .pill {
   background: var(--blue);
   color: #fff;
@@ -199,7 +229,7 @@ a {
   position: relative;
   overflow: hidden;
   background-color: var(--white);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.14);
 }
 
 .profile-card img {
@@ -289,10 +319,15 @@ a {
 
 .section-heading {
   margin-bottom: 42px;
+  max-width: 640px;
 }
 
 .section-heading h2 {
   font-size: clamp(2.3rem, 3vw, 2.8rem);
+}
+
+.section-heading p {
+  max-width: 34ch;
 }
 
 .matchmaker-mobile-subtext {
@@ -300,8 +335,9 @@ a {
 }
 
 .matchmaker {
-  padding: 105px 0;
-  background: #fbfbfb;
+  padding: 118px 0 74px;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(1px);
 }
 
 .matchmaker-grid {
@@ -350,6 +386,12 @@ a {
   border-radius: 10px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
   border: 1px solid var(--border);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.09);
 }
 
 .step-number {
@@ -482,12 +524,23 @@ a {
   border: none;
   background: var(--blue-dark);
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.45rem;
+  font-weight: 500;
   line-height: 1;
   display: grid;
   place-items: center;
   cursor: pointer;
   box-shadow: 0 8px 16px rgba(15, 23, 42, 0.15);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.carousel-arrow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+}
+
+.carousel-arrow:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .carousel-pagination {
@@ -504,6 +557,11 @@ a {
   border: none;
   background: #e1e1e1;
   cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.pagination-dot:hover {
+  transform: scale(1.1);
 }
 
 .pagination-dot.is-active {
@@ -511,14 +569,28 @@ a {
 }
 
 .problems {
-  padding: 105px 0 120px;
+  padding: 86px 0 130px;
   background: #fff;
 }
 
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 24px;
+  position: relative;
+  isolation: isolate;
+}
+
+.problem-grid::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 240px;
+  right: -80px;
+  top: -32px;
+  background: radial-gradient(circle, rgba(88, 123, 246, 0.12) 0%, rgba(88, 123, 246, 0) 72%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .problem-card {
@@ -533,11 +605,18 @@ a {
   --problem-icon-compact-size: 22px;
   --problem-icon-gauge-margin: 5px;
   --problem-header-spacing: 16px;
-  background: var(--card);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
   padding: var(--problem-card-padding);
   padding-top: var(--problem-card-padding-top);
   border-radius: 10px;
   border: 1px solid var(--border);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-2px);
+  border-color: #cfd9f7;
+  background: linear-gradient(180deg, #f1f4fd 0%, #ebeffa 100%);
 }
 
 .problem-header {
@@ -568,12 +647,20 @@ a {
   width: var(--problem-icon-circle-size);
   height: var(--problem-icon-circle-size);
   border-radius: 50%;
-  background: #e0e0e0;
+  background: #e3e6ef;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform 180ms ease, filter 180ms ease;
 }
+
+.problem-card:nth-child(1) .problem-icon { background: #dee4f3; }
+.problem-card:nth-child(2) .problem-icon { background: #dde4f4; }
+.problem-card:nth-child(3) .problem-icon { background: #dfe5f2; }
+.problem-card:nth-child(4) .problem-icon { background: #dce3f2; }
+.problem-card:nth-child(5) .problem-icon { background: #e0e6f3; }
+.problem-card:nth-child(6) .problem-icon { background: #dbe2f1; }
 
 .problem-icon-image {
   width: var(--problem-icon-size);
@@ -592,11 +679,16 @@ a {
 .problem-card p {
   font-size: var(--problem-body-size);
   color: var(--blue-dark);
-  line-height: var(--problem-body-line-height);
+  line-height: 1.35rem;
+}
+
+.problem-card:hover .problem-icon {
+  transform: none;
+  filter: saturate(1.06);
 }
 
 .cta {
-  background: var(--blue);
+  background: linear-gradient(140deg, #4d68df 0%, #587bf6 56%, #6b8cff 100%);
   color: #fff;
   padding: 60px 0;
 }
@@ -643,13 +735,21 @@ font-size: 18px;
   height: 50px;
 }
 
+.store-badge-link {
+  transition: transform 180ms ease;
+}
+
+.store-badge-link:hover {
+  transform: translateY(-1px);
+}
+
 @media (max-width: 900px) {
   .matchmaker {
-    padding: 84px 0;
+    padding: 94px 0 60px;
   }
 
   .problems {
-    padding: 84px 0 96px;
+    padding: 72px 0 106px;
    
   }
 
@@ -842,6 +942,10 @@ font-size: 18px;
     padding-bottom: 22px;
   }
 
+  .problem-grid::before {
+    display: none;
+  }
+
   .step {
     padding: 14px;
     border-radius: 8px;
@@ -868,7 +972,7 @@ font-size: 18px;
   }
 
   .problems {
-    padding: 32px 0 54px;
+    padding: 24px 0 54px;
   }
 
   .hero-cards {
@@ -881,5 +985,21 @@ font-size: 18px;
 
   .problem-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
   }
 }
