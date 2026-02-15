@@ -192,7 +192,7 @@ a {
 }
 
 .pill {
-  background: var(--blue);
+  background: linear-gradient(100deg, #4c57ad 0%, #d04c4d 100%);
   color: #fff;
   padding: 5px 10px;
   border-radius: 999px;
