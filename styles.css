@@ -2,6 +2,7 @@
   color-scheme: light;
   --blue: #587BF6;
   --blue-dark: #4353A5;
+  --blue-soft: #eef2ff;
   --text: #131313;
   --muted: #6b6b6b;
   --border: #e6e6e6;
@@ -19,7 +20,9 @@
 body {
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background: #fff;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(88, 123, 246, 0.08) 0%, rgba(88, 123, 246, 0) 38%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
   line-height: 1.6;
 }
 
@@ -61,7 +64,7 @@ a {
 
 .hero {
   padding: 48px 0 80px;
-  background: #fff;
+  background: transparent;
 }
 
 .nav {
@@ -95,6 +98,15 @@ a {
   display: flex;
   gap: 34px;
   font-size: 0.95rem;
+}
+
+.nav-links a {
+  opacity: 0.78;
+  transition: opacity 180ms ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
 }
 
 .menu-toggle {
@@ -156,6 +168,10 @@ a {
   max-width: 420px;
 }
 
+.hero-copy {
+  max-width: 560px;
+}
+
 .pill {
   background: var(--blue);
   color: #fff;
@@ -199,7 +215,7 @@ a {
   position: relative;
   overflow: hidden;
   background-color: var(--white);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.14);
 }
 
 .profile-card img {
@@ -301,7 +317,8 @@ a {
 
 .matchmaker {
   padding: 105px 0;
-  background: #fbfbfb;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(1px);
 }
 
 .matchmaker-grid {
@@ -350,6 +367,12 @@ a {
   border-radius: 10px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
   border: 1px solid var(--border);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.09);
 }
 
 .step-number {
@@ -538,6 +561,12 @@ a {
   padding-top: var(--problem-card-padding-top);
   border-radius: 10px;
   border: 1px solid var(--border);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-2px);
+  border-color: #d5defb;
 }
 
 .problem-header {
@@ -596,7 +625,7 @@ a {
 }
 
 .cta {
-  background: var(--blue);
+  background: linear-gradient(140deg, #4d68df 0%, #587bf6 56%, #6b8cff 100%);
   color: #fff;
   padding: 60px 0;
 }
