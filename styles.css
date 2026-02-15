@@ -731,12 +731,12 @@ a {
 .learn-more-item:hover,
 .learn-more-item:focus-visible {
   background: rgba(88, 123, 246, 0.08);
-  border-radius: 14px;
+  border-radius: 10px;
 }
 
 .learn-more-item[aria-expanded="true"] {
   background: rgba(88, 123, 246, 0.12);
-  border-radius: 14px;
+  border-radius: 10px;
 }
 
 .learn-more-item:hover .learn-more-item-subtitle,
