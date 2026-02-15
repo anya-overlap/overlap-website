@@ -911,7 +911,9 @@ a {
 }
 
 .cta {
-  background: linear-gradient(140deg, rgba(77, 104, 223, 0.94) 0%, rgba(88, 123, 246, 0.92) 56%, rgba(107, 140, 255, 0.9) 100%);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 34%),
+    linear-gradient(140deg, rgba(77, 104, 223, 0.82) 0%, rgba(88, 123, 246, 0.76) 56%, rgba(107, 140, 255, 0.72) 100%);
   color: #fff;
   padding: 60px 0;
   margin: 0 10px 10px;
