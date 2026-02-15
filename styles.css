@@ -643,6 +643,10 @@ a {
   font-weight: 500;
   letter-spacing: 0.01em;
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding: 10px 14px;
   cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease;
@@ -655,7 +659,9 @@ a {
 
 .learn-more-secondary-toggle::after {
   content: "Show";
-  float: right;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
   font-size: 0.78rem;
   color: #3156c7;
 }
