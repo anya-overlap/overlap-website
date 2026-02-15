@@ -548,7 +548,8 @@ a {
   border: none;
   background: var(--blue-dark);
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.45rem;
+  font-weight: 500;
   line-height: 1;
   display: grid;
   place-items: center;
@@ -633,12 +634,13 @@ a {
   padding-top: var(--problem-card-padding-top);
   border-radius: 10px;
   border: 1px solid var(--border);
-  transition: transform 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .problem-card:hover {
   transform: translateY(-1px);
   border-color: #d5defb;
+  background: linear-gradient(180deg, #f5f7fd 0%, #f2f4fb 100%);
 }
 
 .problem-header {
