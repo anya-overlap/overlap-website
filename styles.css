@@ -254,6 +254,19 @@ a {
   transform: translateY(4.3%);
 }
 
+.profile-card.muted::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.45) 76%,
+    rgba(255, 255, 255, 0.92) 100%
+  );
+}
+
 .profile-photo {
   height: 100%;
   background-size: cover;
