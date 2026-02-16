@@ -252,21 +252,30 @@ a {
 
 .profile-card.muted {
   transform: translateY(4.3%);
+  overflow: visible;
+}
+
+.profile-card.muted img {
+  border-radius: inherit;
+  display: block;
 }
 
 .profile-card.muted::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -18px;
   pointer-events: none;
+  border-radius: clamp(14px, 5%, 18px);
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0) 36%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.72) 72%,
-    rgba(255, 255, 255, 0.96) 90%,
+    rgba(255, 255, 255, 0) 34%,
+    rgba(255, 255, 255, 0.24) 50%,
+    rgba(255, 255, 255, 0.74) 72%,
+    rgba(255, 255, 255, 0.97) 90%,
     rgba(255, 255, 255, 1) 100%
   );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .profile-photo {
