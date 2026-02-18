@@ -352,6 +352,11 @@ a {
   font-size: clamp(2.3rem, 3vw, 2.8rem);
 }
 
+.matchmaker .section-heading h2,
+.problems .section-heading h2 {
+  font-size: clamp(2.05rem, 2.5vw, 2.45rem);
+}
+
 .section-heading p {
   max-width: 34ch;
 }
@@ -610,13 +615,13 @@ a {
 }
 
 .problems {
-  padding: 46px 0 70px;
+  padding: clamp(52px, 6vw, 86px) 0 clamp(78px, 8vw, 126px);
 
 }
 
 .learn-more {
   --learn-more-font-scale: 0.92;
-  padding: 28px 0 88px;
+  padding: clamp(38px, 4vw, 68px) 0 clamp(102px, 9vw, 154px);
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
@@ -635,7 +640,7 @@ a {
   text-align: center;
   font-size: calc(clamp(2rem, 3.05vw, 2.75rem) * var(--learn-more-font-scale));
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: clamp(16px, 2vw, 28px);
 
 }
 
@@ -1023,6 +1028,11 @@ font-size: 18px;
     font-size: 2.05rem;
   }
 
+  .matchmaker .section-heading h2,
+  .problems .section-heading h2 {
+    font-size: clamp(1.78rem, 8vw, 1.92rem);
+  }
+
   .matchmaker-mobile-subtext {
     display: block;
     color: var(--blue);
@@ -1069,6 +1079,10 @@ font-size: 18px;
     flex-direction: column;
     gap: 12px;
     z-index: 30;
+  }
+
+  .nav-links a {
+    opacity: 1;
   }
 
   .nav-links.is-open {
@@ -1285,15 +1299,15 @@ font-size: 18px;
   }
 
   .learn-more-item-title {
-    font-size: calc(1.05rem * var(--learn-more-font-scale));
+    font-size: calc(1.14rem * var(--learn-more-font-scale));
   }
 
   .learn-more-item-subtitle {
-    font-size: calc(0.74rem * var(--learn-more-font-scale));
+    font-size: calc(0.8rem * var(--learn-more-font-scale));
   }
 
   .learn-more-answer {
-    font-size: calc(0.78rem * var(--learn-more-font-scale));
+    font-size: calc(0.84rem * var(--learn-more-font-scale));
     padding: 6px 2px 14px;
   }
 
