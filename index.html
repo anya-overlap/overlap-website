@@ -518,16 +518,19 @@
 
       const menuToggleButton = document.querySelector(".menu-toggle");
       const siteNavLinks = document.querySelector(".nav-links");
+      const siteNav = document.querySelector(".nav");
       const heroTagline = document.querySelector("#hero-tagline");
 
-      if (menuToggleButton && siteNavLinks) {
+      if (menuToggleButton && siteNavLinks && siteNav) {
         const closeMobileNav = () => {
           siteNavLinks.classList.remove("is-open");
+          siteNav.classList.remove("is-menu-open");
           menuToggleButton.setAttribute("aria-expanded", "false");
         };
 
         menuToggleButton.addEventListener("click", () => {
           const isOpen = siteNavLinks.classList.toggle("is-open");
+          siteNav.classList.toggle("is-menu-open", isOpen);
           menuToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
 
