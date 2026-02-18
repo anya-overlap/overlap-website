@@ -610,13 +610,13 @@ a {
 }
 
 .problems {
-  padding: 46px 0 70px;
+  padding: clamp(52px, 6vw, 86px) 0 clamp(78px, 8vw, 126px);
 
 }
 
 .learn-more {
   --learn-more-font-scale: 0.92;
-  padding: 28px 0 88px;
+  padding: clamp(38px, 4vw, 68px) 0 clamp(102px, 9vw, 154px);
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
@@ -635,7 +635,7 @@ a {
   text-align: center;
   font-size: calc(clamp(2rem, 3.05vw, 2.75rem) * var(--learn-more-font-scale));
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: clamp(16px, 2vw, 28px);
 
 }
 
