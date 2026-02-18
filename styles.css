@@ -1081,6 +1081,10 @@ font-size: 18px;
     z-index: 30;
   }
 
+  .nav-links a {
+    opacity: 1;
+  }
+
   .nav-links.is-open {
     display: flex;
   }
