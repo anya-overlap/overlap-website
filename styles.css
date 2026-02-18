@@ -1351,7 +1351,7 @@ font-size: 18px;
   }
 
   .learn-more-item-subtitle {
-    font-size: calc(0.84rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+    font-size: calc(0.88rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   }
 
   .learn-more-answer {
