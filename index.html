@@ -534,9 +534,43 @@
           menuToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
 
+        const scrollToSection = (targetId) => {
+          if (!targetId) {
+            return;
+          }
+
+          const targetSection = document.querySelector(targetId);
+          if (!targetSection) {
+            return;
+          }
+
+          const navOffset = siteNav.getBoundingClientRect().height + 10;
+          const targetTop = window.scrollY + targetSection.getBoundingClientRect().top - navOffset;
+          window.scrollTo({
+            top: Math.max(targetTop, 0),
+            behavior: "smooth",
+          });
+        };
+
         siteNavLinks.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
+          link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href");
+            if (!targetId?.startsWith("#")) {
+              closeMobileNav();
+              return;
+            }
+
+            event.preventDefault();
             closeMobileNav();
+
+            if (window.innerWidth <= 768) {
+              window.setTimeout(() => {
+                scrollToSection(targetId);
+              }, 290);
+              return;
+            }
+
+            scrollToSection(targetId);
           });
         });
 
