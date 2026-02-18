@@ -521,6 +521,11 @@
       const heroTagline = document.querySelector("#hero-tagline");
 
       if (menuToggleButton && siteNavLinks) {
+        const closeMobileNav = () => {
+          siteNavLinks.classList.remove("is-open");
+          menuToggleButton.setAttribute("aria-expanded", "false");
+        };
+
         menuToggleButton.addEventListener("click", () => {
           const isOpen = siteNavLinks.classList.toggle("is-open");
           menuToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
@@ -528,9 +533,20 @@
 
         siteNavLinks.querySelectorAll("a").forEach((link) => {
           link.addEventListener("click", () => {
-            siteNavLinks.classList.remove("is-open");
-            menuToggleButton.setAttribute("aria-expanded", "false");
+            closeMobileNav();
           });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMobileNav();
+          }
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 768) {
+            closeMobileNav();
+          }
         });
       }
 
