@@ -37,14 +37,9 @@ html {
 }
 
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 500ms ease, transform 500ms ease;
-}
-
-.reveal-on-scroll.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: none;
 }
 
 .container {

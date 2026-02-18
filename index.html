@@ -445,32 +445,6 @@
       </div>
     </footer>
     <script>
-      const revealItems = Array.from(document.querySelectorAll(".reveal-on-scroll"));
-      const canAnimate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (!canAnimate) {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      } else if ("IntersectionObserver" in window) {
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: 0.15,
-            rootMargin: "0px 0px -8% 0px",
-          }
-        );
-
-        revealItems.forEach((item) => revealObserver.observe(item));
-      } else {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      }
-
       const phoneCarousel = document.querySelector(".phone-carousel");
       if (phoneCarousel) {
         const track = phoneCarousel.querySelector(".carousel-track");
