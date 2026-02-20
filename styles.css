@@ -787,7 +787,7 @@ a {
 
 .learn-more-item-title {
   color: #2f3138;
-  font-size: calc(clamp(1.16rem, 1.6vw, 1.5rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+  font-size: calc(clamp(1.02rem, 1.25vw, 1.26rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   font-weight: 500;
   line-height: 1.2;
 }
