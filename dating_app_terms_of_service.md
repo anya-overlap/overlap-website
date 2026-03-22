@@ -201,9 +201,8 @@ These Terms are governed by the laws of New York, without regard to conflict of 
 
 If you have questions about these Terms, contact us at:
 
-anya@tryoverlap.app
+contact@tryoverlap.app
 
 ---
 
 **By using Overlap, you acknowledge that you have read and agree to these Terms of Service.**
-

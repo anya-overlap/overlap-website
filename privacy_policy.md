@@ -177,4 +177,4 @@ Your continued use of the Service after the effective date of an updated Privacy
 If you have questions or requests relating to this Privacy Policy, you may contact us at:
 
 Overlap
-anya@tryoverlap.app
+contact@tryoverlap.app
