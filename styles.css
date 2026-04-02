@@ -1520,11 +1520,11 @@ font-size: 18px;
   }
 
   .learn-more-item-title {
-    font-size: calc(1.14rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+    font-size: calc(1.05rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   }
 
   .learn-more-item-subtitle {
-    font-size: calc(0.88rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+    font-size: calc(0.8rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   }
 
   .learn-more-answer {
