@@ -395,7 +395,7 @@ a {
 }
 
 .section-heading {
-  margin-bottom: 42px;
+  margin-bottom: 37px;
   max-width: 640px;
 }
 
@@ -1219,7 +1219,7 @@ font-size: 18px;
 
   .matchmaker {
     padding-top: calc(var(--section-space-top) - 8px);
-    padding-bottom: calc(var(--section-space-bottom-tight) - 8px);
+    padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
   }
 
   .problems {
@@ -1489,6 +1489,7 @@ font-size: 18px;
     width: 100%;
     transform: none;
     gap: 10px;
+    margin-bottom: 10px;
   }
 
   .phone-frame {
