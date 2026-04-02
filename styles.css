@@ -1217,6 +1217,12 @@ font-size: 18px;
     --section-space-bottom-loose: var(--section-space-mobile-bottom-loose);
   }
 
+  h1,
+  h2,
+  h3 {
+    line-height: 1.15;
+  }
+
   .matchmaker {
     padding-top: calc(var(--section-space-top) - 8px);
     padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
@@ -1631,6 +1637,11 @@ font-size: 18px;
 
   .legal-section h2 {
     font-size: 1.2rem;
+    line-height: 1.15;
+  }
+
+  .legal-section {
+    margin-top: calc(var(--legal-section-space) + 5px);
   }
 }
 
