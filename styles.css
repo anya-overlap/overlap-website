@@ -106,18 +106,18 @@ a {
 }
 
 .logo img {
-  height: 29px;
+  height: 26px;
   width: auto;
   display: block;
 }
 
 .logo-word {
   font-family: "Domine", serif;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 20px;
   color: #041D85;
-  margin-left: 11px;
+  margin-left: 10px;
   line-height: 1;
+  font-weight: 600;
 }
 
 
@@ -1346,12 +1346,12 @@ font-size: 18px;
 
 
   .logo img {
-    height: 30px;
+    height: 22px;
   }
 
   .logo-word {
     font-size: 16px;
-    margin-left: 5px;
+    margin-left: 6px;
   }
 
   .cta-brand {
