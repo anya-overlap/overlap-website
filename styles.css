@@ -1352,11 +1352,12 @@ font-size: 18px;
   }
 
   .hero .store-buttons {
-    margin-top: 14px;
+    margin-top: 8px;
     width: 100%;
     justify-content: center;
     flex-wrap: nowrap;
     gap: clamp(10px, 3.4vw, 18px);
+    transform: translateY(-2px);
   }
 
   .cta .store-buttons {

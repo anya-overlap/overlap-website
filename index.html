@@ -604,6 +604,66 @@
         const transitionMs = 400;
         const visibleMs = 2500;
         let taglineIndex = 0;
+        let taglineResizeFrame = null;
+
+        const reserveHeroTaglineHeight = () => {
+          const heading = heroTagline.closest("h1");
+          if (!heading) {
+            return;
+          }
+
+          const headingWidth = heading.getBoundingClientRect().width;
+          if (!headingWidth) {
+            return;
+          }
+
+          const measurementHeading = heading.cloneNode(false);
+          const measurementTagline = heroTagline.cloneNode(false);
+
+          measurementHeading.style.position = "absolute";
+          measurementHeading.style.visibility = "hidden";
+          measurementHeading.style.pointerEvents = "none";
+          measurementHeading.style.left = "0";
+          measurementHeading.style.top = "0";
+          measurementHeading.style.zIndex = "-1";
+          measurementHeading.style.width = `${headingWidth}px`;
+          measurementHeading.style.minHeight = "0";
+          measurementHeading.style.margin = "0";
+
+          document.body.appendChild(measurementHeading);
+          measurementHeading.appendChild(measurementTagline);
+
+          let maxHeight = 0;
+
+          taglineOptions.forEach((tagline) => {
+            measurementTagline.textContent = tagline;
+            maxHeight = Math.max(maxHeight, measurementHeading.getBoundingClientRect().height);
+          });
+
+          measurementHeading.remove();
+
+          if (maxHeight > 0) {
+            heading.style.minHeight = `${Math.ceil(maxHeight)}px`;
+          }
+        };
+
+        const scheduleHeroTaglineResize = () => {
+          if (taglineResizeFrame !== null) {
+            window.cancelAnimationFrame(taglineResizeFrame);
+          }
+
+          taglineResizeFrame = window.requestAnimationFrame(() => {
+            reserveHeroTaglineHeight();
+            taglineResizeFrame = null;
+          });
+        };
+
+        reserveHeroTaglineHeight();
+        window.addEventListener("resize", scheduleHeroTaglineResize);
+
+        if (document.fonts?.ready) {
+          document.fonts.ready.then(scheduleHeroTaglineResize);
+        }
 
         window.setInterval(() => {
           heroTagline.classList.add("is-changing");
