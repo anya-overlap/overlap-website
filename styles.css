@@ -274,11 +274,9 @@ a {
 }
 
 .hero-cards {
-  position: relative;
-  width: min(340px, 100%);
-  aspect-ratio: 1 / 1.18;
-  margin-inline: auto;
-  transform: translateX(9px);
+  display: grid;
+  gap: 20px;
+  justify-items: center;
 }
 
 .profile-card {
@@ -304,24 +302,8 @@ a {
 }
 
 .profile-card.muted {
-  transform: translateX(calc(-50% - 18px)) translateY(26px) rotate(-4.5deg);
+  transform: translateY(4.3%);
   box-shadow: none;
-}
-
-.hero-cards .profile-card {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin: 0;
-}
-
-.hero-cards .profile-card:first-child {
-  z-index: 2;
-  transform: translateX(-50%) rotate(2.5deg);
-}
-
-.hero-cards .profile-card.muted {
-  z-index: 1;
 }
 
 .profile-card-gradient-overlay {
@@ -1570,16 +1552,16 @@ font-size: 18px;
 
   .hero-cards {
     position: relative;
-    width: min(242px, 100%);
+    width: min(234px, 100%);
     aspect-ratio: 1 / 1.08;
     margin-inline: auto;
-    margin-top: 50px;
+    margin-top: 60px;
     display: block;
-    transform: translateX(13px);
+    transform: translateX(8px);
   }
 
   .profile-card {
-    width: min(196px, 66vw);
+    width: min(190px, 64vw);
     position: absolute;
     top: 0;
     left: 50%;
