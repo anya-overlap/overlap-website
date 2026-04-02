@@ -395,7 +395,7 @@ a {
 }
 
 .section-heading {
-  margin-bottom: 37px;
+  margin-bottom: 47px;
   max-width: 640px;
 }
 
@@ -1420,6 +1420,10 @@ font-size: 18px;
     margin-bottom: 28px;
   }
 
+  .matchmaker .section-heading {
+    margin-bottom: 26px;
+  }
+
   .problem-card {
     --problem-card-padding: 14px;
     --problem-card-padding-top: 7px;
@@ -1451,7 +1455,7 @@ font-size: 18px;
   .steps {
     margin-top: 5px;
     gap: 27px;
-    padding-bottom: 26px;
+    padding-bottom: 28px;
     width: min(96%, 570px);
     margin-left: auto;
     margin-right: auto;
