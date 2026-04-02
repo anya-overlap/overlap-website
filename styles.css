@@ -773,7 +773,7 @@ a {
 
 .learn-more-answer {
   padding: 8px 4px 18px;
-  color: #4f5b82;
+  color: #465173;
   font-size: calc(0.92rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   line-height: 1.45;
 }
@@ -831,7 +831,7 @@ a {
 
 .learn-more-item-subtitle {
   color: #1f3fa8;
-  font-size: calc(0.82rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+  font-size: calc(0.85rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   line-height: 1.22;
 }
 
@@ -1538,7 +1538,7 @@ font-size: 18px;
   }
 
   .learn-more-item-subtitle {
-    font-size: calc(0.8rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+    font-size: calc(0.83rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   }
 
   .learn-more-answer {
