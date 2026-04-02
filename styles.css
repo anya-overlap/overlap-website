@@ -1406,17 +1406,17 @@ font-size: 18px;
   }
 
   .problem-card {
-    --problem-card-padding: 10px;
+    --problem-card-padding: 12px;
     --problem-card-padding-top: 7px;
-    --problem-title-size: 1.2rem;
+    --problem-title-size: 1.1rem;
     
-    --problem-body-size: 0.92rem;
+    --problem-body-size: calc(0.83rem );
     --problem-body-line-height: 1.25rem;
     --problem-icon-circle-size: 32px;
     --problem-icon-size: 21px;
     --problem-icon-compact-size: 18px;
     --problem-icon-gauge-margin: 3px;
-    --problem-header-spacing: 10px;
+    --problem-header-spacing: 5px;
   }
 
   .cta {
