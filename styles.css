@@ -11,6 +11,14 @@
   --card: #F5F5F5;
   --white: #ffffff;
   --shadow: 0 22px 40px rgba(16, 24, 40, 0.12);
+  --section-space-top: clamp(46px, 6vw, 72px);
+  --section-space-bottom-tight: clamp(42px, 5.5vw, 66px);
+  --section-space-bottom: clamp(54px, 7vw, 88px);
+  --section-space-bottom-loose: clamp(68px, 8vw, 112px);
+  --section-space-mobile-top: 30px;
+  --section-space-mobile-bottom-tight: 26px;
+  --section-space-mobile-bottom: 46px;
+  --section-space-mobile-bottom-loose: 58px;
 }
 
 * {
@@ -80,7 +88,7 @@ a {
 }
 
 .hero {
-  padding: 40px 0 80px;
+  padding: 40px 0 clamp(64px, 7vw, 88px);
   background: transparent;
 }
 
@@ -381,7 +389,7 @@ a {
 }
 
 .matchmaker {
-  padding: 68px 0 34px;
+  padding: var(--section-space-top) 0 var(--section-space-bottom-tight);
   background:
     linear-gradient(180deg, #ffffff 0%, #ffffff 62%, #fcfdff 100%);
   border-top: 1px solid #eef1f8;
@@ -630,14 +638,14 @@ a {
 }
 
 .problems {
-  padding: clamp(52px, 6vw, 86px) 0 clamp(78px, 8vw, 126px);
+  padding: var(--section-space-top) 0 var(--section-space-bottom);
 
 }
 
 .learn-more {
   --learn-more-font-scale: 0.92;
   --learn-more-content-scale: 1.12;
-  padding: clamp(38px, 4vw, 68px) 0 clamp(102px, 9vw, 154px);
+  padding: var(--section-space-top) 0 var(--section-space-bottom-loose);
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
@@ -1056,6 +1064,11 @@ font-size: 18px;
 }
 
 .legal-card {
+  --legal-section-space: clamp(22px, 3vw, 32px);
+  --legal-stack-space: 16px;
+  --legal-heading-space: 14px;
+  --legal-list-indent: 22px;
+  --legal-list-item-space: 8px;
   max-width: 860px;
   margin: 0 auto;
   padding: clamp(24px, 4vw, 44px);
@@ -1078,31 +1091,35 @@ font-size: 18px;
 
 .legal-card > p + p,
 .legal-section p + p {
-  margin-top: 14px;
+  margin-top: var(--legal-stack-space);
 }
 
 .legal-section {
-  padding-top: 24px;
-  margin-top: 24px;
+  padding-top: var(--legal-section-space);
+  margin-top: var(--legal-section-space);
   border-top: 1px solid rgba(206, 216, 245, 0.9);
 }
 
 .legal-section h2 {
   font-size: clamp(1.35rem, 2vw, 1.8rem);
-  margin-bottom: 12px;
+  margin-bottom: var(--legal-heading-space);
+}
+
+.legal-section > * + * {
+  margin-top: var(--legal-stack-space);
 }
 
 .legal-section ul {
-  padding-left: 22px;
-  margin: 14px 0;
+  padding-left: var(--legal-list-indent);
+  margin: 0;
 }
 
 .legal-section li + li {
-  margin-top: 8px;
+  margin-top: var(--legal-list-item-space);
 }
 
 .legal-closing {
-  margin-top: 28px;
+  margin-top: calc(var(--legal-section-space) + 4px);
   font-weight: 600;
   color: #253055;
 }
@@ -1148,6 +1165,23 @@ font-size: 18px;
 }
 
 @media (max-width: 768px) {
+  :root {
+    --section-space-top: var(--section-space-mobile-top);
+    --section-space-bottom-tight: var(--section-space-mobile-bottom-tight);
+    --section-space-bottom: var(--section-space-mobile-bottom);
+    --section-space-bottom-loose: var(--section-space-mobile-bottom-loose);
+  }
+
+  .matchmaker {
+    padding-top: calc(var(--section-space-top) - 8px);
+    padding-bottom: calc(var(--section-space-bottom-tight) - 8px);
+  }
+
+  .problems {
+    padding-top: calc(var(--section-space-top) - 8px);
+    padding-bottom: calc(var(--section-space-bottom) - 8px);
+  }
+
   .section-heading h2 {
     font-size: 2.05rem;
   }
@@ -1246,7 +1280,7 @@ font-size: 18px;
   }
 
   .hero {
-    padding: 20px 0 60px;
+    padding: 20px 0 52px;
   }
 
   .hero-copy h1 {
@@ -1331,11 +1365,6 @@ font-size: 18px;
     margin-bottom: 28px;
   }
 
-  .matchmaker {
-    padding: 44px 0 0;
-  }
-
-
   .problem-card {
     --problem-card-padding: 10px;
     --problem-card-padding-top: 7px;
@@ -1354,10 +1383,6 @@ font-size: 18px;
     padding: 40px 0;
   }
 
-
-  .matchmaker {
-    padding: 44px 0 28px;
-  }
 
   .matchmaker-grid {
     gap: 16px;
@@ -1425,15 +1450,6 @@ font-size: 18px;
     margin-top: 10px;
     font-size: 0.92rem;
     line-height: 1.2rem;
-  }
-
-  .problems {
-    padding: 36px 0 54px;
-   
-  }
-
-  .learn-more {
-    padding: 30px 0 72px;
   }
 
   .learn-more h2 {
@@ -1534,6 +1550,11 @@ font-size: 18px;
   }
 
   .legal-card {
+    --legal-section-space: 20px;
+    --legal-stack-space: 12px;
+    --legal-heading-space: 10px;
+    --legal-list-indent: 18px;
+    --legal-list-item-space: 6px;
     padding: 20px 18px;
   }
 
@@ -1545,19 +1566,8 @@ font-size: 18px;
     line-height: 1.6;
   }
 
-  .legal-section {
-    padding-top: 20px;
-    margin-top: 20px;
-  }
-
   .legal-section h2 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
-  .legal-section ul {
-    padding-left: 18px;
-    margin: 10px 0;
   }
 }
 
