@@ -218,6 +218,8 @@ a {
 
 .hero .store-buttons {
   margin-top: 22px;
+  justify-content: center;
+  margin-inline: auto;
 }
 
 .pill {
@@ -232,7 +234,7 @@ a {
 .store-buttons {
   position: relative;
   display: flex;
-  gap: clamp(12px, 2vw, 24px);
+  gap: clamp(32px, 5.2vw, 60px);
   margin-top: 18px;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1354,14 +1356,14 @@ font-size: 18px;
     width: 100%;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: clamp(8px, 3vw, 14px);
+    gap: clamp(10px, 3.4vw, 18px);
   }
 
   .cta .store-buttons {
     margin-top: 16px;
     width: 100%;
     justify-content: center;
-    gap: clamp(8px, 1.8vw, 12px);
+    gap: clamp(10px, 2.2vw, 14px);
     opacity: 0.5;
   }
 
