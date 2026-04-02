@@ -274,9 +274,11 @@ a {
 }
 
 .hero-cards {
-  display: grid;
-  gap: 20px;
-  justify-items: center;
+  position: relative;
+  width: min(340px, 100%);
+  aspect-ratio: 1 / 1.18;
+  margin-inline: auto;
+  transform: translateX(9px);
 }
 
 .profile-card {
@@ -302,8 +304,24 @@ a {
 }
 
 .profile-card.muted {
-  transform: translateY(4.3%);
+  transform: translateX(calc(-50% - 18px)) translateY(26px) rotate(-4.5deg);
   box-shadow: none;
+}
+
+.hero-cards .profile-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+}
+
+.hero-cards .profile-card:first-child {
+  z-index: 2;
+  transform: translateX(-50%) rotate(2.5deg);
+}
+
+.hero-cards .profile-card.muted {
+  z-index: 1;
 }
 
 .profile-card-gradient-overlay {
@@ -1551,11 +1569,37 @@ font-size: 18px;
   }
 
   .hero-cards {
-    width: 100%;
+    position: relative;
+    width: min(242px, 100%);
+    aspect-ratio: 1 / 1.08;
+    margin-inline: auto;
+    margin-top: 50px;
+    display: block;
+    transform: translateX(13px);
   }
 
   .profile-card {
-    width: min(252px, 81%);
+    width: min(196px, 66vw);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  .hero-cards .profile-card:first-child {
+    z-index: 2;
+    transform: translateX(calc(-50% + 14px)) translateY(12px) rotate(2.5deg);
+  }
+
+  .profile-card.muted {
+    z-index: 1;
+    transform: translateX(calc(-50% - 40px)) translateY(-40px) rotate(-3deg);
+    box-shadow: none;
+  }
+
+  .profile-card-gradient-overlay {
+    display: none;
   }
 
   .container {
