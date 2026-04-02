@@ -114,7 +114,6 @@ a {
 .logo-word {
   font-family: "Domine", serif;
   font-size: 22px;
-  font-weight: 600;
   color: #041D85;
   margin-left: 10px;
   line-height: 1;
@@ -406,7 +405,6 @@ a {
 .matchmaker .section-heading h2,
 .problems .section-heading h2 {
   font-size: clamp(2.05rem, 2.5vw, 2.45rem);
-  padding-top: 5px;
 }
 
 .section-heading p {
@@ -1218,12 +1216,6 @@ font-size: 18px;
     --section-space-bottom-loose: var(--section-space-mobile-bottom-loose);
   }
 
-  h1,
-  h2,
-  h3 {
-    line-height: 1.15;
-  }
-
   .matchmaker {
     padding-top: calc(var(--section-space-top) - 8px);
     padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
@@ -1540,16 +1532,12 @@ font-size: 18px;
     padding: 10px 2px;
   }
 
-  .learn-more-item-copy {
-    gap: 5px;
-  }
-
   .learn-more-item-title {
-    font-size: calc(1.1025rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+    font-size: calc(1.05rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   }
 
   .learn-more-item-subtitle {
-    font-size: calc(0.84rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+    font-size: calc(0.8rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   }
 
   .learn-more-answer {
@@ -1642,11 +1630,6 @@ font-size: 18px;
 
   .legal-section h2 {
     font-size: 1.2rem;
-    line-height: 1.15;
-  }
-
-  .legal-section {
-    margin-top: calc(var(--legal-section-space) + 5px);
   }
 }
 
