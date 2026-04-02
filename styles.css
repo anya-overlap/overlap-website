@@ -1201,6 +1201,7 @@ font-size: 18px;
 
   .problem-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
   }
 
   .legal-nav {
@@ -1422,9 +1423,9 @@ font-size: 18px;
   .problem-card {
     --problem-card-padding: 14px;
     --problem-card-padding-top: 7px;
-    --problem-title-size: 1.19rem;
+    --problem-title-size: 1.22rem;
     
-    --problem-body-size: calc(0.83rem );
+    --problem-body-size: 0.86rem;
     --problem-body-line-height: 1.25rem;
     --problem-icon-circle-size: 32px;
     --problem-icon-size: 21px;
