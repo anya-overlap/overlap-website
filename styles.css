@@ -1423,9 +1423,9 @@ font-size: 18px;
   .problem-card {
     --problem-card-padding: 14px;
     --problem-card-padding-top: 7px;
-    --problem-title-size: 1.22rem;
+    --problem-title-size: 1.24rem;
     
-    --problem-body-size: 0.86rem;
+    --problem-body-size: 0.9rem;
     --problem-body-line-height: 1.25rem;
     --problem-icon-circle-size: 32px;
     --problem-icon-size: 21px;
