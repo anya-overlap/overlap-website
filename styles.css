@@ -406,6 +406,7 @@ a {
 .matchmaker .section-heading h2,
 .problems .section-heading h2 {
   font-size: clamp(2.05rem, 2.5vw, 2.45rem);
+  padding-top: 5px;
 }
 
 .section-heading p {
