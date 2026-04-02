@@ -1420,9 +1420,9 @@ font-size: 18px;
   }
 
   .problem-card {
-    --problem-card-padding: 12px;
+    --problem-card-padding: 14px;
     --problem-card-padding-top: 7px;
-    --problem-title-size: 1.15rem;
+    --problem-title-size: 1.19rem;
     
     --problem-body-size: calc(0.83rem );
     --problem-body-line-height: 1.25rem;
