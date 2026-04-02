@@ -268,7 +268,7 @@ a {
 }
 
 .store-badge {
-  height: 52px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -1412,7 +1412,7 @@ font-size: 18px;
   }
 
   .hero .store-badge {  
-    max-width: 142px;
+    max-width: 156px;
     height: auto;
   }
 
