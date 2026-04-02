@@ -975,7 +975,7 @@ a {
 .problem-card p {
   font-size: var(--problem-body-size);
   color: var(--blue-dark);
-  line-height: 1.35rem;
+  line-height: 1.4rem;
 }
 
 .problem-card:hover .problem-icon {
@@ -1408,7 +1408,7 @@ font-size: 18px;
   .problem-card {
     --problem-card-padding: 12px;
     --problem-card-padding-top: 7px;
-    --problem-title-size: 1.1rem;
+    --problem-title-size: 1.15rem;
     
     --problem-body-size: calc(0.83rem );
     --problem-body-line-height: 1.25rem;
@@ -1416,7 +1416,7 @@ font-size: 18px;
     --problem-icon-size: 21px;
     --problem-icon-compact-size: 18px;
     --problem-icon-gauge-margin: 3px;
-    --problem-header-spacing: 5px;
+    --problem-header-spacing: 1px;
   }
 
   .cta {
