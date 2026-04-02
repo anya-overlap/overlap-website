@@ -1340,8 +1340,8 @@ font-size: 18px;
   }
 
   .logo-word {
-    font-size: 15px;
-    margin-left: 3px;
+    font-size: 16px;
+    margin-left: 5px;
   }
 
   .cta-brand {
@@ -1402,7 +1402,7 @@ font-size: 18px;
   }
 
   .hero .store-badge {  
-    max-width: 138px;
+    max-width: 142px;
     height: auto;
   }
 
