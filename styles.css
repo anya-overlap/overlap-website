@@ -230,6 +230,7 @@ a {
 }
 
 .store-buttons {
+  position: relative;
   display: flex;
   gap: clamp(12px, 2vw, 24px);
   margin-top: 18px;
@@ -238,12 +239,30 @@ a {
   align-items: center;
   width: fit-content;
   max-width: 100%;
-  opacity: 0.5;
+}
+
+.store-buttons-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .store-badge-link {
   display: inline-flex;
   align-items: center;
+  opacity: 0.3;
 }
 
 .store-badge {
@@ -1006,6 +1025,11 @@ font-size: 18px;
   flex-wrap: nowrap;
   justify-content: center;
   width: 100%;
+}
+
+.cta .store-buttons-label {
+  background: rgba(255, 255, 255, 0.96);
+  color: #3554cf;
 }
 
 .cta .store-badge {
