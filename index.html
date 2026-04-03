@@ -612,6 +612,12 @@
             return;
           }
 
+          if (window.innerWidth <= 768) {
+            heading.style.minHeight = "";
+            heading.style.height = "";
+            return;
+          }
+
           const headingWidth = heading.getBoundingClientRect().width;
           if (!headingWidth) {
             return;
@@ -628,6 +634,7 @@
           measurementHeading.style.zIndex = "-1";
           measurementHeading.style.width = `${headingWidth}px`;
           measurementHeading.style.minHeight = "0";
+          measurementHeading.style.height = "auto";
           measurementHeading.style.margin = "0";
 
           document.body.appendChild(measurementHeading);
@@ -643,7 +650,9 @@
           measurementHeading.remove();
 
           if (maxHeight > 0) {
-            heading.style.minHeight = `${Math.ceil(maxHeight)}px`;
+            const reservedHeight = `${Math.ceil(maxHeight)}px`;
+            heading.style.minHeight = reservedHeight;
+            heading.style.height = reservedHeight;
           }
         };
 
