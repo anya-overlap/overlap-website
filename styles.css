@@ -1337,6 +1337,22 @@ font-size: 18px;
 
   .menu-toggle {
     display: flex;
+    width: 27px;
+    height: 20px;
+    gap: 3px;
+  }
+
+  .menu-toggle-line {
+    width: 20px;
+    background: #4353A5;
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
   }
 
   .nav-links {
@@ -1401,12 +1417,12 @@ font-size: 18px;
 
 
   .logo img {
-    height: 22px;
+    height: 20px;
   }
 
   .logo-word {
-    font-size: 16px;
-    margin-left: 6px;
+    font-size: 14px;
+    margin-left: 5px;
   }
 
   .cta-brand {
