@@ -1906,7 +1906,7 @@ a {
 
   .hero-cards {
     position: relative;
-    width: min(234px, 100%);
+    width: min(250px, 100%);
     aspect-ratio: 1 / 1.08;
     margin-inline: auto;
     margin-top: 5px;
@@ -1915,7 +1915,7 @@ a {
   }
 
   .profile-card {
-    width: min(190px, 64vw);
+    width: min(204px, 68.5vw);
     position: absolute;
     top: 0;
     left: 50%;
