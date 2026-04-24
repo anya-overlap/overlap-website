@@ -745,15 +745,43 @@
         item.addEventListener("click", () => {
           const isExpanded = item.getAttribute("aria-expanded") === "true";
           const answer = item.nextElementSibling;
+
           item.setAttribute("aria-expanded", isExpanded ? "false" : "true");
           if (answer && answer.classList.contains("learn-more-answer")) {
-            answer.hidden = isExpanded;
+            if (answer._closeAnimationHandler) {
+              answer.removeEventListener("animationend", answer._closeAnimationHandler);
+              answer._closeAnimationHandler = null;
+            }
+
             if (!isExpanded) {
+              answer.hidden = false;
+              answer.classList.remove("is-closing");
               answer.classList.remove("is-opening");
               window.requestAnimationFrame(() => {
                 answer.classList.add("is-opening");
               });
+              return;
             }
+
+            answer.classList.remove("is-opening");
+            answer.classList.remove("is-closing");
+            window.requestAnimationFrame(() => {
+              answer.classList.add("is-closing");
+            });
+
+            const handleCloseAnimationEnd = (event) => {
+              if (event.animationName !== "learn-more-answer-in") {
+                return;
+              }
+
+              answer.hidden = true;
+              answer.classList.remove("is-closing");
+              answer._closeAnimationHandler = null;
+              answer.removeEventListener("animationend", handleCloseAnimationEnd);
+            };
+
+            answer._closeAnimationHandler = handleCloseAnimationEnd;
+            answer.addEventListener("animationend", handleCloseAnimationEnd);
           }
         });
       });

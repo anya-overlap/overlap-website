@@ -903,11 +903,16 @@ a {
   color: var(--learn-more-answer-text);
   font-size: calc(0.92rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   line-height: 1.55;
-  background: var(--learn-more-shell);
+  background: rgba(255, 255, 255, 0.96);
+  border-top: 1px solid rgba(126, 146, 206, 0.18);
 }
 
 .learn-more-answer.is-opening {
   animation: learn-more-answer-in 220ms ease-out;
+}
+
+.learn-more-answer.is-closing {
+  animation: learn-more-answer-in 220ms ease-out reverse forwards;
 }
 
 .learn-more-item {
@@ -920,7 +925,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 13px 20px 11px 24px;
+  padding: 11px 20px 10px 24px;
   cursor: pointer;
   border-radius: 10px;
   transition: background-color 160ms ease, color 160ms ease;
@@ -949,20 +954,22 @@ a {
 
 .learn-more-item-copy {
   display: grid;
-  gap: 4px;
+  gap: 6px;
 }
 
 .learn-more-item-title {
   color: var(--learn-more-title);
   font-size: calc(clamp(1.04rem, 1.18vw, 1.22rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   font-weight: 500;
-  line-height: 1.24;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
 }
 
 .learn-more-item-subtitle {
   color: #4353A5;
   font-size: calc(clamp(0.87rem, 0.94vw, 0.93rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
-  line-height: 1.28;
+  line-height: 1.18;
+  font-weight: 500;
 }
 
 .learn-more-item-icon {
@@ -1688,7 +1695,7 @@ font-size: 18px;
 
   .learn-more-item {
     gap: 12px;
-    padding: 12px 14px 11px;
+    padding: 10px 14px 9px;
   }
 
   .learn-more-item-title {
