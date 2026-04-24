@@ -223,7 +223,7 @@ a {
   max-width: 100%;
   flex-wrap: nowrap;
   white-space: nowrap;
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.5vw, 3.5rem);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -231,7 +231,8 @@ a {
 
 .hero-subtext-accent {
   color: var(--blue);
-  font-weight: 600;
+  font-weight: 700;
+  
 }
 
 .hero-subtext-base {
@@ -1432,7 +1433,7 @@ font-size: 18px;
   .hero-subtext {
     gap: 8px;
     margin-top: 54px;
-    font-size: 0.95rem;
+    font-size: .95rem;
   }
 
   .cta .store-buttons {
