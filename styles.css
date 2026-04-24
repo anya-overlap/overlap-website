@@ -177,7 +177,7 @@ a {
 
 .hero-content{
   display: grid;
-  gap: 0;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 
