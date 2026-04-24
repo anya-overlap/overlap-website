@@ -23,11 +23,13 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="top">
     <header class="hero">
       <div class="container">
         <nav class="nav">
-          <div class="logo"><img src="./assets/logo.png" alt="Oli" /><span class="logo-word">Overlap</span></div>
+          <a class="logo" href="#top" aria-label="Back to top"
+            ><img src="./assets/logo.png" alt="Oli" /><span class="logo-word">Overlap</span></a
+          >
           <button
             class="menu-toggle"
             type="button"
@@ -552,6 +554,7 @@
       const menuToggleButton = document.querySelector(".menu-toggle");
       const siteNavLinks = document.querySelector(".nav-links");
       const siteNav = document.querySelector(".nav");
+      const logoLink = document.querySelector(".logo");
       const heroTagline = document.querySelector("#hero-tagline");
 
       if (menuToggleButton && siteNavLinks && siteNav) {
@@ -619,6 +622,13 @@
           });
         };
 
+        const scrollToTop = () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        };
+
         siteNavLinks.querySelectorAll("a").forEach((link) => {
           link.addEventListener("click", (event) => {
             const targetId = link.getAttribute("href");
@@ -639,6 +649,18 @@
 
             scrollToSection(targetId);
           });
+        });
+
+        logoLink?.addEventListener("click", (event) => {
+          event.preventDefault();
+          closeMobileNav();
+
+          if (window.innerWidth <= 768) {
+            window.setTimeout(scrollToTop, 290);
+            return;
+          }
+
+          scrollToTop();
         });
 
         document.addEventListener("keydown", (event) => {
