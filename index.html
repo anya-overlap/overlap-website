@@ -541,15 +541,47 @@
       const heroTagline = document.querySelector("#hero-tagline");
 
       if (menuToggleButton && siteNavLinks && siteNav) {
+        let lastScrollY = window.scrollY;
+        let isScrollTicking = false;
+
         const closeMobileNav = () => {
           siteNavLinks.classList.remove("is-open");
           siteNav.classList.remove("is-menu-open");
+          siteNav.classList.remove("is-hidden-on-scroll");
           menuToggleButton.setAttribute("aria-expanded", "false");
+        };
+
+        const syncMobileNavVisibility = () => {
+          const currentScrollY = window.scrollY;
+          const scrollDelta = currentScrollY - lastScrollY;
+          const isMobileViewport = window.innerWidth <= 768;
+          const isMenuOpen = siteNav.classList.contains("is-menu-open");
+
+          if (!isMobileViewport || isMenuOpen || currentScrollY <= 8) {
+            siteNav.classList.remove("is-hidden-on-scroll");
+          } else if (scrollDelta > 5) {
+            siteNav.classList.add("is-hidden-on-scroll");
+          } else if (scrollDelta < -5) {
+            siteNav.classList.remove("is-hidden-on-scroll");
+          }
+
+          lastScrollY = currentScrollY;
+          isScrollTicking = false;
+        };
+
+        const requestMobileNavSync = () => {
+          if (isScrollTicking) {
+            return;
+          }
+
+          isScrollTicking = true;
+          window.requestAnimationFrame(syncMobileNavVisibility);
         };
 
         menuToggleButton.addEventListener("click", () => {
           const isOpen = siteNavLinks.classList.toggle("is-open");
           siteNav.classList.toggle("is-menu-open", isOpen);
+          siteNav.classList.remove("is-hidden-on-scroll");
           menuToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
 
@@ -599,10 +631,14 @@
           }
         });
 
+        window.addEventListener("scroll", requestMobileNavSync, { passive: true });
         window.addEventListener("resize", () => {
           if (window.innerWidth > 768) {
             closeMobileNav();
+          } else {
+            siteNav.classList.remove("is-hidden-on-scroll");
           }
+          lastScrollY = window.scrollY;
         });
       }
 
