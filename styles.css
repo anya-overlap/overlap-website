@@ -110,6 +110,12 @@ a {
   transition: transform 170ms linear, background-color 220ms ease;
 }
 
+.nav.is-hidden-on-scroll {
+  transform: translateY(-100%);
+  transition-duration: 170ms, 220ms;
+  transition-timing-function: linear, ease;
+}
+
 .logo {
   display: inline-flex;
   align-items: center;
@@ -1355,12 +1361,6 @@ font-size: 18px;
     flex-wrap: wrap;
     row-gap: 0;
     padding: 18px 6vw 15px;
-  }
-
-  .nav.is-hidden-on-scroll {
-    transform: translateY(-100%);
-    transition-duration: 170ms, 220ms;
-    transition-timing-function: linear, ease;
   }
 
   .logo {
