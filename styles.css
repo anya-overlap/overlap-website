@@ -1590,6 +1590,15 @@ a {
     padding: 4px 11px;
   }
 
+  .hero .store-buttons-label {
+    font-size: 0.96rem;
+    padding: 6px 12px;
+  }
+
+  .hero .hero-store-label {
+    margin-top: 12px;
+  }
+
 
   .logo img {
     height: 20px;
@@ -1895,7 +1904,7 @@ a {
     width: min(234px, 100%);
     aspect-ratio: 1 / 1.08;
     margin-inline: auto;
-    margin-top: 60px;
+    margin-top: 5px;
     display: block;
     transform: translateX(8px);
   }
