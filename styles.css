@@ -279,6 +279,10 @@ a {
 }
 
 @media (min-width: 769px) {
+  .nav {
+    padding: 20px 8vw;
+  }
+
   .logo,
   .nav-links {
     transform: none;
