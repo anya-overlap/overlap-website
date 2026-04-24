@@ -194,12 +194,12 @@ a {
 
 .hero-content{
   display: grid;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
 
   /* Use fixed content-sized tracks so both columns remain visible */
-  grid-template-columns: minmax(0, 620px) minmax(0, 320px);
+  grid-template-columns: minmax(0, 620px) minmax(0, 308px);
 }
 
 /* Mobile: stack */
@@ -258,6 +258,7 @@ a {
 
 .hero-copy {
   max-width: 560px;
+ 
 }
 
 .hero .store-buttons {
@@ -280,7 +281,8 @@ a {
 
 @media (min-width: 769px) {
   .nav {
-    padding: 20px 8vw;
+    padding-block: 20px;
+    padding-inline: max(8vw, calc((100vw - 1400px) / 2 + 8vw));
   }
 
   .logo,
@@ -375,6 +377,7 @@ a {
   display: grid;
   gap: 20px;
   justify-items: center;
+  
 }
 
 .profile-card {
