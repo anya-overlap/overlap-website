@@ -217,7 +217,7 @@ a {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  margin: 218px 0 0;
+  margin: 200px 0 0;
   max-width: none;
   width: max-content;
   max-width: 100%;
@@ -265,7 +265,7 @@ a {
   }
 
   .hero .store-buttons {
-    margin-top: 46px;
+    margin-top: 28px;
   }
 }
 
@@ -321,7 +321,7 @@ a {
 }
 
 .hero .store-badge-link {
-  transform: scale(0.9);
+  transform: scale(0.81);
   transform-origin: center;
 }
 
@@ -1422,7 +1422,7 @@ font-size: 18px;
   }
 
   .hero .store-buttons {
-    margin-top: 20px;
+    margin-top: 14px;
     width: 100%;
     justify-content: center;
     flex-wrap: nowrap;
