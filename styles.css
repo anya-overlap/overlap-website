@@ -1689,11 +1689,14 @@ a {
 
   .cta-inner {
     gap: 16px;
+    justify-items: start;
+    text-align: left;
   }
 
   .cta-tagline {
     font-size: clamp(1.75rem, 7.4vw, 2.7rem);
     white-space: normal;
+    text-align: left;
   }
 
   .cta-divider {
@@ -1703,35 +1706,55 @@ a {
 
   .cta-footer-meta {
     grid-template-columns: 1fr;
-    gap: 18px;
-    text-align: center;
+    gap: 14px;
+    text-align: left;
   }
 
   .cta-footer-block--brand,
   .cta-footer-block--note,
   .cta-footer-block--legal {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: start;
+    justify-items: start;
+    align-items: start;
   }
 
   .cta-brand {
     gap: 8px;
   }
 
+  .cta-footer-block--brand {
+    gap: 0;
+  }
+
   .cta-note {
-    font-size: 1rem;
+    font-size: 0.92rem;
     white-space: normal;
+    text-align: left;
   }
 
   .footer-legal-links {
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 0;
+    gap: 0;
   }
 
-  .cta-contact,
+  .cta-contact {
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+
   .cta-copyright,
   .footer-legal-link a {
-    font-size: 0.96rem;
+    font-size: 0.88rem;
+    line-height: 1.25;
+  }
+
+  .cta .store-buttons {
+    justify-content: flex-start;
+  }
+
+  .cta .store-badge-link {
+    justify-content: flex-start;
   }
 
 
