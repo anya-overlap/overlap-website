@@ -177,11 +177,12 @@ a {
 
 .hero-content{
   display: grid;
-  gap: 1px;
+  gap: 0;
   align-items: center;
+  justify-content: center;
 
-  /* Desktop/tablet: left side gets more space */
-  grid-template-columns: 1.5fr 1fr;
+  /* Use fixed content-sized tracks so both columns remain visible */
+  grid-template-columns: minmax(0, 620px) minmax(0, 320px);
 }
 
 /* Mobile: stack */
@@ -239,7 +240,6 @@ a {
 
 .hero-copy {
   max-width: 560px;
-  background: rgba(255, 0, 0, 0.12);
 }
 
 .hero .store-buttons {
@@ -328,7 +328,6 @@ a {
   display: grid;
   gap: 20px;
   justify-items: center;
-  background: rgba(0, 102, 255, 0.12);
 }
 
 .profile-card {
