@@ -361,6 +361,14 @@ a {
   padding: 8px 16px;
 }
 
+.hero .hero-store-label {
+  position: static;
+  transform: none;
+  display: inline-block;
+  margin-top: 22px;
+  z-index: auto;
+}
+
 .store-badge-link {
   display: inline-flex;
   align-items: center;
