@@ -556,12 +556,15 @@
           const scrollDelta = currentScrollY - lastScrollY;
           const isMobileViewport = window.innerWidth <= 768;
           const isMenuOpen = siteNav.classList.contains("is-menu-open");
+          const isNearTop = currentScrollY < 48;
+          const hideThreshold = isNearTop ? 2 : 5;
+          const showThreshold = isNearTop ? 2 : 5;
 
-          if (!isMobileViewport || isMenuOpen || currentScrollY <= 8) {
+          if (!isMobileViewport || isMenuOpen || currentScrollY <= 1) {
             siteNav.classList.remove("is-hidden-on-scroll");
-          } else if (scrollDelta > 5) {
+          } else if (scrollDelta > hideThreshold) {
             siteNav.classList.add("is-hidden-on-scroll");
-          } else if (scrollDelta < -5) {
+          } else if (scrollDelta < -showThreshold) {
             siteNav.classList.remove("is-hidden-on-scroll");
           }
 
