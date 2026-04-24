@@ -1431,9 +1431,12 @@ font-size: 18px;
   }
 
   .hero-subtext {
-    gap: 8px;
-    margin-top: 54px;
-    font-size: .95rem;
+    display: grid;
+    gap: 2px;
+    margin-top: 40px;
+    width: auto;
+    white-space: normal;
+    font-size: 1rem;
   }
 
   .cta .store-buttons {
