@@ -217,13 +217,13 @@ a {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  margin: 200px 0 0;
+  margin: 190px 0 0;
   max-width: none;
   width: max-content;
   max-width: 100%;
   flex-wrap: nowrap;
   white-space: nowrap;
-  font-size: clamp(0.95rem, 1.5vw, 3.5rem);
+  font-size: clamp(0.95rem, 1.5vw, 4rem);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
