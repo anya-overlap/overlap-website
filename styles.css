@@ -1648,7 +1648,6 @@ a {
     width: 100%;
     justify-content: center;
     gap: clamp(10px, 2.2vw, 14px);
-    opacity: 0.72;
   }
 
   .cta .store-badge-link {
@@ -1656,11 +1655,16 @@ a {
     min-width: 0;
     display: flex;
     justify-content: center;
+    opacity: 0.72;
   }
 
   .cta .store-badge {
     max-width: min(150px, 100%);
     height: auto;
+  }
+
+  .cta .store-buttons-label {
+    background: rgba(255, 255, 255, 0.89);
   }
 
   .footer-legal-links {

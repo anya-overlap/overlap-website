@@ -486,6 +486,7 @@
       if (!canAnimate) {
         revealItems.forEach((item) => item.classList.add("is-visible"));
       } else if ("IntersectionObserver" in window) {
+        const isMobileViewport = window.innerWidth <= 768;
         const revealObserver = new IntersectionObserver(
           (entries, observer) => {
             entries.forEach((entry) => {
@@ -496,8 +497,8 @@
             });
           },
           {
-            threshold: 0.15,
-            rootMargin: "0px 0px -8% 0px",
+            threshold: isMobileViewport ? 0.12 : 0.15,
+            rootMargin: isMobileViewport ? "0px 0px -2% 0px" : "0px 0px -8% 0px",
           }
         );
 
