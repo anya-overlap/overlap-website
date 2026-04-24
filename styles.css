@@ -357,15 +357,17 @@ a {
 }
 
 .hero .store-buttons-label {
-  font-size: 1.22rem;
-  padding: 8px 16px;
+  font-size: clamp(0.98rem, 1vw + 0.55rem, 1.08rem);
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.84);
+  letter-spacing: 0.065em;
 }
 
 .hero .hero-store-label {
   position: static;
   transform: none;
   display: inline-block;
-  margin-top: 22px;
+  margin-top: 18px;
   z-index: auto;
 }
 
@@ -1581,18 +1583,21 @@ a {
   .hero-copy h1 {
     font-size: clamp(1.75rem, 6.3vw, 2.3rem);
     margin: 5px 0 4px;
-    min-height: calc(2 * 1.2em);
-    height: calc(3 * 1.2em);
+    line-height: 1.12;
+    min-height: calc(2 * 1.12em);
+    height: calc(3 * 1.12em);
   }
 
   .hero .pill {
     font-size: 0.8rem;
-    padding: 4px 11px;
+    padding: 2px 10px;
   }
 
   .hero .store-buttons-label {
-    font-size: 0.96rem;
-    padding: 6px 12px;
+    font-size: 0.84rem;
+    padding: 5px 11px;
+    background: rgba(255, 255, 255, 0.76);
+    letter-spacing: 0.06em;
   }
 
   .hero .hero-store-label {
@@ -1640,7 +1645,8 @@ a {
     margin-top: 18px;
     width: auto;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 460;
   }
 
   .cta .store-buttons {
@@ -1905,16 +1911,16 @@ a {
 
   .hero-cards {
     position: relative;
-    width: min(234px, 100%);
+    width: min(250px, 100%);
     aspect-ratio: 1 / 1.08;
     margin-inline: auto;
-    margin-top: 5px;
+    margin-top: -10px;
     display: block;
     transform: translateX(8px);
   }
 
   .profile-card {
-    width: min(190px, 64vw);
+    width: min(204px, 68.5vw);
     position: absolute;
     top: 0;
     left: 50%;
@@ -1979,7 +1985,7 @@ a {
 @media (max-width: 420px) {
   .hero-copy h1 {
     font-size: clamp(2.2rem, 8.4vw, 2.75rem);
-    height: calc(3 * 1.2em);
+    height: calc(3 * 1.12em);
   }
 
   .legal-hero-copy h1 {
