@@ -1891,7 +1891,7 @@ a {
 
   .learn-more-answer {
     font-size: calc(0.88rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
-    padding: 0 14px 14px 18px;
+    padding: 10px 14px 14px 18px;
   }
 
   .learn-more-item-icon {
