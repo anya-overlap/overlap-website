@@ -356,6 +356,11 @@ a {
   pointer-events: none;
 }
 
+.hero .store-buttons-label {
+  font-size: 1.22rem;
+  padding: 8px 16px;
+}
+
 .store-badge-link {
   display: inline-flex;
   align-items: center;
@@ -1197,7 +1202,7 @@ a {
 }
 
 .cta .store-buttons-label {
-  background: rgba(255, 255, 255, 0.985);
+  background: rgba(255, 255, 255, 0.85);
   color: #3554cf;
 }
 
