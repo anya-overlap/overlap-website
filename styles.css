@@ -177,11 +177,11 @@ a {
 
 .hero-content{
   display: grid;
-  gap: 28px;
+  gap: 1px;
   align-items: center;
 
   /* Desktop/tablet: left side gets more space */
-  grid-template-columns: 1.72fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
 }
 
 /* Mobile: stack */
@@ -212,8 +212,34 @@ a {
   max-width: 420px;
 }
 
+.hero-subtext {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 218px 0 0;
+  max-width: none;
+  width: max-content;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.hero-subtext-accent {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.hero-subtext-base {
+  color: #041D85;
+}
+
 .hero-copy {
   max-width: 560px;
+  background: rgba(255, 0, 0, 0.12);
 }
 
 .hero .store-buttons {
@@ -238,7 +264,7 @@ a {
   }
 
   .hero .store-buttons {
-    margin-top: 102px;
+    margin-top: 46px;
   }
 }
 
@@ -293,10 +319,16 @@ a {
   display: block;
 }
 
+.hero .store-badge-link {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
 .hero-cards {
   display: grid;
   gap: 20px;
   justify-items: center;
+  background: rgba(0, 102, 255, 0.12);
 }
 
 .profile-card {
@@ -1390,12 +1422,18 @@ font-size: 18px;
   }
 
   .hero .store-buttons {
-    margin-top: 8px;
+    margin-top: 20px;
     width: 100%;
     justify-content: center;
     flex-wrap: nowrap;
     gap: clamp(10px, 3.4vw, 18px);
     transform: translateY(-2px);
+  }
+
+  .hero-subtext {
+    gap: 8px;
+    margin-top: 54px;
+    font-size: 0.95rem;
   }
 
   .cta .store-buttons {
