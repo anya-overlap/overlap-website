@@ -262,6 +262,37 @@ a {
 }
 
 @media (min-width: 769px) {
+  .hero {
+    padding-top: 112px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    width: min(84vw, 1244px);
+    transform: translateX(-50%);
+    z-index: 20;
+    padding: 12px 20px;
+    border: 1px solid rgba(67, 83, 165, 0.05);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(12px);
+  }
+
+  .logo,
+  .nav-links {
+    transform: none;
+  }
+
+  .logo img {
+    height: 23px;
+  }
+
+  .logo-word {
+    font-size: 18px;
+  }
+
   .hero-copy h1 {
     margin: 10px 0 4px;
     padding-bottom: 0.12em;
