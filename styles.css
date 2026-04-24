@@ -362,6 +362,12 @@ a {
   opacity: 0.3;
 }
 
+.hero .store-badge-link,
+.cta .store-badge-link {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .store-badge {
   height: 60px;
   width: auto;
@@ -1191,7 +1197,7 @@ a {
 }
 
 .cta .store-buttons-label {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.985);
   color: #3554cf;
 }
 
