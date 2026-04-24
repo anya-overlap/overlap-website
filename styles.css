@@ -1637,7 +1637,7 @@ a {
   .hero-subtext {
     display: flex;
     gap: 8px;
-    margin-top: 40px;
+    margin-top: 18px;
     width: auto;
     white-space: nowrap;
     font-size: 1rem;
