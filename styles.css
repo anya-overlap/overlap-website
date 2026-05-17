@@ -1292,12 +1292,22 @@ a {
 }
 
 .footer-social-link img {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   display: block;
   filter: brightness(0) invert(1);
   opacity: 0.82;
   transition: opacity 160ms ease;
+}
+
+.footer-social-link .footer-icon--mail {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social-link .footer-icon--instagram {
+  width: 18px;
+  height: 18px;
 }
 
 .footer-social-link:hover,
@@ -1621,6 +1631,16 @@ a {
   filter: brightness(0) saturate(100%) invert(42%) sepia(89%) saturate(1406%) hue-rotate(215deg) brightness(99%) contrast(94%);
   opacity: 0.9;
   transition: opacity 160ms ease;
+}
+
+.legal-footer-social .footer-icon--mail {
+  width: 20px;
+  height: 20px;
+}
+
+.legal-footer-social .footer-icon--instagram {
+  width: 18px;
+  height: 18px;
 }
 
 .legal-footer-social a:hover img,
@@ -1984,8 +2004,9 @@ a {
   .cta-footer-block--social {
     grid-column: 1;
     grid-row: 2;
+    align-self: end;
     justify-content: flex-start;
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .cta-brand {
@@ -2000,8 +2021,9 @@ a {
     grid-column: 2;
     grid-row: 1 / span 2;
     justify-self: end;
+    align-self: center;
     align-items: flex-start;
-    margin-top: 5px;
+    margin-top: 0;
   }
 
   .cta-copyright {
@@ -2019,13 +2041,22 @@ a {
     align-items: flex-end;
     text-align: right;
     margin-top: 0;
-    gap: 6px;
+    gap: 5px;
   }
 
   .cta-copyright,
   .footer-legal-link a {
-    font-size: 0.88rem;
     line-height: 1.25;
+  }
+
+  .cta-copyright {
+    font-size: 0.88rem;
+  }
+
+  .footer-legal-link a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.92;
   }
 
   .cta .store-buttons {
@@ -2257,18 +2288,26 @@ a {
     grid-column: 2;
     grid-row: 1 / span 2;
     justify-self: end;
+    align-self: center;
     align-items: flex-end;
     flex-direction: column;
     text-align: right;
-    gap: 6px;
-    padding-top: 5px;
+    gap: 5px;
+    padding-top: 0;
+  }
+
+  .legal-footer-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.92;
   }
 
   .legal-footer-social {
     grid-column: 1;
     grid-row: 2;
+    align-self: end;
     gap: 8px;
-    margin-top: 2px;
+    margin-top: 0;
   }
 }
 
