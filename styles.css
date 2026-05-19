@@ -1159,14 +1159,14 @@ a {
 
 .cta {
   color: #fff;
-  padding: 56px 0 66px;
+  padding: 56px 0 40px;
 }
 
 .cta-shell {
   border-radius: 10px;
   background: linear-gradient(140deg, #4d68df 0%, #587bf6 56%, #6b8cff 100%);
   box-shadow: 0 28px 54px rgba(62, 89, 192, 0.18);
-  padding: clamp(38px, 5vw, 54px) clamp(22px, 4vw, 46px) clamp(26px, 4vw, 34px);
+  padding: clamp(38px, 5vw, 54px) clamp(22px, 4vw, 46px) 22px;
 }
 
 .cta-inner {
@@ -1295,8 +1295,8 @@ a {
   width: 19px;
   height: 19px;
   display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.82;
+  filter: brightness(0) saturate(100%) invert(100%);
+  opacity: 0.78;
   transition: opacity 160ms ease;
 }
 
@@ -1668,7 +1668,7 @@ a {
   }
 
   .cta {
-    padding: 44px 0 54px;
+    padding: 44px 0 38px;
   }
 
   .matchmaker-grid {
