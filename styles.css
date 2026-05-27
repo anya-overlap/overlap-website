@@ -568,13 +568,13 @@ a {
 
 .compatibility-grid {
   display: grid;
-  grid-template-columns: minmax(202px, 260px) minmax(320px, 520px);
-  gap: clamp(27px, 4.6vw, 88px);
+  grid-template-columns: minmax(202px, 260px) minmax(300px, 440px);
+  gap: clamp(22px, 3.8vw, 64px);
   align-items: center;
   justify-items: center;
   justify-content: center;
-  width: min(100%, 930px);
-  max-width: 930px;
+  width: min(100%, 820px);
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -604,9 +604,10 @@ a {
 }
 
 .compatibility-copy {
-  max-width: 442px;
+  max-width: 376px;
   display: grid;
-  gap: 18px;
+  gap: 14px;
+  transform: translateY(-14px);
 }
 
 .compatibility-copy-lead {
@@ -619,7 +620,7 @@ a {
 
 .compatibility-copy p {
   font-size: clamp(1.02rem, 1.5vw, 1.35rem);
-  line-height: 1.55;
+  line-height: 1.45;
   color: #666666;
 }
 
@@ -2175,6 +2176,7 @@ a {
   .compatibility-copy {
     max-width: 100%;
     gap: 14px;
+    transform: none;
   }
 
   .compatibility-copy-lead {
