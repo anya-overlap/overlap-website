@@ -711,19 +711,26 @@ a {
   transform-origin: top center;
 }
 
+.carousel-stage {
+  position: relative;
+  width: min(306px, 100%);
+}
+
 .carousel-controls {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin-top: -8px;
+  gap: 12px;
+  margin-top: -20px;
+  width: min(306px, 100%);
 }
 
 .phone-frame {
   position: relative;
   width: min(340px, 100%);
   isolation: isolate;
+  margin-inline: auto;
 }
 
 .matchmaker .phone-frame {
@@ -797,6 +804,7 @@ a {
 }
 
 .carousel-arrow {
+  --carousel-arrow-translate-y: 0;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -807,6 +815,7 @@ a {
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(26, 47, 188, 0.3);
   transition: transform 160ms ease, box-shadow 160ms ease;
+  transform: translateY(var(--carousel-arrow-translate-y));
 }
 
 .carousel-arrow-icon {
@@ -820,13 +829,28 @@ a {
   transform: rotate(180deg);
 }
 
+.matchmaker .carousel-arrow {
+  --carousel-arrow-translate-y: -50%;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+.matchmaker .carousel-arrow.prev {
+  left: -64px;
+}
+
+.matchmaker .carousel-arrow.next {
+  right: -64px;
+}
+
 .carousel-arrow:hover {
-  transform: translateY(-2px);
+  transform: translateY(calc(var(--carousel-arrow-translate-y) - 2px));
   box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
 }
 
 .carousel-arrow:active {
-  transform: translateY(0) scale(0.97);
+  transform: translateY(var(--carousel-arrow-translate-y)) scale(0.97);
 }
 
 .carousel-pagination {
@@ -2184,6 +2208,10 @@ a {
     margin-bottom: 10px;
   }
 
+  .carousel-stage {
+    width: min(280px, calc(100vw - 72px));
+  }
+
   .phone-frame {
     width: min(280px, calc(100vw - 72px));
     margin-inline: auto;
@@ -2194,9 +2222,16 @@ a {
   }
 
   .carousel-controls {
-    width: 100%;
-    gap: 16px;
-    flex-wrap: wrap;
+    width: min(280px, calc(100vw - 72px));
+    gap: 12px;
+  }
+
+  .matchmaker .carousel-arrow.prev {
+    left: -54px;
+  }
+
+  .matchmaker .carousel-arrow.next {
+    right: -54px;
   }
   .learn-more h2 {
     margin-bottom: 14px;
