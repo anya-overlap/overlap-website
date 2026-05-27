@@ -527,12 +527,10 @@ a {
   max-width: 640px;
 }
 
-.section-heading h2 {
-  font-size: clamp(2.3rem, 3vw, 2.8rem);
-}
-
+.section-heading h2,
 .matchmaker .section-heading h2,
-.problems .section-heading h2 {
+.problems .section-heading h2,
+.compatibility .section-heading h2 {
   font-size: clamp(2.05rem, 2.5vw, 2.45rem);
 }
 
