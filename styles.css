@@ -587,6 +587,22 @@ a {
   justify-content: center;
 }
 
+.compatibility--question-hub .compatibility-phone {
+  position: relative;
+  width: max-content;
+  isolation: isolate;
+}
+
+.compatibility--question-hub .phone-card,
+.compatibility--question-hub .phone-device,
+.compatibility--question-hub .compatibility-screen {
+  opacity: 0.5;
+}
+
+.compatibility--question-hub .phone-frame::before {
+  display: none;
+}
+
 .compatibility-phone-frame {
   width: min(266px, 100%);
 }
@@ -610,6 +626,17 @@ a {
   display: block;
   transform: translateY(3px) scale(0.972);
   transform-origin: center top;
+}
+
+.question-hub-modal-overlay {
+  position: absolute;
+  right: 180px;
+  top: 31%;
+  width: min(360px, 42vw);
+  z-index: 2;
+  transform: translateY(-4%);
+  pointer-events: none;
+  filter: drop-shadow(0 22px 42px rgba(18, 26, 54, 0.22));
 }
 
 .compatibility-copy {
@@ -2247,6 +2274,13 @@ a {
 
   .compatibility-phone-frame {
     width: min(288px, calc(100vw - 48px));
+  }
+
+  .question-hub-modal-overlay {
+    right: -72px;
+    top: 56%;
+    width: min(320px, calc(100vw - 36px));
+    transform: translateY(0);
   }
 
   .carousel-controls {
