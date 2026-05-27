@@ -612,7 +612,7 @@ a {
 }
 
 .compatibility--question-hub .compatibility-phone-frame {
-  width: min(213px, 100%);
+  width: min(263px, 100%);
 }
 
 .compatibility-screen {
@@ -639,9 +639,9 @@ a {
 .question-hub-modal-overlay {
   position: absolute;
   right: 280px;
+  border-radius: 10px;
   top: 31%;
-  width: min(230px, 26.88vw);
-  padding: 4px;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -652,9 +652,11 @@ a {
 }
 
 .question-hub-modal-image {
-  width: 100%;
+  width: min(230px, 26.88vw);
   height: auto;
   display: block;
+  border-radius: 10px;
+  outline: 4px solid darkgray;
 }
 
 .compatibility-copy {
@@ -662,6 +664,10 @@ a {
   display: grid;
   gap: 14px;
   transform: translateY(-14px);
+}
+
+.compatibility--question-hub .compatibility-copy {
+  transform: translate(88px, -14px);
 }
 
 .compatibility-copy-lead {
@@ -2299,15 +2305,22 @@ a {
   }
 
   .compatibility--question-hub .compatibility-phone-frame {
-    width: min(230px, calc(100vw - 96px));
+    width: min(284px, calc(100vw - 80px));
   }
 
   .question-hub-modal-overlay {
     right: -72px;
     top: 56%;
-    width: min(205px, calc(100vw - 104px));
-    padding: 4px;
+    width: max-content;
     transform: translateY(0);
+  }
+
+  .compatibility--question-hub .compatibility-copy {
+    transform: none;
+  }
+
+  .question-hub-modal-image {
+    width: min(205px, calc(100vw - 104px));
   }
 
   .carousel-controls {
