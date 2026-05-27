@@ -600,7 +600,7 @@ a {
 .compatibility--question-hub .phone-card,
 .compatibility--question-hub .phone-device,
 .compatibility--question-hub .compatibility-screen {
-  opacity: 0.5;
+  opacity: 0.54;
 }
 
 .compatibility--question-hub .phone-frame::before {
