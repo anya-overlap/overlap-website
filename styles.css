@@ -558,6 +558,10 @@ a {
   backdrop-filter: blur(1px);
 }
 
+.compatibility--question-hub {
+  padding-bottom: calc(var(--section-space-bottom-tight) + 180px);
+}
+
 .compatibility .section-heading {
   max-width: 880px;
   margin-bottom: 34px;
@@ -607,6 +611,10 @@ a {
   width: min(266px, 100%);
 }
 
+.compatibility--question-hub .compatibility-phone-frame {
+  width: min(213px, 100%);
+}
+
 .compatibility-screen {
   top: 5.3%;
   bottom: 5.3%;
@@ -630,13 +638,23 @@ a {
 
 .question-hub-modal-overlay {
   position: absolute;
-  right: 180px;
+  right: 280px;
   top: 31%;
-  width: min(360px, 42vw);
+  width: min(230px, 26.88vw);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
   transform: translateY(-4%);
   pointer-events: none;
   filter: drop-shadow(0 22px 42px rgba(18, 26, 54, 0.22));
+}
+
+.question-hub-modal-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .compatibility-copy {
@@ -1852,6 +1870,10 @@ a {
     padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
   }
 
+  .compatibility--question-hub {
+    padding-bottom: calc(var(--section-space-bottom-tight) + 120px);
+  }
+
   .problems {
     padding-top: calc(var(--section-space-top) - 8px);
     padding-bottom: calc(var(--section-space-bottom) - 8px);
@@ -2276,10 +2298,15 @@ a {
     width: min(288px, calc(100vw - 48px));
   }
 
+  .compatibility--question-hub .compatibility-phone-frame {
+    width: min(230px, calc(100vw - 96px));
+  }
+
   .question-hub-modal-overlay {
     right: -72px;
     top: 56%;
-    width: min(320px, calc(100vw - 36px));
+    width: min(205px, calc(100vw - 104px));
+    padding: 4px;
     transform: translateY(0);
   }
 
