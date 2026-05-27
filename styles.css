@@ -604,7 +604,7 @@ a {
   height: auto;
   aspect-ratio: 1320 / 2868;
   display: block;
-  transform: scale(0.972);
+  transform: translateY(3px) scale(0.972);
   transform-origin: center top;
 }
 
