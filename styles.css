@@ -711,9 +711,9 @@ a {
   max-width: 330px;
   display: grid;
   gap: 34px;
-  justify-self: start;
+  justify-self: center;
+  align-self: center;
   text-align: left;
-  transform: translateY(28px);
 }
 
 .matchmaker-copy p {
@@ -784,7 +784,7 @@ a {
   justify-items: center;
   gap: 0;
   pointer-events: none;
-  transform: translateY(calc(-50% - 10px));
+  transform: translateY(calc(-50% - 26px));
 }
 
 .matchmaker-callout-text {
@@ -907,18 +907,49 @@ a {
 }
 
 .matchmaker .carousel-arrow {
-  --carousel-arrow-translate-y: -50%;
-  position: absolute;
-  top: 50%;
+  --carousel-arrow-translate-y: 0;
+  position: relative;
   z-index: 2;
 }
 
-.matchmaker .carousel-arrow.prev {
-  left: -56px;
+.carousel-side-controls {
+  position: absolute;
+  top: 50%;
+  right: -56px;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .matchmaker .carousel-arrow.next {
-  right: -56px;
+  right: auto;
+}
+
+.carousel-secondary-action {
+  border: 0;
+  background: transparent;
+  color: #8b8b8b;
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.2;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.carousel-secondary-action:hover {
+  opacity: 0.74;
+}
+
+.carousel-secondary-action:active {
+  transform: translateY(1px);
+}
+
+.matchmaker .carousel-secondary-action.prev {
+  position: static;
 }
 
 .carousel-arrow:hover {
@@ -2332,12 +2363,12 @@ a {
     top: 50%;
   }
 
-  .matchmaker .carousel-arrow.prev {
-    left: -48px;
+  .carousel-side-controls {
+    right: -48px;
   }
 
-  .matchmaker .carousel-arrow.next {
-    right: -48px;
+  .matchmaker .carousel-secondary-action.prev {
+    top: auto;
   }
   .learn-more h2 {
     margin-bottom: 14px;

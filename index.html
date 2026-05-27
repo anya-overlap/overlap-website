@@ -185,9 +185,6 @@
             <div class="matchmaker-right" id="difference">
               <div class="phone-card phone-carousel">
                 <div class="carousel-stage">
-                  <button class="carousel-arrow prev" type="button" aria-label="Previous slide">
-                    <img src="./assets/arrowblack.svg" alt="" aria-hidden="true" class="carousel-arrow-icon" />
-                  </button>
                   <div class="phone-frame">
                     <div class="phone-screen">
                       <div class="carousel-track">
@@ -217,9 +214,14 @@
                       alt="iPhone 14 Pro in space black"
                     />
                   </div>
-                  <button class="carousel-arrow next" type="button" aria-label="Next slide">
-                    <img src="./assets/arrowblack.svg" alt="" aria-hidden="true" class="carousel-arrow-icon" />
-                  </button>
+                  <div class="carousel-side-controls">
+                    <button class="carousel-arrow next" type="button" aria-label="Next slide">
+                      <img src="./assets/arrowblack.svg" alt="" aria-hidden="true" class="carousel-arrow-icon" />
+                    </button>
+                    <button class="carousel-secondary-action prev" type="button" aria-label="Previous slide">
+                      Previous
+                    </button>
+                  </div>
                 </div>
                 <div class="carousel-controls">
                   <div class="carousel-pagination" role="tablist" aria-label="Slider pagination"></div>
@@ -583,6 +585,7 @@
         const pagination = phoneCarousel.querySelector(".carousel-pagination");
         const prevButton = phoneCarousel.querySelector(".carousel-arrow.prev");
         const nextButton = phoneCarousel.querySelector(".carousel-arrow.next");
+        const prevSecondaryButton = phoneCarousel.querySelector(".carousel-secondary-action.prev");
 
         let currentIndex = 0;
 
@@ -619,6 +622,7 @@
 
         prevButton?.addEventListener("click", () => updateCarousel(currentIndex - 1));
         nextButton?.addEventListener("click", () => updateCarousel(currentIndex + 1));
+        prevSecondaryButton?.addEventListener("click", () => updateCarousel(currentIndex - 1));
       }
 
       const compatibilityProfileVideo = document.querySelector(".compatibility-profile-video");
