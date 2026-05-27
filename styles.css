@@ -729,27 +729,29 @@ a {
 
 .matchmaker-callout {
   position: absolute;
-  left: calc(50% + 165px);
-  top: calc(100% - 42px);
+  right: -58px;
+  top: 50%;
   display: grid;
   justify-items: center;
-  gap: 4px;
+  gap: 0;
   pointer-events: none;
+  transform: translateY(-50%);
 }
 
 .matchmaker-callout-text {
   font-family: "Kalam", cursive;
-  font-size: 1.12rem;
+  font-size: 1.6rem;
   line-height: 1;
   color: #587BF6;
-  transform: rotate(9deg);
+  transform: rotate(10deg) translateX(-10px);
   white-space: nowrap;
 }
 
 .matchmaker-callout-arrow {
-  width: 34px;
+  width: 30px;
   height: auto;
   display: block;
+  transform: translateX(-28px) translateY(-6px);
 }
 
 .phone-frame {
@@ -2253,8 +2255,8 @@ a {
   }
 
   .matchmaker-callout {
-    left: calc(50% + 146px);
-    top: calc(100% - 40px);
+    right: -36px;
+    top: 50%;
   }
 
   .matchmaker .carousel-arrow.prev {
