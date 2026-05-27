@@ -699,7 +699,7 @@ a {
 
 .matchmaker-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 0.82fr) minmax(320px, 1.18fr);
+  grid-template-columns: minmax(300px, 0.94fr) minmax(320px, 1.06fr);
   gap: clamp(36px, 6vw, 96px);
   align-items: center;
   justify-content: center;
@@ -708,7 +708,8 @@ a {
 }
 
 .matchmaker-copy {
-  max-width: 330px;
+  max-width: 370px;
+  width: 100%;
   display: grid;
   gap: 34px;
   justify-self: center;
