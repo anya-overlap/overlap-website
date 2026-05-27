@@ -559,20 +559,23 @@ a {
   margin-bottom: 34px;
 }
 
-.compatibility .section-heading h2 {
-  font-size: clamp(2.1rem, 3.2vw, 2.95rem);
-}
-
 .compatibility .section-heading p {
   color: var(--blue);
-  font-size: clamp(1.05rem, 1.55vw, 1.35rem);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: -4px;
 }
 
 .compatibility-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
-  gap: clamp(36px, 6vw, 120px);
+  grid-template-columns: minmax(224px, 288px) minmax(320px, 520px);
+  gap: clamp(31px, 5.1vw, 102px);
   align-items: center;
+  justify-items: center;
+  justify-content: center;
+  width: min(100%, 930px);
+  max-width: 930px;
+  margin: 0 auto;
 }
 
 .compatibility-phone {
@@ -581,7 +584,7 @@ a {
 }
 
 .compatibility-phone-frame {
-  width: min(370px, 100%);
+  width: min(296px, 100%);
 }
 
 .compatibility-screen {
@@ -601,16 +604,17 @@ a {
 }
 
 .compatibility-copy {
-  max-width: 520px;
+  max-width: 442px;
   display: grid;
   gap: 18px;
 }
 
 .compatibility-copy-lead {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 2.9vw, 2.7rem);
-  line-height: 1.1;
+  font-size: clamp(2.3rem, 3.45vw, 3.15rem);
+  line-height: 1.03;
   color: #232323;
+  font-weight: 700;
 }
 
 .compatibility-copy p {
@@ -1811,12 +1815,7 @@ a {
   }
 
   .compatibility .section-heading {
-    margin-bottom: 26px;
-  }
-
-  .compatibility .section-heading p {
-    font-size: 1.07rem;
-    margin-top: 4px;
+    margin-bottom: 28px;
   }
 
   .matchmaker-mobile-subtext {
@@ -2170,6 +2169,7 @@ a {
   .compatibility-grid {
     grid-template-columns: 1fr;
     gap: 26px;
+    width: 100%;
   }
 
   .compatibility-copy {
@@ -2178,12 +2178,21 @@ a {
   }
 
   .compatibility-copy-lead {
-    font-size: clamp(1.7rem, 7vw, 2rem);
+    font-size: clamp(1.95rem, 7.8vw, 2.3rem);
+  }
+
+  .compatibility .section-heading p {
+    font-size: 1.07rem;
+    margin-top: 4px;
   }
 
   .compatibility-copy p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+
+  .compatibility-phone-frame {
+    width: min(256px, calc(100vw - 48px));
   }
 
   .matchmaker-left,
@@ -2241,7 +2250,7 @@ a {
   }
 
   .compatibility-phone-frame {
-    width: min(320px, calc(100vw - 48px));
+    width: min(288px, calc(100vw - 48px));
   }
 
   .carousel-controls {
