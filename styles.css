@@ -709,6 +709,7 @@ a {
   gap: 1px;
   transform: scale(0.9);
   transform-origin: top center;
+  position: relative;
 }
 
 .carousel-stage {
@@ -722,8 +723,33 @@ a {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: -20px;
+  margin-top: -15px;
   width: min(306px, 100%);
+}
+
+.matchmaker-callout {
+  position: absolute;
+  left: calc(50% + 165px);
+  top: calc(100% - 42px);
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.matchmaker-callout-text {
+  font-family: "Kalam", cursive;
+  font-size: 1.12rem;
+  line-height: 1;
+  color: #587BF6;
+  transform: rotate(9deg);
+  white-space: nowrap;
+}
+
+.matchmaker-callout-arrow {
+  width: 34px;
+  height: auto;
+  display: block;
 }
 
 .phone-frame {
@@ -837,11 +863,11 @@ a {
 }
 
 .matchmaker .carousel-arrow.prev {
-  left: -64px;
+  left: -56px;
 }
 
 .matchmaker .carousel-arrow.next {
-  right: -64px;
+  right: -56px;
 }
 
 .carousel-arrow:hover {
@@ -2226,12 +2252,17 @@ a {
     gap: 12px;
   }
 
+  .matchmaker-callout {
+    left: calc(50% + 146px);
+    top: calc(100% - 40px);
+  }
+
   .matchmaker .carousel-arrow.prev {
-    left: -54px;
+    left: -48px;
   }
 
   .matchmaker .carousel-arrow.next {
-    right: -54px;
+    right: -48px;
   }
   .learn-more h2 {
     margin-bottom: 14px;
