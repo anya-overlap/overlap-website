@@ -568,8 +568,8 @@ a {
 
 .compatibility-grid {
   display: grid;
-  grid-template-columns: minmax(224px, 288px) minmax(320px, 520px);
-  gap: clamp(31px, 5.1vw, 102px);
+  grid-template-columns: minmax(202px, 260px) minmax(320px, 520px);
+  gap: clamp(27px, 4.6vw, 88px);
   align-items: center;
   justify-items: center;
   justify-content: center;
@@ -584,7 +584,7 @@ a {
 }
 
 .compatibility-phone-frame {
-  width: min(296px, 100%);
+  width: min(266px, 100%);
 }
 
 .compatibility-screen {
@@ -2192,7 +2192,7 @@ a {
   }
 
   .compatibility-phone-frame {
-    width: min(256px, calc(100vw - 48px));
+    width: min(230px, calc(100vw - 48px));
   }
 
   .matchmaker-left,
