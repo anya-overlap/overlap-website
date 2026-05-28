@@ -636,8 +636,9 @@ a {
   opacity: 0.54;
 }
 
-.compatibility--question-hub .phone-frame::before {
-  display: none;
+.compatibility--question-hub .phone-card {
+  position: relative;
+  z-index: 1;
 }
 
 .compatibility-phone-frame {
@@ -896,24 +897,74 @@ a {
 .phone-frame::before {
   content: "";
   position: absolute;
-  width: 142%;
-  aspect-ratio: 1.22 / 1;
-  left: 50%;
-  top: 49%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  border-radius: 62% 38% 58% 42% / 44% 56% 40% 60%;
+  width: var(--phone-glow-width, 142%);
+  aspect-ratio: var(--phone-glow-aspect, 1.22 / 1);
+  left: var(--phone-glow-left, 50%);
+  top: var(--phone-glow-top, 49%);
+  transform: translate(-50%, -50%) rotate(var(--phone-glow-rotate, -45deg));
+  border-radius: var(--phone-glow-radius, 62% 38% 58% 42% / 44% 56% 40% 60%);
   background: radial-gradient(
-    circle at 50% 48%,
-    #4353A5 0%,
-    rgba(67, 83, 165, 0.6) 22%,
-    rgba(88, 123, 246, 0.24) 49%,
-    rgba(88, 123, 246, 0.11) 63%,
-    rgba(88, 123, 246, 0.04) 73%,
+    circle at var(--phone-glow-center, 50% 48%),
+    rgba(67, 83, 165, var(--phone-glow-core, 1)) 0%,
+    rgba(67, 83, 165, var(--phone-glow-inner, 0.6)) 22%,
+    rgba(88, 123, 246, var(--phone-glow-mid, 0.24)) 49%,
+    rgba(88, 123, 246, var(--phone-glow-outer, 0.11)) 63%,
+    rgba(88, 123, 246, var(--phone-glow-fade, 0.04)) 73%,
     rgba(88, 123, 246, 0) 82%
   );
-  filter: blur(25px);
+  filter: blur(var(--phone-glow-blur, 25px));
   z-index: 0;
   pointer-events: none;
+}
+
+.compatibility--question-hub .compatibility-phone-frame {
+  --phone-glow-width: 136%;
+  --phone-glow-aspect: 1.18 / 1;
+  --phone-glow-top: 50%;
+  --phone-glow-rotate: -42deg;
+  --phone-glow-radius: 58% 42% 56% 44% / 46% 54% 42% 58%;
+  --phone-glow-center: 48% 46%;
+  --phone-glow-core: 0.88;
+  --phone-glow-inner: 0.5;
+  --phone-glow-mid: 0.21;
+  --phone-glow-outer: 0.1;
+  --phone-glow-fade: 0.035;
+  --phone-glow-blur: 24px;
+}
+
+.compatibility--question-hub .compatibility-phone-frame::before {
+  z-index: -1;
+}
+
+.question-system-story .phone-frame {
+  --phone-glow-width: 146%;
+  --phone-glow-aspect: 1.24 / 1;
+  --phone-glow-top: 48%;
+  --phone-glow-rotate: -47deg;
+  --phone-glow-radius: 64% 36% 60% 40% / 42% 58% 38% 62%;
+  --phone-glow-center: 52% 49%;
+  --phone-glow-core: 0.96;
+  --phone-glow-inner: 0.58;
+  --phone-glow-mid: 0.25;
+  --phone-glow-outer: 0.115;
+  --phone-glow-fade: 0.042;
+  --phone-glow-blur: 26px;
+}
+
+.compatibility--take-control .compatibility-phone-frame {
+  --phone-glow-width: 140%;
+  --phone-glow-aspect: 1.2 / 1;
+  --phone-glow-left: 49%;
+  --phone-glow-top: 50%;
+  --phone-glow-rotate: -43deg;
+  --phone-glow-radius: 60% 40% 54% 46% / 43% 57% 41% 59%;
+  --phone-glow-center: 49% 47%;
+  --phone-glow-core: 0.92;
+  --phone-glow-inner: 0.55;
+  --phone-glow-mid: 0.22;
+  --phone-glow-outer: 0.105;
+  --phone-glow-fade: 0.038;
+  --phone-glow-blur: 25px;
 }
 
 .phone-device {
