@@ -692,7 +692,11 @@ a {
 }
 
 .compatibility--question-hub .compatibility-copy {
-  transform: translate(88px, -14px);
+  transform: translate(112px, -14px);
+}
+
+.compatibility--question-hub .compatibility-grid {
+  gap: clamp(40px, 6vw, 104px);
 }
 
 .question-system-story {
