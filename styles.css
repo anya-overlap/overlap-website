@@ -696,21 +696,29 @@ a {
 }
 
 .question-system-story {
-  --question-system-control-gap: 40px;
+  --question-system-copy-width: 376px;
+  --question-system-control-gap: 24px;
   --question-system-callout-gap: 24px;
-  --question-system-phone-width: 337px;
+  --question-system-phone-width: 303px;
   display: grid;
-  grid-template-columns: minmax(300px, 0.92fr) minmax(320px, 1.08fr);
-  gap: clamp(16px, 2.4vw, 34px);
+  grid-template-columns:
+    minmax(300px, var(--question-system-copy-width))
+    var(--question-system-phone-width)
+    max-content
+    max-content;
+  column-gap: 0;
+  row-gap: 1px;
   align-items: center;
   justify-content: center;
-  width: min(100%, 820px);
+  width: max-content;
+  max-width: 100%;
   margin: clamp(58px, 8vw, 88px) auto 0;
 }
 
 .question-system-copy {
-  max-width: 376px;
+  max-width: var(--question-system-copy-width);
   gap: 18px;
+  padding-right: 34px;
 }
 
 .compatibility-copy > p,
@@ -719,9 +727,9 @@ a {
 }
 
 .question-system-carousel {
-  width: 100%;
+  width: var(--question-system-phone-width);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .question-system-story .phone-card,
@@ -803,10 +811,9 @@ a {
 
 .phone-carousel {
   display: grid;
-  grid-template-columns: minmax(0, max-content) max-content max-content;
-  justify-items: start;
+  grid-template-columns: 1fr;
+  justify-items: center;
   align-items: center;
-  column-gap: var(--question-system-control-gap);
   row-gap: 1px;
   transform: scale(1);
   transform-origin: top center;
@@ -822,7 +829,7 @@ a {
 .question-system-story .carousel-stage,
 .question-system-story .phone-frame,
 .question-system-story .carousel-controls {
-  width: min(var(--question-system-phone-width), 110%);
+  width: var(--question-system-phone-width);
 }
 
 .carousel-controls {
@@ -839,14 +846,14 @@ a {
 }
 
 .matchmaker-callout {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 1;
   align-self: center;
   justify-self: start;
   display: grid;
   justify-items: center;
   gap: 0;
-  margin-left: calc(var(--question-system-callout-gap) - var(--question-system-control-gap));
+  margin-left: var(--question-system-callout-gap);
   pointer-events: none;
   transform: translateY(-24px);
 }
@@ -979,13 +986,14 @@ a {
 }
 
 .carousel-side-controls {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
   align-self: center;
   justify-self: start;
   display: grid;
   justify-items: center;
   gap: 12px;
+  margin-left: var(--question-system-control-gap);
   z-index: 2;
 }
 
