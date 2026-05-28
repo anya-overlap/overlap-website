@@ -532,7 +532,7 @@ a {
 }
 
 .body-section {
-  --body-section-padding-top: var(--section-space-top);
+  --body-section-padding-top: calc(var(--section-space-top) * 0.55);
   --body-section-padding-bottom: var(--section-space-bottom-tight);
   --body-section-heading-gap: 47px;
   --body-section-heading-max-width: 640px;
@@ -2076,7 +2076,7 @@ a {
   }
 
   .body-section {
-    --body-section-padding-top: calc(var(--section-space-top) - 8px);
+    --body-section-padding-top: calc((var(--section-space-top) - 8px) * 0.9);
     --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
     --body-section-title-size: clamp(1.78rem, 8vw, 1.92rem);
   }
