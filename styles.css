@@ -538,7 +538,7 @@ a {
   --body-section-heading-max-width: 640px;
   --body-section-heading-align: left;
   --body-section-heading-width: auto;
-  --body-section-title-size: clamp(2.05rem, 2.5vw, 2.45rem);
+  --body-section-title-size: clamp(1.7rem, 2.07vw, 2.03rem);
   --body-section-subtitle-max-width: 34ch;
   --body-section-subtitle-margin-top: -4px;
   --body-section-copy-font-family: "Inter", sans-serif;
@@ -1178,7 +1178,7 @@ a {
   --body-section-heading-align: center;
   --body-section-heading-width: 100%;
   --body-section-heading-max-width: none;
-  --body-section-title-size: calc(clamp(2rem, 3.05vw, 2.75rem) * var(--learn-more-font-scale));
+  --body-section-title-size: calc(clamp(1.66rem, 2.53vw, 2.28rem) * var(--learn-more-font-scale));
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
@@ -2079,7 +2079,7 @@ a {
     --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
     --body-section-heading-gap: 22px;
     --body-section-subtitle-margin-top: 0;
-    --body-section-title-size: clamp(1.78rem, 8vw, 1.92rem);
+    --body-section-title-size: clamp(1.47rem, 6.62vw, 1.59rem);
   }
 
   .compatibility--question-hub {
@@ -2096,7 +2096,7 @@ a {
 
   .learn-more {
     --body-section-padding-bottom: var(--section-space-bottom-loose);
-    --body-section-title-size: calc(clamp(2rem, 3.05vw, 2.75rem) * var(--learn-more-font-scale));
+    --body-section-title-size: calc(clamp(1.66rem, 2.53vw, 2.28rem) * var(--learn-more-font-scale));
   }
 
   .matchmaker-mobile-subtext {
