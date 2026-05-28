@@ -531,6 +531,11 @@ a {
   --body-section-heading-width: auto;
   --body-section-title-size: clamp(2.05rem, 2.5vw, 2.45rem);
   --body-section-subtitle-max-width: 34ch;
+  --body-section-copy-font-family: "Inter", sans-serif;
+  --body-section-copy-font-weight: 400;
+  --body-section-copy-size: clamp(1.02rem, 1.5vw, 1.35rem);
+  --body-section-copy-line-height: 1.45;
+  --body-section-copy-color: #666666;
   padding: var(--body-section-padding-top) 0 var(--body-section-padding-bottom);
 }
 
@@ -547,6 +552,14 @@ a {
 
 .body-section .section-heading p {
   max-width: var(--body-section-subtitle-max-width);
+}
+
+.body-section-copy {
+  font-family: var(--body-section-copy-font-family);
+  font-weight: var(--body-section-copy-font-weight);
+  font-size: var(--body-section-copy-size);
+  line-height: var(--body-section-copy-line-height);
+  color: var(--body-section-copy-color);
 }
 
 .section-heading--centered {
@@ -680,16 +693,10 @@ a {
 
 .compatibility-copy-lead {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2.3rem, 3.45vw, 3.15rem);
-  line-height: 1.03;
+  font-size: clamp(1.52rem, 1.5vw, 2rem);
+  line-height: 1.08;
   color: #232323;
-  font-weight: 700;
-}
-
-.compatibility-copy p {
-  font-size: clamp(1.02rem, 1.5vw, 1.35rem);
-  line-height: 1.45;
-  color: #666666;
+  font-weight: 600;
 }
 
 .matchmaker {
@@ -720,12 +727,6 @@ a {
   justify-self: center;
   align-self: center;
   text-align: left;
-}
-
-.matchmaker-copy p {
-  font-size: clamp(1.02rem, 1.5vw, 1.35rem);
-  line-height: 1.45;
-  color: #666666;
 }
 
 .matchmaker-right {
@@ -2279,18 +2280,18 @@ a {
     transform: none;
   }
 
+  .body-section {
+    --body-section-copy-size: 1rem;
+    --body-section-copy-line-height: 1.5;
+  }
+
   .compatibility-copy-lead {
-    font-size: clamp(1.95rem, 7.8vw, 2.3rem);
+    font-size: clamp(1.35rem, 5.4vw, 1.7rem);
   }
 
   .compatibility .section-heading p {
     font-size: 1.07rem;
     margin-top: 4px;
-  }
-
-  .compatibility-copy p {
-    font-size: 1rem;
-    line-height: 1.5;
   }
 
   .compatibility-phone-frame {
