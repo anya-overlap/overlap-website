@@ -847,6 +847,10 @@ a {
   text-align: right;
 }
 
+.compatibility-copy--mobile-inline {
+  display: none;
+}
+
 .compatibility--question-hub .compatibility-copy {
   transform: translate(112px, -14px);
 }
@@ -2647,6 +2651,14 @@ a {
     max-width: 100%;
     gap: 14px;
     transform: none;
+  }
+
+  .compatibility-grid--triptych > .compatibility-copy--mirror {
+    display: none;
+  }
+
+  .compatibility-copy--mobile-inline {
+    display: grid;
   }
 
   .compatibility-copy--mirror {
