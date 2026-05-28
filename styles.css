@@ -639,7 +639,7 @@ a {
   aspect-ratio: 353 / 552;
   border-radius: 10px;
   transform: translateY(-4%);
-  box-shadow: 0 20px 36px rgba(208, 76, 77, 0.18);
+  box-shadow: 0 22px 42px rgba(208, 76, 77, 0.18);
   z-index: 0;
   pointer-events: none;
 }
@@ -671,7 +671,7 @@ a {
   left: 10.2%;
   right: 10.2%;
   border-radius: 33px;
-  box-shadow: 0 20px 36px rgba(88, 123, 246, 0.18);
+  box-shadow: 0 22px 42px rgba(88, 123, 246, 0.21);
   z-index: 0;
   pointer-events: none;
 }
