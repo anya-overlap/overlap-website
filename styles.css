@@ -626,7 +626,7 @@ a {
   width: max-content;
   isolation: isolate;
   --question-hub-phone-width: min(237px, 100%);
-  --question-hub-modal-offset: 252px;
+  --question-hub-modal-offset: 282px;
   --question-hub-modal-width: min(207px, 24.2vw);
 }
 
@@ -682,7 +682,7 @@ a {
   z-index: 2;
   transform: translateY(-4%);
   pointer-events: none;
-  filter: drop-shadow(0 22px 42px rgba(18, 26, 54, 0.22));
+  filter: drop-shadow(0 20px 36px rgba(208, 76, 77, 0.18));
 }
 
 .question-hub-modal-image {
