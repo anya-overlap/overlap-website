@@ -2677,7 +2677,7 @@ a {
 
   .question-system-story {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 0px;
     width: 100%;
     margin-top: 42px;
   }
