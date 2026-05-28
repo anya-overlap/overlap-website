@@ -696,12 +696,15 @@ a {
 }
 
 .question-system-story {
+  --question-system-control-gap: 40px;
+  --question-system-callout-gap: 24px;
+  --question-system-phone-width: 337px;
   display: grid;
   grid-template-columns: minmax(300px, 0.92fr) minmax(320px, 1.08fr);
-  gap: clamp(24px, 3.5vw, 52px);
+  gap: clamp(16px, 2.4vw, 34px);
   align-items: center;
   justify-content: center;
-  width: min(100%, 860px);
+  width: min(100%, 820px);
   margin: clamp(58px, 8vw, 88px) auto 0;
 }
 
@@ -800,16 +803,26 @@ a {
 
 .phone-carousel {
   display: grid;
-  justify-items: center;
-  gap: 1px;
-  transform: scale(0.9);
+  grid-template-columns: minmax(0, max-content) max-content max-content;
+  justify-items: start;
+  align-items: center;
+  column-gap: var(--question-system-control-gap);
+  row-gap: 1px;
+  transform: scale(1);
   transform-origin: top center;
-  position: relative;
 }
 
 .carousel-stage {
   position: relative;
+  grid-column: 1;
+  grid-row: 1;
   width: min(306px, 100%);
+}
+
+.question-system-story .carousel-stage,
+.question-system-story .phone-frame,
+.question-system-story .carousel-controls {
+  width: min(var(--question-system-phone-width), 110%);
 }
 
 .carousel-controls {
@@ -819,18 +832,23 @@ a {
   justify-content: center;
   gap: 12px;
   margin-top: -10px;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
   width: min(306px, 100%);
 }
 
 .matchmaker-callout {
-  position: absolute;
-  right: -112px;
-  top: 50%;
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
+  justify-self: start;
   display: grid;
   justify-items: center;
   gap: 0;
+  margin-left: calc(var(--question-system-callout-gap) - var(--question-system-control-gap));
   pointer-events: none;
-  transform: translateY(calc(-50% - 26px));
+  transform: translateY(-24px);
 }
 
 .matchmaker-callout-text {
@@ -854,10 +872,6 @@ a {
   width: min(340px, 100%);
   isolation: isolate;
   margin-inline: auto;
-}
-
-.matchmaker .phone-frame {
-  width: min(306px, 100%);
 }
 
 .phone-frame::before {
@@ -965,13 +979,13 @@ a {
 }
 
 .carousel-side-controls {
-  position: absolute;
-  top: 50%;
-  right: -84px;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  justify-self: start;
   display: grid;
   justify-items: center;
   gap: 12px;
-  transform: translateY(-50%);
   z-index: 2;
 }
 
@@ -2369,8 +2383,10 @@ a {
 
   .phone-carousel {
     width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
     transform: none;
-    gap: 10px;
+    row-gap: 10px;
     margin-bottom: 10px;
   }
 
@@ -2410,15 +2426,21 @@ a {
     width: min(280px, calc(100vw - 72px));
     gap: 12px;
     margin-top: -5px;
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .matchmaker-callout {
-    right: -64px;
-    top: 50%;
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+    transform: none;
   }
 
   .carousel-side-controls {
-    right: -68px;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
   }
 
   .matchmaker .carousel-secondary-action.prev {
