@@ -1255,12 +1255,12 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
 }
 
 .pagination-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 999px;
   border: none;
   background: #e1e1e1;
@@ -2778,6 +2778,10 @@ a {
     margin-top: -5px;
     grid-column: 1;
     grid-row: 3;
+    align-self: start;
+    transform: translateY(-73px);
+    position: relative;
+    z-index: 3;
   }
 
   .matchmaker-callout {
@@ -2803,7 +2807,16 @@ a {
     z-index: 3;
   }
 
+  .carousel-side-controls .carousel-arrow.next,
   .carousel-side-controls .carousel-secondary-action.prev {
+    width: 118px;
+    flex: 0 0 118px;
+  }
+
+  .carousel-side-controls .carousel-secondary-action.prev {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     top: auto;
     margin-top: 0;
     order: -1;
