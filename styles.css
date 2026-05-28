@@ -630,6 +630,20 @@ a {
   --question-hub-modal-width: min(207px, 24.2vw);
 }
 
+.compatibility--question-hub .compatibility-phone::before {
+  content: "";
+  position: absolute;
+  right: var(--question-hub-modal-offset);
+  top: 31%;
+  width: var(--question-hub-modal-width);
+  aspect-ratio: 353 / 552;
+  border-radius: 10px;
+  transform: translateY(-4%);
+  box-shadow: 0 20px 36px rgba(208, 76, 77, 0.18);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .compatibility--question-hub .phone-card,
 .compatibility--question-hub .phone-device,
 .compatibility--question-hub .compatibility-screen {
@@ -682,7 +696,6 @@ a {
   z-index: 2;
   transform: translateY(-4%);
   pointer-events: none;
-  filter: drop-shadow(0 20px 36px rgba(208, 76, 77, 0.18));
 }
 
 .question-hub-modal-image {
@@ -2473,6 +2486,13 @@ a {
     right: var(--question-hub-modal-offset);
     top: 56%;
     width: max-content;
+    transform: translateY(0);
+  }
+
+  .compatibility--question-hub .compatibility-phone::before {
+    right: var(--question-hub-modal-offset);
+    top: 56%;
+    width: var(--question-hub-modal-width);
     transform: translateY(0);
   }
 
