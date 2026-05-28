@@ -534,12 +534,13 @@ a {
 .body-section {
   --body-section-padding-top: calc(var(--section-space-top) * 0.55);
   --body-section-padding-bottom: var(--section-space-bottom-tight);
-  --body-section-heading-gap: 47px;
+  --body-section-heading-gap: 32px;
   --body-section-heading-max-width: 640px;
   --body-section-heading-align: left;
   --body-section-heading-width: auto;
   --body-section-title-size: clamp(2.05rem, 2.5vw, 2.45rem);
   --body-section-subtitle-max-width: 34ch;
+  --body-section-subtitle-margin-top: -4px;
   --body-section-copy-font-family: "Inter", sans-serif;
   --body-section-copy-font-weight: 400;
   --body-section-copy-size: clamp(0.92rem, 1.08vw, 1.08rem);
@@ -561,6 +562,7 @@ a {
 
 .body-section .section-heading p {
   max-width: var(--body-section-subtitle-max-width);
+  margin-top: var(--body-section-subtitle-margin-top);
 }
 
 .body-section-copy {
@@ -584,7 +586,6 @@ a {
   color: var(--blue);
   font-weight: 400;
   font-size: 1.2rem;
-  margin-top: -4px;
 }
 
 .compatibility {
@@ -610,7 +611,6 @@ a {
   color: var(--blue);
   font-weight: 400;
   font-size: 1.2rem;
-  margin-top: -4px;
 }
 
 .compatibility-grid {
@@ -860,7 +860,6 @@ a {
   color: var(--blue);
   font-weight: 400;
   font-size: 1.2rem;
-  margin-top: -4px;
 }
 
 .phone-card {
@@ -2078,6 +2077,8 @@ a {
   .body-section {
     --body-section-padding-top: calc((var(--section-space-top) - 8px) * 0.9);
     --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
+    --body-section-heading-gap: 22px;
+    --body-section-subtitle-margin-top: 0;
     --body-section-title-size: clamp(1.78rem, 8vw, 1.92rem);
   }
 
@@ -2100,7 +2101,6 @@ a {
 
   .matchmaker-mobile-subtext {
     font-size: 1.07rem;
-    margin-top: 4px;
   }
 
   .info-block h3 {
@@ -2304,14 +2304,6 @@ a {
     height: auto;
   }
 
-  .body-section {
-    --body-section-heading-gap: 28px;
-  }
-
-  .matchmaker {
-    --body-section-heading-gap: 26px;
-  }
-
   .problem-card {
     --problem-card-padding: 14px;
     --problem-card-padding-top: 7px;
@@ -2469,7 +2461,6 @@ a {
 
   .compatibility .section-heading p {
     font-size: 1.07rem;
-    margin-top: 4px;
   }
 
   .compatibility-phone-frame {
