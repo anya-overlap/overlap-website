@@ -698,15 +698,15 @@ a {
 .question-system-story {
   display: grid;
   grid-template-columns: minmax(300px, 0.92fr) minmax(320px, 1.08fr);
-  gap: clamp(36px, 6vw, 96px);
+  gap: clamp(24px, 3.5vw, 52px);
   align-items: center;
   justify-content: center;
-  width: min(100%, 920px);
+  width: min(100%, 860px);
   margin: clamp(58px, 8vw, 88px) auto 0;
 }
 
 .question-system-copy {
-  max-width: 390px;
+  max-width: 360px;
 }
 
 .question-system-carousel {
@@ -819,7 +819,7 @@ a {
 
 .matchmaker-callout {
   position: absolute;
-  right: -98px;
+  right: -112px;
   top: 50%;
   display: grid;
   justify-items: center;
@@ -962,7 +962,7 @@ a {
 .carousel-side-controls {
   position: absolute;
   top: 50%;
-  right: -88px;
+  right: -84px;
   display: grid;
   justify-items: center;
   gap: 12px;
