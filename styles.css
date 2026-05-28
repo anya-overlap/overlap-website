@@ -805,7 +805,7 @@ a {
 
 .compatibility-copy-lead {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.38rem, 1.37vw, .5rem);
+  font-size: calc(clamp(1.38rem, 1.37vw, .5rem) * 0.9);
   line-height: 1.08;
   color: #232323;
   font-weight: 600;
@@ -2456,7 +2456,7 @@ a {
   }
 
   .compatibility-copy-lead {
-    font-size: clamp(1.23rem, 4.91vw, 1.55rem);
+    font-size: calc(clamp(1.23rem, 4.91vw, 1.55rem) * 0.9);
   }
 
   .compatibility .section-heading p {
