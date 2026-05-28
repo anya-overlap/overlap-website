@@ -594,6 +594,7 @@ a {
 
 .compatibility--question-system {
   --body-section-heading-max-width: 900px;
+  --body-section-padding-bottom: var(--section-space-bottom);
 }
 
 .compatibility .section-heading p {
@@ -1991,6 +1992,10 @@ a {
   }
 
   .problems {
+    --body-section-padding-bottom: calc(var(--section-space-bottom) - 8px);
+  }
+
+  .compatibility--question-system {
     --body-section-padding-bottom: calc(var(--section-space-bottom) - 8px);
   }
 
