@@ -620,6 +620,9 @@ a {
   position: relative;
   width: max-content;
   isolation: isolate;
+  --question-hub-phone-width: min(237px, 100%);
+  --question-hub-modal-offset: 252px;
+  --question-hub-modal-width: min(207px, 24.2vw);
 }
 
 .compatibility--question-hub .phone-card,
@@ -637,7 +640,7 @@ a {
 }
 
 .compatibility--question-hub .compatibility-phone-frame {
-  width: min(263px, 100%);
+  width: var(--question-hub-phone-width);
 }
 
 .compatibility-screen {
@@ -663,7 +666,7 @@ a {
 
 .question-hub-modal-overlay {
   position: absolute;
-  right: 280px;
+  right: var(--question-hub-modal-offset);
   border-radius: 10px;
   top: 31%;
   width: max-content;
@@ -677,7 +680,7 @@ a {
 }
 
 .question-hub-modal-image {
-  width: min(230px, 26.88vw);
+  width: var(--question-hub-modal-width);
   height: auto;
   display: block;
   border-radius: 10px;
@@ -2416,11 +2419,13 @@ a {
   }
 
   .compatibility--question-hub .compatibility-phone-frame {
-    width: min(284px, calc(100vw - 80px));
+    --question-hub-phone-width: min(256px, calc(100vw - 80px));
+    --question-hub-modal-offset: -65px;
+    --question-hub-modal-width: min(185px, calc(100vw - 104px));
   }
 
   .question-hub-modal-overlay {
-    right: -72px;
+    right: var(--question-hub-modal-offset);
     top: 56%;
     width: max-content;
     transform: translateY(0);
@@ -2431,7 +2436,7 @@ a {
   }
 
   .question-hub-modal-image {
-    width: min(205px, calc(100vw - 104px));
+    width: var(--question-hub-modal-width);
   }
 
   .carousel-controls {
