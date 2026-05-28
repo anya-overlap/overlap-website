@@ -1316,47 +1316,8 @@ a {
   background: var(--blue);
 }
 
-.problems {
-  --body-section-padding-bottom: var(--section-space-bottom);
-  background:
-    radial-gradient(circle at 14% 20%, rgba(88, 123, 246, 0.04) 0%, rgba(88, 123, 246, 0) 30%),
-    radial-gradient(circle at 86% 16%, rgba(208, 76, 77, 0.03) 0%, rgba(208, 76, 77, 0) 28%),
-    linear-gradient(180deg, #fbfcff 0%, #f5f8fe 100%);
-  border-top: 1px solid rgba(192, 202, 228, 0.42);
-  border-bottom: 1px solid rgba(205, 214, 236, 0.56);
-}
-
-.problems::before,
-.problems::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.problems::before {
-  inset: 0;
-  background-image:
-    linear-gradient(90deg, rgba(67, 83, 165, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(67, 83, 165, 0.045) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 32%, transparent 88%);
-  opacity: 0.34;
-}
-
-.problems::after {
-  width: clamp(300px, 42vw, 620px);
-  height: clamp(140px, 18vw, 280px);
-  right: clamp(-90px, -6vw, -10px);
-  bottom: clamp(20px, 6vw, 90px);
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.085) 48%, rgba(208, 76, 77, 0.08) 100%);
-  filter: blur(46px);
-  opacity: 0.56;
-}
-
 @media (min-width: 769px) {
-  .body-section:not(.problems) {
+  .body-section {
     background:
       radial-gradient(circle at 14% 20%, rgba(88, 123, 246, 0.04) 0%, rgba(88, 123, 246, 0) 30%),
       radial-gradient(circle at 86% 16%, rgba(208, 76, 77, 0.03) 0%, rgba(208, 76, 77, 0) 28%),
@@ -1365,15 +1326,15 @@ a {
     border-bottom: 1px solid rgba(205, 214, 236, 0.56);
   }
 
-  .body-section:not(.problems)::before,
-  .body-section:not(.problems)::after {
+  .body-section::before,
+  .body-section::after {
     content: "";
     position: absolute;
     pointer-events: none;
     z-index: 0;
   }
 
-  .body-section:not(.problems)::before {
+  .body-section::before {
     inset: 0;
     background-image:
       linear-gradient(90deg, rgba(67, 83, 165, 0.06) 1px, transparent 1px),
@@ -1383,7 +1344,7 @@ a {
     opacity: 0.34;
   }
 
-  .body-section:not(.problems)::after {
+  .body-section::after {
     width: clamp(300px, 42vw, 620px);
     height: clamp(140px, 18vw, 280px);
     right: clamp(-90px, -6vw, -10px);
@@ -1671,114 +1632,6 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.problem-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  position: relative;
-  isolation: isolate;
-}
-
-.problem-card {
-  --problem-card-padding: 16px;
-  --problem-card-padding-top: 16px;
-  --problem-title-size: 1.3rem;
-  --problem-title-line-height: 1.6rem;
-  --problem-body-size: 0.9rem;
-  --problem-body-line-height: 1.25rem;
-  --problem-icon-circle-size: 40px;
-  --problem-icon-size: 26px;
-  --problem-icon-compact-size: 22px;
-  --problem-icon-gauge-margin: 5px;
-  --problem-header-spacing: 16px;
-  background:
-    radial-gradient(circle at 18% 10%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0) 38%),
-    linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
-  padding: var(--problem-card-padding);
-  padding-top: var(--problem-card-padding-top);
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-}
-
-.problem-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(216, 72, 72, 0.24);
-  background:
-    radial-gradient(circle at 14% 16%, rgba(85, 120, 246, 0.055) 0%, rgba(85, 120, 246, 0) 42%),
-    radial-gradient(circle at 86% 82%, rgba(216, 72, 72, 0.05) 0%, rgba(216, 72, 72, 0) 44%),
-    linear-gradient(130deg, rgba(85, 120, 246, 0.03) 0%, rgba(137, 106, 236, 0.022) 52%, rgba(216, 72, 72, 0.03) 100%),
-    linear-gradient(180deg, #f4f6fc 0%, #f1f4fb 100%);
-}
-
-.problem-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-bottom: var(--problem-header-spacing);
-  gap: 10px;
-}
-
-.problem-header-left {
-  flex: 1;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.problem-header-right {
-  align-self: flex-start;
-}
-
-.problem-header h4 {
-  font-size: var(--problem-title-size);
-  line-height: var(--problem-title-line-height);
-}
-
-.problem-icon {
-  width: var(--problem-icon-circle-size);
-  height: var(--problem-icon-circle-size);
-  border-radius: 50%;
-  background: #e3e6ef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform 180ms ease, filter 180ms ease;
-}
-
-.problem-card:nth-child(1) .problem-icon { background: #dee4f3; }
-.problem-card:nth-child(2) .problem-icon { background: #dde4f4; }
-.problem-card:nth-child(3) .problem-icon { background: #dfe5f2; }
-.problem-card:nth-child(4) .problem-icon { background: #dce3f2; }
-.problem-card:nth-child(5) .problem-icon { background: #e0e6f3; }
-.problem-card:nth-child(6) .problem-icon { background: #dbe2f1; }
-
-.problem-icon-image {
-  width: var(--problem-icon-size);
-  height: var(--problem-icon-size);
-}
-
-.problem-icon-image--compact {
-  width: var(--problem-icon-compact-size);
-  height: var(--problem-icon-compact-size);
-}
-
-.problem-icon-image--gauge {
-  margin-bottom: var(--problem-icon-gauge-margin);
-}
-
-.problem-card p {
-  font-size: var(--problem-body-size);
-  color: var(--blue-dark);
-  line-height: 1.4rem;
-}
-
-.problem-card:hover .problem-icon {
-  transform: none;
-  filter: saturate(1.06);
 }
 
 .cta {
@@ -2291,11 +2144,6 @@ a {
     padding: 94px 0 60px;
   }
 
-  .problems {
-    padding: 72px 0 106px;
-   
-  }
-
   .learn-more {
     padding-bottom: 96px;
   }
@@ -2315,11 +2163,6 @@ a {
     justify-self: start;
     text-align: left;
     max-width: 540px;
-    gap: 18px;
-  }
-
-  .problem-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
   }
 
@@ -2349,10 +2192,6 @@ a {
     overflow: visible;
   }
 
-  .problems {
-    --body-section-padding-bottom: calc(var(--section-space-bottom) - 8px);
-  }
-
   .compatibility--question-system {
     --body-section-padding-bottom: calc(var(--section-space-bottom) - 8px);
   }
@@ -2371,14 +2210,8 @@ a {
   .compatibility--question-hub::after,
   .compatibility--question-system::after,
   .compatibility--take-control::after,
-  .problems::after,
   .learn-more::after {
     opacity: 0.62;
-  }
-
-  .problems::before {
-    background-size: 26px 26px;
-    opacity: 0.24;
   }
 
   .learn-more::before {
@@ -2590,20 +2423,6 @@ a {
     height: auto;
   }
 
-  .problem-card {
-    --problem-card-padding: 14px;
-    --problem-card-padding-top: 7px;
-    --problem-title-size: 1.24rem;
-    
-    --problem-body-size: 0.9rem;
-    --problem-body-line-height: 1.25rem;
-    --problem-icon-circle-size: 32px;
-    --problem-icon-size: 21px;
-    --problem-icon-compact-size: 18px;
-    --problem-icon-gauge-margin: 3px;
-    --problem-header-spacing: 1px;
-  }
-
   .cta {
     padding: 34px 0 42px;
   }
@@ -2773,10 +2592,6 @@ a {
   .question-system-copy,
   .question-system-carousel {
     min-width: 0;
-  }
-
-  .problem-grid::before {
-    display: none;
   }
 
   .matchmaker-right {
@@ -2985,10 +2800,6 @@ a {
 
   .container {
     padding: 0 var(--page-gutter-mobile);
-  }
-
-  .problem-grid {
-    grid-template-columns: 1fr;
   }
 
   .legal-hero {
