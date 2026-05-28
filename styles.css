@@ -566,6 +566,10 @@ a {
   margin-inline: auto;
 }
 
+.compatibility--take-control {
+  border-top: none;
+}
+
 .matchmaker-mobile-subtext {
   display: block;
   color: var(--blue);
