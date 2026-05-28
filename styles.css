@@ -2169,7 +2169,7 @@ a {
     justify-self: start;
     text-align: left;
     max-width: 540px;
-    gap: 18px;
+    gap: 15px;
   }
 
   .legal-nav {
@@ -2557,8 +2557,10 @@ a {
 
   .compatibility-copy {
     max-width: 100%;
-    gap: 14px;
+    width: 100%;
+    gap: 9px;
     transform: none;
+    justify-self: start;
   }
 
   .compatibility-grid--triptych > .compatibility-copy--mirror {
