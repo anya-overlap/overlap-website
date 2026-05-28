@@ -697,7 +697,7 @@ a {
 
 .question-system-story {
   --question-system-copy-width: 376px;
-  --question-system-control-gap: 24px;
+  --question-system-control-gap: 1px;
   --question-system-callout-gap: 24px;
   --question-system-phone-width: 303px;
   display: grid;
@@ -949,9 +949,9 @@ a {
 
 .carousel-arrow {
   --carousel-arrow-translate-y: 0;
-  min-width: 96px;
-  height: 40px;
-  border-radius: 10px;
+  min-width: 82px;
+  height: 34px;
+  border-radius: 7px;
   border: 1px solid rgba(67, 83, 165, 0.08);
   background: linear-gradient(135deg, #5e7df4 0%, #4353a5 100%);
   display: inline-flex;
@@ -959,7 +959,7 @@ a {
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  padding: 0 18px;
+  padding: 0 13px;
   box-shadow: 0 14px 30px rgba(67, 83, 165, 0.22);
   transition: transform 160ms ease, box-shadow 160ms ease;
   transform: translateY(var(--carousel-arrow-translate-y));
