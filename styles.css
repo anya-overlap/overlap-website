@@ -720,6 +720,11 @@ a {
   --body-section-padding-bottom: var(--section-space-bottom);
 }
 
+.compatibility.compatibility--question-system::before,
+.compatibility + .compatibility.compatibility--question-system::before {
+  opacity: 0;
+}
+
 .compatibility--question-system::after {
   width: clamp(300px, 42vw, 620px);
   height: clamp(140px, 18vw, 280px);
