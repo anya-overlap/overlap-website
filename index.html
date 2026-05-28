@@ -183,7 +183,7 @@
                     <div class="phone-screen">
                       <div class="carousel-track">
                         <div class="carousel-slide is-active">
-                          <img src="./assets/partnershipVScompanionship.png" alt="Partnership versus companionship question screen" />
+                          <img src="./assets/partnrcompanion.png" alt="Partnership versus companionship question screen" />
                         </div>
                         <div class="carousel-slide">
                           <img src="./assets/trueAuthenticSelf.png" alt="True authentic self question screen" />
@@ -610,12 +610,13 @@
 
       const phoneCarousel = document.querySelector(".phone-carousel");
       if (phoneCarousel) {
+        const carouselSection = phoneCarousel.closest(".body-section");
         const track = phoneCarousel.querySelector(".carousel-track");
         const slides = Array.from(phoneCarousel.querySelectorAll(".carousel-slide"));
         const pagination = phoneCarousel.querySelector(".carousel-pagination");
-        const prevButton = phoneCarousel.querySelector(".carousel-arrow.prev");
-        const nextButton = phoneCarousel.querySelector(".carousel-arrow.next");
-        const prevSecondaryButton = phoneCarousel.querySelector(".carousel-secondary-action.prev");
+        const prevButton = carouselSection?.querySelector(".carousel-arrow.prev");
+        const nextButton = carouselSection?.querySelector(".carousel-arrow.next");
+        const prevSecondaryButton = carouselSection?.querySelector(".carousel-secondary-action.prev");
 
         let currentIndex = 0;
 
