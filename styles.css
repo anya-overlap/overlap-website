@@ -1820,11 +1820,11 @@ a {
 .legal-section {
   padding-top: var(--legal-section-space);
   margin-top: var(--legal-section-space);
-  border-top: 1px solid rgba(181, 195, 233, 0.42);
+  border-top: 1px solid rgba(181, 195, 233, 0.24);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0%, rgba(244, 248, 255, 0.6) 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(244, 248, 255, 0.52) 100%);
   border-radius: 18px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
 }
 
 .legal-section h2 {
