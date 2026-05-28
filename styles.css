@@ -1444,7 +1444,7 @@ a {
   overflow: clip;
 }
 
-.learn-more.reveal-on-scroll.is-visible .learn-more-entry {
+.learn-more-group.reveal-on-scroll.is-visible .learn-more-entry {
   animation: learn-more-entry-in 360ms ease-out forwards;
   animation-delay: var(--learn-more-entry-delay, 0ms);
 }

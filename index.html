@@ -92,13 +92,13 @@
     </header>
 
     <main>
-      <section id="how" class="body-section compatibility reveal-on-scroll" aria-labelledby="compatibility-heading">
+      <section id="how" class="body-section compatibility" aria-labelledby="compatibility-heading">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal-on-scroll">
             <h2 id="compatibility-heading">Small batches ranked by compatibility</h2>
             <p>less noise - not a browsing app</p>
           </div>
-          <div class="compatibility-grid">
+          <div class="compatibility-grid reveal-on-scroll">
             <div class="compatibility-phone">
               <div class="phone-card">
                 <div class="phone-frame compatibility-phone-frame">
@@ -125,13 +125,17 @@
         </div>
       </section>
 
-      <section id="difference" class="body-section compatibility compatibility--question-hub compatibility--question-system reveal-on-scroll" aria-labelledby="question-system-heading">
+      <section
+        id="difference"
+        class="body-section compatibility compatibility--question-hub compatibility--question-system"
+        aria-labelledby="question-system-heading"
+      >
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal-on-scroll">
             <h2 id="question-system-heading">Choose from 1200+ optional questions</h2>
             <p>customize your own algorithm</p>
           </div>
-          <div class="compatibility-grid">
+          <div class="compatibility-grid reveal-on-scroll">
             <div class="compatibility-phone">
               <div class="phone-card">
                 <div class="phone-frame compatibility-phone-frame">
@@ -165,8 +169,8 @@
               </p>
             </div>
           </div>
-          <div class="question-system-divider" aria-hidden="true"></div>
-          <div class="question-system-story">
+          <div class="question-system-divider reveal-on-scroll" aria-hidden="true"></div>
+          <div class="question-system-story reveal-on-scroll">
             <div class="matchmaker-copy question-system-copy body-section-copy">
               <p class="compatibility-copy-lead">Thoughtful questions that actually matter.</p>
               <p>
@@ -231,13 +235,13 @@
         </div>
       </section>
 
-      <section class="body-section compatibility compatibility--take-control reveal-on-scroll" aria-labelledby="take-control-heading">
+      <section class="body-section compatibility compatibility--take-control" aria-labelledby="take-control-heading">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal-on-scroll">
             <h2 id="take-control-heading">Take control of your dating</h2>
             <p>choose how important these attributes are</p>
           </div>
-          <div class="compatibility-grid">
+          <div class="compatibility-grid reveal-on-scroll">
             <div class="compatibility-phone">
               <div class="phone-card">
                 <div class="phone-frame compatibility-phone-frame">
@@ -264,13 +268,13 @@
         </div>
       </section>
 
-      <section id="problems" class="body-section problems reveal-on-scroll">
+      <section id="problems" class="body-section problems">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal-on-scroll">
             <h2>Current problems with dating</h2>
             <p class="link">and how we solve them</p>
           </div>
-          <div class="problem-grid">
+          <div class="problem-grid reveal-on-scroll">
             <article class="problem-card">
               <div class="problem-header">
                 <div class="problem-header-left">
@@ -354,13 +358,13 @@
         </div>
       </section>
 
-      <section class="body-section learn-more reveal-on-scroll" aria-labelledby="learn-more-heading">
+      <section class="body-section learn-more" aria-labelledby="learn-more-heading">
         <div class="container learn-more-container">
-          <div class="section-heading section-heading--centered">
+          <div class="section-heading section-heading--centered reveal-on-scroll">
             <h2 id="learn-more-heading">Learn more</h2>
           </div>
 
-          <div class="learn-more-group">
+          <div class="learn-more-group reveal-on-scroll">
             <div class="learn-more-list" role="list">
               <div class="learn-more-entry">
                 <button class="learn-more-item" type="button" aria-expanded="false">
@@ -447,7 +451,7 @@
             </button>
           </div>
 
-          <div class="learn-more-group learn-more-group--secondary" id="learn-more-secondary-group" hidden>
+          <div class="learn-more-group learn-more-group--secondary reveal-on-scroll" id="learn-more-secondary-group" hidden>
             <div class="learn-more-list" role="list">
               <div class="learn-more-entry">
                 <button class="learn-more-item" type="button" aria-expanded="false">
@@ -588,22 +592,45 @@
         revealItems.forEach((item) => item.classList.add("is-visible"));
       } else if ("IntersectionObserver" in window) {
         const isMobileViewport = window.innerWidth <= 768;
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: isMobileViewport ? 0.12 : 0.15,
-            rootMargin: isMobileViewport ? "0px 0px -2% 0px" : "0px 0px -8% 0px",
-          }
-        );
+        const defaultRevealThreshold = isMobileViewport ? 0.12 : 0.15;
+        const defaultRevealRootMargin = isMobileViewport ? "0px 0px -2% 0px" : "0px 0px -8% 0px";
+        const revealObservers = new Map();
+        const getRevealObserver = (threshold, rootMargin) => {
+          const observerKey = `${threshold}|${rootMargin}`;
 
-        revealItems.forEach((item) => revealObserver.observe(item));
+          if (revealObservers.has(observerKey)) {
+            return revealObservers.get(observerKey);
+          }
+
+          const observer = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              threshold,
+              rootMargin,
+            }
+          );
+
+          revealObservers.set(observerKey, observer);
+          return observer;
+        };
+
+        revealItems.forEach((item) => {
+          const threshold = Number.parseFloat(item.dataset.revealThreshold);
+          const rootMargin = item.dataset.revealRootMargin || defaultRevealRootMargin;
+          const observer = getRevealObserver(
+            Number.isFinite(threshold) ? threshold : defaultRevealThreshold,
+            rootMargin
+          );
+
+          observer.observe(item);
+        });
       } else {
         revealItems.forEach((item) => item.classList.add("is-visible"));
       }
@@ -949,6 +976,14 @@
           const nextState = !isExpanded;
           learnMoreSecondaryToggle.setAttribute("aria-expanded", nextState ? "true" : "false");
           learnMoreSecondaryGroup.hidden = !nextState;
+
+          if (nextState) {
+            window.requestAnimationFrame(() => {
+              learnMoreSecondaryGroup.classList.add("is-visible");
+            });
+          } else {
+            learnMoreSecondaryGroup.classList.remove("is-visible");
+          }
         });
       }
     </script>
