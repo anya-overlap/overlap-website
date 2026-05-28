@@ -538,12 +538,12 @@ a {
   --body-section-heading-max-width: 640px;
   --body-section-heading-align: left;
   --body-section-heading-width: auto;
-  --body-section-title-size: clamp(1.7rem, 2.07vw, 2.03rem);
+  --body-section-title-size: clamp(1.48rem, 1.8vw, 1.77rem);
   --body-section-subtitle-max-width: 34ch;
   --body-section-subtitle-margin-top: -4px;
   --body-section-copy-font-family: "Inter", sans-serif;
   --body-section-copy-font-weight: 400;
-  --body-section-copy-size: clamp(0.92rem, 1.08vw, 1.08rem);
+  --body-section-copy-size: clamp(0.8rem, 0.94vw, 0.94rem);
   --body-section-copy-line-height: 1.42;
   --body-section-copy-color: #666666;
   padding: var(--body-section-padding-top) 0 var(--body-section-padding-bottom);
@@ -805,7 +805,7 @@ a {
 
 .compatibility-copy-lead {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.52rem, 1.5vw, 2rem);
+  font-size: clamp(1.38rem, 1.37vw, .5rem);
   line-height: 1.08;
   color: #232323;
   font-weight: 600;
@@ -1178,7 +1178,7 @@ a {
   --body-section-heading-align: center;
   --body-section-heading-width: 100%;
   --body-section-heading-max-width: none;
-  --body-section-title-size: calc(clamp(1.66rem, 2.53vw, 2.28rem) * var(--learn-more-font-scale));
+  --body-section-title-size: calc(clamp(1.44rem, 2.2vw, 1.98rem) * var(--learn-more-font-scale));
   background:
     radial-gradient(circle at 12% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 36%),
     linear-gradient(180deg, #fdfefe 0%, #f7f9ff 100%);
@@ -2079,7 +2079,7 @@ a {
     --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
     --body-section-heading-gap: 22px;
     --body-section-subtitle-margin-top: 0;
-    --body-section-title-size: clamp(1.47rem, 6.62vw, 1.59rem);
+    --body-section-title-size: clamp(1.28rem, 5.76vw, 1.38rem);
   }
 
   .compatibility--question-hub {
@@ -2096,7 +2096,7 @@ a {
 
   .learn-more {
     --body-section-padding-bottom: var(--section-space-bottom-loose);
-    --body-section-title-size: calc(clamp(1.66rem, 2.53vw, 2.28rem) * var(--learn-more-font-scale));
+    --body-section-title-size: calc(clamp(1.44rem, 2.2vw, 1.98rem) * var(--learn-more-font-scale));
   }
 
   .matchmaker-mobile-subtext {
@@ -2451,12 +2451,12 @@ a {
   }
 
   .body-section {
-    --body-section-copy-size: 1rem;
+    --body-section-copy-size: 0.87rem;
     --body-section-copy-line-height: 1.5;
   }
 
   .compatibility-copy-lead {
-    font-size: clamp(1.35rem, 5.4vw, 1.7rem);
+    font-size: clamp(1.23rem, 4.91vw, 1.55rem);
   }
 
   .compatibility .section-heading p {
