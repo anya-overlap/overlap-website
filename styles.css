@@ -726,6 +726,13 @@ a {
   margin: 0 auto;
 }
 
+.compatibility-grid--triptych {
+  grid-template-columns: minmax(260px, 376px) minmax(202px, 260px) minmax(260px, 376px);
+  gap: clamp(22px, 3.4vw, 52px);
+  width: min(100%, 1180px);
+  max-width: 1180px;
+}
+
 .compatibility-phone {
   display: flex;
   justify-content: center;
@@ -834,6 +841,10 @@ a {
   display: grid;
   gap: 18px;
   transform: translateY(-14px);
+}
+
+.compatibility-copy--mirror {
+  text-align: right;
 }
 
 .compatibility--question-hub .compatibility-copy {
@@ -2636,6 +2647,10 @@ a {
     max-width: 100%;
     gap: 14px;
     transform: none;
+  }
+
+  .compatibility-copy--mirror {
+    text-align: left;
   }
 
   .body-section {
