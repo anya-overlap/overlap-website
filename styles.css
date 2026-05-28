@@ -117,7 +117,7 @@ a {
 
 @media (min-width: 769px) {
   .nav {
-    padding-inline: max(var(--page-gutter), calc((100vw - var(--page-max-width)) / 2 + var(--page-gutter)));
+    padding-inline: max(9vw, calc((100vw - var(--page-max-width)) / 2 + 9vw));
   }
 }
 
@@ -294,7 +294,7 @@ a {
   .nav {
     height: 64px;
     padding-block: 20px;
-    padding-inline: max(8vw, calc((100vw - 1400px) / 2 + 8vw));
+    padding-inline: max(9vw, calc((100vw - 1400px) / 2 + 9vw));
   }
 
   .logo,
