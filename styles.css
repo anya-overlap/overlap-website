@@ -2199,6 +2199,9 @@ a {
   .learn-more {
     --body-section-padding-bottom: var(--section-space-bottom-loose);
     --body-section-title-size: calc(clamp(1.44rem, 2.2vw, 1.98rem) * var(--learn-more-font-scale));
+    background:
+      radial-gradient(circle at 16% 6%, rgba(88, 123, 246, 0.08) 0%, rgba(88, 123, 246, 0) 34%),
+      linear-gradient(180deg, #fdfefe 0%, #f6f9ff 100%);
   }
 
   .compatibility::before {
