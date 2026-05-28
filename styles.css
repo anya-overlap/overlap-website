@@ -533,8 +533,8 @@ a {
   --body-section-subtitle-max-width: 34ch;
   --body-section-copy-font-family: "Inter", sans-serif;
   --body-section-copy-font-weight: 400;
-  --body-section-copy-size: clamp(1.02rem, 1.5vw, 1.35rem);
-  --body-section-copy-line-height: 1.45;
+  --body-section-copy-size: clamp(0.92rem, 1.08vw, 1.08rem);
+  --body-section-copy-line-height: 1.42;
   --body-section-copy-color: #666666;
   padding: var(--body-section-padding-top) 0 var(--body-section-padding-bottom);
 }
@@ -586,6 +586,10 @@ a {
 
 .compatibility--question-hub {
   --body-section-padding-bottom: calc(var(--section-space-bottom-tight) + 180px);
+}
+
+.compatibility--question-system {
+  --body-section-heading-max-width: 900px;
 }
 
 .compatibility .section-heading p {
@@ -691,12 +695,42 @@ a {
   transform: translate(88px, -14px);
 }
 
+.question-system-story {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.92fr) minmax(320px, 1.08fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 920px);
+  margin: clamp(58px, 8vw, 88px) auto 0;
+}
+
+.question-system-copy {
+  max-width: 390px;
+}
+
+.question-system-carousel {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.question-system-story .phone-card,
+.question-system-story .phone-device,
+.question-system-story .phone-screen,
+.question-system-story .carousel-stage,
+.question-system-story .carousel-track,
+.question-system-story .carousel-slide {
+  opacity: 1;
+}
+
 .compatibility-copy-lead {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.52rem, 1.5vw, 2rem);
   line-height: 1.08;
   color: #232323;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .matchmaker {
@@ -2268,6 +2302,13 @@ a {
     gap: 16px;
   }
 
+  .question-system-story {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-top: 42px;
+  }
+
   .compatibility-grid {
     grid-template-columns: 1fr;
     gap: 26px;
@@ -2303,12 +2344,21 @@ a {
     min-width: 0;
   }
 
+  .question-system-copy,
+  .question-system-carousel {
+    min-width: 0;
+  }
+
   .problem-grid::before {
     display: none;
   }
 
   .matchmaker-right {
     padding-inline: 0;
+    justify-content: center;
+  }
+
+  .question-system-carousel {
     justify-content: center;
   }
 
