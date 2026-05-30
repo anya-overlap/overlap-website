@@ -1031,6 +1031,7 @@ a {
   border-radius: 9999px;
   background: rgba(88, 123, 246, 0.34);
   transform: translateY(-50%);
+  transition: top 220ms ease;
 }
 
 .calculated-selector-option {
@@ -1042,13 +1043,23 @@ a {
   width: 100%;
   min-height: 37px;
   padding: 0 12px;
+  border: 0;
+  background: transparent;
   font-size: clamp(0.7rem, 1vw, 0.82rem);
   line-height: 1;
   color: #111111;
+  cursor: pointer;
+  appearance: none;
 }
 
 .calculated-selector-option.is-active {
   font-weight: 500;
+}
+
+.calculated-selector-option:focus-visible {
+  outline: 2px solid rgba(67, 83, 165, 0.38);
+  outline-offset: 2px;
+  border-radius: 999px;
 }
 
 .calculated-selector-caption {

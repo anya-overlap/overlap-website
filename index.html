@@ -286,14 +286,14 @@
           </div>
 
           <div class="calculated-story reveal-on-scroll">
-            <div class="calculated-visual" aria-hidden="true">
+            <div class="calculated-visual">
               <div class="calculated-selector-group">
                 <span class="calculated-handwritten">Choose one</span>
-                <div class="calculated-selector">
+                <div class="calculated-selector" role="group" aria-label="Compatibility preference selector">
                   <span class="calculated-selector-highlight"></span>
-                  <span class="calculated-selector-option">Ignore</span>
-                  <span class="calculated-selector-option is-active">Default</span>
-                  <span class="calculated-selector-option">Dealbreaker</span>
+                  <button class="calculated-selector-option" type="button">Ignore</button>
+                  <button class="calculated-selector-option is-active" type="button" aria-pressed="true">Default</button>
+                  <button class="calculated-selector-option" type="button" aria-pressed="false">Dealbreaker</button>
                 </div>
                 <p class="calculated-selector-caption">
                   Fine-tune what matters most, then let Overlap prioritize people who align.
@@ -971,6 +971,41 @@
           }
         });
       }
+
+      const calculatedSelectors = Array.from(document.querySelectorAll(".calculated-selector"));
+      calculatedSelectors.forEach((selector) => {
+        const highlight = selector.querySelector(".calculated-selector-highlight");
+        const options = Array.from(selector.querySelectorAll(".calculated-selector-option"));
+
+        if (!highlight || options.length === 0) {
+          return;
+        }
+
+        const setActiveOption = (option) => {
+          options.forEach((item) => {
+            const isActive = item === option;
+            item.classList.toggle("is-active", isActive);
+            item.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          const optionCenter = option.offsetTop + option.offsetHeight / 2;
+          highlight.style.top = `${optionCenter}px`;
+        };
+
+        const initialActiveOption = options.find((option) => option.classList.contains("is-active")) ?? options[0];
+        setActiveOption(initialActiveOption);
+
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            setActiveOption(option);
+          });
+        });
+
+        window.addEventListener("resize", () => {
+          const activeOption = options.find((option) => option.classList.contains("is-active")) ?? options[0];
+          setActiveOption(activeOption);
+        });
+      });
     </script>
   </body>
 </html>
