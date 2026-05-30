@@ -1054,6 +1054,7 @@ a {
   border: 0;
   background: transparent;
   font-size: clamp(0.7rem, 1vw, 0.82rem);
+  font-weight: 500;
   line-height: 1;
   color: #111111;
   cursor: pointer;
@@ -1061,7 +1062,7 @@ a {
 }
 
 .calculated-selector-option.is-active {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .calculated-selector-option:focus-visible {
@@ -2812,14 +2813,14 @@ a {
   }
 
   .calculated-story {
-    gap: 26px;
+    gap: 18px;
   }
 
   .calculated-visual {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 12px;
     min-height: auto;
-    padding-inline: 8px;
+    padding-inline: 4px;
   }
 
   .calculated-selector-group,
@@ -2833,7 +2834,7 @@ a {
     justify-self: stretch;
     order: 2;
     display: grid;
-    gap: 14px;
+    gap: 10px;
     justify-items: center;
   }
 
@@ -2845,7 +2846,7 @@ a {
   }
 
   .calculated-selector-row {
-    width: min(100%, 470px);
+    width: min(100%, 286px);
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -2853,8 +2854,8 @@ a {
 
   .calculated-selector {
     max-width: none;
-    width: min(100%, 360px);
-    height: 32px;
+    width: min(100%, 272px);
+    height: 28px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     border-radius: 999px;
@@ -2863,21 +2864,21 @@ a {
   .calculated-selector-caption {
     max-width: 30ch;
     margin-top: 0;
-    font-size: 0.9rem;
+    font-size: 0.84rem;
     margin-inline: auto;
   }
 
   .calculated-network {
     order: 1;
-    min-height: 296px;
-    width: min(100%, 470px);
+    min-height: 244px;
+    width: min(100%, 340px);
     margin: 0 auto;
     transform: none;
   }
 
   .calculated-selector-highlight {
-    width: 34%;
-    height: 46px;
+    width: 32%;
+    height: 38px;
     margin-left: 0;
     left: 50%;
     top: 50%;
@@ -2905,19 +2906,19 @@ a {
   }
 
   .calculated-score {
-    min-width: 48px;
-    min-height: 48px;
-    font-size: 0.84rem;
+    min-width: 42px;
+    min-height: 42px;
+    font-size: 0.76rem;
   }
 
   .calculated-avatar {
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
   }
 
   .calculated-avatar-icon {
-    width: 36px;
-    height: 46px;
+    width: 30px;
+    height: 38px;
   }
 
   .calculated-copy {
