@@ -1056,7 +1056,7 @@
             window.requestAnimationFrame(() => {
               const highlightRect = highlight.getBoundingClientRect();
               const networkRect = calculatedNetwork.getBoundingClientRect();
-              const startX = highlightRect.left + highlightRect.width / 2 - networkRect.left;
+              const startX = highlightRect.right - networkRect.left + 10;
               const startY = highlightRect.top + highlightRect.height / 2 - networkRect.top;
 
               lineTargets.forEach((target) => {
