@@ -875,6 +875,10 @@ a {
   display: none;
 }
 
+.compatibility-copy--desktop-only {
+  display: grid;
+}
+
 .compatibility--question-hub .compatibility-copy {
   transform: translate(112px, -14px);
 }
@@ -2761,6 +2765,10 @@ a {
 
   .compatibility-copy--mobile-inline {
     display: grid;
+  }
+
+  .compatibility-copy--desktop-only {
+    display: none;
   }
 
   .compatibility-copy--mirror {
