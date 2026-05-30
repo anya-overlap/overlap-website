@@ -2842,11 +2842,11 @@ a {
   }
 
   .calculated-handwritten {
-    margin-left: -8px;
+    margin-left: 8px;
     margin-bottom: -8px;
     font-size: 1.02rem;
     justify-self: start;
-    transform: rotate(-5deg);
+    transform: rotate(-10deg);
   }
 
   .calculated-selector-row {
