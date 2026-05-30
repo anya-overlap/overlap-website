@@ -1165,9 +1165,9 @@
 
         const getAvatarShadow = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          const spread = 1 + normalizedScore * 7;
-          const blur = 8 + normalizedScore * 20;
-          const alpha = 0.02 + normalizedScore * 0.16;
+          const spread = 1 + normalizedScore * 4.5;
+          const blur = 6 + normalizedScore * 12;
+          const alpha = 0.02 + normalizedScore * 0.11;
 
           return `0 0 0 ${spread}px rgba(88, 123, 246, ${alpha}), 0 12px ${blur}px rgba(88, 123, 246, ${alpha * 0.72})`;
         };
