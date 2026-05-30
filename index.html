@@ -290,9 +290,6 @@
               <div class="calculated-selector-group">
                 <span class="calculated-handwritten">Choose one</span>
                 <div class="calculated-selector-row">
-                  <div class="calculated-selector-counter" aria-live="polite">
-                    <span class="calculated-selector-counter-value">50</span>
-                  </div>
                   <div class="calculated-selector" role="group" aria-label="Compatibility preference selector">
                     <span class="calculated-selector-highlight"></span>
                     <button class="calculated-selector-option" type="button" data-value="100">Ignore</button>
@@ -978,7 +975,6 @@
       calculatedSelectors.forEach((selector) => {
         const highlight = selector.querySelector(".calculated-selector-highlight");
         const options = Array.from(selector.querySelectorAll(".calculated-selector-option"));
-        const counterValue = selector.parentElement?.querySelector(".calculated-selector-counter-value");
         const calculatedVisual = selector.closest(".calculated-visual");
         const calculatedNetwork = calculatedVisual?.querySelector(".calculated-network");
         const lineTargets = calculatedNetwork
@@ -1027,7 +1023,7 @@
           100: [85, 88, 82],
         };
 
-        if (!highlight || !counterValue || options.length === 0) {
+        if (!highlight || options.length === 0) {
           return;
         }
 
@@ -1039,6 +1035,7 @@
         let currentScores = [...scoreCheckpoints[currentValue]];
         const scoreTrackMin = 70;
         const scoreTrackMax = 100;
+        const isMobileCalculatedLayout = () => window.innerWidth <= 768;
 
         const setActiveOption = (option) => {
           options.forEach((item) => {
@@ -1049,10 +1046,13 @@
         };
 
         const getOptionCenterForValue = (value) => {
+          const useHorizontalLayout = isMobileCalculatedLayout();
           const orderedStops = options
             .map((option) => ({
               value: getOptionValue(option),
-              center: option.offsetTop + option.offsetHeight / 2,
+              center: useHorizontalLayout
+                ? option.offsetLeft + option.offsetWidth / 2
+                : option.offsetTop + option.offsetHeight / 2,
             }))
             .sort((left, right) => left.value - right.value);
 
@@ -1162,7 +1162,7 @@
         const renderValue = (value, scores = currentScores) => {
           currentValue = value;
           currentScores = [...scores];
-          counterValue.textContent = `${Math.round(value)}`;
+          const useHorizontalLayout = isMobileCalculatedLayout();
           scoreElements.forEach((scoreElement, index) => {
             if (!scoreElement) {
               return;
@@ -1187,15 +1187,32 @@
               avatarIconElement.style.backgroundColor = getAvatarIconColor(roundedScore);
             }
           });
-          highlight.style.top = `${getOptionCenterForValue(value)}px`;
+          if (useHorizontalLayout) {
+            highlight.style.left = `${getOptionCenterForValue(value)}px`;
+            highlight.style.top = "50%";
+          } else {
+            highlight.style.top = `${getOptionCenterForValue(value)}px`;
+            highlight.style.left = "";
+          }
           if (calculatedNetwork && lineTargets.length > 0) {
             window.requestAnimationFrame(() => {
               const highlightRect = highlight.getBoundingClientRect();
               const networkRect = calculatedNetwork.getBoundingClientRect();
-              const startX = highlightRect.right - networkRect.left + 10;
-              const startY = highlightRect.top + highlightRect.height / 2 - networkRect.top;
+              const startX = useHorizontalLayout
+                ? highlightRect.left + highlightRect.width / 2 - networkRect.left
+                : highlightRect.right - networkRect.left + 10;
+              const startY = useHorizontalLayout
+                ? highlightRect.top - networkRect.top - 10
+                : highlightRect.top + highlightRect.height / 2 - networkRect.top;
               const trackStartX = Math.max(startX + 72, calculatedNetwork.clientWidth * 0.42);
               const trackEndX = calculatedNetwork.clientWidth * 0.93;
+              const mobileTrackTop = calculatedNetwork.clientHeight * 0.06;
+              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.64;
+              const mobileColumns = [
+                calculatedNetwork.clientWidth * 0.14,
+                calculatedNetwork.clientWidth * 0.43,
+                calculatedNetwork.clientWidth * 0.72,
+              ];
 
               lineTargets.forEach((target, targetIndex) => {
                 if (!target.line || !target.anchor || !target.match) {
@@ -1203,19 +1220,30 @@
                 }
 
                 const score = scores[targetIndex];
-                const normalizedScore = Math.min(
-                  1,
-                  Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin))
-                );
-                const matchLeft = trackStartX + (trackEndX - trackStartX) * normalizedScore;
+                const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
 
-                target.match.style.left = `${matchLeft}px`;
-                target.match.style.right = "auto";
+                if (useHorizontalLayout) {
+                  const matchTop = mobileTrackBottom - (mobileTrackBottom - mobileTrackTop) * normalizedScore;
+                  target.match.style.left = `${mobileColumns[targetIndex]}px`;
+                  target.match.style.top = `${matchTop}px`;
+                  target.match.style.bottom = "auto";
+                  target.match.style.right = "auto";
+                } else {
+                  const matchLeft = trackStartX + (trackEndX - trackStartX) * normalizedScore;
+                  target.match.style.left = `${matchLeft}px`;
+                  target.match.style.right = "auto";
+                  target.match.style.top = "";
+                  target.match.style.bottom = targetIndex === 2 ? "0" : "";
+                }
                 target.match.style.transform = "none";
 
                 const anchorRect = target.anchor.getBoundingClientRect();
-                const endX = anchorRect.left - networkRect.left;
-                const endY = anchorRect.top + anchorRect.height / 2 - networkRect.top;
+                const endX = useHorizontalLayout
+                  ? anchorRect.left + anchorRect.width / 2 - networkRect.left
+                  : anchorRect.left - networkRect.left;
+                const endY = useHorizontalLayout
+                  ? anchorRect.bottom - networkRect.top
+                  : anchorRect.top + anchorRect.height / 2 - networkRect.top;
                 const deltaX = endX - startX;
                 const deltaY = endY - startY;
                 const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
