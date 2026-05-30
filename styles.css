@@ -2802,6 +2802,7 @@ a {
     gap: 6px;
     min-height: auto;
     padding-inline: 4px;
+    margin-top: 0;
   }
 
   .calculated-selector-group,
