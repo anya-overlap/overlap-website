@@ -959,7 +959,7 @@ a {
 
 .calculated-story {
   display: grid;
-  gap: clamp(28px, 5vw, 48px);
+  gap: 0;
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
@@ -971,8 +971,9 @@ a {
   gap: 0;
   align-items: center;
   justify-content: center;
-  min-height: 470px;
+  min-height: 396px;
   padding-inline: 30px;
+  margin-top: -76px;
 }
 
 .calculated-selector-group {
@@ -1061,7 +1062,7 @@ a {
 
 .calculated-network {
   position: relative;
-  min-height: 350px;
+  min-height: 244px;
   transform: translateX(-56px);
 }
 
@@ -1168,8 +1169,12 @@ a {
 }
 
 .calculated-copy {
-  max-width: 430px;
-  margin-left: auto;
+  max-width: 520px;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: -24px;
+  justify-self: center;
+  text-align: left;
   gap: 18px;
 }
 
