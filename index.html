@@ -1023,8 +1023,8 @@
           : [];
         const scoreCheckpoints = {
           0: [75, 99, 81],
-          50: [91, 82, 87],
-          100: [83, 92, 79],
+          50: [92, 79, 87],
+          100: [85, 88, 84],
         };
 
         if (!highlight || !counterValue || options.length === 0) {
@@ -1104,15 +1104,15 @@
 
         const getScorePillScale = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          return 0.86 + normalizedScore * 0.22;
+          return 0.78 + normalizedScore * 0.3;
         };
 
         const getAvatarBorderColor = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
           const hue = 223 - normalizedScore * 3;
-          const saturation = 30 + normalizedScore * 36;
-          const lightness = 86 - normalizedScore * 28;
-          const alpha = 0.2 + normalizedScore * 0.48;
+          const saturation = 30 + normalizedScore * 42;
+          const lightness = 86 - normalizedScore * 34;
+          const alpha = 0.2 + normalizedScore * 0.56;
 
           return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
         };
