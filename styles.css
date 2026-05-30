@@ -2838,10 +2838,10 @@ a {
   }
 
   .calculated-handwritten {
-    margin-left: 0;
+    margin-left: -22px;
     margin-bottom: -2px;
-    font-size: 1.42rem;
-    justify-self: center;
+    font-size: 1.24rem;
+    justify-self: start;
   }
 
   .calculated-selector-row {
