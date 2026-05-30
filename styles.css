@@ -1138,13 +1138,15 @@ a {
   top: 0;
   left: 0;
   z-index: 2;
-  min-width: 50px;
-  min-height: 50px;
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  padding: 9px;
+  padding: 0;
   font-size: 0.86rem;
+  line-height: 1;
   color: #ffffff;
   background: var(--blue);
   box-shadow: 0 10px 24px rgba(88, 123, 246, 0.28);
@@ -2840,10 +2842,11 @@ a {
   }
 
   .calculated-handwritten {
-    margin-left: -22px;
+    margin-left: -8px;
     margin-bottom: -8px;
-    font-size: 1.12rem;
+    font-size: 1.02rem;
     justify-self: start;
+    transform: rotate(-5deg);
   }
 
   .calculated-selector-row {
@@ -2904,8 +2907,8 @@ a {
   }
 
   .calculated-score {
-    min-width: 42px;
-    min-height: 42px;
+    width: 42px;
+    height: 42px;
     font-size: 0.76rem;
   }
 

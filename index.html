@@ -1144,7 +1144,7 @@
 
         const getScorePillScale = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          return 0.68 + normalizedScore * 0.3;
+          return 0.68 + normalizedScore * 0.24;
         };
 
         const getAvatarBorderColor = (score) => {
