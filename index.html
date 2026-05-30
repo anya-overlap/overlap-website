@@ -988,14 +988,17 @@
           ? [
               {
                 line: calculatedNetwork.querySelector(".calculated-line--top"),
+                match: calculatedNetwork.querySelector(".calculated-match--top"),
                 anchor: calculatedNetwork.querySelector(".calculated-match--top .calculated-avatar"),
               },
               {
                 line: calculatedNetwork.querySelector(".calculated-line--middle"),
+                match: calculatedNetwork.querySelector(".calculated-match--middle"),
                 anchor: calculatedNetwork.querySelector(".calculated-match--middle .calculated-avatar"),
               },
               {
                 line: calculatedNetwork.querySelector(".calculated-line--bottom"),
+                match: calculatedNetwork.querySelector(".calculated-match--bottom"),
                 anchor: calculatedNetwork.querySelector(".calculated-match--bottom .calculated-avatar"),
               },
             ]
@@ -1060,9 +1063,17 @@
               const startY = highlightRect.top + highlightRect.height / 2 - networkRect.top;
 
               lineTargets.forEach((target) => {
-                if (!target.line || !target.anchor) {
+                if (!target.line || !target.anchor || !target.match) {
                   return;
                 }
+
+                target.match.style.transform = "";
+
+                const baseAnchorRect = target.anchor.getBoundingClientRect();
+                const horizontalGap = Math.max(0, baseAnchorRect.left - (highlightRect.right + 10));
+                const shiftLeft = horizontalGap * 0.2;
+
+                target.match.style.transform = `translateX(-${shiftLeft}px)`;
 
                 const anchorRect = target.anchor.getBoundingClientRect();
                 const endX = anchorRect.left - networkRect.left;
