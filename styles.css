@@ -1065,9 +1065,7 @@ a {
 }
 
 .calculated-selector-option:focus-visible {
-  outline: 2px solid rgba(67, 83, 165, 0.38);
-  outline-offset: 2px;
-  border-radius: 999px;
+  outline: none;
 }
 
 .calculated-selector-caption {
@@ -2856,7 +2854,7 @@ a {
   .calculated-selector {
     max-width: none;
     width: min(100%, 360px);
-    height: 54px;
+    height: 32px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     border-radius: 999px;
