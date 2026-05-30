@@ -1012,8 +1012,8 @@
           : [];
         const scoreCheckpoints = {
           0: [75, 99, 81],
-          50: [91, 98, 84],
-          100: [84, 98, 73],
+          50: [83, 91, 74],
+          100: [96, 88, 91],
         };
 
         if (!highlight || !counterValue || options.length === 0) {
@@ -1025,6 +1025,8 @@
         let currentValue = getOptionValue(
           options.find((option) => option.classList.contains("is-active")) ?? options[0]
         );
+        const scoreTrackMin = 70;
+        const scoreTrackMax = 100;
 
         const setActiveOption = (option) => {
           options.forEach((item) => {
@@ -1102,19 +1104,24 @@
               const networkRect = calculatedNetwork.getBoundingClientRect();
               const startX = highlightRect.right - networkRect.left + 10;
               const startY = highlightRect.top + highlightRect.height / 2 - networkRect.top;
+              const trackStartX = Math.max(startX + 92, calculatedNetwork.clientWidth * 0.48);
+              const trackEndX = calculatedNetwork.clientWidth * 0.86;
 
-              lineTargets.forEach((target) => {
+              lineTargets.forEach((target, targetIndex) => {
                 if (!target.line || !target.anchor || !target.match) {
                   return;
                 }
 
-                target.match.style.transform = "";
+                const score = interpolatedScores[targetIndex];
+                const normalizedScore = Math.min(
+                  1,
+                  Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin))
+                );
+                const matchLeft = trackStartX + (trackEndX - trackStartX) * normalizedScore;
 
-                const baseAnchorRect = target.anchor.getBoundingClientRect();
-                const horizontalGap = Math.max(0, baseAnchorRect.left - (highlightRect.right + 10));
-                const shiftLeft = horizontalGap * 0.2;
-
-                target.match.style.transform = `translateX(-${shiftLeft}px)`;
+                target.match.style.left = `${matchLeft}px`;
+                target.match.style.right = "auto";
+                target.match.style.transform = "none";
 
                 const anchorRect = target.anchor.getBoundingClientRect();
                 const endX = anchorRect.left - networkRect.left;
