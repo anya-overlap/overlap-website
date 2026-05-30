@@ -986,7 +986,7 @@ a {
 
 .calculated-visual {
   display: grid;
-  grid-template-columns: minmax(240px, 320px) minmax(360px, 1fr);
+  grid-template-columns: minmax(220px, 280px) minmax(320px, 1fr);
   gap: 0;
   align-items: center;
   justify-content: center;
@@ -1101,7 +1101,7 @@ a {
 .calculated-network {
   position: relative;
   min-height: 350px;
-  transform: translateX(-24px);
+  transform: translateX(-56px);
 }
 
 .calculated-network-lines {
@@ -1114,12 +1114,12 @@ a {
   left: 0;
   top: 0;
   width: 0;
-  height: 4px;
+  height: 3px;
   border-radius: 999px;
-  background-image: radial-gradient(circle, rgba(182, 186, 196, 0.72) 0 62%, rgba(182, 186, 196, 0) 66%);
-  background-size: 24px 4px;
+  background-image: radial-gradient(circle, rgba(188, 192, 202, 0.66) 0 64%, rgba(188, 192, 202, 0) 68%);
+  background-size: 27px 3px;
   background-repeat: round no-repeat;
-  opacity: 0.82;
+  opacity: 0.78;
   transform-origin: left center;
 }
 
