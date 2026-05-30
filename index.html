@@ -1247,8 +1247,8 @@
                 : highlightRect.top + highlightRect.height / 2 - networkRect.top;
               const trackStartX = Math.max(startX + 72, calculatedNetwork.clientWidth * 0.42);
               const trackEndX = calculatedNetwork.clientWidth * 0.93;
-              const mobileTrackTop = calculatedNetwork.clientHeight * 0.14;
-              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.52;
+              const mobileTrackTop = calculatedNetwork.clientHeight * 0.07;
+              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.6;
               const mobileCenterX = calculatedNetwork.clientWidth * 0.5;
               const mobileColumns = [
                 mobileCenterX - 82,
@@ -1331,7 +1331,7 @@
             return;
           }
 
-          const duration = Math.max(480, distance * 14);
+          const duration = Math.max(620, distance * 18);
           const startTime = performance.now();
 
           const step = (now) => {
