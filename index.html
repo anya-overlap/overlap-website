@@ -282,7 +282,7 @@
         <div class="container">
           <div class="section-heading reveal-on-scroll">
             <h2 id="calculated-heading">Compatibility calculated.</h2>
-            <p>Your preferences shape every recommendation.</p>
+            <p>precise custom matches</p>
           </div>
 
           <div class="calculated-story reveal-on-scroll">
@@ -332,7 +332,7 @@
               </div>
             </div>
 
-            <div class="calculated-copy compatibility-copy body-section-copy">
+            <div class="calculated-copy body-section-copy">
               <p class="compatibility-copy-lead">Values are individual. Personalize your experience.</p>
               <p>
                 Introspect on what you value, and we will show people with similar answers.
@@ -1139,20 +1139,20 @@
 
         const getAvatarScale = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          return 0.82 + normalizedScore * 0.18;
+          return 0.76 + normalizedScore * 0.26;
         };
 
         const getScorePillScale = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          return 0.68 + normalizedScore * 0.2;
+          return 0.68 + normalizedScore * 0.3;
         };
 
         const getAvatarBorderColor = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
           const hue = 223 - normalizedScore * 3;
-          const saturation = 24 + normalizedScore * 30;
-          const lightness = 88 - normalizedScore * 24;
-          const alpha = 0.16 + normalizedScore * 0.38;
+          const saturation = 30 + normalizedScore * 42;
+          const lightness = 86 - normalizedScore * 34;
+          const alpha = 0.2 + normalizedScore * 0.56;
 
           return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
         };
@@ -1165,9 +1165,9 @@
 
         const getAvatarShadow = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          const spread = 1 + normalizedScore * 4;
-          const blur = 6 + normalizedScore * 12;
-          const alpha = 0.015 + normalizedScore * 0.09;
+          const spread = 1 + normalizedScore * 7;
+          const blur = 8 + normalizedScore * 20;
+          const alpha = 0.02 + normalizedScore * 0.16;
 
           return `0 0 0 ${spread}px rgba(88, 123, 246, ${alpha}), 0 12px ${blur}px rgba(88, 123, 246, ${alpha * 0.72})`;
         };
@@ -1247,8 +1247,8 @@
                 : highlightRect.top + highlightRect.height / 2 - networkRect.top;
               const trackStartX = Math.max(startX + 72, calculatedNetwork.clientWidth * 0.42);
               const trackEndX = calculatedNetwork.clientWidth * 0.93;
-              const mobileTrackTop = calculatedNetwork.clientHeight * 0.04;
-              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.62;
+              const mobileTrackTop = calculatedNetwork.clientHeight * 0.14;
+              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.52;
               const mobileCenterX = calculatedNetwork.clientWidth * 0.5;
               const mobileColumns = [
                 mobileCenterX - 82,
@@ -1331,7 +1331,7 @@
             return;
           }
 
-          const duration = Math.max(620, distance * 18);
+          const duration = Math.max(480, distance * 14);
           const startTime = performance.now();
 
           const step = (now) => {
