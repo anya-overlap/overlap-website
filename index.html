@@ -1117,6 +1117,12 @@
           return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
         };
 
+        const getAvatarBackgroundColor = (score) => {
+          const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
+          const channel = Math.round(228 - normalizedScore * 26);
+          return `rgb(${channel}, ${channel}, ${channel})`;
+        };
+
         const getAvatarShadow = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
           const spread = 2 + normalizedScore * 4;
@@ -1153,6 +1159,7 @@
 
             const avatarElement = avatarElements[index];
             if (avatarElement) {
+              avatarElement.style.backgroundColor = getAvatarBackgroundColor(roundedScore);
               avatarElement.style.borderColor = getAvatarBorderColor(roundedScore);
               avatarElement.style.boxShadow = getAvatarShadow(roundedScore);
               avatarElement.style.transform = `scale(${getAvatarScale(roundedScore)})`;

@@ -1182,7 +1182,7 @@ a {
   border: 2px solid rgba(88, 123, 246, 0.12);
   box-shadow: 0 0 0 0 rgba(88, 123, 246, 0);
   transform-origin: center;
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .calculated-avatar-icon {
