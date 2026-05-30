@@ -1144,7 +1144,7 @@
 
         const getScorePillScale = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          return 0.68 + normalizedScore * 0.3;
+          return 0.68 + normalizedScore * 0.22;
         };
 
         const getAvatarBorderColor = (score) => {
@@ -1247,8 +1247,8 @@
                 : highlightRect.top + highlightRect.height / 2 - networkRect.top;
               const trackStartX = Math.max(startX + 72, calculatedNetwork.clientWidth * 0.42);
               const trackEndX = calculatedNetwork.clientWidth * 0.93;
-              const mobileTrackTop = calculatedNetwork.clientHeight * 0.14;
-              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.52;
+              const mobileTrackTop = calculatedNetwork.clientHeight * 0.08;
+              const mobileTrackBottom = calculatedNetwork.clientHeight * 0.58;
               const mobileCenterX = calculatedNetwork.clientWidth * 0.5;
               const mobileColumns = [
                 mobileCenterX - 82,
