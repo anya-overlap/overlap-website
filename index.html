@@ -1104,8 +1104,8 @@
               const networkRect = calculatedNetwork.getBoundingClientRect();
               const startX = highlightRect.right - networkRect.left + 10;
               const startY = highlightRect.top + highlightRect.height / 2 - networkRect.top;
-              const trackStartX = Math.max(startX + 92, calculatedNetwork.clientWidth * 0.48);
-              const trackEndX = calculatedNetwork.clientWidth * 0.86;
+              const trackStartX = Math.max(startX + 72, calculatedNetwork.clientWidth * 0.42);
+              const trackEndX = calculatedNetwork.clientWidth * 0.93;
 
               lineTargets.forEach((target, targetIndex) => {
                 if (!target.line || !target.anchor || !target.match) {

@@ -987,7 +987,7 @@ a {
 .calculated-visual {
   display: grid;
   grid-template-columns: minmax(240px, 320px) minmax(360px, 1fr);
-  gap: clamp(48px, 7vw, 120px);
+  gap: 0;
   align-items: center;
   justify-content: center;
   min-height: 470px;
@@ -1101,6 +1101,7 @@ a {
 .calculated-network {
   position: relative;
   min-height: 350px;
+  transform: translateX(-24px);
 }
 
 .calculated-network-lines {
