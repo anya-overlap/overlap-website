@@ -289,11 +289,16 @@
             <div class="calculated-visual">
               <div class="calculated-selector-group">
                 <span class="calculated-handwritten">Choose one</span>
-                <div class="calculated-selector" role="group" aria-label="Compatibility preference selector">
-                  <span class="calculated-selector-highlight"></span>
-                  <button class="calculated-selector-option" type="button">Ignore</button>
-                  <button class="calculated-selector-option is-active" type="button" aria-pressed="true">Default</button>
-                  <button class="calculated-selector-option" type="button" aria-pressed="false">Dealbreaker</button>
+                <div class="calculated-selector-row">
+                  <div class="calculated-selector-counter" aria-live="polite">
+                    <span class="calculated-selector-counter-value">50</span>
+                  </div>
+                  <div class="calculated-selector" role="group" aria-label="Compatibility preference selector">
+                    <span class="calculated-selector-highlight"></span>
+                    <button class="calculated-selector-option" type="button" data-value="100">Ignore</button>
+                    <button class="calculated-selector-option is-active" type="button" aria-pressed="true" data-value="50">Default</button>
+                    <button class="calculated-selector-option" type="button" aria-pressed="false" data-value="0">Dealbreaker</button>
+                  </div>
                 </div>
                 <p class="calculated-selector-caption">
                   Fine-tune what matters most, then let Overlap prioritize people who align.
@@ -976,10 +981,17 @@
       calculatedSelectors.forEach((selector) => {
         const highlight = selector.querySelector(".calculated-selector-highlight");
         const options = Array.from(selector.querySelectorAll(".calculated-selector-option"));
+        const counterValue = selector.parentElement?.querySelector(".calculated-selector-counter-value");
 
-        if (!highlight || options.length === 0) {
+        if (!highlight || !counterValue || options.length === 0) {
           return;
         }
+
+        const getOptionValue = (option) => Number(option.dataset.value ?? 0);
+        let animationFrame = null;
+        let currentValue = getOptionValue(
+          options.find((option) => option.classList.contains("is-active")) ?? options[0]
+        );
 
         const setActiveOption = (option) => {
           options.forEach((item) => {
@@ -987,23 +999,95 @@
             item.classList.toggle("is-active", isActive);
             item.setAttribute("aria-pressed", isActive ? "true" : "false");
           });
+        };
 
-          const optionCenter = option.offsetTop + option.offsetHeight / 2;
-          highlight.style.top = `${optionCenter}px`;
+        const getOptionCenterForValue = (value) => {
+          const orderedStops = options
+            .map((option) => ({
+              value: getOptionValue(option),
+              center: option.offsetTop + option.offsetHeight / 2,
+            }))
+            .sort((left, right) => left.value - right.value);
+
+          if (value <= orderedStops[0].value) {
+            return orderedStops[0].center;
+          }
+
+          if (value >= orderedStops[orderedStops.length - 1].value) {
+            return orderedStops[orderedStops.length - 1].center;
+          }
+
+          for (let index = 0; index < orderedStops.length - 1; index += 1) {
+            const currentStop = orderedStops[index];
+            const nextStop = orderedStops[index + 1];
+
+            if (value >= currentStop.value && value <= nextStop.value) {
+              const progress = (value - currentStop.value) / (nextStop.value - currentStop.value);
+              return currentStop.center + (nextStop.center - currentStop.center) * progress;
+            }
+          }
+
+          return orderedStops[0].center;
+        };
+
+        const renderValue = (value) => {
+          currentValue = value;
+          counterValue.textContent = `${Math.round(value)}`;
+          highlight.style.top = `${getOptionCenterForValue(value)}px`;
+        };
+
+        const animateToOption = (option) => {
+          const targetValue = getOptionValue(option);
+          const startingValue = currentValue;
+
+          setActiveOption(option);
+
+          if (animationFrame !== null) {
+            window.cancelAnimationFrame(animationFrame);
+          }
+
+          const distance = Math.abs(targetValue - startingValue);
+          if (distance === 0) {
+            renderValue(targetValue);
+            return;
+          }
+
+          const duration = Math.max(280, distance * 8);
+          const startTime = performance.now();
+
+          const step = (now) => {
+            const elapsed = now - startTime;
+            const rawProgress = Math.min(elapsed / duration, 1);
+            const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
+            const nextValue = startingValue + (targetValue - startingValue) * easedProgress;
+
+            renderValue(nextValue);
+
+            if (rawProgress < 1) {
+              animationFrame = window.requestAnimationFrame(step);
+              return;
+            }
+
+            renderValue(targetValue);
+            animationFrame = null;
+          };
+
+          animationFrame = window.requestAnimationFrame(step);
         };
 
         const initialActiveOption = options.find((option) => option.classList.contains("is-active")) ?? options[0];
         setActiveOption(initialActiveOption);
+        renderValue(getOptionValue(initialActiveOption));
 
         options.forEach((option) => {
           option.addEventListener("click", () => {
-            setActiveOption(option);
+            animateToOption(option);
           });
         });
 
         window.addEventListener("resize", () => {
           const activeOption = options.find((option) => option.classList.contains("is-active")) ?? options[0];
-          setActiveOption(activeOption);
+          renderValue(getOptionValue(activeOption));
         });
       });
     </script>
