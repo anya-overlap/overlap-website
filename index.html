@@ -1249,10 +1249,11 @@
               const trackEndX = calculatedNetwork.clientWidth * 0.93;
               const mobileTrackTop = calculatedNetwork.clientHeight * 0.06;
               const mobileTrackBottom = calculatedNetwork.clientHeight * 0.64;
+              const mobileCenterX = calculatedNetwork.clientWidth * 0.5;
               const mobileColumns = [
-                calculatedNetwork.clientWidth * 0.2,
-                calculatedNetwork.clientWidth * 0.46,
-                calculatedNetwork.clientWidth * 0.68,
+                mobileCenterX - 112,
+                mobileCenterX,
+                mobileCenterX + 112,
               ];
 
               lineTargets.forEach((target, targetIndex) => {
@@ -1265,7 +1266,8 @@
 
                 if (useHorizontalLayout) {
                   const matchTop = mobileTrackBottom - (mobileTrackBottom - mobileTrackTop) * normalizedScore;
-                  target.match.style.left = `${mobileColumns[targetIndex]}px`;
+                  const matchWidth = target.match.offsetWidth || 0;
+                  target.match.style.left = `${mobileColumns[targetIndex] - matchWidth / 2}px`;
                   target.match.style.top = `${matchTop}px`;
                   target.match.style.bottom = "auto";
                   target.match.style.right = "auto";
