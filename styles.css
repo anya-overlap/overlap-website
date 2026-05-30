@@ -2912,10 +2912,6 @@ a {
     transform: none;
   }
 
-  .calculated-copy > p + p {
-    margin-top: 14px;
-  }
-
   .compatibility-phone-frame {
     width: min(230px, calc(100vw - 48px));
   }
