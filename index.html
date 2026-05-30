@@ -1003,6 +1003,18 @@
               },
             ]
           : [];
+        const scoreElements = calculatedNetwork
+          ? [
+              calculatedNetwork.querySelector(".calculated-match--top .calculated-score"),
+              calculatedNetwork.querySelector(".calculated-match--middle .calculated-score"),
+              calculatedNetwork.querySelector(".calculated-match--bottom .calculated-score"),
+            ]
+          : [];
+        const scoreCheckpoints = {
+          0: [75, 99, 81],
+          50: [91, 98, 84],
+          100: [84, 98, 73],
+        };
 
         if (!highlight || !counterValue || options.length === 0) {
           return;
@@ -1051,9 +1063,38 @@
           return orderedStops[0].center;
         };
 
+        const getInterpolatedScores = (value) => {
+          if (value <= 0) {
+            return scoreCheckpoints[0];
+          }
+
+          if (value >= 100) {
+            return scoreCheckpoints[100];
+          }
+
+          const lowerBound = value <= 50 ? 0 : 50;
+          const upperBound = value <= 50 ? 50 : 100;
+          const progress = (value - lowerBound) / (upperBound - lowerBound);
+          const lowerScores = scoreCheckpoints[lowerBound];
+          const upperScores = scoreCheckpoints[upperBound];
+
+          return lowerScores.map((lowerScore, index) => {
+            const upperScore = upperScores[index];
+            return lowerScore + (upperScore - lowerScore) * progress;
+          });
+        };
+
         const renderValue = (value) => {
           currentValue = value;
           counterValue.textContent = `${Math.round(value)}`;
+          const interpolatedScores = getInterpolatedScores(value);
+          scoreElements.forEach((scoreElement, index) => {
+            if (!scoreElement) {
+              return;
+            }
+
+            scoreElement.textContent = `${Math.round(interpolatedScores[index])}%`;
+          });
           highlight.style.top = `${getOptionCenterForValue(value)}px`;
           if (calculatedNetwork && lineTargets.length > 0) {
             window.requestAnimationFrame(() => {
