@@ -1129,9 +1129,9 @@
         const getAvatarIconColor = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
           const hue = 222;
-          const saturation = 14 + normalizedScore * 18;
-          const lightness = 28 - normalizedScore * 14;
-          const alpha = 0.88 + normalizedScore * 0.12;
+          const saturation = 8 + normalizedScore * 28;
+          const lightness = 36 - normalizedScore * 20;
+          const alpha = 0.8 + normalizedScore * 0.2;
 
           return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
         };
