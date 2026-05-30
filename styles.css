@@ -2929,6 +2929,11 @@ a {
   .calculated-copy {
     order: 3;
     margin-top: 35px;
+    gap: 18px;
+  }
+
+  .calculated-copy > p + p {
+    margin-top: 14px;
   }
 
   .compatibility-phone-frame {
