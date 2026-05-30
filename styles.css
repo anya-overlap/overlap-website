@@ -2850,7 +2850,7 @@ a {
   }
 
   .calculated-selector-row {
-    width: min(100%, 286px);
+    width: min(100%, 252px);
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -2858,7 +2858,7 @@ a {
 
   .calculated-selector {
     max-width: none;
-    width: min(100%, 272px);
+    width: min(100%, 236px);
     height: 28px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -2878,12 +2878,16 @@ a {
   }
 
   .calculated-selector-highlight {
-    width: 32%;
+    width: 39%;
     height: 38px;
     margin-left: 0;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .calculated-selector-option {
+    padding-inline: 6px;
   }
 
   .calculated-line {
