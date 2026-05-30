@@ -982,6 +982,24 @@
         const highlight = selector.querySelector(".calculated-selector-highlight");
         const options = Array.from(selector.querySelectorAll(".calculated-selector-option"));
         const counterValue = selector.parentElement?.querySelector(".calculated-selector-counter-value");
+        const calculatedVisual = selector.closest(".calculated-visual");
+        const calculatedNetwork = calculatedVisual?.querySelector(".calculated-network");
+        const lineTargets = calculatedNetwork
+          ? [
+              {
+                line: calculatedNetwork.querySelector(".calculated-line--top"),
+                anchor: calculatedNetwork.querySelector(".calculated-match--top .calculated-avatar"),
+              },
+              {
+                line: calculatedNetwork.querySelector(".calculated-line--middle"),
+                anchor: calculatedNetwork.querySelector(".calculated-match--middle .calculated-avatar"),
+              },
+              {
+                line: calculatedNetwork.querySelector(".calculated-line--bottom"),
+                anchor: calculatedNetwork.querySelector(".calculated-match--bottom .calculated-avatar"),
+              },
+            ]
+          : [];
 
         if (!highlight || !counterValue || options.length === 0) {
           return;
@@ -1034,6 +1052,33 @@
           currentValue = value;
           counterValue.textContent = `${Math.round(value)}`;
           highlight.style.top = `${getOptionCenterForValue(value)}px`;
+          if (calculatedNetwork && lineTargets.length > 0) {
+            window.requestAnimationFrame(() => {
+              const highlightRect = highlight.getBoundingClientRect();
+              const networkRect = calculatedNetwork.getBoundingClientRect();
+              const startX = highlightRect.left + highlightRect.width / 2 - networkRect.left;
+              const startY = highlightRect.top + highlightRect.height / 2 - networkRect.top;
+
+              lineTargets.forEach((target) => {
+                if (!target.line || !target.anchor) {
+                  return;
+                }
+
+                const anchorRect = target.anchor.getBoundingClientRect();
+                const endX = anchorRect.left - networkRect.left;
+                const endY = anchorRect.top + anchorRect.height / 2 - networkRect.top;
+                const deltaX = endX - startX;
+                const deltaY = endY - startY;
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+
+                target.line.style.left = `${startX}px`;
+                target.line.style.top = `${startY}px`;
+                target.line.style.width = `${distance}px`;
+                target.line.style.transform = `rotate(${angle}deg)`;
+              });
+            });
+          }
         };
 
         const animateToOption = (option) => {
