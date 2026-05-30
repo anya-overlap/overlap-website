@@ -995,7 +995,7 @@ a {
 
 .calculated-selector-group {
   justify-self: center;
-  width: min(100%, 152px);
+  width: min(100%, 167px);
 }
 
 .calculated-selector-row {
@@ -1035,10 +1035,12 @@ a {
 .calculated-selector {
   position: relative;
   display: grid;
-  gap: 0;
-  width: 74%;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: stretch;
+  width: 81.4%;
   margin: 0 auto;
-  padding: 6px 0;
+  height: 111px;
+  padding: 0;
   border-radius: 12px;
   background: rgba(215, 215, 215, 0.88);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
@@ -1048,8 +1050,8 @@ a {
 .calculated-selector-highlight {
   position: absolute;
   left: 50%;
-  width: 152px;
-  margin-left: -76px;
+  width: 167px;
+  margin-left: -83.5px;
   top: 50%;
   height: 38px;
   border-radius: 9999px;
@@ -1060,11 +1062,13 @@ a {
 .calculated-selector-option {
   position: relative;
   z-index: 1;
+  align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 37px;
+  min-height: 0;
+  height: auto;
   padding: 0 12px;
   border: 0;
   background: transparent;
@@ -2857,7 +2861,7 @@ a {
   }
 
   .calculated-selector {
-    max-width: 152px;
+    max-width: 167px;
   }
 
   .calculated-selector-caption {
