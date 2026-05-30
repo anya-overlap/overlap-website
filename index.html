@@ -1024,7 +1024,7 @@
         const scoreCheckpoints = {
           0: [75, 99, 81],
           50: [92, 79, 87],
-          100: [85, 88, 84],
+          100: [85, 88, 82],
         };
 
         if (!highlight || !counterValue || options.length === 0) {
@@ -1099,7 +1099,7 @@
 
         const getAvatarScale = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          return 0.8 + normalizedScore * 0.34;
+          return 0.7 + normalizedScore * 0.46;
         };
 
         const getScorePillScale = (score) => {
@@ -1119,25 +1119,25 @@
 
         const getAvatarBackgroundColor = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          const channel = Math.round(228 - normalizedScore * 26);
+          const channel = Math.round(242 - normalizedScore * 58);
           return `rgb(${channel}, ${channel}, ${channel})`;
         };
 
         const getAvatarShadow = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          const spread = 2 + normalizedScore * 4;
-          const blur = 10 + normalizedScore * 14;
-          const alpha = 0.03 + normalizedScore * 0.11;
+          const spread = 1 + normalizedScore * 7;
+          const blur = 8 + normalizedScore * 20;
+          const alpha = 0.02 + normalizedScore * 0.16;
 
           return `0 0 0 ${spread}px rgba(88, 123, 246, ${alpha}), 0 12px ${blur}px rgba(88, 123, 246, ${alpha * 0.72})`;
         };
 
         const getAvatarIconColor = (score) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          const hue = 222 - normalizedScore * 4;
-          const saturation = 4 + normalizedScore * 42;
-          const lightness = 44 - normalizedScore * 28;
-          const alpha = 0.74 + normalizedScore * 0.26;
+          const hue = 222 - normalizedScore * 6;
+          const saturation = 2 + normalizedScore * 54;
+          const lightness = 52 - normalizedScore * 38;
+          const alpha = 0.68 + normalizedScore * 0.32;
 
           return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
         };
@@ -1155,7 +1155,7 @@
             scoreElement.textContent = `${roundedScore}%`;
             scoreElement.style.backgroundColor = getScorePillColor(roundedScore);
             scoreElement.style.boxShadow = getScorePillShadow(roundedScore);
-            scoreElement.style.transform = `scale(${getScorePillScale(roundedScore)})`;
+            scoreElement.style.transform = `translate(-50%, -50%) scale(${getScorePillScale(roundedScore)})`;
 
             const avatarElement = avatarElements[index];
             if (avatarElement) {
@@ -1208,6 +1208,13 @@
                 target.line.style.top = `${startY}px`;
                 target.line.style.width = `${distance}px`;
                 target.line.style.transform = `rotate(${angle}deg)`;
+
+                const scoreElement = scoreElements[targetIndex];
+                if (scoreElement) {
+                  const matchRect = target.match.getBoundingClientRect();
+                  scoreElement.style.left = `${anchorRect.left - matchRect.left}px`;
+                  scoreElement.style.top = `${anchorRect.top - matchRect.top}px`;
+                }
               });
             });
           }
