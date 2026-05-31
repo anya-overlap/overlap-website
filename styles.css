@@ -2397,6 +2397,7 @@ a {
     );
     width: var(--question-hub-visual-width);
     margin-inline: auto;
+    transform: translateX(clamp(-10px, calc((374px - var(--question-hub-visual-width)) * -0.12), -2px));
     justify-content: flex-start;
     overflow: visible;
   }
@@ -3039,6 +3040,7 @@ a {
   .compatibility--question-hub .compatibility-phone {
     --question-hub-visual-width: min(calc(100vw - 48px), 374px);
     width: var(--question-hub-visual-width);
+    transform: translateX(clamp(-10px, calc((374px - var(--question-hub-visual-width)) * -0.12), -2px));
     justify-content: flex-start;
     overflow: visible;
     --question-hub-phone-width: clamp(188px, calc(var(--question-hub-visual-width) * 0.69), 258px);
