@@ -1371,15 +1371,15 @@ a {
   background-color: fff;
   z-index: 10;
   position: relative;
-  
+  pointer-events: none;
 }
 
 .phone-screen {
   position: absolute;
- top: 5%;
- bottom: 5%;
- left: 10%;
- right: 10%;
+  top: 5%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
@@ -1409,19 +1409,34 @@ a {
   display: block;
 }
 
+.carousel-overlay-controls {
+  position: absolute;
+  left: clamp(10px, 4.5%, 16px);
+  right: clamp(10px, 4.5%, 16px);
+  top: 66%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(8px, 3.2%, 12px);
+  z-index: 3;
+}
+
 .carousel-arrow {
   --carousel-arrow-translate-y: 0;
-  min-width: 82px;
-  height: 34px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: calc(50% - 6px);
+  height: clamp(30px, 8vw, 34px);
   border-radius: 7px;
   border: 1px solid rgba(67, 83, 165, 0.08);
   background: linear-gradient(135deg, #5e7df4 0%, #4353a5 100%);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
-  padding: 0 13px;
+  padding: 0 clamp(10px, 4vw, 13px);
   box-shadow: 0 14px 30px rgba(67, 83, 165, 0.22);
   transition: transform 160ms ease, box-shadow 160ms ease;
   transform: translateY(var(--carousel-arrow-translate-y));
@@ -1429,9 +1444,11 @@ a {
 
 .carousel-primary-label {
   color: #ffffff;
-  font-size: calc(0.98rem * 0.94);
+  font-size: clamp(0.68rem, 2.9vw, calc(0.98rem * 0.94));
   font-weight: 500;
   letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .carousel-primary-icon {
@@ -1447,48 +1464,8 @@ a {
   z-index: 2;
 }
 
-.carousel-side-controls {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  justify-self: start;
-  display: grid;
-  justify-items: center;
-  gap: 12px;
-  margin-left: var(--question-system-control-gap);
-  z-index: 2;
-}
-
 .matchmaker .carousel-arrow.next {
   right: auto;
-}
-
-.carousel-secondary-action {
-  border: 0;
-  background: transparent;
-  color: #8e939d;
-  font: inherit;
-  font-size: calc(0.92rem * 0.86);
-  font-weight: 400;
-  margin-top: 3px;
-  line-height: 1.2;
-  cursor: pointer;
-  padding: 0;
-  letter-spacing: 0.01em;
-  transition: color 160ms ease, opacity 160ms ease, transform 160ms ease;
-}
-
-.carousel-secondary-action:hover {
-  color: #6d7380;
-  opacity: 1;
-}
-
-.carousel-secondary-action:active {
-  transform: translateY(1px);
-}
-
-.matchmaker .carousel-secondary-action.prev {
-  position: static;
 }
 
 .carousel-arrow:hover {
@@ -3108,37 +3085,6 @@ a {
     grid-row: 4;
     justify-self: center;
     transform: none;
-  }
-
-  .carousel-side-controls {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: center;
-    align-self: end;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--question-system-mobile-width);
-    gap: 22px;
-    transform: translateY(482px);
-    margin-bottom: 0;
-    position: relative;
-    z-index: 3;
-  }
-
-  .carousel-side-controls .carousel-arrow.next,
-  .carousel-side-controls .carousel-secondary-action.prev {
-    width: 118px;
-    flex: 0 0 118px;
-  }
-
-  .carousel-side-controls .carousel-secondary-action.prev {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    top: auto;
-    margin-top: 0;
-    order: -1;
   }
   .learn-more-group h3 {
     font-size: clamp(1.09rem, 5.27vw, 1.32rem);
