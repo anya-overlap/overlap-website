@@ -1414,7 +1414,7 @@ a {
   left: clamp(10px, 4.5%, 16px);
   right: clamp(10px, 4.5%, 16px);
   max-width: clamp(202px, 77%, 228px);
-  top: 76%;
+  top: 78%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
