@@ -2387,17 +2387,22 @@ a {
   .compatibility--question-hub .compatibility-phone {
     --question-hub-visual-width: min(calc(100vw - 48px), 374px);
     --question-hub-phone-width: clamp(188px, calc(var(--question-hub-visual-width) * 0.69), 258px);
+    --question-hub-phone-inset: clamp(8px, calc(var(--question-hub-visual-width) * 0.035), 14px);
     --question-hub-modal-overlap: clamp(44px, calc(var(--question-hub-visual-width) * 0.16), 60px);
     --question-hub-modal-width: clamp(154px, calc(var(--question-hub-visual-width) * 0.63), 238px);
     --question-hub-modal-left: clamp(
-      0px,
-      calc(var(--question-hub-phone-width) - var(--question-hub-modal-overlap)),
+      var(--question-hub-phone-inset),
+      calc(var(--question-hub-phone-inset) + var(--question-hub-phone-width) - var(--question-hub-modal-overlap)),
       calc(var(--question-hub-visual-width) - var(--question-hub-modal-width))
     );
     width: var(--question-hub-visual-width);
     margin-inline: auto;
     justify-content: flex-start;
     overflow: visible;
+  }
+
+  .compatibility--question-hub .phone-card {
+    margin-left: var(--question-hub-phone-inset);
   }
 
   .compatibility--question-hub .compatibility-copy {
@@ -2998,10 +3003,14 @@ a {
   }
 
   .question-system-carousel {
+    width: min(100%, var(--question-system-mobile-width));
     justify-content: center;
+    margin-inline: auto;
   }
 
   .phone-carousel {
+    --question-system-mobile-width: clamp(228px, calc(100vw - 92px), 280px);
+    --question-system-phone-width: var(--question-system-mobile-width);
     width: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -3011,11 +3020,11 @@ a {
   }
 
   .carousel-stage {
-    width: min(280px, calc(100vw - 72px));
+    width: var(--question-system-mobile-width);
   }
 
   .phone-frame {
-    width: min(280px, calc(100vw - 72px));
+    width: var(--question-system-mobile-width);
     margin-inline: auto;
   }
 
@@ -3033,11 +3042,12 @@ a {
     justify-content: flex-start;
     overflow: visible;
     --question-hub-phone-width: clamp(188px, calc(var(--question-hub-visual-width) * 0.69), 258px);
+    --question-hub-phone-inset: clamp(8px, calc(var(--question-hub-visual-width) * 0.035), 14px);
     --question-hub-modal-overlap: clamp(44px, calc(var(--question-hub-visual-width) * 0.16), 60px);
     --question-hub-modal-width: clamp(154px, calc(var(--question-hub-visual-width) * 0.63), 238px);
     --question-hub-modal-left: clamp(
-      0px,
-      calc(var(--question-hub-phone-width) - var(--question-hub-modal-overlap)),
+      var(--question-hub-phone-inset),
+      calc(var(--question-hub-phone-inset) + var(--question-hub-phone-width) - var(--question-hub-modal-overlap)),
       calc(var(--question-hub-visual-width) - var(--question-hub-modal-width))
     );
   }
@@ -3076,7 +3086,7 @@ a {
   }
 
   .carousel-controls {
-    width: min(280px, calc(100vw - 72px));
+    width: var(--question-system-mobile-width);
     gap: 12px;
     margin-top: -5px;
     grid-column: 1;
@@ -3102,7 +3112,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: min(280px, calc(100vw - 72px));
+    width: var(--question-system-mobile-width);
     gap: 22px;
     transform: translateY(482px);
     margin-bottom: 0;
