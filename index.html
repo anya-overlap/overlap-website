@@ -1213,10 +1213,33 @@
           return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
         };
 
-        const getAvatarBackgroundColor = (score) => {
+        const matchSurfaceProfiles = [
+          {
+            hue: 20,
+            baseSaturation: 40,
+          },
+          {
+            hue: 220,
+            baseSaturation: 54,
+          },
+          {
+            hue: 138,
+            baseSaturation: 28,
+          },
+        ];
+
+        const getAvatarSurface = (score, index) => {
           const normalizedScore = Math.min(1, Math.max(0, (score - scoreTrackMin) / (scoreTrackMax - scoreTrackMin)));
-          const channel = Math.round(242 - normalizedScore * 58);
-          return `rgb(${channel}, ${channel}, ${channel})`;
+          const profile = matchSurfaceProfiles[index] ?? matchSurfaceProfiles[1];
+          const topSaturation = 10 + normalizedScore * profile.baseSaturation;
+          const bottomSaturation = 14 + normalizedScore * (profile.baseSaturation + 6);
+          const topLightness = 94 - normalizedScore * 6;
+          const bottomLightness = 88 - normalizedScore * 10;
+
+          return {
+            start: `hsl(${profile.hue}, ${topSaturation}%, ${topLightness}%)`,
+            end: `hsl(${profile.hue}, ${bottomSaturation}%, ${bottomLightness}%)`,
+          };
         };
 
         const getAvatarShadow = (score) => {
@@ -1272,7 +1295,9 @@
 
             const avatarElement = avatarElements[index];
             if (avatarElement) {
-              avatarElement.style.backgroundColor = getAvatarBackgroundColor(roundedScore);
+              const avatarSurface = getAvatarSurface(roundedScore, index);
+              avatarElement.style.setProperty("--match-surface-start", avatarSurface.start);
+              avatarElement.style.setProperty("--match-surface-end", avatarSurface.end);
               avatarElement.style.borderColor = getAvatarBorderColor(roundedScore);
               avatarElement.style.boxShadow = getAvatarShadow(roundedScore);
               avatarElement.style.transform = `scale(${getAvatarScale(roundedScore)})`;
