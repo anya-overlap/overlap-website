@@ -1046,10 +1046,17 @@ a {
   color: #111111;
   cursor: pointer;
   appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .calculated-selector-option.is-active {
   font-weight: 600;
+}
+
+.calculated-selector-option:active,
+.calculated-selector-option:focus {
+  background: transparent;
 }
 
 .calculated-selector-option:focus-visible {
