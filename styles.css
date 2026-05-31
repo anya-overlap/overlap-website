@@ -3003,11 +3003,13 @@ a {
 
   .calculated-selector {
     max-width: none;
-    width: min(100%, 272px);
-    height: 32px;
+    width: min(100%, 288px);
+    height: 40px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    padding: 4px;
     border-radius: 999px;
+    overflow: hidden;
   }
 
   .calculated-selector-caption {
@@ -3023,8 +3025,8 @@ a {
   }
 
   .calculated-selector-highlight {
-    width: 39%;
-    height: 42px;
+    width: calc(33.333% - 4px);
+    height: calc(70% );
     margin-left: 0;
     left: 50%;
     top: 50%;
@@ -3034,7 +3036,7 @@ a {
   .calculated-selector-option {
     display: grid;
     place-items: center;
-    padding-inline: 6px;
+    padding-inline: 10px;
     transition: color 160ms ease;
   }
 
