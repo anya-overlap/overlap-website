@@ -1124,36 +1124,36 @@ a {
   position: absolute;
   display: grid;
   place-items: center;
-  --match-surface-start: rgba(234, 236, 243, 0.95);
-  --match-surface-end: rgba(220, 223, 233, 0.92);
-  --match-border: rgba(112, 127, 173, 0.26);
-  --match-ring: rgba(88, 123, 246, 0.1);
-  --match-icon: #44516f;
-  --match-score-shadow: rgba(88, 123, 246, 0.24);
+  --match-surface-start: rgba(231, 235, 247, 0.97);
+  --match-surface-end: rgba(214, 220, 237, 0.95);
+  --match-border: rgba(102, 123, 178, 0.32);
+  --match-ring: rgba(88, 123, 246, 0.14);
+  --match-icon: #3f5178;
+  --match-score-shadow: rgba(88, 123, 246, 0.3);
 }
 
 .calculated-match--warm {
-  --match-surface-start: rgba(239, 234, 229, 0.97);
-  --match-surface-end: rgba(227, 220, 214, 0.94);
-  --match-border: rgba(165, 138, 118, 0.28);
-  --match-ring: rgba(185, 151, 127, 0.12);
-  --match-icon: #5b4d43;
+  --match-surface-start: rgba(243, 232, 223, 0.98);
+  --match-surface-end: rgba(231, 214, 201, 0.95);
+  --match-border: rgba(178, 131, 101, 0.34);
+  --match-ring: rgba(205, 155, 118, 0.15);
+  --match-icon: #6c4c3e;
 }
 
 .calculated-match--cool {
-  --match-surface-start: rgba(231, 237, 247, 0.98);
-  --match-surface-end: rgba(215, 224, 239, 0.94);
-  --match-border: rgba(111, 134, 180, 0.3);
-  --match-ring: rgba(88, 123, 246, 0.13);
-  --match-icon: #3f5278;
+  --match-surface-start: rgba(224, 234, 252, 0.99);
+  --match-surface-end: rgba(203, 217, 244, 0.96);
+  --match-border: rgba(87, 122, 199, 0.35);
+  --match-ring: rgba(88, 123, 246, 0.18);
+  --match-icon: #35508a;
 }
 
 .calculated-match--sage {
-  --match-surface-start: rgba(232, 237, 232, 0.97);
-  --match-surface-end: rgba(218, 225, 219, 0.93);
-  --match-border: rgba(115, 142, 124, 0.28);
-  --match-ring: rgba(125, 152, 134, 0.12);
-  --match-icon: #485b50;
+  --match-surface-start: rgba(228, 238, 229, 0.98);
+  --match-surface-end: rgba(210, 223, 212, 0.95);
+  --match-border: rgba(98, 146, 114, 0.33);
+  --match-ring: rgba(117, 164, 132, 0.15);
+  --match-icon: #3f624a;
 }
 
 .calculated-match--top {
@@ -1203,8 +1203,8 @@ a {
     linear-gradient(180deg, var(--match-surface-start) 0%, var(--match-surface-end) 100%);
   border: 1px solid var(--match-border);
   box-shadow:
-    0 0 0 6px var(--match-ring),
-    0 16px 28px rgba(32, 40, 64, 0.08);
+    0 0 0 7px var(--match-ring),
+    0 16px 28px rgba(32, 40, 64, 0.1);
   transform-origin: center;
   transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
