@@ -3002,18 +3002,19 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
     margin-inline: auto;
   }
 
   .phone-carousel {
-    --question-system-mobile-width: clamp(228px, calc(100vw - 92px), 280px);
+    --question-system-mobile-width: clamp(244px, calc(100vw - 72px), 296px);
     --question-system-phone-width: var(--question-system-mobile-width);
     width: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
     transform: none;
-    row-gap: 10px;
-    margin-bottom: 10px;
+    row-gap: 2px;
+    margin-bottom: 0;
   }
 
   .carousel-stage {
@@ -3088,11 +3089,11 @@ a {
   .carousel-controls {
     width: var(--question-system-mobile-width);
     gap: 12px;
-    margin-top: -5px;
+    margin-top: -12px;
     grid-column: 1;
     grid-row: 3;
     align-self: start;
-    transform: translateY(-73px);
+    transform: none;
     position: relative;
     z-index: 3;
   }
