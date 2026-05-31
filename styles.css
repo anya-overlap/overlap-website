@@ -2407,7 +2407,7 @@ a {
   .question-hub-modal-overlay {
     left: var(--question-hub-modal-left);
     right: auto;
-    top: 61%;
+    top: 66%;
     width: max-content;
     transform: translateY(-50%);
     transform-origin: left center;
@@ -2416,7 +2416,7 @@ a {
   .compatibility--question-hub .compatibility-phone::before {
     left: var(--question-hub-modal-left);
     right: auto;
-    top: 61%;
+    top: 66%;
     width: var(--question-hub-modal-width);
     transform: translateY(-50%);
     box-shadow: 0 22px 42px rgba(208, 76, 77, 0.12);
@@ -3039,7 +3039,7 @@ a {
   .question-hub-modal-overlay {
     left: var(--question-hub-modal-left);
     right: auto;
-    top: 61%;
+    top: 66%;
     width: max-content;
     transform: translateY(-50%);
     transform-origin: left center;
@@ -3048,7 +3048,7 @@ a {
   .compatibility--question-hub .compatibility-phone::before {
     left: var(--question-hub-modal-left);
     right: auto;
-    top: 61%;
+    top: 66%;
     width: var(--question-hub-modal-width);
     transform: translateY(-50%);
     box-shadow: 0 22px 42px rgba(208, 76, 77, 0.12);
