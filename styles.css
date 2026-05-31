@@ -905,7 +905,9 @@ a {
   --question-system-copy-width: 376px;
   --question-system-control-gap: 1px;
   --question-system-callout-gap: 24px;
+  --question-system-callout-arrow-lift: 62px;
   --question-system-phone-width: 303px;
+  --question-system-carousel-control-top: 78%;
   display: grid;
   grid-template-columns:
     minmax(300px, var(--question-system-copy-width))
@@ -936,6 +938,8 @@ a {
   width: var(--question-system-phone-width);
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: visible;
 }
 
 .question-system-story .phone-card,
@@ -1288,16 +1292,15 @@ a {
 }
 
 .matchmaker-callout {
-  grid-column: 4;
-  grid-row: 1;
-  align-self: center;
-  justify-self: start;
+  position: absolute;
+  left: calc(100% + var(--question-system-callout-gap));
+  top: var(--question-system-carousel-control-top);
   display: grid;
   justify-items: center;
   gap: 0;
-  margin-left: var(--question-system-callout-gap);
   pointer-events: none;
-  transform: translateY(-24px);
+  transform: translateY(calc(-1 * var(--question-system-callout-arrow-lift)));
+  z-index: 2;
 }
 
 .matchmaker-callout-text {
@@ -1305,7 +1308,7 @@ a {
   font-size: 1.6rem;
   line-height: 1;
   color: #587BF6;
-  transform: rotate(10deg) translateX(-10px);
+  transform: rotate(10deg) translateX(-10px) translateY(-12px);
   white-space: nowrap;
 }
 
@@ -1313,7 +1316,7 @@ a {
   width: 30px;
   height: auto;
   display: block;
-  transform: translateX(-28px) translateY(-6px);
+  transform: translateX(-28px) translateY(0);
 }
 
 .phone-frame {
@@ -1414,7 +1417,7 @@ a {
   left: clamp(10px, 4.5%, 16px);
   right: clamp(10px, 4.5%, 16px);
   max-width: clamp(202px, 77%, 228px);
-  top: 78%;
+  top: var(--question-system-carousel-control-top);
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -2995,6 +2998,9 @@ a {
 
   .question-system-carousel {
     width: min(100%, var(--question-system-mobile-width));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-inline: auto;
   }
@@ -3092,10 +3098,9 @@ a {
   }
 
   .matchmaker-callout {
-    grid-column: 1;
-    grid-row: 4;
-    justify-self: center;
+    position: static;
     transform: none;
+    margin-top: 14px;
   }
   .learn-more-group h3 {
     font-size: clamp(1.09rem, 5.27vw, 1.32rem);
