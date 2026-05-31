@@ -985,18 +985,20 @@ a {
   width: min(100%, 167px);
 }
 
-.calculated-selector-row {
-  width: 100%;
+.calculated-selector-label {
+  display: block;
+  margin: 0 0 10px;
+  font-family: var(--body-section-heading-font-family);
+  font-size: clamp(1rem, 1.15vw, 1.08rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #111111;
 }
 
-.calculated-handwritten {
-  display: inline-block;
-  margin: 0 0 2px -36px;
-  font-family: "Kalam", cursive;
-  font-size: clamp(1.22rem, 1.7vw, 1.48rem);
-  line-height: 1;
-  color: var(--blue);
-  transform: rotate(-11deg);
+.calculated-selector-row {
+  width: 100%;
 }
 
 .calculated-selector {
@@ -2827,12 +2829,11 @@ a {
     justify-items: center;
   }
 
-  .calculated-handwritten {
-    margin-left: 8px;
-    margin-bottom: -8px;
-    font-size: 1.02rem;
-    justify-self: start;
-    transform: rotate(-10deg);
+  .calculated-selector-label {
+    width: min(100%, 252px);
+    margin: 0 auto;
+    font-size: 0.95rem;
+    text-align: left;
   }
 
   .calculated-selector-row {
