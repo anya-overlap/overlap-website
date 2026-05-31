@@ -1116,6 +1116,36 @@ a {
   position: absolute;
   display: grid;
   place-items: center;
+  --match-surface-start: rgba(234, 236, 243, 0.95);
+  --match-surface-end: rgba(220, 223, 233, 0.92);
+  --match-border: rgba(112, 127, 173, 0.26);
+  --match-ring: rgba(88, 123, 246, 0.1);
+  --match-icon: #44516f;
+  --match-score-shadow: rgba(88, 123, 246, 0.24);
+}
+
+.calculated-match--warm {
+  --match-surface-start: rgba(239, 234, 229, 0.97);
+  --match-surface-end: rgba(227, 220, 214, 0.94);
+  --match-border: rgba(165, 138, 118, 0.28);
+  --match-ring: rgba(185, 151, 127, 0.12);
+  --match-icon: #5b4d43;
+}
+
+.calculated-match--cool {
+  --match-surface-start: rgba(231, 237, 247, 0.98);
+  --match-surface-end: rgba(215, 224, 239, 0.94);
+  --match-border: rgba(111, 134, 180, 0.3);
+  --match-ring: rgba(88, 123, 246, 0.13);
+  --match-icon: #3f5278;
+}
+
+.calculated-match--sage {
+  --match-surface-start: rgba(232, 237, 232, 0.97);
+  --match-surface-end: rgba(218, 225, 219, 0.93);
+  --match-border: rgba(115, 142, 124, 0.28);
+  --match-ring: rgba(125, 152, 134, 0.12);
+  --match-icon: #485b50;
 }
 
 .calculated-match--top {
@@ -1149,7 +1179,8 @@ a {
   line-height: 1;
   color: #ffffff;
   background: var(--blue);
-  box-shadow: 0 10px 24px rgba(88, 123, 246, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 24px var(--match-score-shadow);
   transform-origin: center;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 180ms ease;
@@ -1160,9 +1191,12 @@ a {
   width: 89px;
   height: 89px;
   border-radius: 6px;
-  background: rgba(219, 219, 219, 0.88);
-  border: 2px solid rgba(88, 123, 246, 0.12);
-  box-shadow: 0 0 0 0 rgba(88, 123, 246, 0);
+  background:
+    linear-gradient(180deg, var(--match-surface-start) 0%, var(--match-surface-end) 100%);
+  border: 1px solid var(--match-border);
+  box-shadow:
+    0 0 0 6px var(--match-ring),
+    0 16px 28px rgba(32, 40, 64, 0.08);
   transform-origin: center;
   transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
@@ -1173,7 +1207,7 @@ a {
   left: 50%;
   width: 40px;
   height: 50px;
-  background-color: #1f2430;
+  background-color: var(--match-icon);
   transform: translate(-50%, -50%);
   -webkit-mask-image: url("./assets/personicon.svg");
   -webkit-mask-repeat: no-repeat;
