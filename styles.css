@@ -710,6 +710,13 @@ a {
   opacity: 0.56;
 }
 
+@media (min-width: 769px) {
+  .compatibility--question-hub > .question-system-layout {
+    padding-left: max(24px, calc(var(--page-gutter) - 32px));
+    padding-right: calc(var(--page-gutter) + 32px);
+  }
+}
+
 .compatibility--question-system {
   --body-section-heading-max-width: 900px;
   --body-section-padding-bottom: var(--section-space-bottom);
