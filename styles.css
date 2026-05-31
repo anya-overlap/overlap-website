@@ -3007,7 +3007,7 @@ a {
   }
 
   .phone-carousel {
-    --question-system-mobile-width: clamp(244px, calc(100vw - 72px), 296px);
+    --question-system-mobile-width: min(288px, calc(100vw - 48px));
     --question-system-phone-width: var(--question-system-mobile-width);
     width: 100%;
     grid-template-columns: 1fr;
