@@ -3026,6 +3026,15 @@ a {
     margin-inline: auto;
   }
 
+  .carousel-overlay-controls {
+    max-width: clamp(184px, 68%, 206px);
+  }
+
+  .carousel-arrow {
+    height: 30px;
+    border-radius: 4px;
+  }
+
   .compatibility-phone-frame {
     width: min(288px, calc(100vw - 48px));
   }
