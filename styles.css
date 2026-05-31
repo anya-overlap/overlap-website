@@ -904,7 +904,7 @@ a {
 .question-system-story {
   --question-system-copy-width: 376px;
   --question-system-control-gap: 1px;
-  --question-system-callout-gap: 24px;
+  --question-system-callout-gap: 16px;
   --question-system-callout-arrow-lift: 62px;
   --question-system-phone-width: 303px;
   --question-system-carousel-control-top: 78%;
@@ -1308,7 +1308,7 @@ a {
   font-size: 1.6rem;
   line-height: 1;
   color: #587BF6;
-  transform: rotate(10deg) translateX(-10px) translateY(-12px);
+  transform: rotate(10deg) translateX(-12px) translateY(-4px);
   white-space: nowrap;
 }
 
@@ -1316,7 +1316,7 @@ a {
   width: 30px;
   height: auto;
   display: block;
-  transform: translateX(-28px) translateY(0);
+  transform: translateX(-32px) translateY(0);
 }
 
 .phone-frame {
