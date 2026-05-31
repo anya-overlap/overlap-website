@@ -1030,6 +1030,7 @@ a {
   height: 38px;
   border-radius: 9999px;
   background: rgba(88, 123, 246, 0.34);
+  box-shadow: 0 8px 18px rgba(88, 123, 246, 0.2);
   transform: translateY(-50%);
 }
 
