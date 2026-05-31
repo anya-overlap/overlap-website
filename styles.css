@@ -1464,6 +1464,8 @@ a {
 
 .carousel-arrow {
   --carousel-arrow-translate-y: 0;
+  position: relative;
+  isolation: isolate;
   flex: 0 1 clamp(92px, 35%, 106px);
   min-width: 0;
   max-width: clamp(92px, 35%, 106px);
@@ -1483,6 +1485,7 @@ a {
 }
 
 .carousel-arrow.prev {
+  z-index: 1;
   border-color: #587BF6;
   background: #ffffff;
 }
@@ -1525,6 +1528,7 @@ a {
   content: "";
   position: absolute;
   inset: -5px;
+  z-index: -1;
   border-radius: 9px;
   border: 2px solid rgba(88, 123, 246, 0.58);
   box-shadow: 0 0 0 0 rgba(88, 123, 246, 0.22);
