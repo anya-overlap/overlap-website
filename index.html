@@ -17,6 +17,8 @@
     <meta name="twitter:image" content="https://tryoverlap.app/assets/victoriaScreenshot.png" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link rel="apple-touch-icon" href="./assets/favicon.png" />
+    <link rel="preload" as="image" href="./assets/logo.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="./assets/victoriaScreenshot.png" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +32,7 @@
       <div class="container">
         <nav class="nav">
           <a class="logo" href="#top" aria-label="Back to top"
-            ><img src="./assets/logo.png" alt="Oli" /><span class="logo-word">Overlap</span></a
+            ><img src="./assets/logo.png" alt="Oli" decoding="async" fetchpriority="high" /><span class="logo-word">Overlap</span></a
           >
           <button
             class="menu-toggle"
@@ -63,13 +65,14 @@
  
             <div class="store-buttons">
               <a class="store-badge-link" href="#" aria-label="Download on the App Store">
-                <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" />
+                <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" decoding="async" />
               </a>
               <a class="store-badge-link" href="#" aria-label="Get it on Google Play">
                 <img
                   class="store-badge"
                   src="./assets/GetItOnGooglePlay_Badge_Web_color_English.png"
                   alt="Get it on Google Play"
+                  decoding="async"
                 />
               </a>
             </div>
@@ -77,11 +80,11 @@
           <div class="hero-cards">
             <article class="profile-card">
              
-                <img src="./assets/victoriaScreenshot.png" alt="" />
+                <img src="./assets/victoriaScreenshot.png" alt="" decoding="async" fetchpriority="high" />
              
             </article>
             <article class="profile-card muted">
-              <img src="./assets/jonprofile.png" alt="" />
+              <img src="./assets/jonprofile.png" alt="" decoding="async" />
               <div class="profile-card-gradient-overlay" aria-hidden="true"></div>
             </article>
           </div>
@@ -107,14 +110,25 @@
               <div class="phone-card">
                 <div class="phone-frame compatibility-phone-frame">
                   <div class="phone-screen compatibility-screen">
-                    <video class="compatibility-profile-video" autoplay loop muted playsinline aria-label="Katie match profile video">
-                      <source src="./assets/katieprofilerawcopy_web.mp4" type="video/mp4" />
+                    <video
+                      class="compatibility-profile-video"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                      data-lazy-video
+                      aria-label="Katie match profile video"
+                    >
+                      <source data-src="./assets/katieprofilerawcopy_web.mp4" type="video/mp4" />
                     </video>
                   </div>
                   <img
                     class="phone-device"
                     src="./assets/iPhone 14 Pro – Space Black.png"
                     alt="iPhone 14 Pro in space black"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -156,14 +170,25 @@
               <div class="phone-card">
                 <div class="phone-frame compatibility-phone-frame">
                   <div class="phone-screen compatibility-screen">
-                    <video class="compatibility-profile-video" autoplay loop muted playsinline aria-label="Question hub video">
-                      <source src="./assets/qhubVideo_web.mp4" type="video/mp4" />
+                    <video
+                      class="compatibility-profile-video"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      preload="metadata"
+                      data-lazy-video
+                      aria-label="Question hub video"
+                    >
+                      <source data-src="./assets/qhubVideo_web.mp4" type="video/mp4" />
                     </video>
                   </div>
                   <img
                     class="phone-device"
                     src="./assets/iPhone 14 Pro – Space Black.png"
                     alt="iPhone 14 Pro in space black"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -172,6 +197,8 @@
                   class="question-hub-modal-image"
                   src="./assets/qhubModal2.png"
                   alt="Question Hub topic details modal"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -203,22 +230,22 @@
                     <div class="phone-screen">
                       <div class="carousel-track">
                         <div class="carousel-slide is-active">
-                          <img src="./assets/partnrcompanion.png" alt="Partnership versus companionship question screen" />
+                          <img src="./assets/partnrcompanion.png" alt="Partnership versus companionship question screen" loading="lazy" decoding="async" />
                         </div>
                         <div class="carousel-slide">
-                          <img src="./assets/trueAuthenticSelf.png" alt="True authentic self question screen" />
+                          <img src="./assets/trueAuthenticSelf.png" alt="True authentic self question screen" loading="lazy" decoding="async" />
                         </div>
                         <div class="carousel-slide">
-                          <img src="./assets/texting.png" alt="Texting question screen" />
+                          <img src="./assets/texting.png" alt="Texting question screen" loading="lazy" decoding="async" />
                         </div>
                         <div class="carousel-slide">
-                          <img src="./assets/sexSlider.png" alt="Sex question screen" />
+                          <img src="./assets/sexSlider.png" alt="Sex question screen" loading="lazy" decoding="async" />
                         </div>
                         <div class="carousel-slide">
-                          <img src="./assets/neededVSwanted.png" alt="Needed versus wanted question screen" />
+                          <img src="./assets/neededVSwanted.png" alt="Needed versus wanted question screen" loading="lazy" decoding="async" />
                         </div>
                         <div class="carousel-slide">
-                          <img src="./assets/bfastInBed.png" alt="Breakfast in bed question screen" />
+                          <img src="./assets/bfastInBed.png" alt="Breakfast in bed question screen" loading="lazy" decoding="async" />
                         </div>
                       </div>
                     </div>
@@ -226,6 +253,8 @@
                       class="phone-device"
                       src="./assets/iPhone 14 Pro – Space Black.png"
                       alt="iPhone 14 Pro in space black"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -245,7 +274,7 @@
             </div>
             <div class="matchmaker-callout" aria-hidden="true">
               <span class="matchmaker-callout-text">try it!</span>
-              <img src="./assets/curvedArrowIcon.svg" alt="" class="matchmaker-callout-arrow" />
+              <img src="./assets/curvedArrowIcon.svg" alt="" class="matchmaker-callout-arrow" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -326,7 +355,7 @@
                     <span class="learn-more-item-title">Our position in the market</span>
                     <span class="learn-more-item-subtitle">A unique value proposition</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
                   We don't expect to fully replace other dating apps. Overlap's charm
@@ -345,7 +374,7 @@
                     <span class="learn-more-item-title">Why did you create Overlap?</span>
                     <span class="learn-more-item-subtitle">"There are so many dating apps"</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
                   There are hundreds of dating apps, yet few work reliably. We believe
@@ -360,7 +389,7 @@
                     <span class="learn-more-item-title">How does the algorithm work?</span>
                     <span class="learn-more-item-subtitle">Do I need to train it?</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
                   Unlike other apps, our “algorithm” isn't mysterious. Overlap only
@@ -376,7 +405,7 @@
                     <span class="learn-more-item-title">Do you use AI?</span>
                     <span class="learn-more-item-subtitle">Since everyone asks...</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
                   Curious about AI usage in dating? There are various other apps on the market
@@ -413,7 +442,7 @@
                     <span class="learn-more-item-title">Historical context of dating</span>
                     <span class="learn-more-item-subtitle">How online dating has evolved over time</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
                   In the 1990s, online dating featured detailed written profiles and
@@ -436,7 +465,7 @@
                     <span class="learn-more-item-title">Conflict of interest</span>
                     <span class="learn-more-item-subtitle">The business problem</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
                   A major issue with traditional dating apps is the incentives are not
@@ -458,7 +487,7 @@
                     <span class="learn-more-item-title">Inorganic meeting</span>
                     <span class="learn-more-item-subtitle">The fundamental weakness of apps</span>
                   </span>
-                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" /></span>
+                  <span class="learn-more-item-icon" aria-hidden="true"><img class="learn-more-item-icon-image" src="./assets/caretArrowBlue.svg" alt="" loading="lazy" decoding="async" /></span>
                 </button>
                 <div class="learn-more-answer" hidden>
             
@@ -490,13 +519,15 @@
             <div class="store-buttons">
               <span class="store-buttons-label">Coming spring 2026</span>
               <a class="store-badge-link" href="#" aria-label="Download on the App Store">
-                <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" />
+                <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" loading="lazy" decoding="async" />
               </a>
               <a class="store-badge-link" href="#" aria-label="Get it on Google Play">
                 <img
                   class="store-badge"
                   src="./assets/GetItOnGooglePlay_Badge_Web_color_English.png"
                   alt="Get it on Google Play"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>
@@ -505,7 +536,7 @@
           <div class="cta-footer-meta">
             <div class="cta-footer-block cta-footer-block--brand">
               <div class="cta-brand" aria-label="Overlap brand">
-                <img src="./assets/logo.png" alt="Oli" />
+                <img src="./assets/logo.png" alt="Oli" loading="lazy" decoding="async" />
                 <span class="logo-word cta-logo-word">Overlap</span>
               </div>
               <p class="cta-copyright">&copy; 2026 Overlap</p>
@@ -521,7 +552,7 @@
             <div class="cta-footer-block cta-footer-block--social">
               <div class="footer-social-links" aria-label="Contact Overlap">
                 <a class="footer-social-link" href="mailto:contact@tryoverlap.app" aria-label="Email Overlap">
-                  <img class="footer-icon footer-icon--mail" src="./assets/mail.svg" alt="" aria-hidden="true" />
+                  <img class="footer-icon footer-icon--mail" src="./assets/mail.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
                 </a>
                 <a
                   class="footer-social-link"
@@ -530,7 +561,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img class="footer-icon footer-icon--instagram" src="./assets/instagram.svg" alt="" aria-hidden="true" />
+                  <img class="footer-icon footer-icon--instagram" src="./assets/instagram.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
                 </a>
               </div>
             </div>
@@ -637,17 +668,68 @@
         prevSecondaryButton?.addEventListener("click", () => updateCarousel(currentIndex - 1));
       }
 
-      const compatibilityProfileVideo = document.querySelector(".compatibility-profile-video");
-      if (compatibilityProfileVideo) {
-        const setCompatibilityVideoSpeed = () => {
-          compatibilityProfileVideo.defaultPlaybackRate = 0.8;
-          compatibilityProfileVideo.playbackRate = 0.8;
+      const compatibilityProfileVideos = Array.from(document.querySelectorAll(".compatibility-profile-video"));
+      if (compatibilityProfileVideos.length > 0) {
+        const setCompatibilityVideoSpeed = (video) => {
+          video.defaultPlaybackRate = 0.8;
+          video.playbackRate = 0.8;
         };
 
-        setCompatibilityVideoSpeed();
-        compatibilityProfileVideo.addEventListener("loadedmetadata", setCompatibilityVideoSpeed);
-        compatibilityProfileVideo.addEventListener("play", setCompatibilityVideoSpeed);
-        compatibilityProfileVideo.play().catch(() => {});
+        const loadCompatibilityVideo = (video) => {
+          if (video.dataset.isLoaded === "true") {
+            return;
+          }
+
+          const sources = Array.from(video.querySelectorAll("source"));
+          sources.forEach((source) => {
+            if (!source.src && source.dataset.src) {
+              source.src = source.dataset.src;
+            }
+          });
+
+          video.dataset.isLoaded = "true";
+          video.load();
+        };
+
+        compatibilityProfileVideos.forEach((video) => {
+          const syncVideoSpeed = () => setCompatibilityVideoSpeed(video);
+
+          syncVideoSpeed();
+          video.addEventListener("loadedmetadata", syncVideoSpeed);
+          video.addEventListener("play", syncVideoSpeed);
+        });
+
+        if ("IntersectionObserver" in window) {
+          const videoObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                const video = entry.target;
+                loadCompatibilityVideo(video);
+                setCompatibilityVideoSpeed(video);
+                video.play().catch(() => {});
+                observer.unobserve(video);
+              });
+            },
+            {
+              rootMargin: "240px 0px",
+              threshold: 0.15,
+            }
+          );
+
+          compatibilityProfileVideos.forEach((video) => {
+            videoObserver.observe(video);
+          });
+        } else {
+          compatibilityProfileVideos.forEach((video) => {
+            loadCompatibilityVideo(video);
+            setCompatibilityVideoSpeed(video);
+            video.play().catch(() => {});
+          });
+        }
       }
 
       const menuToggleButton = document.querySelector(".menu-toggle");
