@@ -293,9 +293,15 @@
                 <div class="calculated-selector-row">
                   <div class="calculated-selector" role="group" aria-label="Compatibility preference selector">
                     <span class="calculated-selector-highlight"></span>
-                    <button class="calculated-selector-option" type="button" data-value="100">Ignore</button>
-                    <button class="calculated-selector-option is-active" type="button" aria-pressed="true" data-value="50">Default</button>
-                    <button class="calculated-selector-option" type="button" aria-pressed="false" data-value="0">Dealbreaker</button>
+                    <button class="calculated-selector-option" type="button" data-value="100" data-label="Ignore">
+                      <span class="calculated-selector-option-label">Ignore</span>
+                    </button>
+                    <button class="calculated-selector-option is-active" type="button" aria-pressed="true" data-value="50" data-label="Default">
+                      <span class="calculated-selector-option-label">Default</span>
+                    </button>
+                    <button class="calculated-selector-option" type="button" aria-pressed="false" data-value="0" data-label="Dealbreaker">
+                      <span class="calculated-selector-option-label">Dealbreaker</span>
+                    </button>
                   </div>
                 </div>
               </div>

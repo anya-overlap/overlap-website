@@ -3020,7 +3020,32 @@ a {
   }
 
   .calculated-selector-option {
+    display: grid;
+    place-items: center;
     padding-inline: 6px;
+    transition: color 160ms ease;
+  }
+
+  .calculated-selector-option::before,
+  .calculated-selector-option-label {
+    grid-area: 1 / 1;
+  }
+
+  .calculated-selector-option::before {
+    content: attr(data-label);
+    font-weight: 600;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .calculated-selector-option-label {
+    font-weight: 500;
+    opacity: 0.68;
+  }
+
+  .calculated-selector-option.is-active .calculated-selector-option-label {
+    font-weight: 600;
+    opacity: 1;
   }
 
   .calculated-line {
