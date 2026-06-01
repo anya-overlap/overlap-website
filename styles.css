@@ -3223,14 +3223,19 @@ a {
     left: clamp(12px, 4.5%, 16px);
     right: clamp(12px, 4.5%, 16px);
     max-width: clamp(214px, 78%, 236px);
-    gap: 0;
+    justify-content: center;
+    gap: 8px;
   }
 
   .carousel-arrow {
-    flex: 0 1 46%;
-    max-width: 46%;
-    height: 33px;
+    flex: 0 1 44%;
+    max-width: 44%;
+    height: 31px;
     border-radius: 4px;
+  }
+
+  .carousel-primary-label {
+    font-size: 0.66rem;
   }
 
   .compatibility--question-hub .compatibility-grid {
