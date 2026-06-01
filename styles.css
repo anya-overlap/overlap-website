@@ -1677,7 +1677,7 @@ a {
   --body-section-heading-align: center;
   --body-section-heading-width: 100%;
   --body-section-heading-max-width: none;
-  --body-section-title-size: calc(clamp(1.44rem, 2.2vw, 1.98rem) * var(--learn-more-font-scale));
+  --body-section-title-size: calc(clamp(1.5rem, 2.28vw, 2.04rem) * var(--learn-more-font-scale));
   background:
     radial-gradient(circle at 14% 20%, rgba(88, 123, 246, 0.04) 0%, rgba(88, 123, 246, 0) 30%),
     radial-gradient(circle at 86% 16%, rgba(208, 76, 77, 0.03) 0%, rgba(208, 76, 77, 0) 28%),
@@ -2566,7 +2566,7 @@ a {
 
   .learn-more {
     --body-section-padding-bottom: var(--section-space-bottom-loose);
-    --body-section-title-size: calc(clamp(1.44rem, 2.2vw, 1.98rem) * var(--learn-more-font-scale));
+    --body-section-title-size: calc(clamp(1.5rem, 2.28vw, 2.04rem) * var(--learn-more-font-scale));
   }
 
   .compatibility::before {
