@@ -1553,6 +1553,7 @@ a {
 }
 
 .carousel-arrow {
+  --carousel-arrow-radius: 5px;
   --carousel-arrow-translate-y: 0;
   position: relative;
   isolation: isolate;
@@ -1560,7 +1561,7 @@ a {
   min-width: 0;
   max-width: clamp(92px, 35%, 106px);
   height: clamp(28px, 7vw, 31px);
-  border-radius: 5px;
+  border-radius: var(--carousel-arrow-radius);
   border: 1px solid rgba(67, 83, 165, 0.08);
   background: linear-gradient(135deg, #5e7df4 0%, #4353a5 100%);
   display: flex;
@@ -1612,15 +1613,17 @@ a {
 }
 
 .question-system-carousel .carousel-arrow.next {
+  --next-button-ring-offset-x: 5px;
+  --next-button-ring-offset-y: 6px;
   overflow: visible;
 }
 
 .question-system-carousel .carousel-arrow.next::after {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: calc(-1 * var(--next-button-ring-offset-y)) calc(-1 * var(--next-button-ring-offset-x));
   z-index: -1;
-  border-radius: 9px;
+  border-radius: calc(var(--carousel-arrow-radius) + var(--next-button-ring-offset-y));
   border: 2px solid rgba(88, 123, 246, 0.58);
   box-shadow: 0 0 0 0 rgba(88, 123, 246, 0.22);
   opacity: 0;
@@ -3231,7 +3234,8 @@ a {
     flex: 0 1 47%;
     max-width: 47%;
     height: 38px;
-    border-radius: 4px;
+    --carousel-arrow-radius: 4px;
+    border-radius: var(--carousel-arrow-radius);
   }
 
   .carousel-primary-label {
