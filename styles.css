@@ -2519,21 +2519,22 @@ a {
   }
 
   .compatibility--question-hub .compatibility-phone {
-    --question-hub-visual-width: min(calc(100vw - 48px), 374px);
+    --question-hub-visual-width: min(calc(100vw - (var(--page-gutter-mobile) * 2)), 374px);
     --question-hub-phone-width: clamp(188px, calc(var(--question-hub-visual-width) * 0.69), 258px);
     --question-hub-phone-inset: clamp(8px, calc(var(--question-hub-visual-width) * 0.035), 14px);
     --question-hub-modal-overlap: clamp(44px, calc(var(--question-hub-visual-width) * 0.16), 60px);
     --question-hub-modal-width: clamp(154px, calc(var(--question-hub-visual-width) * 0.63), 238px);
     --question-hub-bottom-space: clamp(28px, calc(var(--question-hub-visual-width) * 0.12), 44px);
+    --question-hub-modal-right-inset: 18px;
     --question-hub-modal-left: clamp(
       var(--question-hub-phone-inset),
       calc(var(--question-hub-visual-width) - var(--question-hub-phone-inset) - var(--question-hub-modal-width)),
-      calc(var(--question-hub-visual-width) - var(--question-hub-modal-width))
+      calc(var(--question-hub-visual-width) - var(--question-hub-modal-width) - var(--question-hub-modal-right-inset))
     );
     width: var(--question-hub-visual-width);
     margin-inline: auto;
     margin-bottom: var(--question-hub-bottom-space);
-    transform: translateX(clamp(-10px, calc((374px - var(--question-hub-visual-width)) * -0.12), -2px));
+    transform: none;
     justify-content: flex-start;
     overflow: visible;
   }
@@ -3235,21 +3236,22 @@ a {
   }
 
   .compatibility--question-hub .compatibility-phone {
-    --question-hub-visual-width: min(calc(100vw - 48px), 374px);
+    --question-hub-visual-width: min(calc(100vw - (var(--page-gutter-mobile) * 2)), 374px);
     --question-hub-phone-width: clamp(188px, calc(var(--question-hub-visual-width) * 0.69), 258px);
     --question-hub-phone-inset: clamp(8px, calc(var(--question-hub-visual-width) * 0.035), 14px);
     --question-hub-modal-overlap: clamp(44px, calc(var(--question-hub-visual-width) * 0.16), 60px);
     --question-hub-modal-width: clamp(154px, calc(var(--question-hub-visual-width) * 0.63), 238px);
     --question-hub-bottom-space: clamp(28px, calc(var(--question-hub-visual-width) * 0.12), 44px);
+    --question-hub-modal-right-inset: 18px;
     --question-hub-modal-left: clamp(
       var(--question-hub-phone-inset),
       calc(var(--question-hub-phone-inset) + var(--question-hub-phone-width) - var(--question-hub-modal-overlap)),
-      calc(var(--question-hub-visual-width) - var(--question-hub-modal-width))
+      calc(var(--question-hub-visual-width) - var(--question-hub-modal-width) - var(--question-hub-modal-right-inset))
     );
     width: var(--question-hub-visual-width);
     margin-inline: auto;
     margin-bottom: var(--question-hub-bottom-space);
-    transform: translateX(clamp(-10px, calc((374px - var(--question-hub-visual-width)) * -0.12), -2px));
+    transform: none;
     justify-content: flex-start;
     overflow: visible;
   }
