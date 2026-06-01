@@ -2526,7 +2526,7 @@ a {
     --question-hub-bottom-space: clamp(28px, calc(var(--question-hub-visual-width) * 0.12), 44px);
     --question-hub-modal-left: clamp(
       var(--question-hub-phone-inset),
-      calc(var(--question-hub-phone-inset) + var(--question-hub-phone-width) - var(--question-hub-modal-overlap)),
+      calc(var(--question-hub-visual-width) - var(--question-hub-phone-inset) - var(--question-hub-modal-width)),
       calc(var(--question-hub-visual-width) - var(--question-hub-modal-width))
     );
     width: var(--question-hub-visual-width);
