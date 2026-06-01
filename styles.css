@@ -3220,16 +3220,16 @@ a {
   }
 
   .carousel-overlay-controls {
-    left: 17px;
-    right: 17px;
+    left: 14px;
+    right: 14px;
     max-width: none;
     justify-content: space-between;
     gap: 0;
   }
 
   .carousel-arrow {
-    flex: 0 1 44%;
-    max-width: 44%;
+    flex: 0 1 47%;
+    max-width: 47%;
     height: 31px;
     border-radius: 4px;
   }
