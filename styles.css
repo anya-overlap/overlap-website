@@ -92,14 +92,15 @@ a {
   isolation: isolate;
   padding: clamp(108px, 12vw, 128px) 0 clamp(64px, 7vw, 88px);
   background:
-    radial-gradient(64% 46% at 12% 6%, rgba(88, 123, 246, 0.15) 0%, rgba(88, 123, 246, 0.055) 34%, rgba(88, 123, 246, 0) 76%),
-    radial-gradient(50% 40% at 82% 22%, rgba(88, 123, 246, 0.105) 0%, rgba(88, 123, 246, 0.04) 30%, rgba(88, 123, 246, 0) 72%),
-    radial-gradient(54% 42% at 72% 80%, rgba(88, 123, 246, 0.086) 0%, rgba(88, 123, 246, 0.03) 30%, rgba(88, 123, 246, 0) 74%),
-    radial-gradient(44% 34% at 36% 32%, rgba(123, 96, 246, 0.068) 0%, rgba(123, 96, 246, 0.024) 28%, rgba(123, 96, 246, 0) 66%),
-    radial-gradient(42% 32% at 24% 76%, rgba(109, 104, 245, 0.05) 0%, rgba(109, 104, 245, 0.017) 30%, rgba(109, 104, 245, 0) 68%),
-    linear-gradient(115deg, rgba(118, 96, 238, 0.02) 6%, rgba(118, 96, 238, 0) 56%),
-    linear-gradient(180deg, rgba(118, 96, 238, 0) 60%, rgba(118, 96, 238, 0.038) 100%),
-    linear-gradient(180deg, #fcfdff 0%, #f5f7ff 100%);
+    radial-gradient(92% 66% at 6% 0%, rgba(88, 123, 246, 0.115) 0%, rgba(88, 123, 246, 0.036) 38%, rgba(88, 123, 246, 0) 80%),
+    radial-gradient(74% 58% at 90% 14%, rgba(88, 123, 246, 0.085) 0%, rgba(88, 123, 246, 0.028) 36%, rgba(88, 123, 246, 0) 78%),
+    radial-gradient(88% 64% at 50% 56%, rgba(123, 96, 246, 0.045) 0%, rgba(123, 96, 246, 0.014) 44%, rgba(123, 96, 246, 0) 84%),
+    radial-gradient(80% 60% at 18% 86%, rgba(109, 104, 245, 0.04) 0%, rgba(109, 104, 245, 0.012) 42%, rgba(109, 104, 245, 0) 82%),
+    radial-gradient(66% 48% at 82% 82%, rgba(88, 123, 246, 0.032) 0%, rgba(88, 123, 246, 0.01) 40%, rgba(88, 123, 246, 0) 82%),
+    linear-gradient(128deg, rgba(255, 255, 255, 0.2) 8%, rgba(255, 255, 255, 0.04) 30%, rgba(88, 123, 246, 0.022) 58%, rgba(88, 123, 246, 0.006) 74%, rgba(255, 255, 255, 0) 88%),
+    linear-gradient(24deg, rgba(123, 96, 246, 0) 18%, rgba(123, 96, 246, 0.014) 50%, rgba(255, 255, 255, 0.11) 68%, rgba(255, 255, 255, 0) 84%),
+    linear-gradient(180deg, rgba(118, 96, 238, 0) 62%, rgba(118, 96, 238, 0.026) 100%),
+    linear-gradient(180deg, #fdfdff 0%, #f7f9ff 100%);
 }
 
 .hero::before,
@@ -2942,6 +2943,11 @@ a {
     justify-self: start;
   }
 
+  .compatibility--calculated .compatibility-copy {
+    gap: 15px;
+    line-height: 1.38;
+  }
+
   .question-system-copy {
     max-width: 100%;
     width: 100%;
@@ -2971,6 +2977,8 @@ a {
 
   .compatibility-copy-lead {
     font-size: clamp(1.22rem, 4.86vw, 1.53rem);
+    line-height: 1.12;
+    margin-bottom: 2px;
   }
 
   .compatibility .section-heading p {
