@@ -843,6 +843,18 @@
           window.requestAnimationFrame(syncMobileNavVisibility);
         };
 
+        const closeMobileNavOnOutsidePointer = (event) => {
+          if (!siteNav.classList.contains("is-menu-open")) {
+            return;
+          }
+
+          if (siteNav.contains(event.target)) {
+            return;
+          }
+
+          closeMobileNav();
+        };
+
         menuToggleButton.addEventListener("click", () => {
           const isOpen = siteNavLinks.classList.toggle("is-open");
           siteNav.classList.toggle("is-menu-open", isOpen);
@@ -915,7 +927,19 @@
           }
         });
 
+        document.addEventListener("pointerdown", closeMobileNavOnOutsidePointer);
         window.addEventListener("scroll", requestMobileNavSync, { passive: true });
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!siteNav.classList.contains("is-menu-open")) {
+              return;
+            }
+
+            closeMobileNav();
+          },
+          { passive: true }
+        );
         window.addEventListener("resize", () => {
           if (window.innerWidth > 768) {
             closeMobileNav();
