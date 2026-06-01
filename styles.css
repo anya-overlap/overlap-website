@@ -640,13 +640,41 @@ a {
 
 .compatibility {
   --body-section-heading-max-width: 880px;
-  background:
+  --compatibility-background:
     radial-gradient(circle at 14% 20%, rgba(88, 123, 246, 0.04) 0%, rgba(88, 123, 246, 0) 30%),
     radial-gradient(circle at 86% 16%, rgba(208, 76, 77, 0.03) 0%, rgba(208, 76, 77, 0) 28%),
     linear-gradient(180deg, #fbfcff 0%, #f5f8fe 100%);
+  --compatibility-grid-image: none;
+  --compatibility-grid-size: auto;
+  --compatibility-grid-mask: none;
+  --compatibility-grid-opacity: 0;
+  --compatibility-grid-blend: normal;
+  --compatibility-glow-width: clamp(300px, 42vw, 620px);
+  --compatibility-glow-height: clamp(140px, 18vw, 280px);
+  --compatibility-glow-left: auto;
+  --compatibility-glow-right: clamp(-90px, -6vw, -10px);
+  --compatibility-glow-top: auto;
+  --compatibility-glow-bottom: clamp(20px, 6vw, 90px);
+  --compatibility-glow-background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.085) 48%, rgba(208, 76, 77, 0.08) 100%);
+  --compatibility-glow-opacity: 0.56;
+  background: var(--compatibility-background);
   border-top: 1px solid rgba(192, 202, 228, 0.42);
   border-bottom: 1px solid rgba(205, 214, 236, 0.56);
   box-shadow: none;
+}
+
+#how.compatibility {
+  --compatibility-background:
+    radial-gradient(circle at 18% 18%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0) 32%),
+    radial-gradient(circle at 82% 82%, rgba(208, 76, 77, 0.028) 0%, rgba(208, 76, 77, 0) 26%),
+    linear-gradient(180deg, #fcfdff 0%, #f6f8fe 100%);
+  --compatibility-grid-image:
+    linear-gradient(90deg, rgba(67, 83, 165, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(67, 83, 165, 0.045) 1px, transparent 1px);
+  --compatibility-grid-size: 44px 44px;
+  --compatibility-grid-mask: none;
+  --compatibility-grid-opacity: 0.48;
+  --compatibility-grid-blend: normal;
 }
 
 .hero + main .compatibility:first-of-type {
@@ -679,24 +707,25 @@ a {
 
 .compatibility::before {
   inset: 0;
-  background-image:
-    linear-gradient(90deg, rgba(67, 83, 165, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(67, 83, 165, 0.045) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 32%, transparent 88%);
-  opacity: 0.37;
+  background-image: var(--compatibility-grid-image);
+  background-size: var(--compatibility-grid-size);
+  mask-image: var(--compatibility-grid-mask);
+  mix-blend-mode: var(--compatibility-grid-blend);
+  opacity: var(--compatibility-grid-opacity);
 }
 
 .compatibility::after {
-  width: clamp(300px, 42vw, 620px);
-  height: clamp(140px, 18vw, 280px);
-  right: clamp(-90px, -6vw, -10px);
-  bottom: clamp(20px, 6vw, 90px);
+  width: var(--compatibility-glow-width);
+  height: var(--compatibility-glow-height);
+  left: var(--compatibility-glow-left);
+  right: var(--compatibility-glow-right);
+  top: var(--compatibility-glow-top);
+  bottom: var(--compatibility-glow-bottom);
   border-radius: 999px;
   transform: none;
-  background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.085) 48%, rgba(208, 76, 77, 0.08) 100%);
+  background: var(--compatibility-glow-background);
   filter: blur(46px);
-  opacity: 0.56;
+  opacity: var(--compatibility-glow-opacity);
 }
 
 .compatibility--question-hub {
@@ -726,23 +755,39 @@ a {
 .compatibility--question-system {
   --body-section-heading-max-width: 900px;
   --body-section-padding-bottom: var(--section-space-bottom);
+  --compatibility-background:
+    radial-gradient(circle at 84% 22%, rgba(88, 123, 246, 0.045) 0%, rgba(88, 123, 246, 0) 28%),
+    radial-gradient(circle at 12% 76%, rgba(208, 76, 77, 0.024) 0%, rgba(208, 76, 77, 0) 24%),
+    linear-gradient(180deg, #fafcff 0%, #f4f7ff 100%);
+  --compatibility-grid-image:
+    linear-gradient(90deg, rgba(67, 83, 165, 0.042) 1px, transparent 1px),
+    linear-gradient(rgba(67, 83, 165, 0.03) 1px, transparent 1px);
+  --compatibility-grid-size: 76px 76px;
+  --compatibility-grid-mask: none;
+  --compatibility-grid-opacity: 0.4;
+  --compatibility-grid-blend: normal;
+  --compatibility-glow-right: clamp(-70px, -5vw, -12px);
+  --compatibility-glow-bottom: clamp(34px, 6vw, 96px);
+  --compatibility-glow-background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.072) 44%, rgba(208, 76, 77, 0.06) 100%);
+  --compatibility-glow-opacity: 0.48;
 }
 
 .compatibility.compatibility--question-system::before,
 .compatibility + .compatibility.compatibility--question-system::before {
-  opacity: 0;
+  opacity: var(--compatibility-grid-opacity);
 }
 
 .compatibility--question-system::after {
-  width: clamp(300px, 42vw, 620px);
-  height: clamp(140px, 18vw, 280px);
-  left: auto;
-  right: clamp(-90px, -6vw, -10px);
-  bottom: clamp(20px, 6vw, 90px);
+  width: var(--compatibility-glow-width);
+  height: var(--compatibility-glow-height);
+  left: var(--compatibility-glow-left);
+  right: var(--compatibility-glow-right);
+  top: var(--compatibility-glow-top);
+  bottom: var(--compatibility-glow-bottom);
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.085) 48%, rgba(208, 76, 77, 0.08) 100%);
+  background: var(--compatibility-glow-background);
   filter: blur(46px);
-  opacity: 0.56;
+  opacity: var(--compatibility-glow-opacity);
 }
 
 .compatibility .section-heading p {
@@ -981,6 +1026,22 @@ a {
   --calculated-visual-inline-padding: 80px;
   --calculated-selector-column-width: 280px;
   --calculated-selector-group-width: 162px;
+  --compatibility-background:
+    radial-gradient(circle at 16% 28%, rgba(88, 123, 246, 0.038) 0%, rgba(88, 123, 246, 0) 30%),
+    radial-gradient(circle at 84% 24%, rgba(208, 76, 77, 0.022) 0%, rgba(208, 76, 77, 0) 24%),
+    linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.022) 38%, rgba(255, 255, 255, 0) 74%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 54%, #f7f9ff 100%);
+  --compatibility-grid-image: none;
+  --compatibility-grid-size: auto;
+  --compatibility-grid-mask: none;
+  --compatibility-grid-opacity: 0;
+  --compatibility-grid-blend: normal;
+  --compatibility-glow-left: clamp(-120px, -7vw, -24px);
+  --compatibility-glow-right: auto;
+  --compatibility-glow-bottom: auto;
+  --compatibility-glow-top: clamp(32px, 9vw, 90px);
+  --compatibility-glow-background: linear-gradient(90deg, rgba(88, 123, 246, 0.08) 0%, rgba(88, 123, 246, 0.03) 52%, rgba(88, 123, 246, 0) 100%);
+  --compatibility-glow-opacity: 0.42;
 }
 
 .calculated-story {
@@ -1636,46 +1697,6 @@ a {
   background: var(--blue);
 }
 
-@media (min-width: 769px) {
-  .body-section {
-    background:
-      radial-gradient(circle at 14% 20%, rgba(88, 123, 246, 0.04) 0%, rgba(88, 123, 246, 0) 30%),
-      radial-gradient(circle at 86% 16%, rgba(208, 76, 77, 0.03) 0%, rgba(208, 76, 77, 0) 28%),
-      linear-gradient(180deg, #fbfcff 0%, #f5f8fe 100%);
-    border-top: 1px solid rgba(192, 202, 228, 0.42);
-    border-bottom: 1px solid rgba(205, 214, 236, 0.56);
-  }
-
-  .body-section::before,
-  .body-section::after {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .body-section::before {
-    inset: 0;
-    background-image:
-      linear-gradient(90deg, rgba(67, 83, 165, 0.06) 1px, transparent 1px),
-      linear-gradient(rgba(67, 83, 165, 0.045) 1px, transparent 1px);
-    background-size: 34px 34px;
-    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 32%, transparent 88%);
-    opacity: 0.37;
-  }
-
-  .body-section::after {
-    width: clamp(300px, 42vw, 620px);
-    height: clamp(140px, 18vw, 280px);
-    right: clamp(-90px, -6vw, -10px);
-    bottom: clamp(20px, 6vw, 90px);
-    border-radius: 999px;
-    background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.085) 48%, rgba(208, 76, 77, 0.08) 100%);
-    filter: blur(46px);
-    opacity: 0.56;
-  }
-}
-
 .learn-more {
   --learn-more-font-scale: 0.92;
   --learn-more-content-scale: 1.12;
@@ -1694,9 +1715,9 @@ a {
   --body-section-heading-max-width: none;
   --body-section-title-size: calc(clamp(1.5rem, 2.28vw, 2.04rem) * var(--learn-more-font-scale));
   background:
-    radial-gradient(circle at 14% 20%, rgba(88, 123, 246, 0.04) 0%, rgba(88, 123, 246, 0) 30%),
-    radial-gradient(circle at 86% 16%, rgba(208, 76, 77, 0.03) 0%, rgba(208, 76, 77, 0) 28%),
-    linear-gradient(180deg, #fbfcff 0%, #f5f8fe 100%);
+    radial-gradient(70% 58% at 50% 0%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0.012) 38%, rgba(88, 123, 246, 0) 78%),
+    radial-gradient(44% 36% at 14% 68%, rgba(208, 76, 77, 0.026) 0%, rgba(208, 76, 77, 0) 70%),
+    linear-gradient(180deg, #fcfdff 0%, #f8faff 44%, #f6f8fd 100%);
   border-top: 1px solid rgba(192, 202, 228, 0.42);
   border-bottom: 1px solid rgba(205, 214, 236, 0.56);
   box-shadow: none;
@@ -1712,24 +1733,24 @@ a {
 
 .learn-more::before {
   inset: 0;
-  background-image:
-    linear-gradient(90deg, rgba(67, 83, 165, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(67, 83, 165, 0.045) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 32%, transparent 88%);
-  opacity: 0.37;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.82) 16%, rgba(0, 0, 0, 0.82) 84%, transparent 100%);
+  opacity: 0.5;
 }
 
 .learn-more::after {
   width: clamp(300px, 42vw, 620px);
   height: clamp(140px, 18vw, 280px);
-  left: auto;
-  right: clamp(-90px, -6vw, -10px);
-  bottom: clamp(20px, 6vw, 90px);
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  top: clamp(26px, 6vw, 72px);
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.085) 48%, rgba(208, 76, 77, 0.08) 100%);
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(88, 123, 246, 0.07) 0%, rgba(88, 123, 246, 0.022) 42%, rgba(88, 123, 246, 0) 78%);
   filter: blur(46px);
-  opacity: 0.56;
+  opacity: 0.44;
 }
 
 .learn-more-container {
