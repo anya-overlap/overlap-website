@@ -3220,11 +3220,11 @@ a {
   }
 
   .carousel-overlay-controls {
-    left: clamp(12px, 4.5%, 16px);
-    right: clamp(12px, 4.5%, 16px);
-    max-width: clamp(214px, 78%, 236px);
-    justify-content: center;
-    gap: 8px;
+    left: 17px;
+    right: 17px;
+    max-width: none;
+    justify-content: space-between;
+    gap: 0;
   }
 
   .carousel-arrow {
