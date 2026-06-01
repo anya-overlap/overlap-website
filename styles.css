@@ -587,6 +587,8 @@ a {
   --body-section-copy-size: clamp(0.8rem, 0.94vw, 0.94rem);
   --body-section-copy-line-height: 1.42;
   --body-section-copy-color: #666666;
+  --feature-copy-max-width: 400px;
+  --feature-copy-gap: 18px;
   position: relative;
   isolation: isolate;
   overflow: clip;
@@ -869,9 +871,10 @@ a {
 }
 
 .compatibility-copy {
-  max-width: 376px;
+  width: min(100%, var(--feature-copy-max-width));
+  max-width: var(--feature-copy-max-width);
   display: grid;
-  gap: 18px;
+  gap: var(--feature-copy-gap);
   transform: translateY(-14px);
 }
 
@@ -910,7 +913,7 @@ a {
 }
 
 .question-system-story {
-  --question-system-copy-width: 376px;
+  --question-system-copy-width: var(--feature-copy-max-width);
   --question-system-control-gap: 1px;
   --question-system-callout-gap: 16px;
   --question-system-callout-arrow-lift: 62px;
@@ -932,9 +935,10 @@ a {
 }
 
 .question-system-copy {
+  width: min(100%, var(--feature-copy-max-width));
   max-width: var(--question-system-copy-width);
-  gap: 18px;
-  padding-right: 34px;
+  gap: var(--feature-copy-gap);
+  padding-right: 0;
 }
 
 .compatibility-copy > p,
@@ -1235,13 +1239,13 @@ a {
 }
 
 .calculated-copy {
-  width: min(100%, 560px);
-  max-width: 560px;
+  width: min(100%, var(--feature-copy-max-width));
+  max-width: var(--feature-copy-max-width);
   margin-inline: auto;
   margin-top: -10px;
   justify-self: center;
   text-align: left;
-  transform: translateX(-88px);
+  transform: translateX(-24px);
 }
 
 .matchmaker {
@@ -1265,10 +1269,10 @@ a {
 }
 
 .matchmaker-copy {
-  max-width: 370px;
-  width: 100%;
+  width: min(100%, var(--feature-copy-max-width));
+  max-width: var(--feature-copy-max-width);
   display: grid;
-  gap: 34px;
+  gap: var(--feature-copy-gap);
   justify-self: center;
   align-self: center;
   text-align: left;
@@ -2920,7 +2924,7 @@ a {
   .compatibility-copy {
     max-width: 100%;
     width: 100%;
-    gap: 9px;
+    gap: 12px;
     transform: none;
     justify-self: start;
   }
@@ -2928,7 +2932,6 @@ a {
   .question-system-copy {
     max-width: 100%;
     width: 100%;
-    padding-right: 0;
   }
 
   .compatibility-grid--triptych > .compatibility-copy--mirror {
@@ -2949,7 +2952,7 @@ a {
 
   .body-section {
     --body-section-copy-size: 0.96rem;
-    --body-section-copy-line-height: 1.5;
+    --body-section-copy-line-height: 1.44;
   }
 
   .compatibility-copy-lead {
@@ -3112,7 +3115,7 @@ a {
   .calculated-copy {
     order: 3;
     margin-top: 35px;
-    gap: 18px;
+    gap: 12px;
     transform: none;
   }
 
