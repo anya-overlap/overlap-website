@@ -3185,7 +3185,7 @@ a {
   }
 
   .question-system-carousel {
-    --showcase-phone-mobile-width: clamp(188px, calc((min(calc(100vw - 48px), 374px)) * 0.69), 258px);
+    --showcase-phone-mobile-width: min(300px, calc(100vw - 40px));
     width: min(100%, var(--question-system-mobile-width));
     display: flex;
     flex-direction: column;
