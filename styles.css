@@ -609,8 +609,9 @@ a {
   text-align: var(--body-section-heading-align, left);
 }
 
-.body-section .section-heading h2 {
+  .body-section .section-heading h2 {
   font-size: var(--body-section-title-size);
+  line-height: var(--body-section-title-line-height, normal);
 }
 
 .body-section .section-heading p {
@@ -2993,6 +2994,7 @@ a {
 
   .body-section {
     --body-section-title-size: clamp(1.63rem, 5.8vw, 2rem);
+    --body-section-title-line-height: 0.98;
     --body-section-copy-size: 0.96rem;
     --body-section-copy-line-height: 1.44;
   }
