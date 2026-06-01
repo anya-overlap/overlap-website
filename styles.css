@@ -577,6 +577,7 @@ a {
   --body-section-padding-bottom: var(--section-space-bottom-tight);
   --body-section-heading-gap: 32px;
   --body-section-heading-max-width: 640px;
+  --body-section-max-width: 1170px;
   --body-section-heading-align: left;
   --body-section-heading-width: auto;
   --body-section-title-size: clamp(1.48rem, 1.8vw, 1.77rem);
@@ -598,6 +599,7 @@ a {
 .body-section > .container {
   position: relative;
   z-index: 1;
+  max-width: var(--body-section-max-width);
 }
 
 .section-heading {
