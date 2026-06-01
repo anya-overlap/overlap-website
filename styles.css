@@ -1239,13 +1239,13 @@ a {
 }
 
 .calculated-copy {
-  width: min(100%, var(--feature-copy-max-width));
-  max-width: var(--feature-copy-max-width);
+  width: min(100%, 520px);
+  max-width: 520px;
   margin-inline: auto;
-  margin-top: -10px;
+  margin-top: -22px;
   justify-self: center;
   text-align: left;
-  transform: translateX(-24px);
+  transform: translateX(-108px);
 }
 
 .matchmaker {
