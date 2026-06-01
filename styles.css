@@ -88,8 +88,7 @@ a {
 
 .hero {
   position: relative;
-  overflow: hidden;
-  isolation: isolate;
+  overflow-x: hidden;
   padding: clamp(108px, 12vw, 128px) 0 clamp(64px, 7vw, 88px);
   background:
     radial-gradient(92% 66% at 6% 0%, rgba(88, 123, 246, 0.115) 0%, rgba(88, 123, 246, 0.036) 38%, rgba(88, 123, 246, 0) 80%),
@@ -1027,10 +1026,10 @@ a {
   --calculated-selector-column-width: 280px;
   --calculated-selector-group-width: 162px;
   --compatibility-background:
-    radial-gradient(circle at 16% 28%, rgba(88, 123, 246, 0.038) 0%, rgba(88, 123, 246, 0) 30%),
-    radial-gradient(circle at 84% 24%, rgba(208, 76, 77, 0.022) 0%, rgba(208, 76, 77, 0) 24%),
-    linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.022) 38%, rgba(255, 255, 255, 0) 74%),
-    linear-gradient(180deg, #ffffff 0%, #fbfcff 54%, #f7f9ff 100%);
+    radial-gradient(circle at 16% 28%, rgba(88, 123, 246, 0.052) 0%, rgba(88, 123, 246, 0) 34%),
+    radial-gradient(circle at 84% 24%, rgba(208, 76, 77, 0.026) 0%, rgba(208, 76, 77, 0) 28%),
+    linear-gradient(90deg, rgba(88, 123, 246, 0) 0%, rgba(88, 123, 246, 0.034) 38%, rgba(255, 255, 255, 0) 74%),
+    linear-gradient(180deg, #fcfdff 0%, #f8faff 54%, #f3f7ff 100%);
   --compatibility-grid-image: none;
   --compatibility-grid-size: auto;
   --compatibility-grid-mask: none;

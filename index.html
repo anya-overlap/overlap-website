@@ -867,9 +867,8 @@
         window.addEventListener("resize", () => {
           if (window.innerWidth > 768) {
             closeMobileNav();
-          } else {
-            siteNav.classList.remove("is-hidden-on-scroll");
           }
+          syncMobileNavVisibility();
           lastScrollY = window.scrollY;
         });
       }
