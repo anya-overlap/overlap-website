@@ -117,6 +117,7 @@
                       loop
                       muted
                       playsinline
+                      webkit-playsinline
                       preload="metadata"
                       data-lazy-video
                       aria-label="Katie match profile video"
@@ -254,6 +255,7 @@
                       loop
                       muted
                       playsinline
+                      webkit-playsinline
                       preload="metadata"
                       data-lazy-video
                       aria-label="Question hub video"
@@ -688,6 +690,28 @@
           video.playbackRate = 0.8;
         };
 
+        const prepareCompatibilityVideo = (video) => {
+          video.autoplay = true;
+          video.muted = true;
+          video.defaultMuted = true;
+          video.loop = true;
+          video.playsInline = true;
+          video.setAttribute("autoplay", "");
+          video.setAttribute("muted", "");
+          video.setAttribute("playsinline", "");
+          video.setAttribute("webkit-playsinline", "");
+        };
+
+        const attemptCompatibilityVideoPlayback = (video) => {
+          prepareCompatibilityVideo(video);
+
+          if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+            return;
+          }
+
+          video.play().catch(() => {});
+        };
+
         const loadCompatibilityVideo = (video) => {
           if (video.dataset.isLoaded === "true") {
             return;
@@ -707,9 +731,17 @@
         compatibilityProfileVideos.forEach((video) => {
           const syncVideoSpeed = () => setCompatibilityVideoSpeed(video);
 
+          prepareCompatibilityVideo(video);
           syncVideoSpeed();
           video.addEventListener("loadedmetadata", syncVideoSpeed);
           video.addEventListener("play", syncVideoSpeed);
+          video.addEventListener("loadeddata", () => attemptCompatibilityVideoPlayback(video));
+          video.addEventListener("canplay", () => attemptCompatibilityVideoPlayback(video));
+          video.addEventListener("pause", () => {
+            if (!video.hasAttribute("controls")) {
+              attemptCompatibilityVideoPlayback(video);
+            }
+          });
         });
 
         if ("IntersectionObserver" in window) {
@@ -723,7 +755,7 @@
                 const video = entry.target;
                 loadCompatibilityVideo(video);
                 setCompatibilityVideoSpeed(video);
-                video.play().catch(() => {});
+                attemptCompatibilityVideoPlayback(video);
                 observer.unobserve(video);
               });
             },
@@ -740,9 +772,29 @@
           compatibilityProfileVideos.forEach((video) => {
             loadCompatibilityVideo(video);
             setCompatibilityVideoSpeed(video);
-            video.play().catch(() => {});
+            attemptCompatibilityVideoPlayback(video);
           });
         }
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState !== "visible") {
+            return;
+          }
+
+          compatibilityProfileVideos.forEach((video) => {
+            if (video.dataset.isLoaded === "true") {
+              attemptCompatibilityVideoPlayback(video);
+            }
+          });
+        });
+
+        window.addEventListener("pageshow", () => {
+          compatibilityProfileVideos.forEach((video) => {
+            if (video.dataset.isLoaded === "true") {
+              attemptCompatibilityVideoPlayback(video);
+            }
+          });
+        });
       }
 
       const menuToggleButton = document.querySelector(".menu-toggle");
