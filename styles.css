@@ -2588,7 +2588,7 @@ a {
     --body-section-padding-top: calc((var(--section-space-top) - 8px) * 0.9);
     --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
     --body-section-heading-gap: 22px;
-    --body-section-subtitle-margin-top: 0;
+    --body-section-subtitle-margin-top: 6px;
     --body-section-title-size: clamp(1.41rem, 6.34vw, 1.52rem);
   }
 
