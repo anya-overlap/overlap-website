@@ -3314,7 +3314,7 @@ a {
 
   .matchmaker-callout {
     position: absolute;
-    left: 68%;
+    left: 70%;
     bottom: clamp(34px, 10vw, 52px);
     display: flex;
     flex-direction: column;
