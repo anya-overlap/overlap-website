@@ -995,7 +995,7 @@ a {
   display: grid;
   justify-items: center;
   justify-self: center;
-  width: min(100%, 188px);
+  width: min(100%, 162px);
 }
 
 .calculated-selector-label {
@@ -1021,10 +1021,10 @@ a {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   align-items: stretch;
-  width: min(75%, 184px);
+  width: min(100%, 156px);
   margin: 0 auto;
-  height: 142px;
-  padding: 6px;
+  height: 112px;
+  padding: 4px;
   box-sizing: border-box;
   border-radius: 10px;
   background: rgba(226, 226, 226, 0.82);
@@ -1034,11 +1034,11 @@ a {
 
 .calculated-selector-highlight {
   position: absolute;
-  left: 8px;
-  width: calc(100% - 16px);
+  left: 4px;
+  width: calc(100% - 8px);
   margin-left: 0;
   top: 50%;
-  height: calc((100% - 32px) / 3);
+  height: calc((100% - 16px) / 3);
   border-radius: 9999px;
   background: rgba(88, 123, 246, 0.34);
   box-shadow: 0 8px 18px rgba(88, 123, 246, 0.2);
@@ -1055,10 +1055,10 @@ a {
   width: 100%;
   min-height: 0;
   height: auto;
-  padding: 0 12px;
+  padding: 0 8px;
   border: 0;
   background: transparent;
-  font-size: clamp(0.82rem, 1.15vw, 0.98rem);
+  font-size: clamp(0.72rem, 0.92vw, 0.84rem);
   font-weight: 500;
   line-height: 1;
   color: #111111;
