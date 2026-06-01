@@ -3216,13 +3216,17 @@ a {
   }
 
   .carousel-overlay-controls {
-    max-width: clamp(204px, 76%, 228px);
+    left: clamp(10px, 4%, 14px);
+    right: clamp(10px, 4%, 14px);
+    max-width: none;
+    justify-content: center;
+    gap: clamp(6px, 4%, 10px);
   }
 
   .carousel-arrow {
-    flex: 0 1 45%;
-    max-width: 45%;
-    height: 32px;
+    flex: 0 1 44%;
+    max-width: 44%;
+    height: 33px;
     border-radius: 4px;
   }
 
@@ -3308,7 +3312,7 @@ a {
     align-items: center;
     gap: 0;
     pointer-events: none;
-    transform: translateX(clamp(12px, 6vw, 26px));
+    transform: translateX(clamp(26px, 9vw, 40px));
     z-index: 4;
   }
 
