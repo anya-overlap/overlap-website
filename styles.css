@@ -3183,7 +3183,7 @@ a {
   }
 
   .question-system-carousel {
-    --showcase-phone-mobile-width: min(296px, calc(100vw - 48px));
+    --showcase-phone-mobile-width: min(300px, calc(100vw - 40px));
     width: min(100%, var(--question-system-mobile-width));
     display: flex;
     flex-direction: column;
