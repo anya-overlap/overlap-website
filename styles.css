@@ -3007,11 +3007,11 @@ a {
 
   .calculated-selector {
     max-width: none;
-    width: min(100%, 288px);
-    height: 46px;
+    width: min(100%, 293px);
+    height: 40px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    padding: 4px;
+    padding: 5px;
     border-radius: 999px;
     overflow: hidden;
   }
@@ -3029,8 +3029,8 @@ a {
   }
 
   .calculated-selector-highlight {
-    width: calc(33.333% - 4px);
-    height: calc(100% - 8px);
+    width: calc(33% - 4px);
+    height: calc(70%);
     margin-left: 0;
     left: 50%;
     top: 50%;
