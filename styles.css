@@ -1547,6 +1547,7 @@ a {
   gap: clamp(8px, 2.5vw, 12px);
   z-index: 3;
   margin-inline: auto;
+  touch-action: manipulation;
 }
 
 .carousel-arrow {
@@ -1569,6 +1570,7 @@ a {
   box-shadow: 0 14px 30px rgba(67, 83, 165, 0.22);
   transition: transform 160ms ease, box-shadow 160ms ease;
   transform: translateY(var(--carousel-arrow-translate-y));
+  touch-action: manipulation;
 }
 
 .carousel-arrow.prev {
