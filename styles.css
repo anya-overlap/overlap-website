@@ -2991,10 +2991,6 @@ a {
     margin-left: 0;
   }
 
-  .compatibility--calculated .calculated-copy {
-    order: -1;
-  }
-
   .calculated-selector-group {
     justify-self: stretch;
     order: 2;
