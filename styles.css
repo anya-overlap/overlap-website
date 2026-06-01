@@ -3230,12 +3230,12 @@ a {
   .carousel-arrow {
     flex: 0 1 47%;
     max-width: 47%;
-    height: 34px;
+    height: 38px;
     border-radius: 4px;
   }
 
   .carousel-primary-label {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
   }
 
   .compatibility--question-hub .compatibility-grid {
