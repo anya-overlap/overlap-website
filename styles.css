@@ -1537,14 +1537,15 @@ a {
 
 .carousel-overlay-controls {
   position: absolute;
-  left: clamp(6px, 2.5%, 10px);
-  right: clamp(6px, 2.5%, 10px);
+  left: clamp(10px, 4.5%, 16px);
+  right: clamp(10px, 4.5%, 16px);
+  max-width: clamp(202px, 77%, 228px);
   top: var(--question-system-carousel-control-top);
   transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(12px, 7%, 18px);
+  gap: clamp(8px, 2.5vw, 12px);
   z-index: 3;
   margin-inline: auto;
   touch-action: manipulation;
@@ -1554,10 +1555,10 @@ a {
   --carousel-arrow-translate-y: 0;
   position: relative;
   isolation: isolate;
-  flex: 0 1 38%;
+  flex: 0 1 clamp(92px, 35%, 106px);
   min-width: 0;
-  max-width: 38%;
-  height: clamp(31px, 8vw, 34px);
+  max-width: clamp(92px, 35%, 106px);
+  height: clamp(28px, 7vw, 31px);
   border-radius: 5px;
   border: 1px solid rgba(67, 83, 165, 0.08);
   background: linear-gradient(135deg, #5e7df4 0%, #4353a5 100%);
@@ -3219,8 +3220,7 @@ a {
     left: clamp(10px, 4%, 14px);
     right: clamp(10px, 4%, 14px);
     max-width: none;
-    justify-content: center;
-    gap: clamp(6px, 4%, 10px);
+    gap: clamp(4px, 2.5%, 8px);
   }
 
   .carousel-arrow {
