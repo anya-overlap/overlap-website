@@ -1614,12 +1614,12 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
 }
 
 .pagination-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
   border: none;
   background: #e1e1e1;
