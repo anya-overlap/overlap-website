@@ -582,7 +582,7 @@ a {
   --body-section-heading-width: auto;
   --body-section-title-size: clamp(1.48rem, 1.8vw, 1.77rem);
   --body-section-subtitle-max-width: 34ch;
-  --body-section-subtitle-margin-top: -4px;
+  --body-section-subtitle-margin-top: 6px;
   --body-section-copy-font-family: "Inter", sans-serif;
   --body-section-copy-font-weight: 400;
   --body-section-copy-size: clamp(0.8rem, 0.94vw, 0.94rem);
@@ -3185,7 +3185,7 @@ a {
   }
 
   .question-system-carousel {
-    --showcase-phone-mobile-width: min(300px, calc(100vw - 40px));
+    --showcase-phone-mobile-width: clamp(188px, calc((min(calc(100vw - 48px), 374px)) * 0.69), 258px);
     width: min(100%, var(--question-system-mobile-width));
     display: flex;
     flex-direction: column;
