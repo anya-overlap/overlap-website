@@ -1249,7 +1249,7 @@ a {
     var(--calculated-visual-inline-padding) +
     ((var(--calculated-selector-column-width) - var(--calculated-selector-group-width)) / 2)
   );
-  margin-top: -22px;
+  margin-top: -46px;
   justify-self: start;
   text-align: left;
   transform: none;
