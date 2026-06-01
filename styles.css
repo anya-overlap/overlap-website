@@ -3167,7 +3167,7 @@ a {
   }
 
   #how .compatibility-phone-frame {
-    width: min(224px, calc(100vw - 48px));
+    width: min(228px, calc(100vw - 48px));
   }
 
   .matchmaker-copy,
