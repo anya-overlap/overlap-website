@@ -1716,7 +1716,7 @@ a {
   --body-section-title-size: calc(clamp(1.5rem, 2.28vw, 2.04rem) * var(--learn-more-font-scale));
   background:
     radial-gradient(70% 58% at 50% 0%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0.012) 38%, rgba(88, 123, 246, 0) 78%),
-    radial-gradient(44% 36% at 14% 68%, rgba(208, 76, 77, 0.026) 0%, rgba(208, 76, 77, 0) 70%),
+    radial-gradient(38% 30% at 12% 70%, rgba(208, 76, 77, 0.014) 0%, rgba(208, 76, 77, 0) 72%),
     linear-gradient(180deg, #fcfdff 0%, #f8faff 44%, #f6f8fd 100%);
   border-top: 1px solid rgba(192, 202, 228, 0.42);
   border-bottom: 1px solid rgba(205, 214, 236, 0.56);
