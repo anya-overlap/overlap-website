@@ -3217,15 +3217,15 @@ a {
   }
 
   .carousel-overlay-controls {
-    left: clamp(10px, 4%, 14px);
-    right: clamp(10px, 4%, 14px);
-    max-width: none;
-    gap: clamp(4px, 2.5%, 8px);
+    left: clamp(12px, 4.5%, 16px);
+    right: clamp(12px, 4.5%, 16px);
+    max-width: clamp(214px, 78%, 236px);
+    gap: 0;
   }
 
   .carousel-arrow {
-    flex: 0 1 44%;
-    max-width: 44%;
+    flex: 0 1 46%;
+    max-width: 46%;
     height: 33px;
     border-radius: 4px;
   }
