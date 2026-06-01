@@ -603,6 +603,7 @@ a {
 }
 
 .section-heading {
+  margin-top: var(--body-section-heading-margin-top, 0);
   width: var(--body-section-heading-width, auto);
   margin-bottom: var(--body-section-heading-gap, 47px);
   max-width: var(--body-section-heading-max-width, 640px);
@@ -2589,6 +2590,7 @@ a {
   .body-section {
     --body-section-padding-top: calc((var(--section-space-top) - 8px) * 0.9);
     --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 3px);
+    --body-section-heading-margin-top: 8px;
     --body-section-heading-gap: 22px;
     --body-section-subtitle-margin-top: 6px;
     --body-section-title-size: clamp(1.41rem, 6.34vw, 1.52rem);
