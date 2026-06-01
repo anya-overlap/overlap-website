@@ -3184,7 +3184,7 @@ a {
   }
 
   .question-system-carousel {
-    --showcase-phone-mobile-width: min(320px, calc(100vw - 32px));
+    --showcase-phone-mobile-width: min(332px, calc(100vw - 24px));
     width: min(100%, var(--question-system-mobile-width));
     display: flex;
     flex-direction: column;
@@ -3192,6 +3192,7 @@ a {
     justify-content: center;
     margin-top: 20px;
     margin-inline: auto;
+    transform: translateX(clamp(-12px, -2vw, -6px));
   }
 
   .phone-carousel {
