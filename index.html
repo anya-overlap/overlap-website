@@ -1410,6 +1410,7 @@
               const mobileTrackTop = calculatedNetwork.clientHeight * 0.08;
               const mobileTrackBottom = calculatedNetwork.clientHeight * 0.58;
               const mobileCenterX = calculatedNetwork.clientWidth * 0.5;
+              const desktopTrackTops = ["9%", "39%", "67%"];
               const mobileColumns = [
                 mobileCenterX - 82,
                 mobileCenterX,
@@ -1435,8 +1436,8 @@
                   const matchLeft = trackStartX + (trackEndX - trackStartX) * normalizedScore;
                   target.match.style.left = `${matchLeft}px`;
                   target.match.style.right = "auto";
-                  target.match.style.top = "";
-                  target.match.style.bottom = targetIndex === 2 ? "0" : "";
+                  target.match.style.top = desktopTrackTops[targetIndex] ?? "";
+                  target.match.style.bottom = "auto";
                 }
                 target.match.style.transform = "none";
 

@@ -1161,7 +1161,7 @@ a {
 }
 
 .calculated-match--top {
-  top: 4%;
+  top: 9%;
   right: 16%;
 }
 
@@ -1171,7 +1171,8 @@ a {
 }
 
 .calculated-match--bottom {
-  bottom: 0;
+  top: 67%;
+  bottom: auto;
   right: 26%;
 }
 
