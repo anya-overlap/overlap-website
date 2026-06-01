@@ -1133,6 +1133,43 @@
           return orderedStops[0].center;
         };
 
+        const getOptionHighlightBoundsForValue = (value) => {
+          const orderedStops = options
+            .map((option) => ({
+              value: getOptionValue(option),
+              left: option.offsetLeft,
+              right: option.offsetLeft + option.offsetWidth,
+              top: option.offsetTop,
+              bottom: option.offsetTop + option.offsetHeight,
+            }))
+            .sort((left, right) => left.value - right.value);
+
+          if (value <= orderedStops[0].value) {
+            return orderedStops[0];
+          }
+
+          if (value >= orderedStops[orderedStops.length - 1].value) {
+            return orderedStops[orderedStops.length - 1];
+          }
+
+          for (let index = 0; index < orderedStops.length - 1; index += 1) {
+            const currentStop = orderedStops[index];
+            const nextStop = orderedStops[index + 1];
+
+            if (value >= currentStop.value && value <= nextStop.value) {
+              const progress = (value - currentStop.value) / (nextStop.value - currentStop.value);
+              return {
+                left: currentStop.left + (nextStop.left - currentStop.left) * progress,
+                right: currentStop.right + (nextStop.right - currentStop.right) * progress,
+                top: currentStop.top + (nextStop.top - currentStop.top) * progress,
+                bottom: currentStop.bottom + (nextStop.bottom - currentStop.bottom) * progress,
+              };
+            }
+          }
+
+          return orderedStops[0];
+        };
+
         const getMobileOptionAnchorForValue = (value) => {
           const orderedStops = options
             .map((option) => {
@@ -1321,12 +1358,17 @@
               avatarIconElement.style.backgroundColor = getAvatarIconColor(roundedScore);
             }
           });
+          const highlightBounds = getOptionHighlightBoundsForValue(value);
+          highlight.style.left = `${highlightBounds.left}px`;
+          highlight.style.top = `${highlightBounds.top}px`;
+          highlight.style.width = `${highlightBounds.right - highlightBounds.left}px`;
+          highlight.style.height = `${highlightBounds.bottom - highlightBounds.top}px`;
+          highlight.style.transform = "none";
+
           if (useHorizontalLayout) {
-            highlight.style.left = `${getOptionCenterForValue(value)}px`;
-            highlight.style.top = "50%";
+            highlight.style.top = `${highlightBounds.top}px`;
           } else {
-            highlight.style.top = `${getOptionCenterForValue(value)}px`;
-            highlight.style.left = "";
+            highlight.style.left = `${highlightBounds.left}px`;
           }
           if (calculatedNetwork && lineTargets.length > 0) {
             window.requestAnimationFrame(() => {
