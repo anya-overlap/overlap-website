@@ -1530,7 +1530,7 @@
                   ? matchRect.left + matchRect.width / 2 - networkRect.left
                   : matchRect.left - networkRect.left;
                 const endY = useHorizontalLayout
-                  ? matchRect.top - networkRect.top
+                  ? matchRect.bottom - networkRect.top
                   : matchRect.top + matchRect.height / 2 - networkRect.top;
                 const deltaX = endX - startX;
                 const deltaY = endY - startY;
