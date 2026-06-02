@@ -1299,7 +1299,6 @@ a {
   box-shadow: 0 10px 24px var(--match-score-shadow);
   transform-origin: center;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 180ms ease;
 }
 
 .calculated-avatar {
@@ -1314,7 +1313,7 @@ a {
     0 0 0 7px var(--match-ring),
     0 16px 28px rgba(32, 40, 64, 0.1);
   transform-origin: center;
-  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .calculated-avatar-icon {

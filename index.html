@@ -1525,13 +1525,13 @@
                 }
                 target.match.style.transform = "none";
 
-                const anchorRect = target.anchor.getBoundingClientRect();
+                const matchRect = target.match.getBoundingClientRect();
                 const endX = useHorizontalLayout
-                  ? anchorRect.left + anchorRect.width / 2 - networkRect.left
-                  : anchorRect.left - networkRect.left;
+                  ? matchRect.left + matchRect.width / 2 - networkRect.left
+                  : matchRect.left - networkRect.left;
                 const endY = useHorizontalLayout
-                  ? anchorRect.bottom - networkRect.top
-                  : anchorRect.top + anchorRect.height / 2 - networkRect.top;
+                  ? matchRect.top - networkRect.top
+                  : matchRect.top + matchRect.height / 2 - networkRect.top;
                 const deltaX = endX - startX;
                 const deltaY = endY - startY;
                 const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
@@ -1549,9 +1549,8 @@
 
                 const scoreElement = scoreElements[targetIndex];
                 if (scoreElement) {
-                  const matchRect = target.match.getBoundingClientRect();
-                  scoreElement.style.left = `${anchorRect.left - matchRect.left}px`;
-                  scoreElement.style.top = `${anchorRect.top - matchRect.top}px`;
+                  scoreElement.style.left = "0px";
+                  scoreElement.style.top = "0px";
                 }
               });
             });
