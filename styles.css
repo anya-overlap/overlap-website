@@ -88,7 +88,8 @@ a {
 
 .hero {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   padding: clamp(108px, 12vw, 128px) 0 clamp(64px, 7vw, 88px);
   background:
     radial-gradient(92% 66% at 6% 0%, rgba(88, 123, 246, 0.115) 0%, rgba(88, 123, 246, 0.036) 38%, rgba(88, 123, 246, 0) 80%),
