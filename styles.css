@@ -1003,8 +1003,8 @@ a {
   font-size: 1em;
   line-height: 1;
   color: var(--blue);
-  vertical-align: -0.05em;
-  transform: rotate(90deg);
+  vertical-align: 0.02em;
+  transform: rotate(90deg) scale(1.12);
   transform-origin: center;
 }
 
@@ -1012,7 +1012,7 @@ a {
   display: inline-block;
   font-family: "Sue Ellen Francisco", cursive;
   font-weight: 400;
-  transform: scale(1.08, 1.65);
+  transform: translateY(-0.14em) scale(1.08, 1.65);
   transform-origin: center;
 }
 
