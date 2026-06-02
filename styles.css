@@ -996,12 +996,14 @@ a {
 }
 
 .human-reviewed-smiley {
-  display: inline-block;
-  margin-left: 0.35rem;
-  font-size: 1.3em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.02em;
+  margin-left: 0.2rem;
+  font-size: 1em;
   line-height: 1;
   color: var(--blue);
-  vertical-align: baseline;
+  vertical-align: -0.05em;
   transform: rotate(90deg);
   transform-origin: center;
 }
@@ -1010,12 +1012,12 @@ a {
   display: inline-block;
   font-family: "Sue Ellen Francisco", cursive;
   font-weight: 400;
-  font-size: 1.08em;
-  transform: scaleY(1.65);
+  transform: scale(1.08, 1.65);
   transform-origin: center;
 }
 
 .human-reviewed-smiley-paren {
+  display: inline-block;
   font-family: "Swanky and Moo Moo", cursive;
   font-weight: 700;
   text-shadow:
