@@ -2301,7 +2301,7 @@ a {
   --legal-section-space: clamp(20px, 2.6vw, 28px);
   --legal-stack-space: 14px;
   --legal-heading-space: 14px;
-  --legal-list-indent: 20px;
+  --legal-list-indent: 30px;
   --legal-list-item-space: 6px;
   max-width: none;
   margin: 0;
