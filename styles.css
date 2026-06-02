@@ -1007,8 +1007,12 @@ a {
 }
 
 .human-reviewed-smiley-equals {
-  font-family: "Yeon Sung", serif;
-  font-weight: 700;
+  display: inline-block;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-size: 1.08em;
+  transform: scaleY(1.65);
+  transform-origin: center;
 }
 
 .human-reviewed-smiley-paren {
