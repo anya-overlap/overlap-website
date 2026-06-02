@@ -995,6 +995,30 @@ a {
   margin: 0;
 }
 
+.human-reviewed-smiley {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 1.3em;
+  line-height: 1;
+  color: var(--blue);
+  vertical-align: baseline;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.human-reviewed-smiley-equals {
+  font-family: "Yeon Sung", serif;
+  font-weight: 700;
+}
+
+.human-reviewed-smiley-paren {
+  font-family: "Swanky and Moo Moo", cursive;
+  font-weight: 700;
+  text-shadow:
+    0.02em 0 0 currentColor,
+    -0.02em 0 0 currentColor;
+}
+
 .question-system-carousel {
   width: var(--question-system-phone-width);
   display: flex;
