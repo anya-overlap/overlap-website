@@ -797,6 +797,12 @@ a {
   font-size: 1.2rem;
 }
 
+@media (min-width: 769px) {
+  .compatibility .section-heading p {
+    margin-top: 3px;
+  }
+}
+
 .compatibility-grid {
   display: grid;
   grid-template-columns: minmax(202px, 260px) minmax(300px, 440px);
