@@ -3477,41 +3477,52 @@ a {
   }
 
   .legal-hero {
-    padding-top: 62px;
+    padding-top: 54px;
   }
 
   .legal-nav {
-    gap: 18px;
+    column-gap: 18px;
+    row-gap: 0;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 18px var(--page-gutter-mobile) 15px;
     margin-bottom: 0;
   }
 
   .legal-nav-links {
-    width: auto;
+    width: 100%;
     padding: 0;
-    overflow: visible;
-    max-height: none;
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
+    margin-left: 0;
+    align-items: stretch;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
     margin-top: 0;
-    gap: 14px;
-    flex-direction: row;
+    gap: 0;
+    flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .nav-links.legal-nav-links a {
-    font-size: 0.71rem;
-    padding: 0;
-    white-space: nowrap;
+    font-size: 0.91rem;
+    padding: 12px 0;
+    white-space: normal;
   }
 
   .legal-nav-links a + a {
-    border-top: 0;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .legal-nav-links.is-open {
+    margin-top: 8px;
+    max-height: 240px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .legal-main {

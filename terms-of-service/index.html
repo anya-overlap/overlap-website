@@ -20,7 +20,18 @@
             <img src="../assets/logo.png" alt="Oli" />
             <span class="logo-word">Overlap</span>
           </a>
-          <div class="nav-links legal-nav-links">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="site-nav-links"
+          >
+            <span class="menu-toggle-line" aria-hidden="true"></span>
+            <span class="menu-toggle-line" aria-hidden="true"></span>
+            <span class="menu-toggle-line" aria-hidden="true"></span>
+          </button>
+          <div class="nav-links legal-nav-links" id="site-nav-links">
             <a href="../support/">Support</a>
             <a href="../ai-transparency-policy/">AI Policy</a>
             <a href="../privacy-policy/">Privacy Policy</a>
@@ -328,20 +339,30 @@
       </div>
     </footer>
     <script>
+      const menuToggleButton = document.querySelector(".menu-toggle");
+      const siteNavLinks = document.querySelector(".nav-links");
       const siteNav = document.querySelector(".nav");
 
-      if (siteNav) {
+      if (menuToggleButton && siteNavLinks && siteNav) {
         let lastScrollY = window.scrollY;
         let isScrollTicking = false;
 
-        const syncNavVisibility = () => {
+        const closeMobileNav = () => {
+          siteNavLinks.classList.remove("is-open");
+          siteNav.classList.remove("is-menu-open");
+          siteNav.classList.remove("is-hidden-on-scroll");
+          menuToggleButton.setAttribute("aria-expanded", "false");
+        };
+
+        const syncMobileNavVisibility = () => {
           const currentScrollY = window.scrollY;
           const scrollDelta = currentScrollY - lastScrollY;
+          const isMenuOpen = siteNav.classList.contains("is-menu-open");
           const isNearTop = currentScrollY < 48;
           const hideThreshold = isNearTop ? 2 : 5;
           const showThreshold = isNearTop ? 2 : 5;
 
-          if (currentScrollY <= 1) {
+          if (isMenuOpen || currentScrollY <= 1) {
             siteNav.classList.remove("is-hidden-on-scroll");
           } else if (scrollDelta > hideThreshold) {
             siteNav.classList.add("is-hidden-on-scroll");
@@ -353,18 +374,64 @@
           isScrollTicking = false;
         };
 
-        const requestNavSync = () => {
+        const requestMobileNavSync = () => {
           if (isScrollTicking) {
             return;
           }
 
           isScrollTicking = true;
-          window.requestAnimationFrame(syncNavVisibility);
+          window.requestAnimationFrame(syncMobileNavVisibility);
         };
 
-        window.addEventListener("scroll", requestNavSync, { passive: true });
-        window.addEventListener("resize", () => {
+        const closeMobileNavOnOutsidePointer = (event) => {
+          if (!siteNav.classList.contains("is-menu-open")) {
+            return;
+          }
+
+          if (siteNav.contains(event.target)) {
+            return;
+          }
+
+          closeMobileNav();
+        };
+
+        menuToggleButton.addEventListener("click", () => {
+          const isOpen = siteNavLinks.classList.toggle("is-open");
+          siteNav.classList.toggle("is-menu-open", isOpen);
           siteNav.classList.remove("is-hidden-on-scroll");
+          menuToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        siteNavLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            closeMobileNav();
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMobileNav();
+          }
+        });
+
+        document.addEventListener("pointerdown", closeMobileNavOnOutsidePointer);
+        window.addEventListener("scroll", requestMobileNavSync, { passive: true });
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!siteNav.classList.contains("is-menu-open")) {
+              return;
+            }
+
+            closeMobileNav();
+          },
+          { passive: true }
+        );
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 768) {
+            closeMobileNav();
+          }
+          syncMobileNavVisibility();
           lastScrollY = window.scrollY;
         });
       }
