@@ -954,8 +954,9 @@
           "Modern dating without the noise.",
           "No more rage deleting.",
         ];
+        const heroAnimationCycleMs = 7000;
         const transitionMs = 400;
-        const visibleMs = 2500;
+        const heroTaglineChangeOffsetMs = 5200;
         let taglineIndex = 0;
         let taglineResizeFrame = null;
 
@@ -1027,15 +1028,20 @@
           document.fonts.ready.then(scheduleHeroTaglineResize);
         }
 
-        window.setInterval(() => {
-          heroTagline.classList.add("is-changing");
-
+        const rotateHeroTagline = () => {
           window.setTimeout(() => {
-            taglineIndex = (taglineIndex + 1) % taglineOptions.length;
-            heroTagline.textContent = taglineOptions[taglineIndex];
-            heroTagline.classList.remove("is-changing");
-          }, transitionMs);
-        }, visibleMs + transitionMs);
+            heroTagline.classList.add("is-changing");
+
+            window.setTimeout(() => {
+              taglineIndex = (taglineIndex + 1) % taglineOptions.length;
+              heroTagline.textContent = taglineOptions[taglineIndex];
+              heroTagline.classList.remove("is-changing");
+            }, transitionMs);
+          }, heroTaglineChangeOffsetMs);
+        };
+
+        rotateHeroTagline();
+        window.setInterval(rotateHeroTagline, heroAnimationCycleMs);
       }
 
       const learnMoreEntries = Array.from(document.querySelectorAll(".learn-more-entry"));
