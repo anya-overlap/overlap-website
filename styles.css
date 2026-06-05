@@ -659,6 +659,7 @@ a {
   --square-rotate: 0deg;
   --square-entry-x: 150px;
   --square-fill: #ffffff;
+  --square-image: none;
   --square-lift-y: calc(var(--square-size) * -0.07);
   position: absolute;
   top: 12px;
@@ -667,7 +668,11 @@ a {
   aspect-ratio: 1;
   border-radius: 10px;
   border: 1px solid rgba(67, 83, 165, 0.12);
-  background: var(--square-fill);
+  background-color: var(--square-fill);
+  background-image: var(--square-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0 18px 34px rgba(67, 83, 165, 0.12);
   transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   opacity: 0;
@@ -724,6 +729,21 @@ a {
   --square-fill: #f2f5ff;
   z-index: 5;
   animation-name: overlap-square-sequence-5;
+}
+
+.overlap-playground-square--photo-jon {
+  --square-fill: #dfe6f8;
+  --square-image: url("./assets/jonprofile.png");
+}
+
+.overlap-playground-square--photo-victoria {
+  --square-fill: #e8ecfa;
+  --square-image: url("./assets/victoriaScreenshot.png");
+}
+
+.overlap-playground-square--photo-emily {
+  --square-fill: #e3e9fa;
+  --square-image: url("./assets/emilyScreenshot.png");
 }
 
 @keyframes overlap-square-sequence-1 {
@@ -788,12 +808,12 @@ a {
 
 @keyframes overlap-square-sequence-5 {
   0%,
-  20% {
+  24% {
     opacity: 0;
     transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
   }
 
-  30%,
+  34%,
   70% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
