@@ -449,10 +449,11 @@ a {
 }
 
 .hero-cards {
-  display: grid;
-  gap: 20px;
-  justify-items: center;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(220px, 29vw, 320px);
+  overflow: visible;
 }
 
 .profile-card {
@@ -633,23 +634,14 @@ a {
   margin-inline: auto;
 }
 
-.overlap-playground {
-  --body-section-padding-top: 10px;
-  --body-section-padding-bottom: clamp(34px, 5vw, 56px);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 58%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 249, 255, 0.96) 100%);
-}
-
-.overlap-playground > .container {
-  display: flex;
-  justify-content: center;
-}
-
 .overlap-playground-stack {
   position: relative;
   width: min(100%, 430px);
   height: clamp(164px, 21vw, 214px);
+}
+
+.hero-cards .overlap-playground-stack {
+  width: min(100%, 430px);
 }
 
 .overlap-playground-square {
@@ -2915,9 +2907,8 @@ main > #how.compatibility.reveal-on-scroll {
     overflow: visible;
   }
 
-  .overlap-playground {
-    --body-section-padding-top: 8px;
-    --body-section-padding-bottom: 28px;
+  .hero-cards {
+    min-height: 154px;
   }
 
   .overlap-playground-stack {
@@ -3748,32 +3739,14 @@ main > #how.compatibility.reveal-on-scroll {
 
   .hero-cards {
     position: relative;
-    width: min(250px, 100%);
-    aspect-ratio: 1 / 1.08;
+    width: min(290px, 100%);
+    min-height: 154px;
     margin-inline: auto;
     margin-top: 14px;
-    display: block;
-    transform: translateX(8px);
-  }
-
-  .profile-card {
-    width: min(204px, 68.5vw);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin: 0;
-    transform: translateX(-50%);
-  }
-
-  .hero-cards .profile-card:first-child {
-    z-index: 2;
-    transform: translateX(calc(-50% + 14px)) translateY(12px) rotate(2.5deg);
-  }
-
-  .profile-card.muted {
-    z-index: 1;
-    transform: translateX(calc(-50% - 40px)) translateY(-40px) rotate(-3deg);
-    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
   }
 
   .profile-card-gradient-overlay {
