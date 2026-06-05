@@ -657,9 +657,9 @@ a {
   --square-offset-x: 0px;
   --square-offset-y: 0px;
   --square-rotate: 0deg;
-  --square-delay: 0s;
   --square-entry-x: 150px;
   --square-fill: #ffffff;
+  --square-lift-y: calc(var(--square-size) * -0.07);
   position: absolute;
   top: 12px;
   left: 50%;
@@ -671,8 +671,9 @@ a {
   box-shadow: 0 18px 34px rgba(67, 83, 165, 0.12);
   transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   opacity: 0;
-  animation: overlap-square-fade-out 6.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
-  animation-delay: var(--square-delay);
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-iteration-count: 1;
   animation-fill-mode: both;
 }
 
@@ -684,50 +685,88 @@ a {
   --square-offset-x: -80px;
   --square-offset-y: 28px;
   --square-rotate: -11deg;
-  --square-delay: 0s;
   --square-fill: #f6f8ff;
   z-index: 1;
+  animation-name: overlap-square-sequence-1;
 }
 
 .overlap-playground-square--2 {
   --square-offset-x: -42px;
   --square-offset-y: 18px;
   --square-rotate: -7deg;
-  --square-delay: 0.2s;
   --square-fill: #eef3ff;
   z-index: 2;
+  animation-name: overlap-square-sequence-2;
 }
 
 .overlap-playground-square--3 {
   --square-offset-x: 0px;
   --square-offset-y: 10px;
   --square-rotate: -2deg;
-  --square-delay: 0.4s;
   --square-fill: #f8faff;
   z-index: 3;
+  animation-name: overlap-square-sequence-3;
 }
 
 .overlap-playground-square--4 {
   --square-offset-x: 42px;
   --square-offset-y: 16px;
   --square-rotate: 5deg;
-  --square-delay: 0s;
   --square-fill: #ffffff;
   z-index: 4;
   animation-name: overlap-square-feature;
-  animation-delay: 0.6s;
 }
 
 .overlap-playground-square--5 {
   --square-offset-x: 82px;
   --square-offset-y: 26px;
   --square-rotate: 10deg;
-  --square-delay: 0.8s;
   --square-fill: #f2f5ff;
   z-index: 5;
+  animation-name: overlap-square-sequence-5;
 }
 
-@keyframes overlap-square-fade-out {
+@keyframes overlap-square-sequence-1 {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+  }
+
+  18%,
+  70% {
+    opacity: 1;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+  }
+}
+
+@keyframes overlap-square-sequence-2 {
+  0%,
+  12% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+  }
+
+  22%,
+  70% {
+    opacity: 1;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+  }
+}
+
+@keyframes overlap-square-sequence-3 {
   0%,
   16% {
     opacity: 0;
@@ -735,12 +774,32 @@ a {
   }
 
   26%,
-  60% {
+  70% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
 
-  72%,
+  76%,
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+  }
+}
+
+@keyframes overlap-square-sequence-5 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+  }
+
+  76%,
   100% {
     opacity: 0;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
@@ -749,26 +808,27 @@ a {
 
 @keyframes overlap-square-feature {
   0%,
-  16% {
+  20% {
     opacity: 0;
     z-index: 4;
     transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(1);
   }
 
-  26%,
-  60% {
+  30%,
+  62% {
     opacity: 1;
     z-index: 4;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(1);
   }
 
-  66% {
+  72%,
+  76% {
     opacity: 1;
     z-index: 8;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) - 18px)) rotate(var(--square-rotate)) scale(1);
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + var(--square-lift-y))) rotate(var(--square-rotate)) scale(1);
   }
 
-  76% {
+  86% {
     opacity: 1;
     z-index: 8;
     transform: translateX(-50%) translateY(12px) rotate(0deg) scale(6.8);
@@ -792,7 +852,7 @@ a {
   filter: blur(18px);
   transform: translateX(-50%);
   opacity: 0;
-  animation: overlap-playground-shadow 6.8s ease-in-out infinite;
+  animation: overlap-playground-shadow 7s ease-in-out 1 both;
 }
 
 @keyframes overlap-playground-shadow {
@@ -801,12 +861,12 @@ a {
     opacity: 0;
   }
 
-  28%,
-  56% {
+  30%,
+  70% {
     opacity: 0.8;
   }
 
-  72%,
+  76%,
   100% {
     opacity: 0;
   }
