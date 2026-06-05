@@ -637,7 +637,7 @@ a {
 .overlap-playground-stack {
   position: relative;
   width: min(100%, 430px);
-  height: clamp(164px, 21vw, 214px);
+  height: clamp(178px, 23vw, 228px);
 }
 
 .hero-cards .overlap-playground-stack {
@@ -645,7 +645,7 @@ a {
 }
 
 .overlap-playground-square {
-  --square-size: clamp(92px, 11vw, 122px);
+  --square-size: clamp(104px, 12vw, 136px);
   --square-offset-x: 0px;
   --square-offset-y: 0px;
   --square-rotate: 0deg;
@@ -670,7 +670,7 @@ a {
   opacity: 0;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
 
@@ -843,13 +843,13 @@ a {
   86% {
     opacity: 1;
     z-index: 8;
-    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(3.4);
+    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.2);
   }
 
   100% {
     opacity: 1;
     z-index: 8;
-    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(3.4);
+    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.2);
   }
 }
 
@@ -864,7 +864,7 @@ a {
   filter: blur(18px);
   transform: translateX(-50%);
   opacity: 0;
-  animation: overlap-playground-shadow 7s ease-in-out 1 both;
+  animation: overlap-playground-shadow 7s ease-in-out infinite both;
 }
 
 @keyframes overlap-playground-shadow {
@@ -2913,11 +2913,11 @@ main > #how.compatibility.reveal-on-scroll {
 
   .overlap-playground-stack {
     width: min(100%, 290px);
-    height: 134px;
+    height: 146px;
   }
 
   .overlap-playground-square {
-    --square-size: 74px;
+    --square-size: 82px;
     --square-entry-x: 112px;
   }
 
