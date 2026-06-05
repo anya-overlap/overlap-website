@@ -2916,38 +2916,55 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .hero-cards {
-    min-height: 192px;
+    min-height: 250px;
   }
 
   .overlap-playground-stack {
-    width: min(100%, 340px);
-    height: 204px;
-    transform: translateX(-10px);
+    width: min(100%, 280px);
+    height: 300px;
+    transform: translateX(-2px);
   }
 
   .overlap-playground-square {
-    --square-size: 118px;
+    --square-size: 128px;
     --square-entry-x: 112px;
+    --square-lift-y: calc(var(--square-size) * -0.11);
   }
 
   .overlap-playground-square--1 {
-    --square-offset-x: -76px;
-    --square-offset-y: 34px;
+    --square-offset-x: -22px;
+    --square-offset-y: 10px;
+    --square-rotate: -14deg;
   }
 
   .overlap-playground-square--2 {
-    --square-offset-x: -40px;
-    --square-offset-y: 22px;
+    --square-offset-x: 6px;
+    --square-offset-y: 44px;
+    --square-rotate: -6deg;
+  }
+
+  .overlap-playground-square--3 {
+    --square-offset-x: 22px;
+    --square-offset-y: 86px;
+    --square-rotate: 0deg;
   }
 
   .overlap-playground-square--4 {
-    --square-offset-x: 40px;
-    --square-offset-y: 20px;
+    --square-offset-x: 8px;
+    --square-offset-y: 132px;
+    --square-rotate: 7deg;
   }
 
   .overlap-playground-square--5 {
-    --square-offset-x: 78px;
-    --square-offset-y: 32px;
+    --square-offset-x: -18px;
+    --square-offset-y: 176px;
+    --square-rotate: 14deg;
+  }
+
+  .overlap-playground-stack::after {
+    width: 112px;
+    height: 42px;
+    transform: translateX(calc(-50% + 4px));
   }
 
   .compatibility--question-system {
