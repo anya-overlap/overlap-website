@@ -637,7 +637,7 @@ a {
 .overlap-playground-stack {
   position: relative;
   width: min(100%, 430px);
-  height: clamp(194px, 25vw, 244px);
+  height: clamp(212px, 27vw, 262px);
 }
 
 .hero-cards .overlap-playground-stack {
@@ -645,7 +645,7 @@ a {
 }
 
 .overlap-playground-square {
-  --square-size: clamp(118px, 13.4vw, 150px);
+  --square-size: clamp(130px, 14.8vw, 164px);
   --square-offset-x: 0px;
   --square-offset-y: 0px;
   --square-rotate: 0deg;
@@ -679,8 +679,8 @@ a {
 }
 
 .overlap-playground-square--1 {
-  --square-offset-x: -92px;
-  --square-offset-y: 32px;
+  --square-offset-x: -102px;
+  --square-offset-y: 36px;
   --square-rotate: -11deg;
   --square-fill: #f6f8ff;
   z-index: 1;
@@ -688,8 +688,8 @@ a {
 }
 
 .overlap-playground-square--2 {
-  --square-offset-x: -48px;
-  --square-offset-y: 20px;
+  --square-offset-x: -54px;
+  --square-offset-y: 22px;
   --square-rotate: -7deg;
   --square-fill: #eef3ff;
   z-index: 2;
@@ -706,8 +706,8 @@ a {
 }
 
 .overlap-playground-square--4 {
-  --square-offset-x: 48px;
-  --square-offset-y: 18px;
+  --square-offset-x: 54px;
+  --square-offset-y: 20px;
   --square-rotate: 5deg;
   --square-fill: #ffffff;
   z-index: 4;
@@ -715,8 +715,8 @@ a {
 }
 
 .overlap-playground-square--5 {
-  --square-offset-x: 94px;
-  --square-offset-y: 30px;
+  --square-offset-x: 104px;
+  --square-offset-y: 34px;
   --square-rotate: 10deg;
   --square-fill: #f2f5ff;
   z-index: 5;
@@ -746,7 +746,7 @@ a {
   }
 
   20%,
-  64% {
+  58% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
@@ -766,7 +766,7 @@ a {
   }
 
   24%,
-  64% {
+  58% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
@@ -786,7 +786,7 @@ a {
   }
 
   28%,
-  64% {
+  58% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
@@ -806,7 +806,7 @@ a {
   }
 
   36%,
-  64% {
+  58% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
@@ -827,20 +827,20 @@ a {
   }
 
   32%,
-  56% {
+  50% {
     opacity: 1;
     z-index: 4;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(1);
   }
 
-  64%,
-  68% {
+  56%,
+  60% {
     opacity: 1;
     z-index: 8;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + var(--square-lift-y))) rotate(var(--square-rotate)) scale(1);
   }
 
-  78% {
+  70% {
     opacity: 1;
     z-index: 8;
     transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.2);
@@ -2913,32 +2913,32 @@ main > #how.compatibility.reveal-on-scroll {
 
   .overlap-playground-stack {
     width: min(100%, 290px);
-    height: 160px;
+    height: 176px;
   }
 
   .overlap-playground-square {
-    --square-size: 92px;
+    --square-size: 102px;
     --square-entry-x: 112px;
   }
 
   .overlap-playground-square--1 {
-    --square-offset-x: -64px;
-    --square-offset-y: 24px;
+    --square-offset-x: -72px;
+    --square-offset-y: 28px;
   }
 
   .overlap-playground-square--2 {
-    --square-offset-x: -34px;
-    --square-offset-y: 16px;
+    --square-offset-x: -38px;
+    --square-offset-y: 18px;
   }
 
   .overlap-playground-square--4 {
-    --square-offset-x: 34px;
-    --square-offset-y: 15px;
+    --square-offset-x: 38px;
+    --square-offset-y: 16px;
   }
 
   .overlap-playground-square--5 {
-    --square-offset-x: 64px;
-    --square-offset-y: 23px;
+    --square-offset-x: 72px;
+    --square-offset-y: 27px;
   }
 
   .compatibility--question-system {
