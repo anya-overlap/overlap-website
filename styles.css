@@ -459,7 +459,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(220px, 29vw, 320px);
+  min-height: clamp(250px, 32vw, 360px);
   overflow: visible;
 }
 
@@ -643,16 +643,17 @@ a {
 
 .overlap-playground-stack {
   position: relative;
-  width: min(100%, 430px);
-  height: clamp(212px, 27vw, 262px);
+  width: min(100%, 500px);
+  height: clamp(244px, 31vw, 308px);
+  transform: translateX(-18px);
 }
 
 .hero-cards .overlap-playground-stack {
-  width: min(100%, 430px);
+  width: min(100%, 500px);
 }
 
 .overlap-playground-square {
-  --square-size: clamp(130px, 14.8vw, 164px);
+  --square-size: clamp(152px, 17vw, 188px);
   --square-offset-x: 0px;
   --square-offset-y: 0px;
   --square-rotate: 0deg;
@@ -672,7 +673,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0 10px 24px rgba(123, 96, 246, 0.14);
+  box-shadow: 0 20px 44px rgba(123, 96, 246, 0.18);
   transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   opacity: 0;
   animation-duration: 7s;
@@ -686,18 +687,18 @@ a {
 }
 
 .overlap-playground-square--1 {
-  --square-offset-x: -102px;
-  --square-offset-y: 36px;
-  --square-rotate: -11deg;
+  --square-offset-x: -108px;
+  --square-offset-y: 42px;
+  --square-rotate: -14deg;
   --square-fill: #f6f8ff;
   z-index: 1;
   animation-name: overlap-square-sequence-1;
 }
 
 .overlap-playground-square--2 {
-  --square-offset-x: -54px;
-  --square-offset-y: 22px;
-  --square-rotate: -7deg;
+  --square-offset-x: -56px;
+  --square-offset-y: 25px;
+  --square-rotate: -9deg;
   --square-fill: #eef3ff;
   z-index: 2;
   animation-name: overlap-square-sequence-2;
@@ -713,18 +714,18 @@ a {
 }
 
 .overlap-playground-square--4 {
-  --square-offset-x: 54px;
-  --square-offset-y: 20px;
-  --square-rotate: 5deg;
+  --square-offset-x: 56px;
+  --square-offset-y: 22px;
+  --square-rotate: 7deg;
   --square-fill: #ffffff;
   z-index: 4;
   animation-name: overlap-square-feature;
 }
 
 .overlap-playground-square--5 {
-  --square-offset-x: 104px;
-  --square-offset-y: 34px;
-  --square-rotate: 10deg;
+  --square-offset-x: 110px;
+  --square-offset-y: 40px;
+  --square-rotate: 13deg;
   --square-fill: #f2f5ff;
   z-index: 5;
   animation-name: overlap-square-sequence-5;
@@ -864,12 +865,12 @@ a {
   content: "";
   position: absolute;
   inset: auto 50% 0;
-  width: 86px;
-  height: 20px;
+  width: 142px;
+  height: 34px;
   border-radius: 999px;
-  background: rgba(67, 83, 165, 0.12);
-  filter: blur(18px);
-  transform: translateX(-50%);
+  background: rgba(123, 96, 246, 0.18);
+  filter: blur(22px);
+  transform: translateX(calc(-50% - 12px));
   opacity: 0;
   animation: overlap-playground-shadow 7s ease-in-out infinite both;
 }
@@ -2915,37 +2916,38 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .hero-cards {
-    min-height: 154px;
+    min-height: 192px;
   }
 
   .overlap-playground-stack {
-    width: min(100%, 290px);
-    height: 176px;
+    width: min(100%, 340px);
+    height: 204px;
+    transform: translateX(-10px);
   }
 
   .overlap-playground-square {
-    --square-size: 102px;
+    --square-size: 118px;
     --square-entry-x: 112px;
   }
 
   .overlap-playground-square--1 {
-    --square-offset-x: -72px;
-    --square-offset-y: 28px;
+    --square-offset-x: -76px;
+    --square-offset-y: 34px;
   }
 
   .overlap-playground-square--2 {
-    --square-offset-x: -38px;
-    --square-offset-y: 18px;
+    --square-offset-x: -40px;
+    --square-offset-y: 22px;
   }
 
   .overlap-playground-square--4 {
-    --square-offset-x: 38px;
-    --square-offset-y: 16px;
+    --square-offset-x: 40px;
+    --square-offset-y: 20px;
   }
 
   .overlap-playground-square--5 {
-    --square-offset-x: 72px;
-    --square-offset-y: 27px;
+    --square-offset-x: 78px;
+    --square-offset-y: 32px;
   }
 
   .compatibility--question-system {
