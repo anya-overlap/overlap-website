@@ -634,7 +634,7 @@ a {
 }
 
 .overlap-playground {
-  --body-section-padding-top: 0;
+  --body-section-padding-top: 10px;
   --body-section-padding-bottom: clamp(34px, 5vw, 56px);
   background:
     radial-gradient(circle at 50% 0%, rgba(88, 123, 246, 0.06) 0%, rgba(88, 123, 246, 0) 58%),
@@ -649,7 +649,7 @@ a {
 .overlap-playground-stack {
   position: relative;
   width: min(100%, 430px);
-  height: clamp(136px, 18vw, 188px);
+  height: clamp(164px, 21vw, 214px);
 }
 
 .overlap-playground-square {
@@ -658,8 +658,9 @@ a {
   --square-offset-y: 0px;
   --square-rotate: 0deg;
   --square-delay: 0s;
+  --square-entry-x: 150px;
   position: absolute;
-  top: 0;
+  top: 12px;
   left: 50%;
   width: var(--square-size);
   aspect-ratio: 1;
@@ -668,8 +669,10 @@ a {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 255, 0.9) 100%);
   box-shadow: 0 18px 34px rgba(67, 83, 165, 0.12);
   transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
-  animation: overlap-square-float 4.8s ease-in-out infinite;
+  opacity: 0;
+  animation: overlap-square-fan-in 6.4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
   animation-delay: var(--square-delay);
+  animation-fill-mode: both;
 }
 
 .overlap-playground-square::before {
@@ -689,52 +692,60 @@ a {
 
 .overlap-playground-square--1 {
   --square-offset-x: -80px;
-  --square-offset-y: 20px;
+  --square-offset-y: 28px;
   --square-rotate: -11deg;
-  --square-delay: -2.4s;
+  --square-delay: 0s;
   z-index: 1;
 }
 
 .overlap-playground-square--2 {
   --square-offset-x: -42px;
-  --square-offset-y: 11px;
+  --square-offset-y: 18px;
   --square-rotate: -7deg;
-  --square-delay: -1.8s;
+  --square-delay: 0.2s;
   z-index: 2;
 }
 
 .overlap-playground-square--3 {
   --square-offset-x: 0px;
-  --square-offset-y: 0px;
+  --square-offset-y: 10px;
   --square-rotate: -2deg;
-  --square-delay: -1.2s;
+  --square-delay: 0.4s;
   z-index: 3;
 }
 
 .overlap-playground-square--4 {
   --square-offset-x: 42px;
-  --square-offset-y: 9px;
+  --square-offset-y: 16px;
   --square-rotate: 5deg;
-  --square-delay: -0.6s;
+  --square-delay: 0.6s;
   z-index: 4;
 }
 
 .overlap-playground-square--5 {
   --square-offset-x: 82px;
-  --square-offset-y: 19px;
+  --square-offset-y: 26px;
   --square-rotate: 10deg;
-  --square-delay: 0s;
+  --square-delay: 0.8s;
   z-index: 5;
 }
 
-@keyframes overlap-square-float {
+@keyframes overlap-square-fan-in {
   0%,
-  100% {
+  16% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+  }
+
+  26%,
+  78% {
+    opacity: 1;
     transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
 
-  50% {
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) - 10px)) rotate(calc(var(--square-rotate) + 1.5deg));
+  100% {
+    opacity: 1;
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
   }
 }
 
@@ -2758,16 +2769,18 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .overlap-playground {
+    --body-section-padding-top: 8px;
     --body-section-padding-bottom: 28px;
   }
 
   .overlap-playground-stack {
     width: min(100%, 290px);
-    height: 118px;
+    height: 134px;
   }
 
   .overlap-playground-square {
     --square-size: 74px;
+    --square-entry-x: 112px;
     border-radius: 18px;
   }
 
@@ -2785,22 +2798,22 @@ main > #how.compatibility.reveal-on-scroll {
 
   .overlap-playground-square--1 {
     --square-offset-x: -56px;
-    --square-offset-y: 18px;
+    --square-offset-y: 22px;
   }
 
   .overlap-playground-square--2 {
     --square-offset-x: -28px;
-    --square-offset-y: 10px;
+    --square-offset-y: 15px;
   }
 
   .overlap-playground-square--4 {
     --square-offset-x: 28px;
-    --square-offset-y: 9px;
+    --square-offset-y: 14px;
   }
 
   .overlap-playground-square--5 {
     --square-offset-x: 56px;
-    --square-offset-y: 17px;
+    --square-offset-y: 21px;
   }
 
   .compatibility--question-system {
