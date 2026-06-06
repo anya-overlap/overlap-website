@@ -661,6 +661,7 @@ a {
   --square-fill: #ffffff;
   --square-image: none;
   --square-lift-y: calc(var(--square-size) * -0.07);
+  --square-rest-scale: 1;
   position: absolute;
   top: 12px;
   left: 50%;
@@ -674,7 +675,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 20px 44px rgba(123, 96, 246, 0.18);
-  transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+  transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   opacity: 0;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -750,19 +751,19 @@ a {
   0%,
   10% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(var(--square-rest-scale));
   }
 
   20%,
   58% {
     opacity: 1;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 
   76%,
   100% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 }
 
@@ -770,19 +771,19 @@ a {
   0%,
   14% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(var(--square-rest-scale));
   }
 
   24%,
   58% {
     opacity: 1;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 
   76%,
   100% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 }
 
@@ -790,19 +791,19 @@ a {
   0%,
   18% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(var(--square-rest-scale));
   }
 
   28%,
   58% {
     opacity: 1;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 
   76%,
   100% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 }
 
@@ -810,19 +811,19 @@ a {
   0%,
   26% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg));
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(var(--square-rest-scale));
   }
 
   36%,
   58% {
     opacity: 1;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 
   76%,
   100% {
     opacity: 0;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate));
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + 12px)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 }
 
@@ -831,21 +832,21 @@ a {
   22% {
     opacity: 0;
     z-index: 4;
-    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(1);
+    transform: translateX(calc(-50% + var(--square-offset-x) + var(--square-entry-x))) translateY(calc(var(--square-offset-y) - 4px)) rotate(calc(var(--square-rotate) + 8deg)) scale(var(--square-rest-scale));
   }
 
   32%,
   50% {
     opacity: 1;
     z-index: 4;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(1);
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(var(--square-offset-y)) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 
   56%,
   60% {
     opacity: 1;
     z-index: 8;
-    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + var(--square-lift-y))) rotate(var(--square-rotate)) scale(1);
+    transform: translateX(calc(-50% + var(--square-offset-x))) translateY(calc(var(--square-offset-y) + var(--square-lift-y))) rotate(var(--square-rotate)) scale(var(--square-rest-scale));
   }
 
   70% {
@@ -2916,55 +2917,60 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .hero-cards {
-    min-height: 250px;
+    min-height: 220px;
   }
 
   .overlap-playground-stack {
-    width: min(100%, 280px);
-    height: 300px;
-    transform: translateX(-2px);
+    width: min(100%, 286px);
+    height: 236px;
+    transform: translateX(-4px);
   }
 
   .overlap-playground-square {
-    --square-size: 128px;
+    --square-size: 116px;
     --square-entry-x: 112px;
-    --square-lift-y: calc(var(--square-size) * -0.11);
+    --square-lift-y: calc(var(--square-size) * -0.18);
   }
 
   .overlap-playground-square--1 {
-    --square-offset-x: -22px;
-    --square-offset-y: 10px;
-    --square-rotate: -14deg;
+    --square-offset-x: -60px;
+    --square-offset-y: 28px;
+    --square-rotate: -16deg;
+    --square-rest-scale: 0.78;
   }
 
   .overlap-playground-square--2 {
-    --square-offset-x: 6px;
-    --square-offset-y: 44px;
-    --square-rotate: -6deg;
+    --square-offset-x: -24px;
+    --square-offset-y: 18px;
+    --square-rotate: -9deg;
+    --square-rest-scale: 0.92;
   }
 
   .overlap-playground-square--3 {
-    --square-offset-x: 22px;
-    --square-offset-y: 86px;
-    --square-rotate: 0deg;
+    --square-offset-x: 6px;
+    --square-offset-y: 12px;
+    --square-rotate: -1deg;
+    --square-rest-scale: 1;
   }
 
   .overlap-playground-square--4 {
-    --square-offset-x: 8px;
-    --square-offset-y: 132px;
-    --square-rotate: 7deg;
+    --square-offset-x: 34px;
+    --square-offset-y: 18px;
+    --square-rotate: 8deg;
+    --square-rest-scale: 1;
   }
 
   .overlap-playground-square--5 {
-    --square-offset-x: -18px;
-    --square-offset-y: 176px;
-    --square-rotate: 14deg;
+    --square-offset-x: 58px;
+    --square-offset-y: 30px;
+    --square-rotate: 15deg;
+    --square-rest-scale: 0.82;
   }
 
   .overlap-playground-stack::after {
-    width: 112px;
-    height: 42px;
-    transform: translateX(calc(-50% + 4px));
+    width: 128px;
+    height: 32px;
+    transform: translateX(calc(-50% - 4px));
   }
 
   .compatibility--question-system {
