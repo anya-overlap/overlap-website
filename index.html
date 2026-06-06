@@ -82,9 +82,17 @@
             <div class="overlap-playground-stack" aria-hidden="true">
               <span class="overlap-playground-square overlap-playground-square--1"></span>
               <span class="overlap-playground-square overlap-playground-square--2 overlap-playground-square--photo-jon"></span>
-              <span class="overlap-playground-square overlap-playground-square--3"></span>
               <span class="overlap-playground-square overlap-playground-square--4 overlap-playground-square--photo-victoria"></span>
               <span class="overlap-playground-square overlap-playground-square--5 overlap-playground-square--photo-emily"></span>
+            </div>
+            <div class="hero-cards-mobile" aria-hidden="true">
+              <article class="profile-card">
+                <img src="./assets/victoriaScreenshot.png" alt="" decoding="async" />
+              </article>
+              <article class="profile-card muted">
+                <img src="./assets/jonprofile.png" alt="" decoding="async" />
+                <div class="profile-card-gradient-overlay" aria-hidden="true"></div>
+              </article>
             </div>
           </div>
         </div>
@@ -1041,7 +1049,6 @@
         };
 
         rotateHeroTagline();
-        window.setInterval(rotateHeroTagline, heroAnimationCycleMs);
       }
 
       const learnMoreEntries = Array.from(document.querySelectorAll(".learn-more-entry"));
