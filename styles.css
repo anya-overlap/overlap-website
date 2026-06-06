@@ -847,13 +847,13 @@ a {
   70% {
     opacity: 1;
     z-index: 8;
-    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.15);
+    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.02);
   }
 
   100% {
     opacity: 1;
     z-index: 8;
-    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.15);
+    transform: translateX(-50%) translateY(12px) rotate(0deg) scale(2.02);
   }
 }
 
@@ -2918,7 +2918,7 @@ main > #how.compatibility.reveal-on-scroll {
     margin-inline: auto;
     margin-top: 14px;
     display: block;
-    transform: translateX(8px);
+    transform: none;
   }
 
   .overlap-playground-stack {
@@ -2948,7 +2948,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .hero-cards-mobile .profile-card.muted {
     z-index: 1;
-    transform: translateX(calc(-50% - 40px)) translateY(-40px) rotate(-3deg);
+    transform: translateX(calc(-50% - 18px)) translateY(-34px) rotate(-3deg);
     box-shadow: none;
   }
 
