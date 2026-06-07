@@ -965,8 +965,11 @@
         const heroAnimationCycleMs = 7000;
         const transitionMs = 400;
         const heroTaglineChangeOffsetMs = 5200;
+        const mobileVisibleMs = 2500;
         let taglineIndex = 0;
         let taglineResizeFrame = null;
+        let heroTaglineStartTimeout = null;
+        let heroTaglineInterval = null;
 
         const reserveHeroTaglineHeight = () => {
           const heading = heroTagline.closest("h1");
@@ -1036,19 +1039,41 @@
           document.fonts.ready.then(scheduleHeroTaglineResize);
         }
 
-        const rotateHeroTagline = () => {
-          window.setTimeout(() => {
-            heroTagline.classList.add("is-changing");
+        const changeHeroTagline = () => {
+          heroTagline.classList.add("is-changing");
 
-            window.setTimeout(() => {
-              taglineIndex = (taglineIndex + 1) % taglineOptions.length;
-              heroTagline.textContent = taglineOptions[taglineIndex];
-              heroTagline.classList.remove("is-changing");
-            }, transitionMs);
+          window.setTimeout(() => {
+            taglineIndex = (taglineIndex + 1) % taglineOptions.length;
+            heroTagline.textContent = taglineOptions[taglineIndex];
+            heroTagline.classList.remove("is-changing");
+          }, transitionMs);
+        };
+
+        const startHeroTaglineCycle = () => {
+          if (heroTaglineStartTimeout !== null) {
+            window.clearTimeout(heroTaglineStartTimeout);
+            heroTaglineStartTimeout = null;
+          }
+
+          if (heroTaglineInterval !== null) {
+            window.clearInterval(heroTaglineInterval);
+            heroTaglineInterval = null;
+          }
+
+          if (window.innerWidth <= 768) {
+            heroTaglineInterval = window.setInterval(changeHeroTagline, mobileVisibleMs + transitionMs);
+            return;
+          }
+
+          heroTaglineStartTimeout = window.setTimeout(() => {
+            changeHeroTagline();
+            heroTaglineInterval = window.setInterval(changeHeroTagline, heroAnimationCycleMs);
+            heroTaglineStartTimeout = null;
           }, heroTaglineChangeOffsetMs);
         };
 
-        rotateHeroTagline();
+        startHeroTaglineCycle();
+        window.addEventListener("resize", startHeroTaglineCycle);
       }
 
       const learnMoreEntries = Array.from(document.querySelectorAll(".learn-more-entry"));
