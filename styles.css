@@ -463,6 +463,17 @@ a {
   overflow: visible;
 }
 
+.hero-cards-desktop {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  width: min(280px, 90%);
+}
+
+.hero-cards-desktop .profile-card {
+  width: 100%;
+}
+
 .hero-cards-mobile {
   display: none;
 }
@@ -2921,7 +2932,7 @@ main > #how.compatibility.reveal-on-scroll {
     transform: none;
   }
 
-  .overlap-playground-stack {
+  .hero-cards-desktop {
     display: none;
   }
 
