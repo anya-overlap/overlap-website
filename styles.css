@@ -1322,7 +1322,7 @@ main > #how.compatibility.reveal-on-scroll {
 .compatibility-copy-lead {
   font-family: "Playfair Display", serif;
   font-size: calc(clamp(1.38rem, 1.37vw, .5rem) * 0.9);
-  line-height: 1.08;
+  line-height: 1.11;
   color: #232323;
   font-weight: 600;
 }
@@ -2915,6 +2915,7 @@ main > #how.compatibility.reveal-on-scroll {
     --body-section-heading-gap: 22px;
     --body-section-subtitle-margin-top: 6px;
     --body-section-title-size: clamp(1.42rem, 6.1vw, 1.54rem);
+    --body-section-title-line-height: 1.08;
   }
 
   .compatibility--question-hub {
@@ -3364,7 +3365,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .body-section {
     --body-section-title-size: clamp(1.66rem, 5.8vw, 2rem);
-    --body-section-title-line-height: 1.04;
+    --body-section-title-line-height: 1.08;
     --body-section-copy-size: 0.96rem;
     --body-section-copy-line-height: 1.44;
   }
