@@ -610,7 +610,7 @@ a {
   --body-section-copy-font-family: "Inter", sans-serif;
   --body-section-copy-font-weight: 400;
   --body-section-copy-size: clamp(0.8rem, 0.94vw, 0.94rem);
-  --body-section-copy-line-height: 1.39;
+  --body-section-copy-line-height: 1.42;
   --body-section-copy-color: #666666;
   --feature-copy-max-width: 400px;
   --feature-copy-gap: 18px;
@@ -3366,8 +3366,8 @@ main > #how.compatibility.reveal-on-scroll {
   .body-section {
     --body-section-title-size: clamp(1.66rem, 5.8vw, 2rem);
     --body-section-title-line-height: 1.08;
-    --body-section-copy-size: 0.96rem;
-    --body-section-copy-line-height: 1.41;
+    --body-section-copy-size: 0.94rem;
+    --body-section-copy-line-height: 1.44;
   }
 
   .compatibility-copy-lead {
