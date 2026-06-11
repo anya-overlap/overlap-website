@@ -604,7 +604,7 @@ a {
   --body-section-max-width: 1170px;
   --body-section-heading-align: left;
   --body-section-heading-width: auto;
-  --body-section-title-size: clamp(1.48rem, 1.8vw, 1.77rem);
+  --body-section-title-size: clamp(1.56rem, 1.92vw, 1.86rem);
   --body-section-subtitle-max-width: 34ch;
   --body-section-subtitle-margin-top: 6px;
   --body-section-copy-font-family: "Inter", sans-serif;
@@ -2914,7 +2914,7 @@ main > #how.compatibility.reveal-on-scroll {
     --body-section-heading-margin-top: 8px;
     --body-section-heading-gap: 22px;
     --body-section-subtitle-margin-top: 6px;
-    --body-section-title-size: clamp(1.41rem, 6.34vw, 1.52rem);
+    --body-section-title-size: clamp(1.42rem, 6.1vw, 1.54rem);
   }
 
   .compatibility--question-hub {
@@ -3363,7 +3363,7 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .body-section {
-    --body-section-title-size: clamp(1.63rem, 5.8vw, 2rem);
+    --body-section-title-size: clamp(1.66rem, 5.8vw, 2rem);
     --body-section-title-line-height: 1.04;
     --body-section-copy-size: 0.96rem;
     --body-section-copy-line-height: 1.44;
