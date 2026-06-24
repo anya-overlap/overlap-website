@@ -560,6 +560,16 @@
       </section>
     </main>
 
+    <a
+      class="mobile-floating-download download-link js-download-link"
+      href="https://apps.apple.com/us/app/overlap-dating/id6760589473"
+      data-download-location="mobile-floating"
+      aria-label="Download Overlap"
+    >
+      <img src="./assets/arrowsmall.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+      <span>Download Overlap</span>
+    </a>
+
     <footer class="cta">
       <div class="container">
         <div class="cta-shell">
@@ -732,6 +742,55 @@
             window.setTimeout(navigateToDownload, 800);
           });
         });
+      }
+
+      const mobileFloatingDownload = document.querySelector(".mobile-floating-download");
+      const heroSection = document.querySelector(".hero");
+      const footerCta = document.querySelector(".cta");
+      if (mobileFloatingDownload && heroSection && footerCta) {
+        let hasLeftHero = false;
+        let footerIsVisible = false;
+
+        const syncFloatingDownloadVisibility = () => {
+          const shouldShow = window.innerWidth <= 768 && hasLeftHero && !footerIsVisible;
+          mobileFloatingDownload.classList.toggle("is-visible", shouldShow);
+        };
+
+        const updateHeroExitState = () => {
+          hasLeftHero = heroSection.getBoundingClientRect().bottom <= 0;
+          syncFloatingDownloadVisibility();
+        };
+
+        if ("IntersectionObserver" in window) {
+          const footerObserver = new IntersectionObserver(
+            (entries) => {
+              footerIsVisible = entries[0]?.isIntersecting ?? false;
+              syncFloatingDownloadVisibility();
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          footerObserver.observe(footerCta);
+          window.addEventListener("scroll", updateHeroExitState, { passive: true });
+          updateHeroExitState();
+        } else {
+          const updateFloatingDownloadFromScroll = () => {
+            const footerTop = footerCta.getBoundingClientRect().top;
+            hasLeftHero = heroSection.getBoundingClientRect().bottom <= 0;
+            footerIsVisible = footerTop < window.innerHeight;
+            syncFloatingDownloadVisibility();
+          };
+
+          window.addEventListener("scroll", updateFloatingDownloadFromScroll, { passive: true });
+          updateFloatingDownloadFromScroll();
+        }
+
+        window.addEventListener("resize", () => {
+          updateHeroExitState();
+        });
+        updateHeroExitState();
       }
 
       const phoneCarousel = document.querySelector(".phone-carousel");
