@@ -696,9 +696,20 @@
         const isIos =
           /iPhone|iPad|iPod/i.test(userAgent) ||
           (navigator.platform === "MacIntel" && typeof navigator.maxTouchPoints === "number" && navigator.maxTouchPoints > 1);
-        const downloadUrl = isAndroid ? playStoreUrl : isIos ? appStoreUrl : appStoreUrl;
+
+        const buildTrackedDownloadUrl = (baseUrl, location) => {
+          const trackedUrl = new URL(baseUrl);
+          trackedUrl.searchParams.set("utm_source", "website");
+          trackedUrl.searchParams.set("utm_medium", "download_cta");
+          trackedUrl.searchParams.set("utm_campaign", location || "unknown");
+          return trackedUrl.toString();
+        };
 
         downloadLinks.forEach((link) => {
+          const location = link.dataset.downloadLocation || "unknown";
+          const defaultBaseUrl = isAndroid ? playStoreUrl : isIos ? appStoreUrl : appStoreUrl;
+          const downloadUrl = buildTrackedDownloadUrl(defaultBaseUrl, location);
+
           link.href = downloadUrl;
           link.addEventListener("click", (event) => {
             const shouldTrackWithCallback =
@@ -713,7 +724,7 @@
               if (typeof window.gtag === "function") {
                 window.gtag("event", "download_cta_click", {
                   source: "website",
-                  location: link.dataset.downloadLocation || "unknown",
+                  location,
                   destination: isAndroid ? "google_play" : "app_store",
                 });
               }
@@ -734,7 +745,7 @@
 
             window.gtag("event", "download_cta_click", {
               source: "website",
-              location: link.dataset.downloadLocation || "unknown",
+              location,
               destination: isAndroid ? "google_play" : "app_store",
               event_callback: navigateToDownload,
             });
