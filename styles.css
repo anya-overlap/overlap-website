@@ -1474,7 +1474,7 @@ main > #how.compatibility.reveal-on-scroll {
 .calculated-network {
   position: relative;
   min-height: 350px;
-  transform: translateX(-56px);
+  transform: translateX(-34px);
 }
 
 .calculated-network-lines {
