@@ -1368,7 +1368,7 @@ main > #how.compatibility.reveal-on-scroll {
   justify-content: center;
   min-height: 412px;
   padding-inline: var(--calculated-visual-inline-padding);
-  margin-top: -76px;
+  margin-top: -24px;
 }
 
 .calculated-selector-group {
@@ -1613,17 +1613,22 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .calculated-copy {
-  width: min(100%, 520px);
-  max-width: 520px;
+  width: min(100%, 500px);
+  max-width: 500px;
   margin-inline: 0;
   margin-left: calc(
     var(--calculated-visual-inline-padding) +
     ((var(--calculated-selector-column-width) - var(--calculated-selector-group-width)) / 2)
   );
-  margin-top: -46px;
+  margin-top: -40px;
   justify-self: start;
   text-align: left;
   transform: none;
+}
+
+.calculated-copy-group {
+  display: grid;
+  gap: var(--feature-copy-gap);
 }
 
 .matchmaker {
@@ -3338,8 +3343,12 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .compatibility--calculated .compatibility-copy {
-    gap: 15px;
+    gap: 26px;
     line-height: 1.38;
+  }
+
+  .calculated-copy-group {
+    gap: 12px;
   }
 
   .question-system-copy {
@@ -3386,6 +3395,7 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .calculated-story {
+    grid-template-columns: 1fr;
     gap: 14px;
   }
 
