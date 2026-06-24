@@ -72,8 +72,15 @@
               <span class="hero-subtext-accent">Precision matchmaking.</span>
               <span class="hero-subtext-base">Without AI</span>
             </p>
-            <span class="store-buttons-label hero-store-label">Coming spring 2026</span>
- 
+            <a
+              class="store-buttons-label hero-store-label download-link js-download-link"
+              href="https://apps.apple.com/us/app/overlap-dating/id6760589473"
+              aria-label="Download Overlap"
+            >
+              <img src="./assets/arrowsmall.svg" alt="" aria-hidden="true" decoding="async" />
+              <span>Download Overlap</span>
+            </a>
+
             <div class="store-buttons">
               <a class="store-badge-link" href="#" aria-label="Download on the App Store">
                 <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" decoding="async" />
@@ -558,7 +565,14 @@
           <div class="cta-inner">
             <h2 class="cta-tagline">Declutter your dating experience</h2>
             <div class="store-buttons">
-              <span class="store-buttons-label">Coming spring 2026</span>
+              <a
+                class="store-buttons-label download-link js-download-link"
+                href="https://apps.apple.com/us/app/overlap-dating/id6760589473"
+                aria-label="Download Overlap"
+              >
+                <img src="./assets/arrowsmall.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                <span>Download Overlap</span>
+              </a>
               <a class="store-badge-link" href="#" aria-label="Download on the App Store">
                 <img class="store-badge" src="./assets/App_Store_Badge.svg" alt="Download on the App Store" loading="lazy" decoding="async" />
               </a>
@@ -659,6 +673,22 @@
         });
       } else {
         revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+
+      const downloadLinks = document.querySelectorAll(".js-download-link");
+      if (downloadLinks.length > 0) {
+        const appStoreUrl = "https://apps.apple.com/us/app/overlap-dating/id6760589473";
+        const playStoreUrl = "https://play.google.com/store/apps/details?id=com.kindredlabs.overlap";
+        const userAgent = navigator.userAgent || navigator.vendor || "";
+        const isAndroid = /Android/i.test(userAgent);
+        const isIos =
+          /iPhone|iPad|iPod/i.test(userAgent) ||
+          (navigator.platform === "MacIntel" && typeof navigator.maxTouchPoints === "number" && navigator.maxTouchPoints > 1);
+        const downloadUrl = isAndroid ? playStoreUrl : isIos ? appStoreUrl : appStoreUrl;
+
+        downloadLinks.forEach((link) => {
+          link.href = downloadUrl;
+        });
       }
 
       const phoneCarousel = document.querySelector(".phone-carousel");
