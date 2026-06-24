@@ -2397,8 +2397,11 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .cta .store-buttons-label {
-  background: rgba(255, 255, 255, 0.85);
-  color: #3554cf;
+  padding: 10px 10px 10px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #587BF6;
+  letter-spacing: 0.04em;
 }
 
 .cta .store-badge {
@@ -3228,7 +3231,10 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .cta .store-buttons-label {
-    background: rgba(255, 255, 255, 0.89);
+    padding: 7px 10px 7px 12px;
+    background: #ffffff;
+    color: #587BF6;
+    letter-spacing: 0.04em;
   }
 
   .footer-legal-links {
