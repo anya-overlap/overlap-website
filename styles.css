@@ -460,7 +460,28 @@ a {
   border-radius: 6px;
 }
 
+.cta .store-buttons-label {
+  font-size: clamp(0.8rem, 0.82vw + 0.44rem, 0.89rem);
+  padding: 8px 12px 8px 8px;
+  background: #ffffff;
+  color: #587BF6;
+  letter-spacing: 0.04em;
+  border-radius: 6px;
+}
+
+.cta .store-buttons-label img {
+  filter: brightness(0) saturate(100%) invert(49%) sepia(91%) saturate(2438%) hue-rotate(210deg) brightness(102%) contrast(93%);
+}
+
 .hero .hero-store-label {
+  position: static;
+  transform: none;
+  display: inline-flex;
+  margin-top: 24px;
+  z-index: auto;
+}
+
+.cta .hero-store-label {
   position: static;
   transform: none;
   display: inline-flex;
@@ -2341,23 +2362,23 @@ main > #how.compatibility.reveal-on-scroll {
 
 .cta {
   color: #fff;
-  padding: 56px 0 40px;
+  padding: 49px 0 35px;
 }
 
 .cta-shell {
   border-radius: 10px;
   background: linear-gradient(140deg, #4d68df 0%, #587bf6 56%, #6b8cff 100%);
   box-shadow: 0 28px 54px rgba(62, 89, 192, 0.18);
-  padding: clamp(38px, 5vw, 54px) clamp(22px, 4vw, 46px) 22px;
+  padding: clamp(33px, 4.4vw, 48px) clamp(19px, 3.5vw, 40px) 19px;
 }
 
 .cta-inner {
-  max-width: 760px;
+  max-width: 670px;
   margin: 0 auto;
   text-align: center;
   display: grid;
   justify-items: center;
-  gap: 18px;
+  gap: 8px;
 }
 
 .cta-brand {
@@ -2367,7 +2388,7 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .cta-brand img {
-  height: 25px;
+  height: 22px;
   width: auto;
   filter: drop-shadow(0 1px 2px rgba(24, 39, 106, 0.24));
 }
@@ -2375,33 +2396,36 @@ main > #how.compatibility.reveal-on-scroll {
 .cta-logo-word {
   margin-left: 0;
   color: #eef6ff;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .cta-tagline {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: clamp(1.72rem, 3.75vw, 2.05rem);
+  font-size: clamp(1.52rem, 3.3vw, 1.8rem);
   line-height: 1.06;
   max-width: none;
   white-space: nowrap;
 }
 
 .cta .store-buttons {
-  margin-top: 0;
-  gap: clamp(8px, 2vw, 18px);
+  margin-top: -10px;
+  gap: 0;
   flex-wrap: nowrap;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
+  justify-self: center;
+  grid-template-columns: 19px auto;
 }
 
-.cta .store-buttons-label {
-  padding: 10px 10px 10px 12px;
-  border-radius: 6px;
-  background: #ffffff;
-  color: #587BF6;
-  letter-spacing: 0.04em;
+.cta .download-link img {
+  width: 19px;
+  height: 19px;
+}
+
+.cta .store-badge-link {
+  display: none;
 }
 
 .cta .store-badge {
@@ -2419,14 +2443,14 @@ main > #how.compatibility.reveal-on-scroll {
 .cta-divider {
   width: 100%;
   height: 1px;
-  margin: clamp(24px, 4vw, 40px) 0 clamp(18px, 3vw, 26px);
+  margin: clamp(21px, 3.5vw, 35px) 0 clamp(16px, 2.6vw, 23px);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.22) 18%, rgba(255, 255, 255, 0.22) 82%, rgba(255, 255, 255, 0.03) 100%);
 }
 
 .cta-footer-meta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;
-  gap: 28px;
+  gap: 25px;
   align-items: center;
 }
 
@@ -3161,6 +3185,15 @@ main > #how.compatibility.reveal-on-scroll {
     letter-spacing: 0.04em;
   }
 
+  .cta .store-buttons-label {
+    font-size: 0.84rem;
+    padding: 7px 10px 7px 12px;
+    background: #ffffff;
+    color: #587BF6;
+    letter-spacing: 0.04em;
+    border-radius: 6px;
+  }
+
   .hero .hero-store-label {
     margin-top: 18px;
   }
@@ -3212,29 +3245,18 @@ main > #how.compatibility.reveal-on-scroll {
 
   .cta .store-buttons {
     margin-top: 16px;
-    width: 100%;
+    width: fit-content;
     justify-content: center;
-    gap: clamp(10px, 2.2vw, 14px);
+    gap: 0;
   }
 
   .cta .store-badge-link {
-    flex: 1 1 0;
-    min-width: 0;
-    display: flex;
-    justify-content: center;
-    opacity: 0.72;
+    display: none;
   }
 
   .cta .store-badge {
     max-width: min(150px, 100%);
     height: auto;
-  }
-
-  .cta .store-buttons-label {
-    padding: 7px 10px 7px 12px;
-    background: #ffffff;
-    color: #587BF6;
-    letter-spacing: 0.04em;
   }
 
   .footer-legal-links {
@@ -3259,28 +3281,32 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .cta {
-    padding: 34px 0 42px;
+    padding: 30px 0 37px;
   }
 
   .cta-shell {
     border-radius: 10px;
-    padding: 34px 20px 24px;
+    padding: 30px 18px 21px;
   }
 
   .cta-inner {
-    gap: 16px;
-    justify-items: start;
-    text-align: left;
+    gap: 8px;
+    justify-items: center;
+    text-align: center;
   }
 
   .cta-tagline {
-    font-size: clamp(1.75rem, 7.4vw, 2.7rem);
+    font-size: clamp(1.54rem, 6.5vw, 2.38rem);
     white-space: normal;
-    text-align: left;
+    text-align: center;
+  }
+
+  .cta .store-buttons {
+    justify-self: center;
   }
 
   .cta-divider {
-    margin: 22px 0 18px;
+    margin: 19px 0 16px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.22) 18%, rgba(255, 255, 255, 0.22) 82%, rgba(255, 255, 255, 0.03) 100%);
   }
 
@@ -3288,8 +3314,8 @@ main > #how.compatibility.reveal-on-scroll {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: flex-start;
-    column-gap: 22px;
-    row-gap: 8px;
+    column-gap: 19px;
+    row-gap: 7px;
     text-align: left;
     width: 100%;
   }
