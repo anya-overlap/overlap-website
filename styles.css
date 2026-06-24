@@ -387,6 +387,10 @@ a {
   display: inline-block;
 }
 
+.hero .pill {
+  background: linear-gradient(100deg, rgba(76, 87, 173, 0.88) 0%, rgba(208, 76, 77, 0.82) 100%);
+}
+
 .store-buttons {
   position: relative;
   display: flex;
@@ -453,6 +457,7 @@ a {
   padding: 10px 12px;
   background: #587BF6;
   letter-spacing: 0.04em;
+  border-radius: 6px;
 }
 
 .hero .hero-store-label {
