@@ -3124,9 +3124,9 @@ main > #how.compatibility.reveal-on-scroll {
     height: 20px;
   }
 
-  .logo-word {
-    font-size: 14px;
-    margin-left: 6px;
+  .nav .logo-word {
+    font-size: 15px;
+    margin-left: 7px;
   }
 
   .cta-brand {
