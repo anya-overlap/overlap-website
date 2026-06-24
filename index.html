@@ -745,19 +745,19 @@
       }
 
       const mobileFloatingDownload = document.querySelector(".mobile-floating-download");
-      const heroSection = document.querySelector(".hero");
+      const firstContentHeading = document.querySelector("#compatibility-heading");
       const footerCta = document.querySelector(".cta");
-      if (mobileFloatingDownload && heroSection && footerCta) {
-        let hasLeftHero = false;
+      if (mobileFloatingDownload && firstContentHeading && footerCta) {
+        let hasReachedFirstContentHeading = false;
         let footerIsVisible = false;
 
         const syncFloatingDownloadVisibility = () => {
-          const shouldShow = window.innerWidth <= 768 && hasLeftHero && !footerIsVisible;
+          const shouldShow = window.innerWidth <= 768 && hasReachedFirstContentHeading && !footerIsVisible;
           mobileFloatingDownload.classList.toggle("is-visible", shouldShow);
         };
 
-        const updateHeroExitState = () => {
-          hasLeftHero = heroSection.getBoundingClientRect().bottom <= 0;
+        const updateFloatingDownloadTriggerState = () => {
+          hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight;
           syncFloatingDownloadVisibility();
         };
 
@@ -773,12 +773,12 @@
           );
 
           footerObserver.observe(footerCta);
-          window.addEventListener("scroll", updateHeroExitState, { passive: true });
-          updateHeroExitState();
+          window.addEventListener("scroll", updateFloatingDownloadTriggerState, { passive: true });
+          updateFloatingDownloadTriggerState();
         } else {
           const updateFloatingDownloadFromScroll = () => {
             const footerTop = footerCta.getBoundingClientRect().top;
-            hasLeftHero = heroSection.getBoundingClientRect().bottom <= 0;
+            hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight;
             footerIsVisible = footerTop < window.innerHeight;
             syncFloatingDownloadVisibility();
           };
@@ -788,9 +788,9 @@
         }
 
         window.addEventListener("resize", () => {
-          updateHeroExitState();
+          updateFloatingDownloadTriggerState();
         });
-        updateHeroExitState();
+        updateFloatingDownloadTriggerState();
       }
 
       const phoneCarousel = document.querySelector(".phone-carousel");
