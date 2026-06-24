@@ -3302,11 +3302,12 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .cta .store-buttons {
+    margin-top: -18px;
     justify-self: center;
   }
 
   .cta-divider {
-    margin: 19px 0 16px;
+    margin: 34px 0 16px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.22) 18%, rgba(255, 255, 255, 0.22) 82%, rgba(255, 255, 255, 0.03) 100%);
   }
 
