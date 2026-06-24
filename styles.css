@@ -450,16 +450,16 @@ a {
 
 .hero .store-buttons-label {
   font-size: clamp(0.98rem, 1vw + 0.55rem, 1.08rem);
-  padding: 6px 8px;
+  padding: 10px 12px;
   background: #587BF6;
-  letter-spacing: 0.065em;
+  letter-spacing: 0.04em;
 }
 
 .hero .hero-store-label {
   position: static;
   transform: none;
   display: inline-flex;
-  margin-top: 18px;
+  margin-top: 24px;
   z-index: auto;
 }
 
@@ -3148,13 +3148,13 @@ main > #how.compatibility.reveal-on-scroll {
 
   .hero .store-buttons-label {
     font-size: 0.84rem;
-    padding: 5px 11px;
-    background: rgba(255, 255, 255, 0.76);
-    letter-spacing: 0.06em;
+    padding: 7px 11px;
+    background: #587BF6;
+    letter-spacing: 0.04em;
   }
 
   .hero .hero-store-label {
-    margin-top: 12px;
+    margin-top: 18px;
   }
 
 
