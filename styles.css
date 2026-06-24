@@ -462,7 +462,7 @@ a {
 
 .cta .store-buttons-label {
   font-size: clamp(0.8rem, 0.82vw + 0.44rem, 0.89rem);
-  padding: 8px 12px 8px 8px;
+  padding: 8px 13px 8px 8px;
   background: #ffffff;
   color: #587BF6;
   letter-spacing: 0.04em;
@@ -2416,7 +2416,8 @@ main > #how.compatibility.reveal-on-scroll {
   justify-content: center;
   width: fit-content;
   justify-self: center;
-  grid-template-columns: 19px auto;
+  grid-template-columns: 17px auto;
+  column-gap: 4px;
 }
 
 .cta .download-link img {
