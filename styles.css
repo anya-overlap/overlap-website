@@ -1622,12 +1622,13 @@ main > #how.compatibility.reveal-on-scroll {
 .calculated-copy {
   width: min(100%, 500px);
   max-width: 500px;
+  gap: 26px;
   margin-inline: 0;
   margin-left: calc(
     var(--calculated-visual-inline-padding) +
     ((var(--calculated-selector-column-width) - var(--calculated-selector-group-width)) / 2)
   );
-  margin-top: -56px;
+  margin-top: -40px;
   justify-self: start;
   text-align: left;
   transform: none;
