@@ -1552,7 +1552,7 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .calculated-match--bottom {
-  top: 67%;
+  top: calc(67% + 10px);
   bottom: auto;
   right: 26%;
 }
