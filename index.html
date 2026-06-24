@@ -75,6 +75,7 @@
             <a
               class="store-buttons-label hero-store-label download-link js-download-link"
               href="https://apps.apple.com/us/app/overlap-dating/id6760589473"
+              data-download-location="hero"
               aria-label="Download Overlap"
             >
               <img src="./assets/arrowsmall.svg" alt="" aria-hidden="true" decoding="async" />
@@ -568,6 +569,7 @@
               <a
                 class="store-buttons-label hero-store-label download-link js-download-link"
                 href="https://apps.apple.com/us/app/overlap-dating/id6760589473"
+                data-download-location="footer"
                 aria-label="Download Overlap"
               >
                 <img src="./assets/arrowsmall.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
@@ -688,6 +690,47 @@
 
         downloadLinks.forEach((link) => {
           link.href = downloadUrl;
+          link.addEventListener("click", (event) => {
+            const shouldTrackWithCallback =
+              typeof window.gtag === "function" &&
+              event.button === 0 &&
+              !event.metaKey &&
+              !event.ctrlKey &&
+              !event.shiftKey &&
+              !event.altKey;
+
+            if (!shouldTrackWithCallback) {
+              if (typeof window.gtag === "function") {
+                window.gtag("event", "download_cta_click", {
+                  source: "website",
+                  location: link.dataset.downloadLocation || "unknown",
+                  destination: isAndroid ? "google_play" : "app_store",
+                });
+              }
+              return;
+            }
+
+            event.preventDefault();
+
+            let hasNavigated = false;
+            const navigateToDownload = () => {
+              if (hasNavigated) {
+                return;
+              }
+
+              hasNavigated = true;
+              window.location.href = downloadUrl;
+            };
+
+            window.gtag("event", "download_cta_click", {
+              source: "website",
+              location: link.dataset.downloadLocation || "unknown",
+              destination: isAndroid ? "google_play" : "app_store",
+              event_callback: navigateToDownload,
+            });
+
+            window.setTimeout(navigateToDownload, 800);
+          });
         });
       }
 
