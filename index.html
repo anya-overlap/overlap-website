@@ -768,7 +768,7 @@
         };
 
         const updateFloatingDownloadTriggerState = () => {
-          hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight;
+          hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
           syncFloatingDownloadVisibility();
         };
 
@@ -789,7 +789,7 @@
         } else {
           const updateFloatingDownloadFromScroll = () => {
             const footerTop = footerCta.getBoundingClientRect().top;
-            hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight;
+            hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
             footerIsVisible = footerTop < window.innerHeight;
             syncFloatingDownloadVisibility();
           };
