@@ -1187,6 +1187,8 @@ main > #how.compatibility.reveal-on-scroll {
   width: 100%;
   min-width: 3.95rem;
   height: .4rem;
+  transform: rotate(3deg);
+  transform-origin: center;
   background-image: url("assets/underline.svg"), url("assets/underline.svg");
   background-position: center 0, center .03rem;
   background-repeat: no-repeat, no-repeat;
