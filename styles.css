@@ -3558,6 +3558,10 @@ main > #how.compatibility.reveal-on-scroll {
     min-width: 0;
   }
 
+  .compatibility--question-system .section-heading .fuzzy-bubbles-count {
+    padding-bottom: .28rem;
+  }
+
   .compatibility--calculated {
     --body-section-padding-bottom: var(--section-space-bottom-loose);
   }
