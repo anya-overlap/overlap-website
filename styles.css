@@ -1198,9 +1198,10 @@ main > #how.compatibility.reveal-on-scroll {
 .compatibility--question-system .section-heading .fuzzy-bubbles-mark {
   margin-left: -.08rem;
   font-family: "Fuzzy Bubbles", cursive;
-  font-size: 1.8em;
+  font-size: 1.68em;
   font-weight: 700;
   line-height: .7;
+  opacity: .87;
   transform: rotate(7deg) translateX(-.14rem) translateY(.34rem);
   transform-origin: bottom left;
 }
