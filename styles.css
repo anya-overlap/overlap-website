@@ -1176,7 +1176,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .compatibility--question-system .section-heading .fuzzy-bubbles-count {
   position: relative;
-  padding-bottom: .32rem;
+  padding-bottom: .2rem;
 }
 
 .compatibility--question-system .section-heading .fuzzy-bubbles-count::after {
