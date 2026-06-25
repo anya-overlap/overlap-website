@@ -1161,6 +1161,50 @@ main > #how.compatibility.reveal-on-scroll {
   font-size: 1.2rem;
 }
 
+.compatibility--question-system .section-heading .fuzzy-bubbles {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: .18rem;
+  row-gap: 0;
+}
+
+.compatibility--question-system .section-heading .fuzzy-bubbles-count,
+.compatibility--question-system .section-heading .fuzzy-bubbles-text,
+.compatibility--question-system .section-heading .fuzzy-bubbles-mark {
+  display: inline-block;
+}
+
+.compatibility--question-system .section-heading .fuzzy-bubbles-count {
+  position: relative;
+  padding-bottom: .38rem;
+}
+
+.compatibility--question-system .section-heading .fuzzy-bubbles-count::after {
+  content: "";
+  position: absolute;
+  left: -.06rem;
+  bottom: 0;
+  width: 100%;
+  min-width: 3.95rem;
+  height: .4rem;
+  background: center / contain no-repeat url("assets/underline.svg");
+}
+
+.compatibility--question-system .section-heading .fuzzy-bubbles strong {
+  font-weight: 600;
+}
+
+.compatibility--question-system .section-heading .fuzzy-bubbles-mark {
+  margin-left: -.02rem;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: .7;
+  transform: rotate(7deg) translateX(-.08rem) translateY(.34rem);
+  transform-origin: bottom left;
+}
+
 #how .section-heading,
 .compatibility--calculated .section-heading,
 .compatibility--question-system > .container .section-heading {
@@ -3514,6 +3558,11 @@ main > #how.compatibility.reveal-on-scroll {
   .compatibility .section-heading p {
     font-size: 1.07rem;
     line-height: 1.28;
+  }
+
+  .compatibility--question-system .section-heading .fuzzy-bubbles-count::after {
+    width: 3.5rem;
+    min-width: 0;
   }
 
   .compatibility--calculated {
