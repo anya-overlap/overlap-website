@@ -452,6 +452,27 @@ a {
   text-decoration: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .hero .store-buttons-label.download-link,
+  .cta .store-buttons-label.download-link {
+    transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .hero .store-buttons-label.download-link:hover,
+  .hero .store-buttons-label.download-link:focus-visible {
+    background: #4353A5;
+    box-shadow: 0 10px 24px rgba(67, 83, 165, 0.18);
+    transform: translateY(-1px);
+  }
+
+  .cta .store-buttons-label.download-link:hover,
+  .cta .store-buttons-label.download-link:focus-visible {
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(74, 104, 217, 0.14), inset 0 0 0 1px rgba(74, 104, 217, 0.16);
+    transform: translateY(-1px);
+  }
+}
+
 .download-link img {
   width: 24px;
   height: 24px;
