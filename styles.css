@@ -1165,13 +1165,12 @@ main > #how.compatibility.reveal-on-scroll {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  column-gap: .18rem;
+  column-gap: .38rem;
   row-gap: 0;
 }
 
 .compatibility--question-system .section-heading .fuzzy-bubbles-count,
-.compatibility--question-system .section-heading .fuzzy-bubbles-text,
-.compatibility--question-system .section-heading .fuzzy-bubbles-mark {
+.compatibility--question-system .section-heading .fuzzy-bubbles-text {
   display: inline-block;
 }
 
@@ -1197,17 +1196,6 @@ main > #how.compatibility.reveal-on-scroll {
 
 .compatibility--question-system .section-heading .fuzzy-bubbles strong {
   font-weight: 600;
-}
-
-.compatibility--question-system .section-heading .fuzzy-bubbles-mark {
-  margin-left: -.08rem;
-  font-family: "Fuzzy Bubbles", cursive;
-  font-size: 1.68em;
-  font-weight: 700;
-  line-height: .7;
-  opacity: .87;
-  transform: rotate(7deg) translateX(-.14rem) translateY(.34rem);
-  transform-origin: bottom left;
 }
 
 #how .section-heading,
