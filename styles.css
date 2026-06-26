@@ -3447,11 +3447,31 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .cta-brand {
-    gap: 4px;
+    gap: 6px;
   }
 
   .footer-social-links {
     margin: 0;
+  }
+
+  .footer-social-link {
+    width: 24px;
+    height: 28px;
+  }
+
+  .footer-social-link img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .footer-social-link .footer-icon--mail {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-social-link .footer-icon--instagram {
+    width: 20px;
+    height: 20px;
   }
 
   .cta-footer-block--legal {
