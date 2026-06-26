@@ -3452,26 +3452,28 @@ main > #how.compatibility.reveal-on-scroll {
 
   .footer-social-links {
     margin: 0;
+    gap: 6px;
   }
 
   .footer-social-link {
-    width: 24px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .footer-social-link img {
-    width: 21px;
-    height: 21px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.62;
   }
 
   .footer-social-link .footer-icon--mail {
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
   }
 
   .footer-social-link .footer-icon--instagram {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
   }
 
   .cta-footer-block--legal {
