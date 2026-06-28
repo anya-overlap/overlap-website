@@ -709,9 +709,9 @@
         };
 
         downloadLinks.forEach((link) => {
-          const location = link.dataset.downloadLocation || "unknown";
+          const buttonLocation = link.dataset.downloadLocation || "unknown";
           const defaultBaseUrl = isAndroid ? playStoreUrl : isIos ? appStoreUrl : appStoreUrl;
-          const downloadUrl = buildTrackedDownloadUrl(defaultBaseUrl, location);
+          const downloadUrl = buildTrackedDownloadUrl(defaultBaseUrl, buttonLocation);
 
           link.href = downloadUrl;
           link.addEventListener("click", (event) => {
@@ -727,8 +727,8 @@
               if (typeof window.gtag === "function") {
                 window.gtag("event", "download_cta_click", {
                   source: "website",
-                  location,
-                  destination: isAndroid ? "google_play" : "app_store",
+                  button_location: buttonLocation,
+                  store_destination: isAndroid ? "google_play" : "app_store",
                 });
               }
               return;
@@ -748,8 +748,8 @@
 
             window.gtag("event", "download_cta_click", {
               source: "website",
-              location,
-              destination: isAndroid ? "google_play" : "app_store",
+              button_location: buttonLocation,
+              store_destination: isAndroid ? "google_play" : "app_store",
               event_callback: navigateToDownload,
             });
 
