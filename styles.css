@@ -3682,7 +3682,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .cta-shell {
     border-radius: 10px;
-    padding: 30px 18px 21px;
+    padding: 30px 28px 21px;
   }
 
   .cta-inner {
@@ -3695,6 +3695,7 @@ main > #how.compatibility.reveal-on-scroll {
     font-size: clamp(1.54rem, 6.5vw, 2.38rem);
     white-space: normal;
     text-align: center;
+    max-width: 13ch;
   }
 
   .cta .store-buttons {
