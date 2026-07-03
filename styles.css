@@ -192,8 +192,8 @@ a {
 .hero-ambient-blob--violet {
   width: clamp(380px, 44vw, 640px);
   height: clamp(380px, 44vw, 640px);
-  left: clamp(0%, 5vw, 12%);
-  bottom: clamp(8px, 3vw, 46px);
+  left: clamp(-8%, -2vw, 4%);
+  bottom: clamp(-80px, -5vw, -30px);
   background: radial-gradient(circle at center, rgba(118, 96, 238, 0.37) 0%, rgba(118, 96, 238, 0.26) 28%, rgba(118, 96, 238, 0.14) 52%, rgba(118, 96, 238, 0.055) 70%, rgba(118, 96, 238, 0) 84%);
   filter: blur(26px);
   animation: hero-ambient-drift-violet 3.2s ease-in-out infinite alternate;
@@ -567,8 +567,8 @@ a {
   }
 
   .hero-ambient-blob--violet {
-    left: -2%;
-    bottom: 0;
+    left: -10%;
+    bottom: -72px;
   }
 
   .hero-ambient-blob--mist {
