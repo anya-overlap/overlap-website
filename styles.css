@@ -3696,6 +3696,7 @@ main > #how.compatibility.reveal-on-scroll {
     white-space: normal;
     text-align: center;
     max-width: 13ch;
+    margin-bottom: 10px;
   }
 
   .cta .store-buttons {
