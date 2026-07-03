@@ -541,6 +541,10 @@ a {
 
 /* Mobile: stack */
 @media (max-width: 600px){
+  .hero-ambient {
+    inset: 0;
+  }
+
   .hero-content{
     grid-template-columns: 1fr;
     min-height: 0;
@@ -3548,7 +3552,7 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .hero {
-    padding: 96px 0 34px;
+    padding: 76px 0 34px;
   }
 
   .hero-content {
