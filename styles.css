@@ -3681,7 +3681,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .cta-shell {
     border-radius: 10px;
-    padding: 30px 28px 21px;
+    padding: 30px 22px 21px;
   }
 
   .cta-inner {
@@ -3692,6 +3692,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .cta-tagline {
     font-size: clamp(1.54rem, 6.5vw, 2.38rem);
+    line-height: 1.12;
     white-space: normal;
     text-align: center;
     max-width: 13ch;
