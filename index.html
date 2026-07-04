@@ -737,8 +737,8 @@
               if (typeof window.gtag === "function") {
                 window.gtag("event", "download_cta_click", {
                   source: "website",
-                  location,
-                  destination: isAndroid ? "google_play" : "app_store",
+                  button_location: location,
+                  store_destination: isAndroid ? "google_play" : "app_store",
                 });
               }
               return;
@@ -758,8 +758,8 @@
 
             window.gtag("event", "download_cta_click", {
               source: "website",
-              location,
-              destination: isAndroid ? "google_play" : "app_store",
+               button_location: location,
+              store_destination: isAndroid ? "google_play" : "app_store",
               event_callback: navigateToDownload,
             });
 
