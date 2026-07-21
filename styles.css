@@ -2727,7 +2727,7 @@ main > #how.compatibility.reveal-on-scroll {
   color: var(--text);
   text-align: left;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
   padding: 12px 22px 10px;
@@ -2756,7 +2756,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-item-copy {
   display: grid;
-  gap: 4px;
+  gap: 2px;
 }
 
 .learn-more-item-title {
@@ -2784,6 +2784,7 @@ main > #how.compatibility.reveal-on-scroll {
   background: transparent;
   line-height: 1;
   position: relative;
+  margin-top: 2px;
 }
 
 .learn-more-item-icon::before,
