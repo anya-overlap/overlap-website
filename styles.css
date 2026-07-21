@@ -2547,7 +2547,10 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-reading-card {
   display: grid;
-  gap: 7px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 24px;
+  row-gap: 12px;
   padding: 18px 22px;
   border: 1px solid rgba(112, 132, 197, 0.16);
   border-radius: 11px;
@@ -2555,8 +2558,14 @@ main > #how.compatibility.reveal-on-scroll {
   box-shadow: 0 8px 24px rgba(44, 62, 120, 0.035);
 }
 
-.learn-more-reading-date {
-  font-size: 0.78rem;
+.learn-more-reading-main {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.learn-more-reading-meta {
+  font-size: 0.74rem;
   line-height: 1.2;
   font-weight: 600;
   color: #4b5877;
@@ -2564,21 +2573,21 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-reading-title {
   font-family: "Playfair Display", serif;
-  font-size: 1.08rem;
-  line-height: 1.2;
+  font-size: 1.22rem;
+  line-height: 1.12;
   font-weight: 600;
   color: #1f1f1f;
 }
 
 .learn-more-reading-dek {
   font-size: 0.9rem;
-  line-height: 1.38;
+  line-height: 1.42;
   color: #666666;
+  max-width: none;
 }
 
 .learn-more-reading-link {
   width: fit-content;
-  margin-top: 4px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -2588,6 +2597,9 @@ main > #how.compatibility.reveal-on-scroll {
   font-weight: 600;
   text-decoration: none;
   transition: transform 180ms ease, opacity 180ms ease;
+  padding: 0;
+  white-space: nowrap;
+  align-self: start;
 }
 
 .learn-more-reading-link:hover,
@@ -3537,17 +3549,37 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading-card {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 10px;
     padding: 16px 16px 15px;
+  }
+
+  .learn-more-reading-main {
+    gap: 8px;
+  }
+
+  .learn-more-reading-meta {
+    font-size: 0.72rem;
+  }
+
+  .learn-more-reading-title {
+    font-size: 1.12rem;
+    line-height: 1.14;
   }
 
   .learn-more-reading-dek {
     font-size: 0.94rem;
     line-height: 1.4;
+    max-width: none;
+  }
+
+  .learn-more-reading-footer {
+    gap: 10px;
   }
 
   .learn-more-reading-link {
-    margin-top: 3px;
     font-size: 0.94rem;
+    padding: 0;
   }
 
   .compatibility::before {
