@@ -2514,7 +2514,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .founder-note-dek {
   margin: 0;
-  max-width: 36ch;
+  max-width: none;
   font-size: 0.9rem;
   line-height: 1.38;
   letter-spacing: 0;
