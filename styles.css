@@ -3576,7 +3576,7 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading-dek {
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     line-height: 1.32;
     max-width: none;
   }
@@ -3587,7 +3587,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .learn-more-reading-link {
     font-size: 0.94rem;
-    margin-top: 8px;
+    margin-top: 14px;
     padding: 0;
   }
 
