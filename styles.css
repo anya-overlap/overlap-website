@@ -2533,8 +2533,8 @@ main > #how.compatibility.reveal-on-scroll {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 500;
-  color: #27324a;
+  font-weight: 400;
+  color: #465575;
 }
 
 .learn-more-reading-header p {
@@ -2617,15 +2617,15 @@ main > #how.compatibility.reveal-on-scroll {
 .learn-more-subsection {
   width: min(100%, 660px);
   margin-top: 38px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .learn-more-subsection h3 {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 500;
-  color: #27324a;
+  font-weight: 400;
+  color: #465575;
 }
 
 .learn-more-group h3 {
