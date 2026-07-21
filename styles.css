@@ -2705,7 +2705,7 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .learn-more-answer {
-  padding: 0 0 18px;
+  padding: 12px 22px 18px;
   color: var(--learn-more-answer-text);
   font-size: calc(0.92rem * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   line-height: 1.55;
