@@ -2756,27 +2756,27 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-item-copy {
   display: grid;
-  gap: 6px;
+  gap: 4px;
 }
 
 .learn-more-item-title {
   color: var(--learn-more-title);
-  font-size: calc(clamp(1.04rem, 1.18vw, 1.22rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+  font-size: calc(clamp(0.98rem, 1.08vw, 1.1rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
   font-weight: 500;
-  line-height: 1.18;
+  line-height: 1.16;
   letter-spacing: -0.01em;
 }
 
 .learn-more-item-subtitle {
-  color: #4353A5;
-  font-size: calc(clamp(0.87rem, 0.94vw, 0.93rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
-  line-height: 1.18;
-  font-weight: 500;
+  color: #60709a;
+  font-size: calc(clamp(0.8rem, 0.88vw, 0.86rem) * var(--learn-more-font-scale) * var(--learn-more-content-scale));
+  line-height: 1.16;
+  font-weight: 400;
 }
 
 .learn-more-item-icon {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -2796,13 +2796,13 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .learn-more-item-icon::before {
-  width: 14px;
+  width: 12px;
   height: 2px;
 }
 
 .learn-more-item-icon::after {
   width: 2px;
-  height: 14px;
+  height: 12px;
 }
 
 .learn-more-item[aria-expanded="true"] .learn-more-item-icon::after {
