@@ -2462,7 +2462,7 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .founder-note-card {
-  width: min(100%, 760px);
+  width: min(100%, 660px);
   margin: 0 auto;
   display: block;
   padding: 0;
@@ -2471,7 +2471,7 @@ main > #how.compatibility.reveal-on-scroll {
 .founder-note-copy {
   display: grid;
   gap: 8px;
-  max-width: 680px;
+  max-width: 660px;
   padding: 3px 0;
 }
 
@@ -2484,7 +2484,7 @@ main > #how.compatibility.reveal-on-scroll {
   letter-spacing: 0;
 }
 
-.founder-note h2 {
+.founder-note-title {
   margin: 0;
   font-size: var(--body-section-title-size);
   line-height: var(--body-section-title-line-height, normal);
@@ -2509,7 +2509,7 @@ main > #how.compatibility.reveal-on-scroll {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #1f1f1f;
+  color: #587BF6;
   font-size: 0.96rem;
   line-height: 1.2;
   font-weight: 600;
@@ -3523,9 +3523,8 @@ main > #how.compatibility.reveal-on-scroll {
     padding: 2px 0 0;
   }
 
-  .founder-note h2 {
-    font-size: var(--body-section-title-size);
-    line-height: var(--body-section-title-line-height, normal);
+  .founder-note .section-heading {
+    margin-bottom: 14px;
   }
 
   .founder-note-dek {
