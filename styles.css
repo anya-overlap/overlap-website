@@ -2525,8 +2525,8 @@ main > #how.compatibility.reveal-on-scroll {
 .learn-more-reading {
   width: min(100%, 660px);
   display: grid;
-  gap: 16px;
-  margin-bottom: 36px;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 .learn-more-reading-header h3 {
@@ -2582,7 +2582,7 @@ main > #how.compatibility.reveal-on-scroll {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #4353A5;
+  color: #587BF6;
   font-size: 0.9rem;
   line-height: 1.2;
   font-weight: 600;
@@ -2598,7 +2598,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-subsection {
   width: min(100%, 660px);
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .learn-more-subsection h3 {
@@ -3527,11 +3527,11 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .learn-more-subsection {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .learn-more-reading-card {
