@@ -2526,7 +2526,7 @@ main > #how.compatibility.reveal-on-scroll {
   width: min(100%, 660px);
   display: grid;
   gap: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .learn-more-reading-header h3 {
@@ -2598,6 +2598,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-subsection {
   width: min(100%, 660px);
+  margin-top: 30px;
   margin-bottom: 12px;
 }
 
@@ -3527,10 +3528,11 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .learn-more-subsection {
+    margin-top: 30px;
     margin-bottom: 12px;
   }
 
