@@ -2452,95 +2452,6 @@ main > #how.compatibility.reveal-on-scroll {
   background: var(--blue);
 }
 
-.founder-note {
-  --body-section-padding-top: calc(var(--section-space-top) * 0.28);
-  --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 8px);
-  background:
-    radial-gradient(70% 58% at 50% 0%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0.012) 38%, rgba(88, 123, 246, 0) 78%),
-    radial-gradient(38% 30% at 12% 70%, rgba(208, 76, 77, 0.014) 0%, rgba(208, 76, 77, 0) 72%),
-    linear-gradient(180deg, #fcfdff 0%, #f8faff 44%, #f6f8fd 100%);
-}
-
-.founder-note-card {
-  width: min(100%, 600px);
-  margin: 0 auto;
-  display: block;
-  padding: 18px 22px;
-  border: 1px solid rgba(112, 132, 197, 0.16);
-  border-radius: 11px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 8px 24px rgba(44, 62, 120, 0.035);
-}
-
-.founder-note .section-heading {
-  width: min(100%, 600px);
-  margin-inline: auto;
-  margin-bottom: 18px;
-}
-
-.founder-note .section-heading .founder-note-subtitle {
-  max-width: 34ch;
-  color: var(--blue);
-  font-size: 1.2rem;
-  line-height: 1.2;
-  font-weight: 400;
-}
-
-.founder-note-copy {
-  display: grid;
-  gap: 7px;
-  max-width: 600px;
-  padding: 3px 0;
-}
-
-.founder-note-eyebrow {
-  margin: 0;
-  font-size: 0.78rem;
-  line-height: 1.2;
-  font-weight: 600;
-  color: #4b5877;
-  letter-spacing: 0;
-}
-
-.founder-note-title {
-  margin: 0;
-  font-size: 1.08rem;
-  line-height: 1.2;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 0;
-  color: #1f1f1f;
-}
-
-.founder-note-dek {
-  margin: 0;
-  max-width: none;
-  font-size: 0.9rem;
-  line-height: 1.38;
-  letter-spacing: 0;
-  color: #666666;
-}
-
-.founder-note-link {
-  width: fit-content;
-  margin-top: 4px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #4353A5;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-
-.founder-note-link:hover,
-.founder-note-link:focus-visible {
-  transform: translateX(2px);
-  opacity: 0.82;
-}
-
 .learn-more {
   --learn-more-font-scale: 0.92;
   --learn-more-content-scale: 1.12;
@@ -2609,6 +2520,93 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-group {
   width: min(100%, 660px);
+}
+
+.learn-more-reading {
+  width: min(100%, 660px);
+  display: grid;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.learn-more-reading-header h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #27324a;
+}
+
+.learn-more-reading-header p {
+  margin-top: 6px;
+  max-width: 28ch;
+  color: #60709a;
+  font-size: 0.9rem;
+  line-height: 1.32;
+}
+
+.learn-more-reading-card {
+  display: grid;
+  gap: 7px;
+  padding: 18px 22px;
+  border: 1px solid rgba(112, 132, 197, 0.16);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 24px rgba(44, 62, 120, 0.035);
+}
+
+.learn-more-reading-date {
+  font-size: 0.78rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #4b5877;
+}
+
+.learn-more-reading-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.08rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.learn-more-reading-dek {
+  font-size: 0.9rem;
+  line-height: 1.38;
+  color: #666666;
+}
+
+.learn-more-reading-link {
+  width: fit-content;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4353A5;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.learn-more-reading-link:hover,
+.learn-more-reading-link:focus-visible {
+  transform: translateX(2px);
+  opacity: 0.82;
+}
+
+.learn-more-subsection {
+  width: min(100%, 660px);
+  margin-bottom: 18px;
+}
+
+.learn-more-subsection h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #27324a;
 }
 
 .learn-more-group h3 {
@@ -3528,30 +3526,24 @@ main > #how.compatibility.reveal-on-scroll {
     --body-section-title-size: calc(clamp(1.5rem, 2.28vw, 2.04rem) * var(--learn-more-font-scale));
   }
 
-  .founder-note {
-    --body-section-padding-top: calc(var(--section-space-top) * 0.18);
+  .learn-more-reading {
+    margin-bottom: 24px;
   }
 
-  .founder-note-card {
+  .learn-more-subsection {
+    margin-bottom: 16px;
+  }
+
+  .learn-more-reading-card {
     padding: 16px 16px 15px;
   }
 
-  .founder-note-copy {
-    gap: 7px;
-    padding: 2px 0 0;
-  }
-
-  .founder-note .section-heading {
-    margin-bottom: 14px;
-  }
-
-  .founder-note-dek {
-    max-width: 28ch;
+  .learn-more-reading-dek {
     font-size: 0.94rem;
     line-height: 1.4;
   }
 
-  .founder-note-link {
+  .learn-more-reading-link {
     margin-top: 3px;
     font-size: 0.94rem;
   }
