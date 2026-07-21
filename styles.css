@@ -2547,9 +2547,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-reading-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
-  column-gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
   row-gap: 12px;
   padding: 18px 22px;
   border: 1px solid rgba(112, 132, 197, 0.16);
@@ -2560,7 +2558,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-reading-main {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
 }
 
@@ -2599,7 +2597,6 @@ main > #how.compatibility.reveal-on-scroll {
   transition: transform 180ms ease, opacity 180ms ease;
   padding: 0;
   white-space: nowrap;
-  align-self: start;
 }
 
 .learn-more-reading-link:hover,
