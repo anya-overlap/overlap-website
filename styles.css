@@ -2589,7 +2589,7 @@ main > #how.compatibility.reveal-on-scroll {
   width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   color: #587BF6;
   font-size: 0.9rem;
   line-height: 1.2;
@@ -2601,8 +2601,8 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .learn-more-reading-link img {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   display: block;
   transform: rotate(-90deg);
   filter: brightness(0) saturate(100%) invert(40%) sepia(73%) saturate(1874%) hue-rotate(216deg) brightness(99%) contrast(89%);
