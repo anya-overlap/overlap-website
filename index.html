@@ -806,18 +806,26 @@
 
       const mobileFloatingDownload = document.querySelector(".mobile-floating-download");
       const firstContentHeading = document.querySelector("#compatibility-heading");
+      const learnMoreSection = document.querySelector(".learn-more");
       const footerCta = document.querySelector(".cta");
-      if (mobileFloatingDownload && firstContentHeading && footerCta) {
+      if (mobileFloatingDownload && firstContentHeading && learnMoreSection && footerCta) {
         let hasReachedFirstContentHeading = false;
+        let learnMoreIsVisible = false;
         let footerIsVisible = false;
 
         const syncFloatingDownloadVisibility = () => {
-          const shouldShow = window.innerWidth <= 768 && hasReachedFirstContentHeading && !footerIsVisible;
+          const shouldShow =
+            window.innerWidth <= 768 &&
+            hasReachedFirstContentHeading &&
+            !learnMoreIsVisible &&
+            !footerIsVisible;
           mobileFloatingDownload.classList.toggle("is-visible", shouldShow);
         };
 
         const updateFloatingDownloadTriggerState = () => {
           hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
+          const learnMoreBounds = learnMoreSection.getBoundingClientRect();
+          learnMoreIsVisible = learnMoreBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
           syncFloatingDownloadVisibility();
         };
 
@@ -839,6 +847,8 @@
           const updateFloatingDownloadFromScroll = () => {
             const footerTop = footerCta.getBoundingClientRect().top;
             hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
+            const learnMoreBounds = learnMoreSection.getBoundingClientRect();
+            learnMoreIsVisible = learnMoreBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
             footerIsVisible = footerTop < window.innerHeight;
             syncFloatingDownloadVisibility();
           };
