@@ -2462,10 +2462,10 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .founder-note-card {
-  width: min(100%, 620px);
+  width: min(100%, 660px);
   margin: 0 auto;
   display: block;
-  padding: 18px 22px;
+  padding: 18px 0;
   border: 1px solid rgba(112, 132, 197, 0.16);
   border-radius: 11px;
   background: rgba(255, 255, 255, 0.72);
@@ -2489,7 +2489,7 @@ main > #how.compatibility.reveal-on-scroll {
 .founder-note-copy {
   display: grid;
   gap: 7px;
-  max-width: 620px;
+  max-width: 660px;
   padding: 3px 0;
 }
 
