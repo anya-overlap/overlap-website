@@ -3567,7 +3567,7 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading-meta {
-    font-size: 0.72rem;
+    display: none;
   }
 
   .learn-more-reading-title {
@@ -3576,8 +3576,8 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading-dek {
-    font-size: 0.94rem;
-    line-height: 1.4;
+    font-size: 0.72rem;
+    line-height: 1.32;
     max-width: none;
   }
 
@@ -3587,6 +3587,7 @@ main > #how.compatibility.reveal-on-scroll {
 
   .learn-more-reading-link {
     font-size: 0.94rem;
+    margin-top: 8px;
     padding: 0;
   }
 
