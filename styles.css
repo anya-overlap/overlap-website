@@ -2452,6 +2452,77 @@ main > #how.compatibility.reveal-on-scroll {
   background: var(--blue);
 }
 
+.founder-note {
+  --body-section-padding-top: calc(var(--section-space-top) * 0.28);
+  --body-section-padding-bottom: var(--section-space-bottom-tight);
+  background:
+    radial-gradient(70% 58% at 50% 0%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0.012) 38%, rgba(88, 123, 246, 0) 78%),
+    radial-gradient(38% 30% at 12% 70%, rgba(208, 76, 77, 0.014) 0%, rgba(208, 76, 77, 0) 72%),
+    linear-gradient(180deg, #fcfdff 0%, #f8faff 44%, #f6f8fd 100%);
+}
+
+.founder-note-card {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+}
+
+.founder-note-copy {
+  display: grid;
+  gap: 8px;
+  max-width: 680px;
+  padding: 3px 0;
+}
+
+.founder-note-eyebrow {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #4b5877;
+  letter-spacing: 0;
+}
+
+.founder-note h2 {
+  margin: 0;
+  font-size: var(--body-section-title-size);
+  line-height: var(--body-section-title-line-height, normal);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #1f1f1f;
+}
+
+.founder-note-dek {
+  margin: 0;
+  max-width: 36ch;
+  font-size: clamp(0.94rem, 1.08vw, 1.02rem);
+  line-height: 1.42;
+  letter-spacing: 0;
+  color: #666666;
+}
+
+.founder-note-link {
+  width: fit-content;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1f1f1f;
+  font-size: 0.96rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.founder-note-link:hover,
+.founder-note-link:focus-visible {
+  transform: translateX(2px);
+  opacity: 0.82;
+}
+
 .learn-more {
   --learn-more-font-scale: 0.92;
   --learn-more-content-scale: 1.12;
@@ -3437,6 +3508,35 @@ main > #how.compatibility.reveal-on-scroll {
   .learn-more {
     --body-section-padding-bottom: var(--section-space-bottom-loose);
     --body-section-title-size: calc(clamp(1.5rem, 2.28vw, 2.04rem) * var(--learn-more-font-scale));
+  }
+
+  .founder-note {
+    --body-section-padding-top: calc(var(--section-space-top) * 0.18);
+  }
+
+  .founder-note-card {
+    padding: 0;
+  }
+
+  .founder-note-copy {
+    gap: 7px;
+    padding: 2px 0 0;
+  }
+
+  .founder-note h2 {
+    font-size: var(--body-section-title-size);
+    line-height: var(--body-section-title-line-height, normal);
+  }
+
+  .founder-note-dek {
+    max-width: 28ch;
+    font-size: 0.94rem;
+    line-height: 1.4;
+  }
+
+  .founder-note-link {
+    margin-top: 3px;
+    font-size: 0.94rem;
   }
 
   .compatibility::before {
