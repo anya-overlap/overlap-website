@@ -2454,7 +2454,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .founder-note {
   --body-section-padding-top: calc(var(--section-space-top) * 0.28);
-  --body-section-padding-bottom: var(--section-space-bottom-tight);
+  --body-section-padding-bottom: calc(var(--section-space-bottom-tight) - 8px);
   background:
     radial-gradient(70% 58% at 50% 0%, rgba(88, 123, 246, 0.05) 0%, rgba(88, 123, 246, 0.012) 38%, rgba(88, 123, 246, 0) 78%),
     radial-gradient(38% 30% at 12% 70%, rgba(208, 76, 77, 0.014) 0%, rgba(208, 76, 77, 0) 72%),
@@ -2462,7 +2462,7 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .founder-note-card {
-  width: min(100%, 660px);
+  width: min(100%, 600px);
   margin: 0 auto;
   display: block;
   padding: 18px 22px;
@@ -2473,9 +2473,9 @@ main > #how.compatibility.reveal-on-scroll {
 }
 
 .founder-note .section-heading {
-  width: min(100%, 660px);
+  width: min(100%, 600px);
   margin-inline: auto;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .founder-note .section-heading .founder-note-subtitle {
@@ -2489,7 +2489,7 @@ main > #how.compatibility.reveal-on-scroll {
 .founder-note-copy {
   display: grid;
   gap: 7px;
-  max-width: 660px;
+  max-width: 600px;
   padding: 3px 0;
 }
 
@@ -2504,8 +2504,8 @@ main > #how.compatibility.reveal-on-scroll {
 
 .founder-note-title {
   margin: 0;
-  font-size: 1.22rem;
-  line-height: 1.16;
+  font-size: 1.08rem;
+  line-height: 1.2;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0;
