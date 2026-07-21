@@ -806,26 +806,26 @@
 
       const mobileFloatingDownload = document.querySelector(".mobile-floating-download");
       const firstContentHeading = document.querySelector("#compatibility-heading");
-      const learnMoreSection = document.querySelector(".learn-more");
+      const learnMoreFaqSection = document.querySelector(".learn-more-subsection");
       const footerCta = document.querySelector(".cta");
-      if (mobileFloatingDownload && firstContentHeading && learnMoreSection && footerCta) {
+      if (mobileFloatingDownload && firstContentHeading && learnMoreFaqSection && footerCta) {
         let hasReachedFirstContentHeading = false;
-        let learnMoreIsVisible = false;
+        let learnMoreFaqIsVisible = false;
         let footerIsVisible = false;
 
         const syncFloatingDownloadVisibility = () => {
           const shouldShow =
             window.innerWidth <= 768 &&
             hasReachedFirstContentHeading &&
-            !learnMoreIsVisible &&
+            !learnMoreFaqIsVisible &&
             !footerIsVisible;
           mobileFloatingDownload.classList.toggle("is-visible", shouldShow);
         };
 
         const updateFloatingDownloadTriggerState = () => {
           hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
-          const learnMoreBounds = learnMoreSection.getBoundingClientRect();
-          learnMoreIsVisible = learnMoreBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
+          const learnMoreFaqBounds = learnMoreFaqSection.getBoundingClientRect();
+          learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreFaqBounds.bottom > 0;
           syncFloatingDownloadVisibility();
         };
 
@@ -847,8 +847,8 @@
           const updateFloatingDownloadFromScroll = () => {
             const footerTop = footerCta.getBoundingClientRect().top;
             hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
-            const learnMoreBounds = learnMoreSection.getBoundingClientRect();
-            learnMoreIsVisible = learnMoreBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
+            const learnMoreFaqBounds = learnMoreFaqSection.getBoundingClientRect();
+            learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreFaqBounds.bottom > 0;
             footerIsVisible = footerTop < window.innerHeight;
             syncFloatingDownloadVisibility();
           };
