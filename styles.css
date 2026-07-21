@@ -2558,7 +2558,7 @@ main > #how.compatibility.reveal-on-scroll {
 
 .learn-more-reading-main {
   display: grid;
-  gap: 10px;
+  gap: 4px;
   min-width: 0;
 }
 
@@ -2567,6 +2567,7 @@ main > #how.compatibility.reveal-on-scroll {
   line-height: 1.2;
   font-weight: 600;
   color: #4b5877;
+  margin-top: 10px;
 }
 
 .learn-more-reading-title {
@@ -3552,7 +3553,7 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading-main {
-    gap: 8px;
+    gap: 4px;
   }
 
   .learn-more-reading-meta {
