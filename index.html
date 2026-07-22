@@ -803,9 +803,10 @@ The last generation of dating products solved discovery, the next generation sho
 
       const mobileFloatingDownload = document.querySelector(".mobile-floating-download");
       const firstContentHeading = document.querySelector("#compatibility-heading");
+      const learnMoreSection = document.querySelector(".learn-more");
       const learnMoreFaqSection = document.querySelector(".learn-more-subsection");
       const footerCta = document.querySelector(".cta");
-      if (mobileFloatingDownload && firstContentHeading && learnMoreFaqSection && footerCta) {
+      if (mobileFloatingDownload && firstContentHeading && learnMoreSection && learnMoreFaqSection && footerCta) {
         let hasReachedFirstContentHeading = false;
         let learnMoreFaqIsVisible = false;
         let footerIsVisible = false;
@@ -821,8 +822,9 @@ The last generation of dating products solved discovery, the next generation sho
 
         const updateFloatingDownloadTriggerState = () => {
           hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
+          const learnMoreBounds = learnMoreSection.getBoundingClientRect();
           const learnMoreFaqBounds = learnMoreFaqSection.getBoundingClientRect();
-          learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreFaqBounds.bottom > 0;
+          learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
           syncFloatingDownloadVisibility();
         };
 
@@ -844,8 +846,9 @@ The last generation of dating products solved discovery, the next generation sho
           const updateFloatingDownloadFromScroll = () => {
             const footerTop = footerCta.getBoundingClientRect().top;
             hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
+            const learnMoreBounds = learnMoreSection.getBoundingClientRect();
             const learnMoreFaqBounds = learnMoreFaqSection.getBoundingClientRect();
-            learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreFaqBounds.bottom > 0;
+            learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
             footerIsVisible = footerTop < window.innerHeight;
             syncFloatingDownloadVisibility();
           };
