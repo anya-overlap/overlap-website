@@ -513,18 +513,11 @@
             </div>
           </div>
 
-          <div class="learn-more-secondary-wrap">
-            <button
-              class="learn-more-secondary-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="learn-more-secondary-group"
-            >
-              Learn more about today&rsquo;s dating landscape
-            </button>
+          <div class="learn-more-subsection reveal-on-scroll" aria-labelledby="learn-more-modern-dating-heading">
+            <h3 id="learn-more-modern-dating-heading">Understanding modern dating</h3>
           </div>
 
-          <div class="learn-more-group learn-more-group--secondary reveal-on-scroll" id="learn-more-secondary-group" hidden>
+          <div class="learn-more-group learn-more-group--secondary reveal-on-scroll" id="learn-more-secondary-group">
             <div class="learn-more-list" role="list">
               <div class="learn-more-entry">
                 <button class="learn-more-item" type="button" aria-expanded="false">
@@ -1346,26 +1339,6 @@
           }
         });
       });
-
-      const learnMoreSecondaryToggle = document.querySelector(".learn-more-secondary-toggle");
-      const learnMoreSecondaryGroup = document.querySelector("#learn-more-secondary-group");
-
-      if (learnMoreSecondaryToggle && learnMoreSecondaryGroup) {
-        learnMoreSecondaryToggle.addEventListener("click", () => {
-          const isExpanded = learnMoreSecondaryToggle.getAttribute("aria-expanded") === "true";
-          const nextState = !isExpanded;
-          learnMoreSecondaryToggle.setAttribute("aria-expanded", nextState ? "true" : "false");
-          learnMoreSecondaryGroup.hidden = !nextState;
-
-          if (nextState) {
-            window.requestAnimationFrame(() => {
-              learnMoreSecondaryGroup.classList.add("is-visible");
-            });
-          } else {
-            learnMoreSecondaryGroup.classList.remove("is-visible");
-          }
-        });
-      }
 
       const calculatedSelectors = Array.from(document.querySelectorAll(".calculated-selector"));
       calculatedSelectors.forEach((selector) => {
