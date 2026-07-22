@@ -512,7 +512,7 @@
           </div>
 
           <div class="learn-more-subsection reveal-on-scroll" aria-labelledby="learn-more-modern-dating-heading">
-            <h3 id="learn-more-modern-dating-heading">Understanding modern dating</h3>
+            <h3 id="learn-more-modern-dating-heading">Rethinking modern dating</h3>
           </div>
 
           <div class="learn-more-group learn-more-group--secondary reveal-on-scroll" id="learn-more-secondary-group">
@@ -530,9 +530,24 @@
 <br><br>
 Modern mobile-first dating apps transformed the speed and scale by introducing swiping and lightweight profiles. Browsing infinite profiles is now possible, but with no substance to evaluate compatibility, users now are doing the hard work of determining compatibility themselves. 
 <br><br>
-We believe online dating is ready for a third era. The last generation of dating products solved discovery, the next generation should solve compatibility.
+We believe online dating is ready for a third era.<br><br>
+At Overlap, we want to preserve what modern apps got right - accessibility, scale, and convenience - while reintroducing aspects from the first era that we lost: thoughtful profiles, meaningful compatibility, and a more intentional pace.
 <br><br>
-At Overlap, we want to preserve what modern apps got right- things like accessibility, scale, and convenience. But we also want to reintroduce aspects from the first era - thoughtful profiles, meaningful compatibility, and a more intentional pace.
+
+The last generation of dating products solved discovery, the next generation should solve compatibility.
+<div class="learn-more-answer-callout">
+  <p class="learn-more-answer-callout-title">Explore this idea further</p>
+  <a
+    class="learn-more-answer-callout-link"
+    href="https://substack.com/@overlapdatingapp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <em>Something Has Changed in Modern Dating</em>
+    <img src="./assets/arrowsmall.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+  </a>
+</div>
+
                 </div>
               </div>
               <div class="learn-more-entry">
@@ -788,9 +803,10 @@ At Overlap, we want to preserve what modern apps got right- things like accessib
 
       const mobileFloatingDownload = document.querySelector(".mobile-floating-download");
       const firstContentHeading = document.querySelector("#compatibility-heading");
+      const learnMoreSection = document.querySelector(".learn-more");
       const learnMoreFaqSection = document.querySelector(".learn-more-subsection");
       const footerCta = document.querySelector(".cta");
-      if (mobileFloatingDownload && firstContentHeading && learnMoreFaqSection && footerCta) {
+      if (mobileFloatingDownload && firstContentHeading && learnMoreSection && learnMoreFaqSection && footerCta) {
         let hasReachedFirstContentHeading = false;
         let learnMoreFaqIsVisible = false;
         let footerIsVisible = false;
@@ -806,8 +822,9 @@ At Overlap, we want to preserve what modern apps got right- things like accessib
 
         const updateFloatingDownloadTriggerState = () => {
           hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
+          const learnMoreBounds = learnMoreSection.getBoundingClientRect();
           const learnMoreFaqBounds = learnMoreFaqSection.getBoundingClientRect();
-          learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreFaqBounds.bottom > 0;
+          learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
           syncFloatingDownloadVisibility();
         };
 
@@ -829,8 +846,9 @@ At Overlap, we want to preserve what modern apps got right- things like accessib
           const updateFloatingDownloadFromScroll = () => {
             const footerTop = footerCta.getBoundingClientRect().top;
             hasReachedFirstContentHeading = firstContentHeading.getBoundingClientRect().top <= window.innerHeight * 0.8;
+            const learnMoreBounds = learnMoreSection.getBoundingClientRect();
             const learnMoreFaqBounds = learnMoreFaqSection.getBoundingClientRect();
-            learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreFaqBounds.bottom > 0;
+            learnMoreFaqIsVisible = learnMoreFaqBounds.top < window.innerHeight && learnMoreBounds.bottom > 0;
             footerIsVisible = footerTop < window.innerHeight;
             syncFloatingDownloadVisibility();
           };
