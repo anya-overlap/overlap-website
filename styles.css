@@ -2549,7 +2549,7 @@ main > #how.compatibility.reveal-on-scroll {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   row-gap: 12px;
-  padding: 18px 22px;
+  padding: 14px 22px;
   border: 1px solid rgba(112, 132, 197, 0.16);
   border-radius: 11px;
   background: rgba(255, 255, 255, 0.72);
@@ -2567,20 +2567,20 @@ main > #how.compatibility.reveal-on-scroll {
   line-height: 1.2;
   font-weight: 500;
   color: #4b5877;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .learn-more-reading-title {
   font-family: "Playfair Display", serif;
-  font-size: 1.22rem;
+  font-size: 1.12rem;
   line-height: 1.12;
   font-weight: 600;
   color: #1f1f1f;
 }
 
 .learn-more-reading-dek {
-  font-size: 0.9rem;
-  line-height: 1.42;
+  font-size: 0.84rem;
+  line-height: 1.36;
   color: #666666;
   max-width: none;
 }
@@ -3556,7 +3556,7 @@ main > #how.compatibility.reveal-on-scroll {
   .learn-more-reading-card {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 10px;
-    padding: 16px 16px 15px;
+    padding: 13px 16px 12px;
   }
 
   .learn-more-reading-main {
@@ -3568,12 +3568,12 @@ main > #how.compatibility.reveal-on-scroll {
   }
 
   .learn-more-reading-title {
-    font-size: 1.12rem;
+    font-size: 1.04rem;
     line-height: 1.14;
   }
 
   .learn-more-reading-dek {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     line-height: 1.32;
     max-width: none;
   }
